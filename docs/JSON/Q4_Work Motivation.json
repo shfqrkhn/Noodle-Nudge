@@ -1,0 +1,65 @@
+{
+  "id": "work_motivation_v1.0.0",
+  "version": "1.0.0",
+  "tier": "Tier 1",
+  "title": "Your Work Motivation",
+  "description": "This assessment helps you discover what makes an activity truly engaging and motivating for you. The insights apply not just to your job, but also to hobbies, projects, and personal pursuits.",
+  "instructions": "Think about the activities where you feel most engaged and effective. Please rate how much each of the following characteristics is present in those activities.",
+  "scientificBasis": {
+    "summary": "This assessment is based on the Job Characteristics Model by Hackman & Oldham, a cornerstone of organizational psychology. It measures five core job dimensions that are proven to increase motivation, performance, and satisfaction. The final Motivating Potential Score (MPS) is a powerful, validated indicator of an individual's fit with a given role or task.",
+    "citation": "Model based on 'Work Redesign' (1980) by J.R. Hackman and G.R. Oldham. Questions are standard representations of the core dimensions."
+  },
+  "responseScale": [
+    { "text": "Very Little", "value": 1 },
+    { "text": "Somewhat", "value": 2 },
+    { "text": "A Moderate Amount", "value": 3 },
+    { "text": "A Lot", "value": 4 },
+    { "text": "A Great Deal", "value": 5 }
+  ],
+  "questions": [
+    { "id": "mps_1", "text": "How much variety is there in the activity? (The degree to which it requires a number of different skills)", "scoring": { "dimension": "skillVariety" } },
+    { "id": "mps_2", "text": "How much of the activity do you complete from start to finish? (The degree to which you complete a whole piece of work)", "scoring": { "dimension": "taskIdentity" } },
+    { "id": "mps_3", "text": "How much impact does the activity have on others? (The degree to which it affects other people's lives or work)", "scoring": { "dimension": "taskSignificance" } },
+    { "id": "mps_4", "text": "How much freedom do you have in how you perform the activity? (The degree of autonomy and discretion you have)", "scoring": { "dimension": "autonomy" } },
+    { "id": "mps_5", "text": "How much feedback do you get from the activity itself? (The degree to which doing the work provides clear information about your performance)", "scoring": { "dimension": "feedback" } }
+  ],
+  "scoringRubric": {
+    "primaryScores": [
+      {
+        "id": "motivating_potential_score",
+        "title": "Motivating Potential Score (MPS)",
+        "calculation": "((skillVariety_score + taskIdentity_score + taskSignificance_score) / 3) * autonomy_score * feedback_score",
+        "interpretation": [
+          { "label": "Low", "range": [1, 39], "description": "Activities with these characteristics may feel routine and demotivating to you. You thrive with more engagement." },
+          { "label": "Average", "range": [40, 79], "description": "Activities with these characteristics provide a moderate level of motivation and engagement for you." },
+          { "label": "High", "range": [80, 125], "description": "Activities with these characteristics are highly motivating and engaging for you. This is your 'thrive zone'." }
+        ]
+      }
+    ],
+    "derivativeInsights": [
+      {
+        "id": "key_career_drivers",
+        "title": "Your Key Career Drivers",
+        "replaces": ["What Rewards Do I Value Most?"],
+        "calculationLogic": "IDENTIFY_HIGHEST_SCORE_DIMENSIONS([skillVariety_score, taskIdentity_score, taskSignificance_score, autonomy_score, feedback_score], ['Variety', 'Completion', 'Impact', 'Freedom', 'Clarity'])",
+        "interpretation": {
+          "Variety": "You are driven by VARIETY. You thrive when you can use many different skills and talents.",
+          "Completion": "You are driven by COMPLETION. You are motivated by seeing a project through from beginning to end.",
+          "Impact": "You are driven by IMPACT. You need to know that your work makes a meaningful difference to others.",
+          "Freedom": "You are driven by FREEDOM. You are most effective when you have control and discretion over your own work.",
+          "Clarity": "You are driven by CLARITY. You enjoy knowing exactly how you are performing and seeing direct results from your work."
+        }
+      },
+      {
+        "id": "preferred_environment",
+        "title": "Your Preferred Environment",
+        "replaces": ["Do I Want an Enriched Job?", "What Type of Org Structure/Culture Do I Prefer?", "Do I Like Bureaucracy?"],
+        "calculationLogic": "IF(motivating_potential_score >= 80, 'Organic/Enriched', 'Structured/Routine')",
+        "interpretation": {
+          "Organic/Enriched": "You strongly prefer enriched, flexible, and autonomous environments (Organic Structures). You dislike bureaucracy and routine.",
+          "Structured/Routine": "You may be more comfortable in structured, predictable environments where tasks are clear and require less autonomy (Mechanistic Structures)."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "id": "authentic_ethical_leadership_v1.0.0",
+  "version": "1.0.0",
+  "tier": "Tier 2",
+  "title": "Authentic & Ethical Leadership Profile",
+  "description": "This assessment helps you understand your natural approach to leadership, focusing on authenticity, ethical decision-making, and your capacity to inspire and influence others effectively and responsibly. It combines modern, evidence-based leadership concepts to provide a holistic view of your potential as a leader.",
+  "instructions": "This questionnaire contains items about different dimensions of authentic leadership and ethical behavior. There are no right or wrong responses, so please answer honestly. Use the following scale when responding to each statement by writing the number from the scale below that you feel most accurately characterizes your response to the statement.",
+  "scientificBasis": {
+    "summary": "This assessment is based on the Authentic Leadership theory, which emphasizes four components: self-awareness, internalized moral perspective, balanced processing, and relational transparency. It also integrates principles of ethical leadership, which focuses on demonstrating appropriate conduct through personal actions and promoting ethical behavior to followers.",
+    "citation": "Authentic Leadership items are based on the concepts presented in Northouse, P.G. (2010). Leadership: Theory and practice, 5th ed. Thousand Oaks, CA: Sage. Ethical leadership items are based on concepts from Brown, M. E., Treviño, L. K., and Harrison, D. A. (2005). Ethical Leadership: A Social Learning Perspective for Construct Development and Testing. Organizational Behavior and Human Decision Processes, 97, 117-134. All items are adapted to be legally safe for commercial use and are based on public domain scientific models or IPIP concepts."
+  },
+  "responseScale": [
+    { "text": "Strongly Disagree", "value": 1 },
+    { "text": "Disagree", "value": 2 },
+    { "text": "Neither agree or disagree", "value": 3 },
+    { "text": "Agree", "value": 4 },
+    { "text": "Strongly Agree", "value": 5 }
+  ],
+  "questions": [
+    {
+      "id": "q_01",
+      "text": "I can list my three greatest weaknesses.",
+      "scoring": { "dimension": "self_awareness", "isReversed": false }
+    },
+    {
+      "id": "q_02",
+      "text": "My actions reflect my core values.",
+      "scoring": { "dimension": "internalized_moral_perspective", "isReversed": false }
+    },
+    {
+      "id": "q_03",
+      "text": "I seek others' opinions before making up my own mind.",
+      "scoring": { "dimension": "balanced_processing", "isReversed": false }
+    },
+    {
+      "id": "q_04",
+      "text": "I openly share my feelings with others.",
+      "scoring": { "dimension": "relational_transparency", "isReversed": false }
+    },
+    {
+      "id": "q_05",
+      "text": "I can list my three greatest strengths.",
+      "scoring": { "dimension": "self_awareness", "isReversed": false }
+    },
+    {
+      "id": "q_06",
+      "text": "I do not allow group pressure to control me.",
+      "scoring": { "dimension": "internalized_moral_perspective", "isReversed": false }
+    },
+    {
+      "id": "q_07",
+      "text": "I listen closely to the ideas of those who disagree with me.",
+      "scoring": { "dimension": "balanced_processing", "isReversed": false }
+    },
+    {
+      "id": "q_08",
+      "text": "I let others know who I truly am as a person.",
+      "scoring": { "dimension": "relational_transparency", "isReversed": false }
+    },
+    {
+      "id": "q_09",
+      "text": "I seek feedback as a way of understanding who I really am as a person.",
+      "scoring": { "dimension": "self_awareness", "isReversed": false }
+    },
+    {
+      "id": "q_10",
+      "text": "Other people know where I stand on controversial issues.",
+      "scoring": { "dimension": "internalized_moral_perspective", "isReversed": false }
+    },
+    {
+      "id": "q_11",
+      "text": "I do not emphasize my own point of view at the expense of others.",
+      "scoring": { "dimension": "balanced_processing", "isReversed": false }
+    },
+    {
+      "id": "q_12",
+      "text": "I rarely present a 'false' front to others.",
+      "scoring": { "dimension": "relational_transparency", "isReversed": false }
+    },
+    {
+      "id": "q_13",
+      "text": "I accept the feelings I have about myself.",
+      "scoring": { "dimension": "self_awareness", "isReversed": false }
+    },
+    {
+      "id": "q_14",
+      "text": "My morals guide what I do as a leader.",
+      "scoring": { "dimension": "internalized_moral_perspective", "isReversed": false }
+    },
+    {
+      "id": "q_15",
+      "text": "I listen very carefully to the ideas of others before making decisions.",
+      "scoring": { "dimension": "balanced_processing", "isReversed": false }
+    },
+    {
+      "id": "q_16",
+      "text": "I admit my mistakes to others.",
+      "scoring": { "dimension": "relational_transparency", "isReversed": false }
+    },
+    {
+      "id": "q_17",
+      "text": "I am aware of why I do the things I do.",
+      "scoring": { "dimension": "self_awareness", "isReversed": false }
+    },
+    {
+      "id": "q_18",
+      "text": "I am aware what demotivates me.",
+      "scoring": { "dimension": "self_awareness", "isReversed": false }
+    },
+    {
+      "id": "q_19",
+      "text": "I am aware of what drives or motivates me.",
+      "scoring": { "dimension": "self_awareness", "isReversed": false }
+    },
+    {
+      "id": "q_20",
+      "text": "I am aware of what I truly find important.",
+      "scoring": { "dimension": "self_awareness", "isReversed": false }
+    },
+    {
+      "id": "q_21",
+      "text": "I'd rather not be confronted with my personal limitations and shortcomings.",
+      "scoring": { "dimension": "self_awareness", "isReversed": true }
+    },
+    {
+      "id": "q_22",
+      "text": "When someone criticizes me, I try not to vest too much attention to it.",
+      "scoring": { "dimension": "self_awareness", "isReversed": true }
+    },
+    {
+      "id": "q_23",
+      "text": "I'd rather not have my personal weaknesses exposed.",
+      "scoring": { "dimension": "self_awareness", "isReversed": true }
+    },
+    {
+      "id": "q_24",
+      "text": "I try to block out unpleasant feelings about myself.",
+      "scoring": { "dimension": "self_awareness", "isReversed": true }
+    },
+    {
+      "id": "q_25",
+      "text": "I often pretend to like something when I really do not.",
+      "scoring": { "dimension": "relational_transparency", "isReversed": true }
+    },
+    {
+      "id": "q_26",
+      "text": "Even when I disagree with someone, I will often silently agree.",
+      "scoring": { "dimension": "relational_transparency", "isReversed": true }
+    },
+    {
+      "id": "q_27",
+      "text": "I often behave in a way that does not reflect my true feelings or thoughts.",
+      "scoring": { "dimension": "relational_transparency", "isReversed": true }
+    },
+    {
+      "id": "q_28",
+      "text": "I often pretend to be someone I am not.",
+      "scoring": { "dimension": "relational_transparency", "isReversed": true }
+    },
+    {
+      "id": "q_29",
+      "text": "I stay true to my personal values.",
+      "scoring": { "dimension": "internalized_moral_perspective", "isReversed": false }
+    },
+    {
+      "id": "q_30",
+      "text": "I act in accordance with what I believe in.",
+      "scoring": { "dimension": "internalized_moral_perspective", "isReversed": false }
+    },
+    {
+      "id": "q_31",
+      "text": "People can count on me to behave in the same way over situations.",
+      "scoring": { "dimension": "internalized_moral_perspective", "isReversed": false }
+    },
+    {
+      "id": "q_32",
+      "text": "I act according to personal values, even if others criticize me for it.",
+      "scoring": { "dimension": "internalized_moral_perspective", "isReversed": false }
+    },
+    {
+      "id": "q_33",
+      "text": "I listen to what others have to say.",
+      "scoring": { "dimension": "ethical_leadership", "isReversed": false }
+    },
+    {
+      "id": "q_34",
+      "text": "I speak out when others violate ethical standards.",
+      "scoring": { "dimension": "ethical_leadership", "isReversed": false }
+    },
+    {
+      "id": "q_35",
+      "text": "I conduct my personal life in an ethical manner.",
+      "scoring": { "dimension": "ethical_leadership", "isReversed": false }
+    },
+    {
+      "id": "q_36",
+      "text": "I have the best interests of others in mind.",
+      "scoring": { "dimension": "ethical_leadership", "isReversed": false }
+    },
+    {
+      "id": "q_37",
+      "text": "I make fair and balanced decisions.",
+      "scoring": { "dimension": "ethical_leadership", "isReversed": false }
+    },
+    {
+      "id": "q_38",
+      "text": "I can be trusted.",
+      "scoring": { "dimension": "ethical_leadership", "isReversed": false }
+    },
+    {
+      "id": "q_39",
+      "text": "I discuss business ethics or values with others.",
+      "scoring": { "dimension": "ethical_leadership", "isReversed": false }
+    },
+    {
+      "id": "q_40",
+      "text": "I set an example of how to do things the right way in terms of ethics.",
+      "scoring": { "dimension": "ethical_leadership", "isReversed": false }
+    },
+    {
+      "id": "q_41",
+      "text": "I define success not just by results but also the way that they are obtained.",
+      "scoring": { "dimension": "ethical_leadership", "isReversed": false }
+    },
+    {
+      "id": "q_42",
+      "text": "When making decisions, I ask 'what is the right thing to do?'",
+      "scoring": { "dimension": "ethical_leadership", "isReversed": false }
+    }
+  ],
+  "scoringRubric": {
+    "primaryScores": [
+      {
+        "id": "self_awareness",
+        "title": "Self-Awareness",
+        "calculation": "SUM_AND_AVERAGE([q_01, q_05, q_09, q_13, q_17, q_18, q_19, q_20], REVERSE_SCORE([q_21, q_22, q_23, q_24]))",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You may have limited insight into your own emotions, motives, and strengths/weaknesses. Developing greater self-awareness can enhance your leadership effectiveness." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You have a reasonable understanding of your inner self, but there may be areas where deeper reflection could provide further insights." },
+          { "label": "High", "range": [3.51, 5], "description": "You possess a strong understanding of your own emotions, motives, and strengths/weaknesses, which is a cornerstone of authentic leadership. You are aware of your personal impact." }
+        ]
+      },
+      {
+        "id": "internalized_moral_perspective",
+        "title": "Internalized Moral Perspective",
+        "calculation": "SUM_AND_AVERAGE([q_02, q_06, q_10, q_14, q_29, q_30, q_31, q_32])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "Your actions may sometimes be influenced by external pressures rather than deeply held moral standards. Cultivating a stronger internal moral compass can lead to more consistent ethical behavior." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "Your behavior is generally guided by moral standards, but you might sometimes be swayed by situational demands. Further solidifying your ethical framework can be beneficial." },
+          { "label": "High", "range": [3.51, 5], "description": "Your leadership is consistently guided by strong internal moral standards and values, demonstrating integrity and a clear ethical compass." }
+        ]
+      },
+      {
+        "id": "balanced_processing",
+        "title": "Balanced Processing",
+        "calculation": "SUM_AND_AVERAGE([q_03, q_07, q_11, q_15])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You might tend to process information in a biased way, possibly overlooking dissenting opinions or critical feedback. Striving for a more objective analysis will improve decision-making." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You generally consider different viewpoints, but may occasionally favor information that confirms your existing beliefs. Conscious effort to seek out diverse perspectives will be helpful." },
+          { "label": "High", "range": [3.51, 5], "description": "You are adept at objectively analyzing all relevant information, including diverse and challenging viewpoints, before making decisions." }
+        ]
+      },
+      {
+        "id": "relational_transparency",
+        "title": "Relational Transparency",
+        "calculation": "SUM_AND_AVERAGE([q_04, q_08, q_12, q_16], REVERSE_SCORE([q_25, q_26, q_27, q_28]))",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You may be hesitant to share your true thoughts and feelings, which can hinder trust and openness in relationships. Practicing transparent communication can foster stronger connections." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You share your thoughts and feelings to a reasonable extent, but there might be opportunities to increase your openness to build deeper trust with others." },
+          { "label": "High", "range": [3.51, 5], "description": "You openly and genuinely express your true thoughts and emotions in relationships, fostering trust and authentic connections with others." }
+        ]
+      },
+      {
+        "id": "ethical_leadership",
+        "title": "Ethical Leadership",
+        "calculation": "SUM_AND_AVERAGE([q_33, q_34, q_35, q_36, q_37, q_38, q_39, q_40, q_41, q_42])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You may have areas to develop in consistently demonstrating ethical conduct and promoting it among your followers. Focus on fairness, trustworthiness, and clear communication of values." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You generally strive to lead ethically, but there might be situations where your actions or influence could more strongly reflect ethical principles. Continual self-reflection and reinforcement of values can help." },
+          { "label": "High", "range": [3.51, 5], "description": "You consistently demonstrate high ethical standards through your actions and decisions, serving as a strong role model and actively promoting ethical conduct within your sphere of influence." }
+        ]
+      }
+    ]
+  }
+}

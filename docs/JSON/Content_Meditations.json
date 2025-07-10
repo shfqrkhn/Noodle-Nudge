@@ -1,0 +1,1834 @@
+{
+  "meditation_prompts": [
+    {
+      "day": 1,
+      "theme": "Breath Awareness",
+      "instruction": "Find a comfortable posture. Close your eyes and bring your attention to the natural rhythm of your breath. Notice the sensation of the air entering and leaving your body without trying to change it."
+    },
+    {
+      "day": 2,
+      "theme": "Body Scan",
+      "instruction": "Bring your awareness to the soles of your feet. Notice any sensations—warmth, tingling, pressure—without judgment. Slowly move your attention up through your body, one section at a time."
+    },
+    {
+      "day": 3,
+      "theme": "Sound Awareness",
+      "instruction": "Sit quietly and open your awareness to the sounds around you. Notice sounds near and far, loud and soft. Simply listen, without labeling the sounds as 'good' or 'bad'."
+    },
+    {
+      "day": 4,
+      "theme": "Loving-Kindness",
+      "instruction": "Bring to mind someone you care about deeply. Silently repeat the phrases: 'May you be happy. May you be healthy. May you be safe. May you live with ease.'"
+    },
+    {
+      "day": 5,
+      "theme": "Mindful Observation",
+      "instruction": "Choose a simple object in your environment. Gaze at it for a few minutes, noticing its colors, textures, and shape as if you are seeing it for the very first time."
+    },
+    {
+      "day": 6,
+      "theme": "Working with Thoughts",
+      "instruction": "As thoughts arise, label them gently as 'thinking'. Imagine them as clouds passing in the sky, allowing them to come and go without getting caught up in their stories."
+    },
+    {
+      "day": 7,
+      "theme": "Gratitude",
+      "instruction": "Bring to mind three things you are genuinely grateful for, no matter how small. For each one, hold it in your mind and feel the sensation of gratitude in your body."
+    },
+    {
+      "day": 8,
+      "theme": "Breath Awareness",
+      "instruction": "Focus on the sensation of your breath at the tip of your nose. Feel the coolness of the in-breath and the warmth of the out-breath. Use this as an anchor for your attention."
+    },
+    {
+      "day": 9,
+      "theme": "Body Scan",
+      "instruction": "Focus on the sensations in your hands. Notice the temperature, the feeling of the air on your skin, the contact with any surface. Explore this small area with your full attention."
+    },
+    {
+      "day": 10,
+      "theme": "Sound Awareness",
+      "instruction": "Listen for the most distant sound you can perceive. Then, listen for the closest sound. Alternate between these two points of focus, expanding and contracting your awareness."
+    },
+    {
+      "day": 11,
+      "theme": "Loving-Kindness for Self",
+      "instruction": "Direct feelings of kindness toward yourself. Place a hand on your heart and silently repeat: 'May I be happy. May I be healthy. May I be safe. May I live with ease.'"
+    },
+    {
+      "day": 12,
+      "theme": "Mindful Observation",
+      "instruction": "Look at your own hands. Observe the lines, creases, colors, and shapes with a curious and non-judgmental attention."
+    },
+    {
+      "day": 13,
+      "theme": "Working with Emotions",
+      "instruction": "Notice any emotion present right now. Where do you feel it in your body? Breathe into that area, creating space around the sensation without trying to change it."
+    },
+    {
+      "day": 14,
+      "theme": "Compassion",
+      "instruction": "Bring to mind someone who is struggling. Acknowledge their pain and extend a sense of compassion, silently wishing them peace and freedom from suffering."
+    },
+    {
+      "day": 15,
+      "theme": "Breath Awareness",
+      "instruction": "Count your breaths. Inhale one, exhale one. Inhale two, exhale two. Count up to ten, and then begin again. If you lose track, gently return to one."
+    },
+    {
+      "day": 16,
+      "theme": "Body Scan",
+      "instruction": "Bring your awareness to your face. Notice the small muscles around your eyes, jaw, and forehead. Consciously release any tension you find there."
+    },
+    {
+      "day": 17,
+      "theme": "Sensory Awareness: Touch",
+      "instruction": "Focus on the sensation of your clothes against your skin or your body making contact with the chair. Explore the feeling of pressure, texture, and temperature."
+    },
+    {
+      "day": 18,
+      "theme": "Loving-Kindness for a Neutral Person",
+      "instruction": "Think of someone you see regularly but don't have strong feelings about (e.g., a cashier, a bus driver). Extend wishes of well-being to them, recognizing your shared humanity."
+    },
+    {
+      "day": 19,
+      "theme": "Mindful Observation",
+      "instruction": "Observe the play of light and shadow in the room around you. Notice how light falls on different surfaces and creates different shapes."
+    },
+    {
+      "day": 20,
+      "theme": "Working with Thoughts",
+      "instruction": "Notice the space between your thoughts. In the brief gap after one thought ends and before another begins, rest your awareness in that stillness."
+    },
+    {
+      "day": 21,
+      "theme": "Impermanence",
+      "instruction": "Contemplate the changing nature of your breath. Each breath is unique—it has a beginning, a middle, and an end. It arises and passes away, just like all phenomena."
+    },
+    {
+      "day": 22,
+      "theme": "Breath Awareness",
+      "instruction": "Focus on the gentle rising and falling of your abdomen as you breathe. Let this be a calming anchor for your mind."
+    },
+    {
+      "day": 23,
+      "theme": "Body Scan",
+      "instruction": "Scan your body for any areas that feel relaxed and at ease. Rest your attention there, savoring the feeling of comfort."
+    },
+    {
+      "day": 24,
+      "theme": "Open Awareness",
+      "instruction": "Sit with a wide-open awareness, allowing thoughts, sounds, and physical sensations to come and go without focusing on any single thing. Simply be the space in which everything happens."
+    },
+    {
+      "day": 25,
+      "theme": "Loving-Kindness for a Difficult Person",
+      "instruction": "Bring to mind someone with whom you have a difficult relationship. If you can, extend a simple wish for their well-being, such as 'May you be free from suffering.'"
+    },
+    {
+      "day": 26,
+      "theme": "Mindful Walking",
+      "instruction": "Walk slowly, paying full attention to the sensation of your feet making contact with the ground. Notice the lifting, moving, and placing of each foot."
+    },
+    {
+      "day": 27,
+      "theme": "Working with Emotions",
+      "instruction": "Acknowledge any feeling present by naming it softly in your mind, such as 'This is sadness' or 'This is joy.' Naming the emotion can help create distance from it."
+    },
+    {
+      "day": 28,
+      "theme": "Gratitude",
+      "instruction": "Reflect on a simple modern convenience you enjoy (like running water or electricity). Consider what life would be like without it and cultivate a sense of gratitude."
+    },
+    {
+      "day": 29,
+      "theme": "Breath Awareness",
+      "instruction": "Imagine your breath as a wave, flowing in and flowing out. Ride the rhythm of this wave with your attention."
+    },
+    {
+      "day": 30,
+      "theme": "Body Scan: Energy",
+      "instruction": "Scan your body, noticing where you feel energetic and where you feel tired. Don't try to change anything, just observe the landscape of your physical energy."
+    },
+    {
+      "day": 31,
+      "theme": "Sound Awareness",
+      "instruction": "Pay attention to the silence between sounds. Notice the brief pauses and gaps in the soundscape around you."
+    },
+    {
+      "day": 32,
+      "theme": "Loving-Kindness for All Beings",
+      "instruction": "Expand your circle of kindness to include all living beings everywhere. Silently repeat: 'May all beings be happy. May all beings be safe. May all beings be free.'"
+    },
+    {
+      "day": 33,
+      "theme": "Mindful Observation",
+      "instruction": "If you are near a window, watch the movement of clouds or leaves in the wind. Observe the constant, gentle change."
+    },
+    {
+      "day": 34,
+      "theme": "Working with Thoughts",
+      "instruction": "When a strong thought or worry appears, ask yourself: 'Is this thought helpful right now?' Gently guide your attention back to your breath."
+    },
+    {
+      "day": 35,
+      "theme": "Compassion for Self",
+      "instruction": "Think of a recent mistake or failing. Offer yourself the same compassion you would offer a dear friend in the same situation. Acknowledge that to be human is to be imperfect."
+    },
+    {
+      "day": 36,
+      "theme": "Breath Awareness",
+      "instruction": "Notice the four parts of your breath: the inhalation, the pause at the top, the exhalation, and the pause at the bottom. Rest your attention on this full cycle."
+    },
+    {
+      "day": 37,
+      "theme": "Body Scan",
+      "instruction": "Bring your awareness to the entire container of your body. Feel the outline of your physical form and the sense of it being a whole, interconnected system."
+    },
+    {
+      "day": 38,
+      "theme": "Sensory Awareness: Sight",
+      "instruction": "Without moving your eyes, notice the colors in your peripheral vision. Gently expand your awareness to take in the full spectrum of color around you."
+    },
+    {
+      "day": 39,
+      "theme": "Loving-Kindness",
+      "instruction": "Bring to mind a group of people (your family, your coworkers, your community). Hold them all in your awareness and extend wishes of well-being to the entire group."
+    },
+    {
+      "day": 40,
+      "theme": "Mindful Listening",
+      "instruction": "If you are in a conversation today, practice listening to understand, rather than listening to reply. Give the other person your full, present attention."
+    },
+    {
+      "day": 41,
+      "theme": "Working with Emotions",
+      "instruction": "Notice the 'flavor' of your current emotional state. Is it calm, agitated, joyful, heavy? Acknowledge it without judgment."
+    },
+    {
+      "day": 42,
+      "theme": "Impermanence",
+      "instruction": "Reflect on the fact that this current moment, exactly as it is, will never happen again. This can bring a sense of preciousness to the present."
+    },
+    {
+      "day": 43,
+      "theme": "Breath Awareness",
+      "instruction": "As you inhale, silently say 'In'. As you exhale, silently say 'Out'. Use these simple labels to keep your mind anchored."
+    },
+    {
+      "day": 44,
+      "theme": "Body Scan",
+      "instruction": "Scan your body for any sensations of tightness or contraction. As you breathe out, imagine those areas softening and releasing, even just a little."
+    },
+    {
+      "day": 45,
+      "theme": "Open Awareness",
+      "instruction": "Rest in a state of choiceless awareness. Whatever comes into your attention—a thought, a feeling, a sound—is welcome. Simply notice it and let it be."
+    },
+    {
+      "day": 46,
+      "theme": "Gratitude",
+      "instruction": "Bring to mind a person who has helped you or shown you kindness. Silently thank them in your heart."
+    },
+    {
+      "day": 47,
+      "theme": "Mindful Eating",
+      "instruction": "When you have your next meal or snack, take the first bite with your full attention. Notice the flavors, textures, and smells as if for the first time."
+    },
+    {
+      "day": 48,
+      "theme": "Working with Thoughts",
+      "instruction": "Recognize that your thoughts are not facts. They are mental events that arise and pass away. You don't have to believe them or act on them."
+    },
+    {
+      "day": 49,
+      "theme": "Compassion",
+      "instruction": "Think about the shared human desire to be happy and to avoid suffering. Reflect on how this connects you to every other person on the planet."
+    },
+    {
+      "day": 50,
+      "theme": "Breath Awareness",
+      "instruction": "Follow one single breath from the very beginning of the inhalation all the way to the very end of the exhalation. Give it your complete attention."
+    },
+    {
+      "day": 51,
+      "theme": "Body Scan",
+      "instruction": "Notice the subtle sensation of your heartbeat. Feel this gentle rhythm, a constant sign of life within you."
+    },
+    {
+      "day": 52,
+      "theme": "Sound Awareness",
+      "instruction": "Listen to the sounds within your own body—your breath, your heartbeat, the rumbling of digestion. Explore your internal soundscape."
+    },
+    {
+      "day": 53,
+      "theme": "Loving-Kindness",
+      "instruction": "Bring yourself to mind and wish yourself peace. Then, bring a loved one to mind and wish them peace. See if you can extend this feeling of peace outward."
+    },
+    {
+      "day": 54,
+      "theme": "Mindful Observation",
+      "instruction": "Find a plant or flower and observe it closely. Notice the details of its structure, its colors, and any signs of life and growth."
+    },
+    {
+      "day": 55,
+      "theme": "Working with Emotions",
+      "instruction": "When a difficult emotion arises, ask 'What does this feeling need?' Does it need acceptance? Kindness? Space? Listen for the answer."
+    },
+    {
+      "day": 56,
+      "theme": "Interconnectedness",
+      "instruction": "Consider the clothes you are wearing. Reflect on the many people and processes involved in creating them and bringing them to you (farmers, factory workers, drivers, etc.)."
+    },
+    {
+      "day": 57,
+      "theme": "Breath Awareness",
+      "instruction": "Notice how your body breathes itself. You don't have to do anything; the process happens on its own. Rest in this natural, effortless rhythm."
+    },
+    {
+      "day": 58,
+      "theme": "Body Scan",
+      "instruction": "Bring a gentle, kind awareness to an area of your body where you experience chronic pain or discomfort. Breathe into it with a sense of softness and care, not resistance."
+    },
+    {
+      "day": 59,
+      "theme": "Sensory Awareness: Smell",
+      "instruction": "Take a moment to notice the scents in the air around you. Are they faint or strong? Pleasant or neutral? Just observe."
+    },
+    {
+      "day": 60,
+      "theme": "Loving-Kindness",
+      "instruction": "Imagine someone you love smiling. Hold that image in your mind and allow it to bring a sense of warmth and joy."
+    },
+    {
+      "day": 61,
+      "theme": "Mindful Waiting",
+      "instruction": "The next time you are waiting in line or for something to load, use it as an opportunity to practice. Notice your breath and the sensations in your body instead of reaching for your phone."
+    },
+    {
+      "day": 62,
+      "theme": "Working with Thoughts",
+      "instruction": "Notice the tone of your thoughts. Are they critical, worried, neutral, kind? Simply observe the quality of your inner monologue."
+    },
+    {
+      "day": 63,
+      "theme": "Gratitude",
+      "instruction": "Reflect on one part of your body that works well and that you are grateful for. It could be your eyes that see, your legs that walk, or your lungs that breathe."
+    },
+    {
+      "day": 64,
+      "theme": "Breath Awareness",
+      "instruction": "Feel the sensation of your whole body breathing. With each in-breath, feel your body subtly expand; with each out-breath, feel it soften."
+    },
+    {
+      "day": 65,
+      "theme": "Body Scan",
+      "instruction": "Notice the points of contact your body is making with the floor or furniture. Feel the solidness and support of the surface beneath you."
+    },
+    {
+      "day": 66,
+      "theme": "Open Awareness",
+      "instruction": "Let your awareness be like the sky—vast, open, and allowing all 'weather' (thoughts, feelings, sensations) to pass through without resistance."
+    },
+    {
+      "day": 67,
+      "theme": "Compassion",
+      "instruction": "Recall a time someone was compassionate toward you. Reconnect with how that felt, and consider how you might offer that feeling to someone else today."
+    },
+    {
+      "day": 68,
+      "theme": "Mindful Chores",
+      "instruction": "Pick one routine chore today (like brushing your teeth) and do it with your full attention. Notice all the physical sensations involved."
+    },
+    {
+      "day": 69,
+      "theme": "Working with Emotions",
+      "instruction": "Investigate a pleasant emotion. Where do you feel joy, contentment, or peace in your body? Savor the physical sensation of it."
+    },
+    {
+      "day": 70,
+      "theme": "Impermanence",
+      "instruction": "Notice a sound from its beginning to its end. Observe how it arises, lingers for a moment, and then fades away into silence."
+    },
+    {
+      "day": 71,
+      "theme": "Breath Awareness",
+      "instruction": "Imagine your in-breath gathering calm and your out-breath releasing tension. Breathe in calm, breathe out tension."
+    },
+    {
+      "day": 72,
+      "theme": "Body Scan",
+      "instruction": "Feel the space inside your body. Notice the sense of volume and openness within your torso, arms, and legs."
+    },
+    {
+      "day": 73,
+      "theme": "Sound Awareness",
+      "instruction": "Categorize the sounds you hear as 'pleasant', 'unpleasant', or 'neutral'. Notice if you have a tendency to resist the unpleasant sounds or cling to the pleasant ones."
+    },
+    {
+      "day": 74,
+      "theme": "Loving-Kindness",
+      "instruction": "Offer well-wishes to someone you saw today but do not know. Acknowledge their humanity and wish them well on their journey."
+    },
+    {
+      "day": 75,
+      "theme": "Mindful Observation",
+      "instruction": "Notice the way your own facial expression feels from the inside. Are your muscles tense or relaxed?"
+    },
+    {
+      "day": 76,
+      "theme": "Working with Thoughts",
+      "instruction": "Instead of saying 'I am angry,' try reframing it as 'There is a feeling of anger present.' This creates a little space between you and the emotion."
+    },
+    {
+      "day": 77,
+      "theme": "Gratitude",
+      "instruction": "Be grateful for your challenges. Reflect on how a past difficulty has helped you grow stronger or wiser."
+    },
+    {
+      "day": 78,
+      "theme": "Breath Awareness",
+      "instruction": "Match the length of your inhalation to the length of your exhalation for a few cycles, creating a sense of balance."
+    },
+    {
+      "day": 79,
+      "theme": "Body Scan",
+      "instruction": "Bring your awareness to your shoulders and neck, a common area for holding stress. Gently invite any tension there to soften and release."
+    },
+    {
+      "day": 80,
+      "theme": "Sensory Awareness: Taste",
+      "instruction": "When you drink a glass of water, notice the sensation of the coolness and the feeling of it quenching your thirst. Savor this simple act."
+    },
+    {
+      "day": 81,
+      "theme": "Self-Compassion",
+      "instruction": "Acknowledge that you are doing the best you can with the resources you have in this moment. Offer yourself a moment of grace."
+    },
+    {
+      "day": 82,
+      "theme": "Mindful Technology Use",
+      "instruction": "Before you pick up your phone, pause. Ask yourself: 'What is my intention?' Notice if you are acting out of habit or conscious choice."
+    },
+    {
+      "day": 83,
+      "theme": "Working with Urges",
+      "instruction": "When an urge arises (e.g., to check email, eat a snack), just notice it as a physical sensation. Observe how it grows, peaks, and eventually subsides on its own if you don't act on it."
+    },
+    {
+      "day": 84,
+      "theme": "Interconnectedness",
+      "instruction": "Consider the air you are breathing. It has been shared by countless other beings and plants. Feel this connection to the web of life."
+    },
+    {
+      "day": 85,
+      "theme": "Breath Awareness",
+      "instruction": "Focus on your exhalation. With each out-breath, feel a sense of letting go, releasing, and settling."
+    },
+    {
+      "day": 86,
+      "theme": "Body Scan",
+      "instruction": "Notice the subtle movements in your body, even when sitting still—your chest moving with your breath, your pulse, small shifts in posture."
+    },
+    {
+      "day": 87,
+      "theme": "Open Awareness",
+      "instruction": "Sit and simply be aware of 'what is here now?' Welcome whatever arises into your field of awareness without needing to do anything about it."
+    },
+    {
+      "day": 88,
+      "theme": "Loving-Kindness",
+      "instruction": "Think of someone who has inspired you. Send them feelings of gratitude and well-wishes."
+    },
+    {
+      "day": 89,
+      "theme": "Mindful Observation",
+      "instruction": "Notice patterns in your environment—the grain of wood, the weave of fabric, the arrangement of tiles on the floor."
+    },
+    {
+      "day": 90,
+      "theme": "Working with Thoughts",
+      "instruction": "When a worrying thought arises, label it 'worrying'. This simple act can reduce its power and remind you that it is just a thought."
+    },
+    {
+      "day": 91,
+      "theme": "Gratitude",
+      "instruction": "Be grateful for the gift of this day. Acknowledge that having this time is a precious opportunity."
+    },
+    {
+      "day": 92,
+      "theme": "Breath Awareness",
+      "instruction": "Let your breath be your anchor in the present moment. Whenever your mind wanders, gently guide it back to the physical sensation of breathing."
+    },
+    {
+      "day": 93,
+      "theme": "Body Scan",
+      "instruction": "Feel the weight and solidity of your body. Sense its presence and groundedness on the earth."
+    },
+    {
+      "day": 94,
+      "theme": "Sound Awareness",
+      "instruction": "Notice the beginning, middle, and end of a single sound. Pay attention to its entire lifecycle."
+    },
+    {
+      "day": 95,
+      "theme": "Compassion",
+      "instruction": "Bring to mind all the people who are working right now to make your life possible (e.g., farmers, utility workers, healthcare professionals). Send them a feeling of gratitude and support."
+    },
+    {
+      "day": 96,
+      "theme": "Mindful Transitions",
+      "instruction": "When you move from one task to another today, take one conscious breath as a moment of pause to reset your attention."
+    },
+    {
+      "day": 97,
+      "theme": "Working with Emotions",
+      "instruction": "Recognize that emotions are like weather—they are not permanent and will eventually pass. Observe your inner weather without getting swept away."
+    },
+    {
+      "day": 98,
+      "theme": "Impermanence",
+      "instruction": "Reflect on a past version of yourself. Acknowledge how much you have changed, demonstrating the fluid, unfixed nature of identity."
+    },
+    {
+      "day": 99,
+      "theme": "Breath Awareness",
+      "instruction": "Let your awareness rest in the pause after the exhale. Notice the stillness and quiet in that moment before the next breath begins."
+    },
+    {
+      "day": 100,
+      "theme": "Quarterly Review",
+      "instruction": "For a few minutes, sit quietly and simply rest. After months of focused practice, allow yourself a moment of pure, objectless being. Notice what that feels like."
+    },
+    {
+      "day": 101,
+      "theme": "Mindful Breathing",
+      "instruction": "Place a hand on your belly and feel it rise and fall with each breath. This can enhance the sensation and help keep you grounded."
+    },
+    {
+      "day": 102,
+      "theme": "Body Scan",
+      "instruction": "Notice the overall temperature of your body. Are there areas that feel warmer or cooler than others? Just observe without judgment."
+    },
+    {
+      "day": 103,
+      "theme": "Soundscape Meditation",
+      "instruction": "Imagine your ears are microphones, passively receiving all sounds without discrimination. Let the entire symphony of sounds wash over you."
+    },
+    {
+      "day": 104,
+      "theme": "Loving-Kindness for a Friend",
+      "instruction": "Bring a good friend to mind. Hold their image and silently wish them everything you would wish for yourself: happiness, health, and peace."
+    },
+    {
+      "day": 105,
+      "theme": "Visual Observation",
+      "instruction": "Let your eyes rest softly on a point in front of you. Without straining, simply take in the visual information in your field of vision."
+    },
+    {
+      "day": 106,
+      "theme": "Labeling Thoughts",
+      "instruction": "As thoughts arise, categorize them: 'planning,' 'remembering,' 'judging,' 'fantasizing.' This shows you the patterns of your mind."
+    },
+    {
+      "day": 107,
+      "theme": "Gratitude for the Body",
+      "instruction": "Thank your body for all the work it does without your conscious effort—digesting food, fighting illness, healing wounds. Appreciate its innate intelligence."
+    },
+    {
+      "day": 108,
+      "theme": "Mindful Breathing",
+      "instruction": "Notice how the breath feels in your throat and chest. Follow the sensation as the air travels down and then back up."
+    },
+    {
+      "day": 109,
+      "theme": "Body Scan",
+      "instruction": "Focus on your jaw. Consciously unclench it, letting your teeth part slightly and your tongue rest comfortably in your mouth. Notice the release of tension."
+    },
+    {
+      "day": 110,
+      "theme": "Sound Awareness",
+      "instruction": "Listen for the rhythm or pattern in the sounds around you, whether it's traffic, birdsong, or the hum of an appliance."
+    },
+    {
+      "day": 111,
+      "theme": "Loving-Kindness for Self (Physical)",
+      "instruction": "Direct kind wishes to your own body. 'May this body be strong. May this body be healthy. May this body be free from pain.'"
+    },
+    {
+      "day": 112,
+      "theme": "Observing Nature",
+      "instruction": "If possible, look at a tree. Observe its stillness and strength, its roots grounded in the earth and its branches reaching for the sky."
+    },
+    {
+      "day": 113,
+      "theme": "Acknowledging Emotions",
+      "instruction": "Gently ask yourself, 'What am I feeling right now?' Allow the answer to arise without needing to fix or analyze it. Just acknowledge its presence."
+    },
+    {
+      "day": 114,
+      "theme": "Compassion for Others' Struggles",
+      "instruction": "Remind yourself that everyone you meet is fighting a battle you know nothing about. Let this thought cultivate a sense of gentleness and patience toward others."
+    },
+    {
+      "day": 115,
+      "theme": "Counting the Breath",
+      "instruction": "Try counting your breaths backward from ten. Exhale ten, inhale ten. Exhale nine, inhale nine. If your mind wanders, gently start again from ten."
+    },
+    {
+      "day": 116,
+      "theme": "Body Scan",
+      "instruction": "Bring awareness to the posture of your spine. Gently lengthen it, creating a sense of dignity and alertness in your posture."
+    },
+    {
+      "day": 117,
+      "theme": "Sensory Awareness: Stillness",
+      "instruction": "Notice the moments of stillness in your body between movements. Feel the pause before you shift or adjust your position."
+    },
+    {
+      "day": 118,
+      "theme": "Loving-Kindness for a Community",
+      "instruction": "Bring your neighborhood or local community to mind. Extend wishes of safety, peace, and well-being to all who live there."
+    },
+    {
+      "day": 119,
+      "theme": "Mindful Seeing",
+      "instruction": "Choose a color and notice all the places it appears in your immediate environment. Let your eyes gently scan for just that one color."
+    },
+    {
+      "day": 120,
+      "theme": "Working with Thoughts",
+      "instruction": "Notice if a thought is about the past or the future. Gently acknowledge its time-frame ('past' or 'future') and return your attention to the present moment."
+    },
+    {
+      "day": 121,
+      "theme": "Impermanence of Sensation",
+      "instruction": "Focus on a physical sensation. Notice how it is not static; it may change in intensity, location, or quality from moment to moment."
+    },
+    {
+      "day": 122,
+      "theme": "Mindful Breathing",
+      "instruction": "Imagine breathing in energy and vitality, and breathing out any sluggishness or fatigue."
+    },
+    {
+      "day": 123,
+      "theme": "Body Scan",
+      "instruction": "Feel the sensation of your feet on the floor. Imagine roots growing down from your feet, grounding you to the earth."
+    },
+    {
+      "day": 124,
+      "theme": "Open Awareness",
+      "instruction": "Allow your awareness to be boundless, with no center and no edge. Rest in this open, spacious quality of mind."
+    },
+    {
+      "day": 125,
+      "theme": "Forgiveness Meditation",
+      "instruction": "Bring to mind a small hurt you have caused someone else. Acknowledge it without judgment and silently ask for forgiveness, letting go of self-blame."
+    },
+    {
+      "day": 126,
+      "theme": "Mindful Movement",
+      "instruction": "Slowly stretch your arms overhead. Pay full attention to the sensations in your muscles, joints, and skin as you move."
+    },
+    {
+      "day": 127,
+      "theme": "Working with difficult emotions",
+      "instruction": "When a challenging emotion is present, place a hand over your heart as a gesture of self-soothing and compassion. Breathe with the feeling."
+    },
+    {
+      "day": 128,
+      "theme": "Gratitude for Simple Things",
+      "instruction": "Be grateful for the chair that is supporting you, the roof over your head, and the air you are breathing. Acknowledge these simple supports."
+    },
+    {
+      "day": 129,
+      "theme": "Mindful Breathing",
+      "instruction": "Focus on the physical sensation of air filling your lungs. Feel the expansion in your chest and rib cage."
+    },
+    {
+      "day": 130,
+      "theme": "Body Scan",
+      "instruction": "Notice the aliveness in your body—the subtle hum of energy, tingling, or vibration that is always present."
+    },
+    {
+      "day": 131,
+      "theme": "Sound Awareness",
+      "instruction": "Listen to the sounds of your own breathing. Can you hear the soft whisper of air entering and leaving your body?"
+    },
+    {
+      "day": 132,
+      "theme": "Loving-Kindness for the World",
+      "instruction": "Hold the image of the Earth in your mind. Send wishes of peace, healing, and harmony to the planet and all its inhabitants."
+    },
+    {
+      "day": 133,
+      "theme": "Mindful Observation",
+      "instruction": "Notice the empty space in the room around you. Become aware of the space between objects, and the space in which everything exists."
+    },
+    {
+      "day": 134,
+      "theme": "Working with Thoughts",
+      "instruction": "Watch your thoughts as if you were sitting on a riverbank watching leaves float by. Don't try to grab them; just watch them drift past."
+    },
+    {
+      "day": 135,
+      "theme": "Self-Compassion",
+      "instruction": "Acknowledge a struggle you are currently facing. Silently tell yourself, 'This is a moment of suffering. Suffering is a part of life. May I be kind to myself.'"
+    },
+    {
+      "day": 136,
+      "theme": "Mindful Breathing",
+      "instruction": "Breathe in for a count of four, hold for a count of four, and breathe out for a count of six. Repeat this for a few cycles to calm the nervous system."
+    },
+    {
+      "day": 137,
+      "theme": "Body Scan",
+      "instruction": "Scan your body for any areas that feel good right now—perhaps a sense of warmth, relaxation, or tingling. Rest your attention there."
+    },
+    {
+      "day": 138,
+      "theme": "Sensory Awareness: Touch",
+      "instruction": "Gently touch the fingertips of one hand to the fingertips of the other. Notice the sensation of contact with curiosity."
+    },
+    {
+      "day": 139,
+      "theme": "Shared Humanity",
+      "instruction": "Reflect on the fact that at this very moment, millions of other people are also breathing, thinking, and feeling, just like you."
+    },
+    {
+      "day": 140,
+      "theme": "Mindful Listening to Music",
+      "instruction": "Listen to a piece of instrumental music. Instead of analyzing it, just let the sounds wash over you. Notice how the vibrations feel in your body."
+    },
+    {
+      "day": 141,
+      "theme": "Working with Emotions",
+      "instruction": "Notice how emotions are not solid. They are processes that flow and change. Observe the fluid nature of your feelings."
+    },
+    {
+      "day": 142,
+      "theme": "Impermanence of Thoughts",
+      "instruction": "Notice that a thought you had a minute ago is now gone. Where did it go? Acknowledge the transient nature of your mental activity."
+    },
+    {
+      "day": 143,
+      "theme": "Mindful Breathing",
+      "instruction": "Let your exhalation be slightly longer than your inhalation. This can help to activate the body's relaxation response."
+    },
+    {
+      "day": 144,
+      "theme": "Body Scan",
+      "instruction": "Notice the boundary of your skin. Feel the sensation of where 'you' end and the world begins. Explore this edge with your awareness."
+    },
+    {
+      "day": 145,
+      "theme": "Open Awareness",
+      "instruction": "Sit with a 'don't know' mind. Let go of any agendas or expectations, and simply be open and receptive to the present moment as it unfolds."
+    },
+    {
+      "day": 146,
+      "theme": "Gratitude for Others",
+      "instruction": "Bring to mind someone who does a difficult or thankless job. Silently acknowledge their contribution and send them a feeling of appreciation."
+    },
+    {
+      "day": 147,
+      "theme": "Mindful Drinking",
+      "instruction": "With your next cup of tea or coffee, take a moment to notice the warmth of the mug, the aroma, and the flavor of the first sip with your full attention."
+    },
+    {
+      "day": 148,
+      "theme": "Noting Thoughts",
+      "instruction": "Instead of getting lost in a thought, mentally 'note' it. 'Worry.' 'Plan.' 'Memory.' This creates a separation that allows for greater awareness."
+    },
+    {
+      "day": 149,
+      "theme": "Compassion",
+      "instruction": "Bring to mind an animal. Acknowledge its existence and its own desire to live peacefully. Extend a sense of kindness and respect toward it."
+    },
+    {
+      "day": 150,
+      "theme": "Mindful Breathing",
+      "instruction": "As you breathe, imagine you are providing life-giving oxygen to every cell in your body. Feel your breath as a nourishing force."
+    },
+    {
+      "day": 151,
+      "theme": "Body Scan",
+      "instruction": "Notice the weight of your arms resting in your lap or on the armrests. Let gravity do the work and release any effort to hold them up."
+    },
+    {
+      "day": 152,
+      "theme": "Sound Awareness",
+      "instruction": "Notice how sounds arise from silence and dissolve back into silence. Let your mind rest in that underlying quiet."
+    },
+    {
+      "day": 153,
+      "theme": "Loving-Kindness",
+      "instruction": "Bring to mind someone you admire from afar (an artist, a leader, a historical figure). Send them feelings of gratitude and respect."
+    },
+    {
+      "day": 154,
+      "theme": "Mindful Observation",
+      "instruction": "Notice the subtle shifts of light in your room as time passes. Observe the gentle dance of brightness and shadow."
+    },
+    {
+      "day": 155,
+      "theme": "Working with Emotions",
+      "instruction": "Ask yourself: 'Can I be with this feeling for just one more breath?' Practice staying present with your emotions, one moment at a time."
+    },
+    {
+      "day": 156,
+      "theme": "Interconnectedness",
+      "instruction": "Reflect on the water you drink. Consider its long journey through rivers, clouds, and rain to reach you. Feel your connection to the planet's water cycle."
+    },
+    {
+      "day": 157,
+      "theme": "Mindful Breathing",
+      "instruction": "Observe your breath without any labels or counting. Simply feel the raw physical sensation of breathing."
+    },
+    {
+      "day": 158,
+      "theme": "Body Scan",
+      "instruction": "Bring awareness to your whole body sitting here. Feel its shape, its weight, its presence in this moment."
+    },
+    {
+      "day": 159,
+      "theme": "Sensory Awareness: Smell",
+      "instruction": "Notice if there is a scent associated with the room you are in. Is it familiar? Faint? Simply be aware of the olfactory landscape."
+    },
+    {
+      "day": 160,
+      "theme": "Common Humanity",
+      "instruction": "Remind yourself that your struggles are part of the human condition. Others have felt this way. You are not alone. Feel the comfort in this shared experience."
+    },
+    {
+      "day": 161,
+      "theme": "Mindful Commuting",
+      "instruction": "During your commute today, take a few moments to notice the sights and sounds outside your window without judgment or story."
+    },
+    {
+      "day": 162,
+      "theme": "Working with Restlessness",
+      "instruction": "If you feel restless, notice the physical sensations of that energy in your body. Observe the urge to move without having to act on it."
+    },
+    {
+      "day": 163,
+      "theme": "Gratitude for the Senses",
+      "instruction": "Take a moment to be grateful for each of your senses: the ability to see, hear, smell, taste, and touch. Appreciate these gateways to the world."
+    },
+    {
+      "day": 164,
+      "theme": "Mindful Breathing",
+      "instruction": "Feel the breath as it moves through your entire body, not just your lungs. Imagine your toes, fingers, and head breathing in and out."
+    },
+    {
+      "day": 165,
+      "theme": "Body Scan",
+      "instruction": "Notice the contact points between your left and right sides. Where do your hands touch? Do your legs cross? Just be aware."
+    },
+    {
+      "day": 166,
+      "theme": "Open Awareness",
+      "instruction": "Let go of your primary anchor (like the breath) and allow your awareness to be open and receptive to whatever is most predominant in your experience moment to moment."
+    },
+    {
+      "day": 167,
+      "theme": "Self-Forgiveness",
+      "instruction": "Bring to mind a mistake for which you still carry guilt. Acknowledge the pain it caused, recognize that you did the best you could at the time, and offer yourself forgiveness."
+    },
+    {
+      "day": 168,
+      "theme": "Mindful Brushing",
+      "instruction": "When you brush your teeth, pay attention to the sensation of the bristles, the taste of the toothpaste, and the sound of the brush. Be fully present for this simple act."
+    },
+    {
+      "day": 169,
+      "theme": "Working with Joy",
+      "instruction": "When you feel a moment of joy or happiness, pause. Notice where you feel it in your body and allow yourself to fully savor the pleasant sensation."
+    },
+    {
+      "day": 170,
+      "theme": "Impermanence of Self",
+      "instruction": "Recognize that the 'you' of this moment is different from the 'you' of an hour ago. You are not a fixed entity, but a constantly changing process."
+    },
+    {
+      "day": 171,
+      "theme": "Mindful Breathing",
+      "instruction": "Notice the natural, unforced quality of your breath. You don't need to control it. Simply allow it to be as it is."
+    },
+    {
+      "day": 172,
+      "theme": "Body Scan",
+      "instruction": "Feel the aliveness in your fingertips. Notice any tingling, warmth, or pulsing sensations."
+    },
+    {
+      "day": 173,
+      "theme": "Sound Awareness",
+      "instruction": "Notice the texture of the sounds you hear. Are they sharp, soft, rough, smooth?"
+    },
+    {
+      "day": 174,
+      "theme": "Loving-Kindness for an Acquaintance",
+      "instruction": "Think of someone you know casually. Wish them happiness and well-being, strengthening the sense of positive connection in your social web."
+    },
+    {
+      "day": 175,
+      "theme": "Mindful Observation",
+      "instruction": "Observe a shadow. Notice its shape, its darkness, and how it changes as the light source moves."
+    },
+    {
+      "day": 176,
+      "theme": "Working with Desire",
+      "instruction": "When a desire or craving arises, observe it as a pattern of thought and sensation. Notice its energy without needing to immediately gratify it."
+    },
+    {
+      "day": 177,
+      "theme": "Gratitude for Knowledge",
+      "instruction": "Be grateful for one thing you have learned that has made your life better. Acknowledge the value of that knowledge."
+    },
+    {
+      "day": 178,
+      "theme": "Mindful Breathing",
+      "instruction": "Follow the breath as if it were the most interesting thing in the world. Approach each inhalation and exhalation with fresh curiosity."
+    },
+    {
+      "day": 179,
+      "theme": "Body Scan",
+      "instruction": "Bring awareness to the area around your heart. Notice any sensations of openness, tightness, warmth, or coolness in your chest."
+    },
+    {
+      "day": 180,
+      "theme": "Sensory Awareness: Stillness and Movement",
+      "instruction": "Notice what is still in your environment and what is moving. Be aware of both the dynamic and static aspects of the present moment."
+    },
+    {
+      "day": 181,
+      "theme": "Self-Compassion Break",
+      "instruction": "Acknowledge a moment of difficulty ('This is hard'). Recognize it's part of being human ('Others feel this way'). Offer yourself kindness ('May I be kind to myself')."
+    },
+    {
+      "day": 182,
+      "theme": "Half-Year Check-In",
+      "instruction": "Sit quietly and reflect on your journey so far this year. Acknowledge your efforts, your growth, and your challenges without judgment. Simply be with your story up to this point."
+    },
+    {
+      "day": 183,
+      "theme": "Mindful Breathing",
+      "instruction": "Feel the beginning, middle, and end of your inhalation. Then feel the beginning, middle, and end of your exhalation. Break the breath down into its component parts."
+    },
+    {
+      "day": 184,
+      "theme": "Body Scan",
+      "instruction": "Notice the sensation of gravity holding you to the earth. Feel your weight and the support of the ground or chair beneath you."
+    },
+    {
+      "day": 185,
+      "theme": "Sound Awareness",
+      "instruction": "Let sounds be just vibrations in the air. Drop the stories and labels about what is making the sound, and just experience the raw sensory data."
+    },
+    {
+      "day": 186,
+      "theme": "Loving-Kindness",
+      "instruction": "Bring to mind the people you will interact with today. Silently wish them a good day, setting an intention of kindness for your interactions."
+    },
+    {
+      "day": 187,
+      "theme": "Mindful Observation",
+      "instruction": "Look at your reflection in a window or screen. Observe the image without criticism or praise, just as a collection of shapes, colors, and light."
+    },
+    {
+      "day": 188,
+      "theme": "Working with Thoughts",
+      "instruction": "Recognize that you are the observer of your thoughts, not the thoughts themselves. Rest in this spacious awareness that is watching the mind."
+    },
+    {
+      "day": 189,
+      "theme": "Gratitude",
+      "instruction": "Be grateful for your ability to learn and grow. Acknowledge your capacity for change and adaptation."
+    },
+    {
+      "day": 190,
+      "theme": "Mindful Breathing",
+      "instruction": "Imagine your breath is a gentle broom, sweeping your mind clean of clutter with each exhalation."
+    },
+    {
+      "day": 191,
+      "theme": "Body Scan",
+      "instruction": "Bring awareness to your entire skeletal structure. Feel the solid framework that supports your body."
+    },
+    {
+      "day": 192,
+      "theme": "Sound Awareness",
+      "instruction": "Notice how your mind automatically labels sounds. For a few moments, see if you can just hear the sound without the label."
+    },
+    {
+      "day": 193,
+      "theme": "Loving-Kindness for Self",
+      "instruction": "Acknowledge one of your positive qualities. Silently appreciate this aspect of yourself and offer yourself kindness for it."
+    },
+    {
+      "day": 194,
+      "theme": "Observing Movement",
+      "instruction": "If you can see people walking, observe their movements without creating stories about them. Just notice the physical act of walking."
+    },
+    {
+      "day": 195,
+      "theme": "Working with Emotions",
+      "instruction": "Notice the impermanent, wave-like nature of an emotion. It rises in intensity, crests, and then naturally subsides if you allow it to."
+    },
+    {
+      "day": 196,
+      "theme": "Compassion",
+      "instruction": "Reflect on a time you were in need and someone helped you. Connect with that feeling of receiving care, and let it fuel your own compassion."
+    },
+    {
+      "day": 197,
+      "theme": "Mindful Breathing",
+      "instruction": "On the in-breath, be aware of the space you are taking up. On the out-breath, be aware of the space around you. Feel the connection between inner and outer space."
+    },
+    {
+      "day": 198,
+      "theme": "Body Scan",
+      "instruction": "Notice the subtle sensation of air on your exposed skin—your face, your hands. Feel the connection with the atmosphere around you."
+    },
+    {
+      "day": 199,
+      "theme": "Sensory Awareness: Touch",
+      "instruction": "Place your hands on your lap. Notice the texture of the fabric beneath your palms and fingers."
+    },
+    {
+      "day": 200,
+      "theme": "Loving-Kindness for a Difficult Person",
+      "instruction": "Recognize that a person you find difficult is also seeking happiness, just like you, even if they do it in unskillful ways. Hold this shared humanity in your awareness."
+    },
+    {
+      "day": 201,
+      "theme": "Mindful Observation",
+      "instruction": "Notice the geometry in the room: the straight lines of walls and furniture, the circles and squares. See the world as a collection of shapes."
+    },
+    {
+      "day": 202,
+      "theme": "Working with Thoughts",
+      "instruction": "When a thought hooks you, gently and kindly unhook yourself by saying 'thinking' and returning your focus to your breath."
+    },
+    {
+      "day": 203,
+      "theme": "Impermanence",
+      "instruction": "Contemplate that everything you can see, hear, and feel in this moment is temporary and in a state of flux. Rest in this understanding of change."
+    },
+    {
+      "day": 204,
+      "theme": "Mindful Breathing",
+      "instruction": "As you inhale, feel the sense of receiving. As you exhale, feel the sense of letting go. Inhale, receive; exhale, release."
+    },
+    {
+      "day": 205,
+      "theme": "Body Scan",
+      "instruction": "Bring awareness to the space between your eyebrows. Let this area soften and relax."
+    },
+    {
+      "day": 206,
+      "theme": "Open Awareness",
+      "instruction": "Sit with an attitude of friendly curiosity toward whatever enters your awareness. 'Ah, this thought.' 'Oh, that sound.' Welcome it all."
+    },
+    {
+      "day": 207,
+      "theme": "Gratitude",
+      "instruction": "Feel gratitude for your own capacity for awareness—this ability to notice your experience as it happens."
+    },
+    {
+      "day": 208,
+      "theme": "Mindful Action",
+      "instruction": "When you get up after this meditation, notice the intention to move, the physical process of rising, and the sensation of standing. Bring mindfulness to this simple action."
+    },
+    {
+      "day": 209,
+      "theme": "Working with Emotions",
+      "instruction": "Notice the difference between a primary emotion (e.g., sadness) and a secondary reaction to it (e.g., anger about being sad). Try to stay with the primary feeling."
+    },
+    {
+      "day": 210,
+      "theme": "Compassion",
+      "instruction": "Bring to mind the suffering of others in the world. Allow your heart to be touched by this reality and send a wish for their relief."
+    },
+    {
+      "day": 211,
+      "theme": "Mindful Breathing",
+      "instruction": "Follow your breath down into your belly, feeling it expand on the in-breath and gently contract on the out-breath."
+    },
+    {
+      "day": 212,
+      "theme": "Body Scan",
+      "instruction": "Notice any asymmetry in your body. Is one shoulder higher? Are you leaning to one side? Simply observe without needing to correct."
+    },
+    {
+      "day": 213,
+      "theme": "Sound Awareness",
+      "instruction": "Listen to the overall 'hum' of your environment—the combination of all sounds into a single, complex vibration."
+    },
+    {
+      "day": 214,
+      "theme": "Loving-Kindness",
+      "instruction": "Extend kind wishes to the person you were in the past. Offer that younger version of yourself compassion and understanding."
+    },
+    {
+      "day": 215,
+      "theme": "Mindful Observation",
+      "instruction": "Notice the process of blinking. Be aware of the brief moment of darkness and the sensation of your eyelids."
+    },
+    {
+      "day": 216,
+      "theme": "Working with Thoughts",
+      "instruction": "Acknowledge the creativity of your mind. It is constantly generating thoughts, plans, and stories. Appreciate this ability without getting lost in the content."
+    },
+    {
+      "day": 217,
+      "theme": "Interconnectedness",
+      "instruction": "Consider the food you ate today. Reflect on its connection to the sun, the soil, and the rain. Feel your part in this vast web of life."
+    },
+    {
+      "day": 218,
+      "theme": "Mindful Breathing",
+      "instruction": "Notice the rhythm of your breath. Is it fast, slow, deep, shallow? Just observe its natural pace right now."
+    },
+    {
+      "day": 219,
+      "theme": "Body Scan",
+      "instruction": "Bring a sense of warmth and kindness to your awareness as you scan your body. Let your attention be gentle and caring."
+    },
+    {
+      "day": 220,
+      "theme": "Sensory Awareness: Sight",
+      "instruction": "Let your gaze soften and unfocus. Take in the whole visual field at once, without focusing on any one object."
+    },
+    {
+      "day": 221,
+      "theme": "Common Humanity",
+      "instruction": "When you see other people today, remind yourself: 'This person wants to be happy, just like me. This person experiences pain, just like me.'"
+    },
+    {
+      "day": 222,
+      "theme": "Mindful Transitions",
+      "instruction": "Pause for a moment before you enter a new room or start a new task. Take one conscious breath to mark the transition."
+    },
+    {
+      "day": 223,
+      "theme": "Working with Restlessness",
+      "instruction": "If you feel antsy or bored, investigate that feeling. What are its physical sensations? Where is it in your body? Get curious about it."
+    },
+    {
+      "day": 224,
+      "theme": "Gratitude",
+      "instruction": "Think of one person who believes in you. Feel the warmth and support of their confidence in you."
+    },
+    {
+      "day": 225,
+      "theme": "Mindful Breathing",
+      "instruction": "Imagine your breath is a calm, deep lake. Let your mind rest in its stillness."
+    },
+    {
+      "day": 226,
+      "theme": "Body Scan",
+      "instruction": "Feel the sensation of the air as you breathe in and out of your nostrils. Notice the subtle coolness and warmth."
+    },
+    {
+      "day": 227,
+      "theme": "Open Awareness",
+      "instruction": "Be aware of your experience in this moment without trying to hold onto it or push it away. Practice radical acceptance of 'what is.'"
+    },
+    {
+      "day": 228,
+      "theme": "Loving-Kindness",
+      "instruction": "Extend well-wishes to your future self. 'May my future self be happy. May my future self be healthy. May my future self find peace.'"
+    },
+    {
+      "day": 229,
+      "theme": "Mindful Observation",
+      "instruction": "Notice how your perception of an object changes depending on how close or far away it is. Explore the effect of distance on your senses."
+    },
+    {
+      "day": 230,
+      "theme": "Working with Thoughts",
+      "instruction": "Let go of the need to control your thoughts. Allow them to arise and pass naturally, like bubbles rising to the surface of water."
+    },
+    {
+      "day": 231,
+      "theme": "Impermanence",
+      "instruction": "Reflect that all your current worries and joys are temporary states. This too shall pass. Find a sense of ease in this knowledge."
+    },
+    {
+      "day": 232,
+      "theme": "Mindful Breathing",
+      "instruction": "Breathe in, aware of your body. Breathe out, smiling to your body. Acknowledge your physical presence with kindness."
+    },
+    {
+      "day": 233,
+      "theme": "Body Scan",
+      "instruction": "Notice the subtle energetic quality of your body. Does it feel vibrant, dull, calm, agitated? Just observe."
+    },
+    {
+      "day": 234,
+      "theme": "Sound Awareness",
+      "instruction": "Notice the direction from which sounds are coming—left, right, in front, behind. Map out your auditory space."
+    },
+    {
+      "day": 235,
+      "theme": "Self-Compassion",
+      "instruction": "Silently repeat, 'I am enough, just as I am in this moment.' Let the words be a soothing balm."
+    },
+    {
+      "day": 236,
+      "theme": "Mindful Technology Break",
+      "instruction": "After you finish using a device, take 60 seconds to just sit. Notice the echo of the screen time in your mind and body before moving on."
+    },
+    {
+      "day": 237,
+      "theme": "Working with Emotions",
+      "instruction": "Investigate the 'story' attached to an emotion. Notice the narrative your mind creates, and see if you can separate the story from the raw physical sensation."
+    },
+    {
+      "day": 238,
+      "theme": "Gratitude for Nature",
+      "instruction": "Be grateful for the sun, which provides warmth and light, fueling all life on Earth. Feel a connection to this vast source of energy."
+    },
+    {
+      "day": 239,
+      "theme": "Mindful Breathing",
+      "instruction": "Imagine your breath reaching every part of your body, from the top of your head to the tips of your toes."
+    },
+    {
+      "day": 240,
+      "theme": "Body Scan",
+      "instruction": "Notice the places in your body that feel neutral—not pleasant or unpleasant. Rest your awareness in this simple, non-dramatic experience."
+    },
+    {
+      "day": 241,
+      "theme": "Sensory Awareness: Touch",
+      "instruction": "Feel the subtle movement of air on your skin. Can you detect any gentle currents or breezes in the room?"
+    },
+    {
+      "day": 242,
+      "theme": "Loving-Kindness",
+      "instruction": "Bring to mind all the people who have shown you kindness. Let your heart fill with gratitude for the love and support you have received."
+    },
+    {
+      "day": 243,
+      "theme": "Mindful Observation",
+      "instruction": "Notice the interaction of different textures in your environment. The smoothness of a table, the roughness of a wall, the softness of fabric."
+    },
+    {
+      "day": 244,
+      "theme": "Working with Thoughts",
+      "instruction": "Notice the 'stickiness' of some thoughts. Observe how the mind wants to cling to them, and gently practice the art of letting go, again and again."
+    },
+    {
+      "day": 245,
+      "theme": "Interconnectedness",
+      "instruction": "Reflect that the atoms making up your body were once part of distant stars. Feel your connection to the vastness of the cosmos."
+    },
+    {
+      "day": 246,
+      "theme": "Mindful Breathing",
+      "instruction": "On your next in-breath, silently say 'calm'. On your next out-breath, silently say 'ease'. Inhale calm, exhale ease."
+    },
+    {
+      "day": 247,
+      "theme": "Body Scan",
+      "instruction": "Bring a gentle curiosity to your physical sensations. Approach your body not with a goal, but with an open-ended question: 'What is here right now?'"
+    },
+    {
+      "day": 248,
+      "theme": "Open Awareness",
+      "instruction": "Rest in the awareness that is aware. Notice the quality of consciousness itself—the simple fact that you are experiencing this moment."
+    },
+    {
+      "day": 249,
+      "theme": "Compassion",
+      "instruction": "Think of someone you know who is happy and thriving. Rejoice in their happiness (this is called 'sympathetic joy' or 'mudita')."
+    },
+    {
+      "day": 250,
+      "theme": "Mindful Action",
+      "instruction": "Perform a simple, everyday action—like picking up a cup—with the precision and care of a sacred ritual. Notice every detail of the movement."
+    },
+    {
+      "day": 251,
+      "theme": "Working with Pain",
+      "instruction": "If there is physical pain, separate the raw sensation from the mental story about it ('This is awful, it will never end'). Just stay with the pure sensation for a breath."
+    },
+    {
+      "day": 252,
+      "theme": "Gratitude",
+      "instruction": "Be grateful for your own resilience. Acknowledge all the challenges you have already survived and navigated in your life."
+    },
+    {
+      "day": 253,
+      "theme": "Mindful Breathing",
+      "instruction": "Let your breath be a reminder to return to the present moment, over and over again."
+    },
+    {
+      "day": 254,
+      "theme": "Body Scan",
+      "instruction": "Notice the space your body occupies. Feel your own physical presence in the room."
+    },
+    {
+      "day": 255,
+      "theme": "Sound Awareness",
+      "instruction": "Pay attention to the vibrational quality of sounds. Feel them as energy moving through the air and your body."
+    },
+    {
+      "day": 256,
+      "theme": "Loving-Kindness for Self",
+      "instruction": "Silently say to yourself: 'May I accept myself just as I am.' Offer yourself radical acceptance in this moment."
+    },
+    {
+      "day": 257,
+      "theme": "Mindful Observation",
+      "instruction": "Observe the natural world outside your window. Notice the signs of life, change, and the current season."
+    },
+    {
+      "day": 258,
+      "theme": "Working with Thoughts",
+      "instruction": "Notice how thoughts often come in chains. See if you can catch the moment one thought links to the next, creating a story."
+    },
+    {
+      "day": 259,
+      "theme": "Impermanence",
+      "instruction": "Reflect on a happy memory. Acknowledge that the moment has passed, and appreciate it as a precious part of your history, without clinging."
+    },
+    {
+      "day": 260,
+      "theme": "Mindful Breathing",
+      "instruction": "Breathe in, aware of your whole body. Breathe out, releasing all tension. Let your breath soothe your entire physical being."
+    },
+    {
+      "day": 261,
+      "theme": "Body Scan",
+      "instruction": "Bring awareness to your internal organs—your stomach, lungs, heart. Sense the quiet, constant work happening inside you."
+    },
+    {
+      "day": 262,
+      "theme": "Open Awareness",
+      "instruction": "Notice the constant stream of experience: sights, sounds, thoughts, feelings. Let it all flow without needing to grasp or control any of it."
+    },
+    {
+      "day": 263,
+      "theme": "Shared Humanity",
+      "instruction": "Consider the simple act of breathing. At this very moment, billions of others are sharing this fundamental experience of life with you."
+    },
+    {
+      "day": 264,
+      "theme": "Mindful Communication",
+      "instruction": "Before you speak today, take a brief pause. Consider if your words are true, necessary, and kind."
+    },
+    {
+      "day": 265,
+      "theme": "Working with difficult emotions",
+      "instruction": "Imagine a difficult emotion as a small child needing attention. Turn toward it with kindness and care, rather than pushing it away."
+    },
+    {
+      "day": 266,
+      "theme": "Gratitude",
+      "instruction": "Be grateful for the challenges that have shaped you and taught you important lessons."
+    },
+    {
+      "day": 267,
+      "theme": "Mindful Breathing",
+      "instruction": "Simply rest your attention on the fact that you are breathing. This alone is a profound anchor to the present."
+    },
+    {
+      "day": 268,
+      "theme": "Body Scan",
+      "instruction": "Feel the structure of your feet—the bones, arches, and contact points with the floor. Appreciate this foundation."
+    },
+    {
+      "day": 269,
+      "theme": "Sound Awareness",
+      "instruction": "Notice the rhythm of your own life—the pattern of your breathing, your heartbeat, the cadence of your thoughts."
+    },
+    {
+      "day": 270,
+      "theme": "Loving-Kindness",
+      "instruction": "Offer kind wishes to all people, without exception. 'May all beings everywhere be filled with loving-kindness.'"
+    },
+    {
+      "day": 271,
+      "theme": "Mindful Observation",
+      "instruction": "Notice the quality of the light in the room. Is it bright, dim, warm, cool? How does it affect your mood?"
+    },
+    {
+      "day": 272,
+      "theme": "Working with Thoughts",
+      "instruction": "Don't believe everything you think. Treat your thoughts as suggestions or possibilities, not as absolute truths."
+    },
+    {
+      "day": 273,
+      "theme": "Three-Quarter Review",
+      "instruction": "Reflect on a key theme that has emerged in your life this year. What have you learned about it? What is your relationship to it now?"
+    },
+    {
+      "day": 274,
+      "theme": "Mindful Breathing",
+      "instruction": "Breathe in, gathering your scattered attention. Breathe out, settling into the present moment."
+    },
+    {
+      "day": 275,
+      "theme": "Body Scan",
+      "instruction": "Sense the weight of your head on your neck and shoulders. Can you release any tension and let your skeleton do the work of holding it up?"
+    },
+    {
+      "day": 276,
+      "theme": "Open Awareness",
+      "instruction": "Notice the space around your body. Feel yourself existing within this space, connected to it."
+    },
+    {
+      "day": 277,
+      "theme": "Compassion",
+      "instruction": "Bring to mind someone who has hurt you. Acknowledge that their actions likely came from their own pain and confusion. If possible, wish for them to be free from that pain."
+    },
+    {
+      "day": 278,
+      "theme": "Mindful Action",
+      "instruction": "As you go about your day, notice the sensation of your hands as they touch different objects—a doorknob, a keyboard, a cup."
+    },
+    {
+      "day": 279,
+      "theme": "Working with Joy",
+      "instruction": "Recall a moment of simple happiness. Let yourself re-experience the feeling in your body, savoring the memory."
+    },
+    {
+      "day": 280,
+      "theme": "Gratitude",
+      "instruction": "Be grateful for a time when something went wrong, and you learned a valuable lesson from it."
+    },
+    {
+      "day": 281,
+      "theme": "Mindful Breathing",
+      "instruction": "Observe the breath as pure sensation, without adding the words 'in' or 'out'. Just feel the raw data of the body breathing."
+    },
+    {
+      "day": 282,
+      "theme": "Body Scan",
+      "instruction": "Notice the natural alignment of your body. Feel the connection from your feet, up your spine, to the crown of your head."
+    },
+    {
+      "day": 283,
+      "theme": "Sound Awareness",
+      "instruction": "Be aware of the soundscape as a whole, a tapestry woven from many different auditory threads."
+    },
+    {
+      "day": 284,
+      "theme": "Loving-Kindness for Self",
+      "instruction": "Acknowledge your own effort and good intentions, regardless of the outcome. Offer yourself appreciation for trying."
+    },
+    {
+      "day": 285,
+      "theme": "Mindful Observation",
+      "instruction": "Observe the impermanence of a single thought. Watch it arise in the mind, exist for a moment, and then fade away."
+    },
+    {
+      "day": 286,
+      "theme": "Working with Thoughts",
+      "instruction": "Ask of a recurring thought: 'Who would I be without this thought?' Imagine the freedom of not being defined by it."
+    },
+    {
+      "day": 287,
+      "theme": "Interconnectedness",
+      "instruction": "Reflect on how your well-being is connected to the well-being of others, and their well-being is connected to yours."
+    },
+    {
+      "day": 288,
+      "theme": "Mindful Breathing",
+      "instruction": "Let each breath be a new beginning. With every inhalation, you have a chance to start fresh in the present moment."
+    },
+    {
+      "day": 289,
+      "theme": "Body Scan",
+      "instruction": "Feel the gentle movement of your clothing as your body breathes. Notice this subtle, rhythmic sensation."
+    },
+    {
+      "day": 290,
+      "theme": "Sensory Awareness: Stillness",
+      "instruction": "Notice the stillness within your own body, the quiet presence that underlies all movement and activity."
+    },
+    {
+      "day": 291,
+      "theme": "Self-Compassion",
+      "instruction": "If you are feeling critical of yourself, ask: 'What would kindness say right now?' Listen for a gentler inner voice."
+    },
+    {
+      "day": 292,
+      "theme": "Mindful Consumption",
+      "instruction": "Before you buy something today, pause. Ask: 'Do I truly need this? Will it bring lasting value to my life?'"
+    },
+    {
+      "day": 293,
+      "theme": "Working with Urges",
+      "instruction": "When a strong craving or urge appears, greet it like an old friend. 'Ah, the urge to check my phone is here again.' This friendly acknowledgment can reduce its power."
+    },
+    {
+      "day": 294,
+      "theme": "Gratitude",
+      "instruction": "Be grateful for the quiet moments, the times of peace and non-doing."
+    },
+    {
+      "day": 295,
+      "theme": "Mindful Breathing",
+      "instruction": "Imagine you are breathing in all the positive energy in the universe, and breathing out any negativity or stress."
+    },
+    {
+      "day": 296,
+      "theme": "Body Scan",
+      "instruction": "Notice the subtle difference between the left and right sides of your body. Is one side more tense or relaxed?"
+    },
+    {
+      "day": 297,
+      "theme": "Open Awareness",
+      "instruction": "Trust in your awareness to know what it needs to focus on. Let go of the need to direct it, and simply allow it to rest or move as it pleases."
+    },
+    {
+      "day": 298,
+      "theme": "Loving-Kindness",
+      "instruction": "Think of the Earth itself as a living being. Send it wishes of healing, respect, and care."
+    },
+    {
+      "day": 299,
+      "theme": "Mindful Observation",
+      "instruction": "Observe the space between your thoughts. Can you rest in that gap, however brief it may be?"
+    },
+    {
+      "day": 300,
+      "theme": "Working with Emotions",
+      "instruction": "Allow an emotion to be present without needing to understand its cause or fix it. Just give it space to be."
+    },
+    {
+      "day": 301,
+      "theme": "Impermanence",
+      "instruction": "Contemplate your own life as a flowing river, not a static object. You are a process, constantly in motion and change."
+    },
+    {
+      "day": 302,
+      "theme": "Mindful Breathing",
+      "instruction": "Feel your breath as a source of stability, a reliable anchor you can return to at any time."
+    },
+    {
+      "day": 303,
+      "theme": "Body Scan",
+      "instruction": "Bring awareness to the palms of your hands. Notice any tingling, warmth, or pulsing aliveness there."
+    },
+    {
+      "day": 304,
+      "theme": "Sound Awareness",
+      "instruction": "Listen to the layered nature of sound. Notice how some sounds are in the foreground, and others are in the background."
+    },
+    {
+      "day": 305,
+      "theme": "Compassion",
+      "instruction": "Acknowledge the shared vulnerability of being human. We all experience loss, sickness, and old age. Let this foster a sense of connection and kindness."
+    },
+    {
+      "day": 306,
+      "theme": "Mindful Action",
+      "instruction": "Choose one action you will perform today with deliberate, mindful attention, such as making your bed or washing your hands."
+    },
+    {
+      "day": 307,
+      "theme": "Working with Pain",
+      "instruction": "If you are experiencing emotional pain, breathe into the center of it with compassion, as if you were comforting a crying child."
+    },
+    {
+      "day": 308,
+      "theme": "Gratitude",
+      "instruction": "Be grateful for the present moment, recognizing it as the only time you ever truly have."
+    },
+    {
+      "day": 309,
+      "theme": "Mindful Breathing",
+      "instruction": "Let your breath be natural and easy. There is no 'right' way to breathe. Just observe the breath as it is."
+    },
+    {
+      "day": 310,
+      "theme": "Body Scan",
+      "instruction": "Notice the overall sense of being embodied. Feel what it's like to inhabit this physical form, right here, right now."
+    },
+    {
+      "day": 311,
+      "theme": "Open Awareness",
+      "instruction": "Let your awareness be like a vast, open field. Allow any thoughts, feelings, or sensations to arise and pass like weather moving across the landscape."
+    },
+    {
+      "day": 312,
+      "theme": "Loving-Kindness",
+      "instruction": "Offer kind wishes to yourself, acknowledging your own fundamental goodness and desire for happiness."
+    },
+    {
+      "day": 313,
+      "theme": "Mindful Observation",
+      "instruction": "Notice the constant, subtle dance of change in your sensory experience—a shift in light, a distant sound, a passing thought."
+    },
+    {
+      "day": 314,
+      "theme": "Working with Thoughts",
+      "instruction": "Notice the gap between an event and your interpretation of it. In that space lies your freedom to choose your response."
+    },
+    {
+      "day": 315,
+      "theme": "Interconnectedness",
+      "instruction": "Reflect on a simple object, like a pencil. Consider the wood from a tree, the graphite from a mine, the metal band, the rubber eraser, and all the people involved in its creation."
+    },
+    {
+      "day": 316,
+      "theme": "Mindful Breathing",
+      "instruction": "Breathe in, I calm my body. Breathe out, I smile. Dwelling in the present moment, I know this is a wonderful moment."
+    },
+    {
+      "day": 317,
+      "theme": "Body Scan",
+      "instruction": "Scan your body for any pleasant or neutral sensations. Let your attention rest on these areas of ease."
+    },
+    {
+      "day": 318,
+      "theme": "Sensory Awareness: Sight",
+      "instruction": "Notice how your eyes are constantly moving and scanning, even when you think you are looking at one thing. Observe this subtle, natural movement."
+    },
+    {
+      "day": 319,
+      "theme": "Shared Humanity",
+      "instruction": "Think of a person you admire. Recognize that they, too, have flaws, fears, and struggles. This makes their accomplishments even more inspiring."
+    },
+    {
+      "day": 320,
+      "theme": "Mindful Transitions",
+      "instruction": "When you hang up the phone or close your laptop, take a moment to pause and breathe before immediately moving to the next thing."
+    },
+    {
+      "day": 321,
+      "theme": "Working with Restlessness",
+      "instruction": "Instead of fighting feelings of boredom or restlessness, can you become curious about them? What do they actually feel like in the body?"
+    },
+    {
+      "day": 322,
+      "theme": "Gratitude",
+      "instruction": "Be grateful for the people who have challenged you, for they have helped you to grow and discover your own strength."
+    },
+    {
+      "day": 323,
+      "theme": "Mindful Breathing",
+      "instruction": "Feel your breath as a constant companion that has been with you since birth and will be with you until your last moment."
+    },
+    {
+      "day": 324,
+      "theme": "Body Scan",
+      "instruction": "Notice the subtle vibration of aliveness throughout your entire body."
+    },
+    {
+      "day": 325,
+      "theme": "Open Awareness",
+      "instruction": "Let go of the meditator. Let go of the meditation. Just let there be awareness."
+    },
+    {
+      "day": 326,
+      "theme": "Loving-Kindness",
+      "instruction": "Expand your loving-kindness to include all people in your country and in the world, wishing them peace and happiness."
+    },
+    {
+      "day": 327,
+      "theme": "Mindful Observation",
+      "instruction": "Observe the tendency of the mind to label things as 'good' or 'bad.' For a few moments, just let things be, without judgment."
+    },
+    {
+      "day": 328,
+      "theme": "Working with Thoughts",
+      "instruction": "Thank your mind for its thoughts, even the difficult ones. 'Thank you for trying to protect me.' This can soften your relationship with your own mind."
+    },
+    {
+      "day": 329,
+      "theme": "Impermanence",
+      "instruction": "Contemplate that every experience, pleasant or unpleasant, is like a visitor. It comes, stays for a while, and then it leaves."
+    },
+    {
+      "day": 330,
+      "theme": "Mindful Breathing",
+      "instruction": "Let your breath anchor you in the here and now, a safe harbor in the midst of life's storms."
+    },
+    {
+      "day": 331,
+      "theme": "Body Scan",
+      "instruction": "Sense into the soles of your feet, feeling your connection to the ground. Let this be a source of stability."
+    },
+    {
+      "day": 332,
+      "theme": "Sound Awareness",
+      "instruction": "Notice the sounds that are farthest away, then gradually bring your awareness to sounds that are closer and closer, until you are listening to the sound of your own breath."
+    },
+    {
+      "day": 333,
+      "theme": "Self-Compassion",
+      "instruction": "Put your hands on your heart and offer yourself a moment of warmth and kindness, especially if you are having a difficult day."
+    },
+    {
+      "day": 334,
+      "theme": "Mindful Daily Routine",
+      "instruction": "Choose one part of your morning routine—making coffee, showering—and commit to being fully present for it, engaging all your senses."
+    },
+    {
+      "day": 335,
+      "theme": "Working with Emotions",
+      "instruction": "Allow emotions to be messengers. What information might this feeling be trying to give you about your needs or values?"
+    },
+    {
+      "day": 336,
+      "theme": "Gratitude",
+      "instruction": "Be grateful for your own heart, for its capacity to feel love, compassion, and joy."
+    },
+    {
+      "day": 337,
+      "theme": "Mindful Breathing",
+      "instruction": "With each breath, feel the simple miracle of being alive in this moment."
+    },
+    {
+      "day": 338,
+      "theme": "Body Scan",
+      "instruction": "Notice the subtle sensations around your eyes. Can you soften the gaze and release any tension held there?"
+    },
+    {
+      "day": 339,
+      "theme": "Sensory Awareness: Touch",
+      "instruction": "Notice the feeling of the air temperature on your skin. Is it cool, warm, or neutral? Does it change?"
+    },
+    {
+      "day": 340,
+      "theme": "Shared Humanity",
+      "instruction": "Remind yourself that your personal struggles are part of a universal human experience. This connects you to everyone who has ever lived."
+    },
+    {
+      "day": 341,
+      "theme": "Mindful Listening",
+      "instruction": "When listening to someone, notice the tone and emotion in their voice, not just the words they are saying."
+    },
+    {
+      "day": 342,
+      "theme": "Working with Urges",
+      "instruction": "When an impulse arises, notice the story your mind tells you about why you 'need' to act on it. See the story as just a thought."
+    },
+    {
+      "day": 343,
+      "theme": "Interconnectedness",
+      "instruction": "Reflect on your dependence on others for your daily existence—the people who grow your food, generate your electricity, and maintain your community."
+    },
+    {
+      "day": 344,
+      "theme": "Mindful Breathing",
+      "instruction": "Breathe in, I am aware of my in-breath. Breathe out, I am aware of my out-breath. Keep it simple and direct."
+    },
+    {
+      "day": 345,
+      "theme": "Body Scan",
+      "instruction": "Feel the sensation of your body as a single, unified field of sensation, from head to toe."
+    },
+    {
+      "day": 346,
+      "theme": "Open Awareness",
+      "instruction": "Let your mind be like a mirror, reflecting whatever appears before it without judgment or alteration."
+    },
+    {
+      "day": 347,
+      "theme": "Loving-Kindness",
+      "instruction": "Offer kindness to those who support you—family, friends, mentors. Acknowledge their role in your life with gratitude."
+    },
+    {
+      "day": 348,
+      "theme": "Mindful Observation",
+      "instruction": "Notice the impermanence of the present moment. It arises, exists for an instant, and is immediately replaced by the next."
+    },
+    {
+      "day": 349,
+      "theme": "Working with Thoughts",
+      "instruction": "See your thoughts not as 'your' thoughts, but simply as 'thoughts' that are arising in awareness. This depersonalizes them and reduces their power."
+    },
+    {
+      "day": 350,
+      "theme": "Compassion",
+      "instruction": "Generate a feeling of compassion in your heart and radiate it outward, first to loved ones, then to your community, and finally to all beings."
+    },
+    {
+      "day": 351,
+      "theme": "Mindful Breathing",
+      "instruction": "As you inhale, feel your body filling with fresh energy. As you exhale, imagine releasing anything that is old or stale."
+    },
+    {
+      "day": 352,
+      "theme": "Body Scan",
+      "instruction": "Notice the areas of your body that are in shadow, away from the light. Bring a gentle awareness to these often-ignored places."
+    },
+    {
+      "day": 353,
+      "theme": "Sound Awareness",
+      "instruction": "Notice the most subtle sound you can detect. Let your awareness become very refined and focused."
+    },
+    {
+      "day": 354,
+      "theme": "Self-Forgiveness",
+      "instruction": "Acknowledge that you are a work in progress, and that making mistakes is part of the learning process. Offer yourself grace."
+    },
+    {
+      "day": 355,
+      "theme": "Mindful Action",
+      "instruction": "When you walk from one room to another, be fully aware of the intention to walk and the physical sensations of moving."
+    },
+    {
+      "day": 356,
+      "theme": "Working with Joy",
+      "instruction": "Notice small moments of everyday pleasure—the warmth of the sun, the taste of coffee, a kind word. Savor these simple joys."
+    },
+    {
+      "day": 357,
+      "theme": "Gratitude",
+      "instruction": "Be grateful for the path you have walked so far, with all its twists, turns, and lessons. Acknowledge your entire journey."
+    },
+    {
+      "day": 358,
+      "theme": "Mindful Breathing",
+      "instruction": "Use your breath as an anchor to the present, a safe harbor you can return to whenever you feel lost in thought."
+    },
+    {
+      "day": 359,
+      "theme": "Body Scan",
+      "instruction": "Feel your body from the inside out. Sense the inner space and aliveness of your physical form."
+    },
+    {
+      "day": 360,
+      "theme": "Open Awareness",
+      "instruction": "Rest in the simple knowing of being aware. This knowing is always present, calm, and clear, beneath the surface of all experience."
+    },
+    {
+      "day": 361,
+      "theme": "Loving-Kindness",
+      "instruction": "Let your final formal loving-kindness practice of the year be for yourself. 'May I be happy. May I be healthy. May I be safe. May I live with ease.'"
+    },
+    {
+      "day": 362,
+      "theme": "Mindful Observation",
+      "instruction": "Observe the end of one thing and the beginning of another—the end of a breath, the end of a sound, the end of a thought."
+    },
+    {
+      "day": 363,
+      "theme": "Working with Thoughts and Emotions",
+      "instruction": "Sit with whatever is present for you right now—thoughts, feelings, sensations. Offer it all a spacious and kind awareness, without needing to change a thing."
+    },
+    {
+      "day": 364,
+      "theme": "Compassion and Gratitude",
+      "instruction": "Hold both the suffering and the joy of the past year in your awareness. Feel compassion for the difficult moments and gratitude for the good ones."
+    },
+    {
+      "day": 365,
+      "theme": "Looking Forward",
+      "instruction": "Set an intention for the coming year not as a rigid goal, but as a direction for your heart. What quality (like kindness, courage, or peace) do you want to cultivate?"
+    },
+    {
+      "day": 366,
+      "theme": "Resting in Awareness",
+      "instruction": "For these final moments of the year's practice, simply rest. Let go of all techniques and effort. Be present with the simple, profound fact of your own existence. "
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "id": "proactive_personality_v1.0.0",
+  "version": "1.0.0",
+  "tier": "Tier 2",
+  "title": "Proactive Personality Profile",
+  "description": "This assessment measures your natural tendency to take initiative, identify opportunities, and actively influence your environment. A proactive personality is often linked to personal growth, career advancement, and entrepreneurship.",
+  "instructions": "Please rate how accurately each statement describes you. There are no right or wrong answers. Use the following scale for your responses.",
+  "scientificBasis": {
+    "summary": "This assessment measures Proactive Personality, a well-established construct in organizational psychology. It reflects an individual's disposition to identify and act on opportunities, show initiative, and persevere until meaningful change occurs. The items are based on the public domain International Personality Item Pool (IPIP) and concepts from foundational research on proactive personality.",
+    "citation": "Items are adapted from the Proactive Personality Scale by Bateman and Crant (1993, 1996). The concepts are public domain and wording has been adapted for general use, aligning with the International Personality Item Pool (IPIP) philosophy."
+  },
+  "responseScale": [
+    { "text": "Strongly Disagree", "value": 1 },
+    { "text": "Disagree", "value": 2 },
+    { "text": "Neither Agree nor Disagree", "value": 3 },
+    { "text": "Agree", "value": 4 },
+    { "text": "Strongly Agree", "value": 5 }
+  ],
+  "questions": [
+    {
+      "id": "q_01",
+      "text": "I am constantly on the lookout for new ways to improve things.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_02",
+      "text": "I feel driven to make a difference in my community, and maybe the world.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_03",
+      "text": "I tend to let others take the initiative to start new projects.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": true }
+    },
+    {
+      "id": "q_04",
+      "text": "Wherever I have been, I have been a powerful force for constructive change.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_05",
+      "text": "I enjoy facing and overcoming obstacles to my ideas.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_06",
+      "text": "Nothing is more exciting than seeing my ideas turn into reality.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_07",
+      "text": "If I see something I don't like, I fix it.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_08",
+      "text": "No matter what the odds, if I believe in something I will make it happen.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_09",
+      "text": "I love being a champion for my ideas, even against others' opposition.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_10",
+      "text": "I excel at identifying opportunities.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_11",
+      "text": "I am always looking for better ways to do things.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_12",
+      "text": "If I believe in an idea, no obstacle will prevent me from making it happen.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_13",
+      "text": "I love to challenge the status quo.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_14",
+      "text": "When I have a problem, I tackle it head-on.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    },
+    {
+      "id": "q_15",
+      "text": "I am great at turning problems into opportunities.",
+      "scoring": { "dimension": "proactive_personality", "isReversed": false }
+    }
+  ],
+  "scoringRubric": {
+    "primaryScores": [
+      {
+        "id": "proactive_personality",
+        "title": "Proactive Personality Score",
+        "calculation": "SUM_AND_AVERAGE([q_01, q_02, q_04, q_05, q_06, q_07, q_08, q_09, q_10, q_11, q_12, q_13, q_14, q_15], REVERSE_SCORE([q_03]))",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You tend to be less proactive, preferring to adapt to circumstances rather than actively trying to change them. You may be more comfortable reacting to situations as they arise." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You demonstrate a balanced level of proactivity, capable of taking initiative when motivated but also comfortable with existing structures." },
+          { "label": "High", "range": [3.51, 5], "description": "You possess a strong proactive personality, consistently seeking opportunities, taking initiative, and driving change in your environment. You are likely an impactful and entrepreneurial individual." }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "core_profile_v1.0.0",
+  "version": "1.0.0",
+  "tier": "Tier 1",
+  "title": "Your Core Profile",
+  "description": "This foundational assessment helps you understand your core personality—the stable patterns of how you tend to think, feel, and behave. Your honest responses will provide the most valuable insights for your personal growth journey.",
+  "instructions": "Please rate how accurately each statement describes you. There are no right or wrong answers.",
+  "scientificBasis": {
+    "summary": "This assessment is built using items from the International Personality Item Pool (IPIP), a public domain scientific collaboration. The items are designed to measure the Five-Factor Model of personality, the most empirically validated model in modern psychology. This ensures your results are based on credible, open-source science and are safe for all uses.",
+    "citation": "Items were selected from the International Personality Item Pool (ipip.ori.org), developed by L. R. Goldberg, et al. This is a public domain resource."
+  },
+  "responseScale": [
+    { "text": "Very Inaccurate", "value": 1 },
+    { "text": "Moderately Inaccurate", "value": 2 },
+    { "text": "Neither Accurate nor Inaccurate", "value": 3 },
+    { "text": "Moderately Accurate", "value": 4 },
+    { "text": "Very Accurate", "value": 5 }
+  ],
+  "questions": [
+    { "id": "ipip_e1", "text": "Am the life of the party.", "scoring": { "dimension": "extraversion", "isReversed": false } },
+    { "id": "ipip_e2", "text": "Don't talk a lot.", "scoring": { "dimension": "extraversion", "isReversed": true } },
+    { "id": "ipip_e3", "text": "Start conversations.", "scoring": { "dimension": "extraversion", "isReversed": false } },
+    { "id": "ipip_e4", "text": "Keep in the background.", "scoring": { "dimension": "extraversion", "isReversed": true } },
+    { "id": "ipip_a1", "text": "Am interested in people.", "scoring": { "dimension": "agreeableness", "isReversed": false } },
+    { "id": "ipip_a2", "text": "Insult people.", "scoring": { "dimension": "agreeableness", "isReversed": true } },
+    { "id": "ipip_a3", "text": "Sympathize with others' feelings.", "scoring": { "dimension": "agreeableness", "isReversed": false } },
+    { "id": "ipip_a4", "text": "Am not interested in other people's problems.", "scoring": { "dimension": "agreeableness", "isReversed": true } },
+    { "id": "ipip_c1", "text": "Am always prepared.", "scoring": { "dimension": "conscientiousness", "isReversed": false } },
+    { "id": "ipip_c2", "text": "Make a mess of things.", "scoring": { "dimension": "conscientiousness", "isReversed": true } },
+    { "id": "ipip_c3", "text": "Get chores done right away.", "scoring": { "dimension": "conscientiousness", "isReversed": false } },
+    { "id": "ipip_c4", "text": "Often forget to put things back in their proper place.", "scoring": { "dimension": "conscientiousness", "isReversed": true } },
+    { "id": "ipip_n1", "text": "Get stressed out easily.", "scoring": { "dimension": "neuroticism", "isReversed": false } },
+    { "id": "ipip_n2", "text": "Am relaxed most of the time.", "scoring": { "dimension": "neuroticism", "isReversed": true } },
+    { "id": "ipip_n3", "text": "Worry about things.", "scoring": { "dimension": "neuroticism", "isReversed": false } },
+    { "id": "ipip_n4", "text": "Seldom feel blue.", "scoring": { "dimension": "neuroticism", "isReversed": true } },
+    { "id": "ipip_o1", "text": "Have a vivid imagination.", "scoring": { "dimension": "openness", "isReversed": false } },
+    { "id": "ipip_o2", "text": "Am not interested in abstract ideas.", "scoring": { "dimension": "openness", "isReversed": true } },
+    { "id": "ipip_o3", "text": "Have excellent ideas.", "scoring": { "dimension": "openness", "isReversed": false } },
+    { "id": "ipip_o4", "text": "Have difficulty understanding abstract ideas.", "scoring": { "dimension": "openness", "isReversed": true } }
+  ],
+  "scoringRubric": {
+    "primaryScores": [
+      {
+        "id": "extraversion", "title": "Extraversion",
+        "calculation": "SUM_AND_AVERAGE([ipip_e1, ipip_e3], REVERSE_SCORE([ipip_e2, ipip_e4]))",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You are likely more reserved, enjoy solitude, and draw energy from your inner world." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You have a balance of introverted and extraverted tendencies, comfortable both in social settings and on your own." },
+          { "label": "High", "range": [3.51, 5], "description": "You are outgoing, sociable, and draw energy from being around people." }
+        ]
+      },
+      {
+        "id": "agreeableness", "title": "Agreeableness",
+        "calculation": "SUM_AND_AVERAGE([ipip_a1, ipip_a3], REVERSE_SCORE([ipip_a2, ipip_a4]))",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You are more analytical, critical, and prioritize your own interests and perspectives. You are comfortable with debate." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You can be cooperative and empathetic but are also willing to stand your ground when necessary." },
+          { "label": "High", "range": [3.51, 5], "description": "You are cooperative, trusting, and helpful. You value social harmony and getting along with others." }
+        ]
+      },
+      {
+        "id": "conscientiousness", "title": "Conscientiousness",
+        "calculation": "SUM_AND_AVERAGE([ipip_c1, ipip_c3], REVERSE_SCORE([ipip_c2, ipip_c4]))",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You are more spontaneous, flexible, and laid-back, preferring a less structured approach." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You are able to be organized and reliable when needed, but are also comfortable with some spontaneity." },
+          { "label": "High", "range": [3.51, 5], "description": "You are highly disciplined, organized, and reliable, with a strong sense of duty." }
+        ]
+      },
+      {
+        "id": "neuroticism", "title": "Neuroticism (Emotional Stability)",
+        "calculation": "SUM_AND_AVERAGE([ipip_n1, ipip_n3], REVERSE_SCORE([ipip_n2, ipip_n4]))",
+        "interpretation": [
+          { "label": "Low (High Stability)", "range": [1, 2.49], "description": "You are emotionally stable, resilient, and generally calm, even under pressure." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You experience a normal range of emotions but are generally able to manage stress effectively." },
+          { "label": "High (Low Stability)", "range": [3.51, 5], "description": "You are more sensitive and prone to experiencing stress, worry, and emotional fluctuations." }
+        ]
+      },
+      {
+        "id": "openness", "title": "Openness to Experience",
+        "calculation": "SUM_AND_AVERAGE([ipip_o1, ipip_o3], REVERSE_SCORE([ipip_o2, ipip_o4]))",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You are more conventional, practical, and prefer familiar routines and straightforward experiences." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You are open to new ideas but also value practicality and tradition." },
+          { "label": "High", "range": [3.51, 5], "description": "You are intellectually curious, creative, and appreciate art, abstract ideas, and new experiences." }
+        ]
+      }
+    ],
+    "derivativeInsights": [
+      {
+        "id": "creative_potential", "title": "Creative Potential",
+        "replaces": ["How Creative Am I?"],
+        "calculationLogic": "NORMALIZE(openness_score, 1, 5, 0, 100)",
+        "interpretation": { "high": "You likely have a strong creative streak and enjoy new ideas.", "low": "You likely prefer practical and conventional approaches." }
+      },
+      {
+        "id": "procrastination_tendency",
+        "title": "Procrastination Tendency",
+        "replaces": ["Am I a Procrastinator?"],
+        "calculationLogic": "NORMALIZE(5 - conscientiousness_score, 0, 4, 0, 100)",
+        "interpretation": { "high": "You may have a tendency to delay tasks.", "low": "You are likely highly disciplined." }
+      },
+      {
+        "id": "typeA_tendency",
+        "title": "Type-A Tendency",
+        "replaces": ["Am I a Type-A?"],
+        "calculationLogic": "(0.4 * NORMALIZE(neuroticism_score, 1, 5, 0, 100)) + (0.4 * NORMALIZE(conscientiousness_score, 1, 5, 0, 100)) + (0.2 * (100 - NORMALIZE(agreeableness_score, 1, 5, 0, 100)))",
+        "interpretation": { "high": "You exhibit a strong drive and competitiveness.", "low": "You have a more relaxed, patient approach (Type-B)." }
+      },
+      {
+        "id": "ambiguity_tolerance",
+        "title": "Ambiguity Tolerance",
+        "replaces": ["How Well Do I Handle Ambiguity?"],
+        "calculationLogic": "(0.6 * NORMALIZE(openness_score, 1, 5, 0, 100)) + (0.4 * (100 - NORMALIZE(neuroticism_score, 1, 5, 0, 100)))",
+        "interpretation": { "high": "You are likely comfortable with uncertainty and change.", "low": "You likely prefer clarity, structure, and predictability." }
+      },
+      {
+        "id": "assertiveness_tendency", "title": "Assertiveness Tendency (Derived)",
+        "replaces": ["The Rathus Assertiveness Schedule"],
+        "calculationLogic": "(0.7 * NORMALIZE(extraversion_score, 1, 5, 0, 100)) + (0.3 * (100 - NORMALIZE(agreeableness_score, 1, 5, 0, 100)))",
+        "interpretation": { "high": "You are likely comfortable speaking your mind, even in challenging situations.", "low": "You may be more hesitant to express your opinions directly, preferring to avoid confrontation." }
+      },
+      {
+        "id": "jungian_type_proxy", "title": "Estimated Jungian-Style Type",
+        "replaces": ["What’s My Jungian 16-Type Personality?"],
+        "calculationLogic": "CONCAT( (extraversion_score > 3.0 ? 'E' : 'I'), (openness_score > 3.0 ? 'N' : 'S'), (agreeableness_score > 3.0 ? 'F' : 'T'), (conscientiousness_score > 3.0 ? 'J' : 'P') )",
+        "interpretation": { "note": "This is a proxy based on correlations with the Big Five and is provided for exploratory purposes. Your estimated four-letter type is [result]. For a deeper understanding, explore dedicated Jungian assessments." }
+      }
+    ]
+  }
+}

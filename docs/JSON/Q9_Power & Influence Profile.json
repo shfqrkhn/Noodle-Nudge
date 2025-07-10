@@ -1,0 +1,185 @@
+{
+  "id": "power_influence_v1.0.0",
+  "version": "1.0.0",
+  "tier": "Tier 2",
+  "title": "Power & Influence Profile",
+  "description": "This assessment explores your natural tendencies in influencing others and your comfort with different forms of power. Understanding these aspects can help you navigate social and organizational dynamics more effectively.",
+  "instructions": "Please rate how accurately each statement describes your typical behavior or beliefs. There are no right or wrong answers. Use the following scale for your responses.",
+  "scientificBasis": {
+    "summary": "This assessment integrates two key psychological constructs: Machiavellianism, which describes a pragmatic, manipulative, and self-interested approach to power, and French and Raven's Five Bases of Power, which categorizes the sources of influence (Reward, Coercive, Legitimate, Expert, and Referent). The items are developed to align with public domain concepts and IPIP principles, ensuring scientific credibility and legal safety.",
+    "citation": "Machiavellianism concepts are based on the work of Christie & Geis (1970) and subsequent Five Factor Machiavellianism Inventory (FFMI) research. The Five Bases of Power are derived from French and Raven (1959). All specific items are adapted from or inspired by general public domain personality item pools (e.g., IPIP) to ensure copyright safety."
+  },
+  "responseScale": [
+    { "text": "Very Inaccurate", "value": 1 },
+    { "text": "Moderately Inaccurate", "value": 2 },
+    { "text": "Neither Accurate nor Inaccurate", "value": 3 },
+    { "text": "Moderately Accurate", "value": 4 },
+    { "text": "Very Accurate", "value": 5 }
+  ],
+  "questions": [
+    {
+      "id": "q_01",
+      "text": "I often tell people what they want to hear to get what I want.",
+      "scoring": { "dimension": "machiavellianism", "isReversed": false }
+    },
+    {
+      "id": "q_02",
+      "text": "I believe that total trust in others can lead to problems.",
+      "scoring": { "dimension": "machiavellianism", "isReversed": false }
+    },
+    {
+      "id": "q_03",
+      "text": "It is hard to get ahead without sometimes bending the rules.",
+      "scoring": { "dimension": "machiavellianism", "isReversed": false }
+    },
+    {
+      "id": "q_04",
+      "text": "It's best to be honest and straightforward in all situations.",
+      "scoring": { "dimension": "machiavellianism", "isReversed": true }
+    },
+    {
+      "id": "q_05",
+      "text": "I try to make sure people are rewarded for their good work.",
+      "scoring": { "dimension": "reward_power", "isReversed": false }
+    },
+    {
+      "id": "q_06",
+      "text": "I am able to offer desirable incentives to influence others.",
+      "scoring": { "dimension": "reward_power", "isReversed": false }
+    },
+    {
+      "id": "q_07",
+      "text": "I would threaten negative consequences if someone doesn't comply.",
+      "scoring": { "dimension": "coercive_power", "isReversed": false }
+    },
+    {
+      "id": "q_08",
+      "text": "I might make things difficult for someone if they don't do what I ask.",
+      "scoring": { "dimension": "coercive_power", "isReversed": false }
+    },
+    {
+      "id": "q_09",
+      "text": "People generally follow my instructions because of my position.",
+      "scoring": { "dimension": "legitimate_power", "isReversed": false }
+    },
+    {
+      "id": "q_10",
+      "text": "My title or role gives me the right to tell others what to do.",
+      "scoring": { "dimension": "legitimate_power", "isReversed": false }
+    },
+    {
+      "id": "q_11",
+      "text": "Others respect my opinions due to my knowledge and skills.",
+      "scoring": { "dimension": "expert_power", "isReversed": false }
+    },
+    {
+      "id": "q_12",
+      "text": "I am seen as an expert in my field.",
+      "scoring": { "dimension": "expert_power", "isReversed": false }
+    },
+    {
+      "id": "q_13",
+      "text": "People follow my lead because they admire or like me.",
+      "scoring": { "dimension": "referent_power", "isReversed": false }
+    },
+    {
+      "id": "q_14",
+      "text": "My personal charisma helps me influence others.",
+      "scoring": { "dimension": "referent_power", "isReversed": false }
+    },
+    {
+      "id": "q_15",
+      "text": "I enjoy having control over others.",
+      "scoring": { "dimension": "machiavellianism", "isReversed": false }
+    },
+    {
+      "id": "q_16",
+      "text": "I tend to rely on rational arguments rather than threats to influence.",
+      "scoring": { "dimension": "coercive_power", "isReversed": true }
+    },
+    {
+      "id": "q_17",
+      "text": "My influence comes from my ability to offer opportunities to others.",
+      "scoring": { "dimension": "reward_power", "isReversed": false }
+    },
+    {
+      "id": "q_18",
+      "text": "I am generally honest and sincere in my interactions.",
+      "scoring": { "dimension": "machiavellianism", "isReversed": true }
+    },
+    {
+      "id": "q_19",
+      "text": "People listen to me because of my specialized training or expertise.",
+      "scoring": { "dimension": "expert_power", "isReversed": false }
+    },
+    {
+      "id": "q_20",
+      "text": "My ability to influence others is based on my formal authority.",
+      "scoring": { "dimension": "legitimate_power", "isReversed": false }
+    }
+  ],
+  "scoringRubric": {
+    "primaryScores": [
+      {
+        "id": "machiavellianism",
+        "title": "Machiavellianism",
+        "calculation": "SUM_AND_AVERAGE([q_01, q_02, q_03, q_15], REVERSE_SCORE([q_04, q_18]))",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You tend to be less manipulative and more trusting in your interactions, preferring straightforward and ethical approaches." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You balance pragmatism with a consideration for others, adapting your influence style to the situation." },
+          { "label": "High", "range": [3.51, 5], "description": "You exhibit a pragmatic and strategic approach to influence, willing to use various tactics to achieve your goals. This can involve a more detached or manipulative style." }
+        ]
+      },
+      {
+        "id": "reward_power",
+        "title": "Reward Power",
+        "calculation": "AVERAGE_SCORE([q_05, q_06, q_17])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You may not frequently use or perceive yourself as having the ability to offer rewards to influence others." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You sometimes use rewards to influence others, or you recognize their value but may not always have the means to employ them consistently." },
+          { "label": "High", "range": [3.51, 5], "description": "You frequently use or perceive yourself as having the ability to offer positive incentives (e.g., praise, opportunities, tangible benefits) to influence the behavior of others." }
+        ]
+      },
+      {
+        "id": "coercive_power",
+        "title": "Coercive Power",
+        "calculation": "SUM_AND_AVERAGE([q_07, q_08], REVERSE_SCORE([q_16]))",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You rarely use or prefer to avoid threats and punishments to influence others." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You may sometimes use or acknowledge the potential for negative consequences to influence behavior, particularly in structured environments." },
+          { "label": "High", "range": [3.51, 5], "description": "You are willing to use or perceive yourself as having the ability to impose negative consequences or threats to influence others." }
+        ]
+      },
+      {
+        "id": "legitimate_power",
+        "title": "Legitimate Power",
+        "calculation": "AVERAGE_SCORE([q_09, q_10, q_20])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You may not strongly rely on formal authority or position to influence others, or you may not hold roles where this is a primary source of power." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You recognize the importance of formal authority in influencing others, and use it when appropriate." },
+          { "label": "High", "range": [3.51, 5], "description": "You frequently use or perceive your formal position, role, or title as a primary source of influence over others." }
+        ]
+      },
+      {
+        "id": "expert_power",
+        "title": "Expert Power",
+        "calculation": "AVERAGE_SCORE([q_11, q_12, q_19])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You may not primarily rely on your knowledge or expertise to influence others, or you may be developing in this area." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You sometimes use your knowledge or skills to influence others, and you recognize their value as a source of power." },
+          { "label": "High", "range": [3.51, 5], "description": "You frequently use or perceive your specialized knowledge, skills, or expertise as a primary source of influence over others." }
+        ]
+      },
+      {
+        "id": "referent_power",
+        "title": "Referent Power",
+        "calculation": "AVERAGE_SCORE([q_13, q_14])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "Your influence may stem less from personal admiration or charisma, and more from other power bases." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You understand the importance of personal connection and charisma in influencing others, and use it to some extent." },
+          { "label": "High", "range": [3.51, 5], "description": "You frequently use or perceive your personal charisma, likeability, and the respect or admiration of others as a primary source of influence." }
+        ]
+      }
+    ]
+  }
+}

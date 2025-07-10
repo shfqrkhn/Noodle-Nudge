@@ -1,0 +1,97 @@
+{
+  "id": "conflict_style_v1.0.0",
+  "version": "1.0.0",
+  "tier": "Tier 2",
+  "title": "Your Conflict Style",
+  "description": "Disagreements are a natural part of life and work. This assessment helps you understand your instinctive approach to conflict, providing a foundation for handling disagreements more effectively.",
+  "instructions": "When your wishes differ from those of another person, how typical is each of these responses for you? Please answer honestly.",
+  "scientificBasis": {
+    "summary": "This assessment is based on the Thomas-Kilmann Conflict Mode Instrument (TKI), a leading model that maps conflict styles onto two dimensions: assertiveness and cooperativeness. Understanding your dominant style is the first step toward choosing the most effective approach for any given situation.",
+    "citation": "Items are adapted from the public domain International Personality Item Pool (ipip.ori.org) scales representing the five conflict handling modes. Conceptual model based on K.W. Thomas, 'Conflict and Conflict Management' (1976)."
+  },
+  "responseScale": [
+    { "text": "Very Untypical", "value": 1 },
+    { "text": "Untypical", "value": 2 },
+    { "text": "Neutral", "value": 3 },
+    { "text": "Typical", "value": 4 },
+    { "text": "Very Typical", "value": 5 }
+  ],
+  "questions": [
+    { "id": "con_01", "text": "I insist on my own way.", "scoring": { "dimension": "competing", "isReversed": false } },
+    { "id": "con_02", "text": "I give in to the wishes of the other party.", "scoring": { "dimension": "accommodating", "isReversed": false } },
+    { "id": "con_03", "text": "I look for a solution that works for everyone.", "scoring": { "dimension": "collaborating", "isReversed": false } },
+    { "id": "con_04", "text": "I try to avoid the issue.", "scoring": { "dimension": "avoiding", "isReversed": false } },
+    { "id": "con_05", "text": "I am willing to meet the other person halfway.", "scoring": { "dimension": "compromising", "isReversed": false } },
+    { "id": "con_06", "text": "I fight for my side.", "scoring": { "dimension": "competing", "isReversed": false } },
+    { "id": "con_07", "text": "I put others' needs ahead of my own.", "scoring": { "dimension": "accommodating", "isReversed": false } },
+    { "id": "con_08", "text": "I work with the other person to find a good solution.", "scoring": { "dimension": "collaborating", "isReversed": false } },
+    { "id": "con_09", "text": "I put off the discussion until later.", "scoring": { "dimension": "avoiding", "isReversed": false } },
+    { "id": "con_10", "text": "I suggest a middle ground.", "scoring": { "dimension": "compromising", "isReversed": false } }
+  ],
+  "scoringRubric": {
+    "primaryScores": [
+      {
+        "id": "competing_score",
+        "title": "Competing Style Score",
+        "calculation": "AVERAGE_SCORE([con_01, con_06])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You rarely use a competing style, preferring to avoid direct confrontation." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You use a competing style selectively, when you deem it necessary." },
+          { "label": "High", "range": [3.51, 5], "description": "You frequently use a competing style, being highly assertive and focused on your own agenda. This can be effective for quick decisions but may strain relationships." }
+        ]
+      },
+      {
+        "id": "accommodating_score",
+        "title": "Accommodating Style Score",
+        "calculation": "AVERAGE_SCORE([con_02, con_07])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You rarely use an accommodating style, preferring to stand your ground." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You use an accommodating style when appropriate, balancing your needs with others'." },
+          { "label": "High", "range": [3.51, 5], "description": "You frequently use an accommodating style, prioritizing others' needs and seeking harmony. While this fosters good relationships, over-reliance can lead to your own needs being unmet." }
+        ]
+      },
+      {
+        "id": "collaborating_score",
+        "title": "Collaborating Style Score",
+        "calculation": "AVERAGE_SCORE([con_03, con_08])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You rarely use a collaborating style, preferring less time-intensive approaches to conflict." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You use a collaborating style when you see potential for a mutually beneficial outcome." },
+          { "label": "High", "range": [3.51, 5], "description": "You frequently use a collaborating style, seeking 'win-win' solutions that address all parties' concerns deeply. This is highly effective for complex issues and strong relationships." }
+        ]
+      },
+      {
+        "id": "avoiding_score",
+        "title": "Avoiding Style Score",
+        "calculation": "AVERAGE_SCORE([con_04, con_09])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You rarely use an avoiding style, preferring to address conflicts directly." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You use an avoiding style selectively, when appropriate to the situation." },
+          { "label": "High", "range": [3.51, 5], "description": "You frequently use an avoiding style, withdrawing from or postponing conflict. This can be useful for minor issues or when emotions are high, but may cause problems to fester." }
+        ]
+      },
+      {
+        "id": "compromising_score",
+        "title": "Compromising Style Score",
+        "calculation": "AVERAGE_SCORE([con_05, con_10])",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You rarely use a compromising style, preferring to either compete or collaborate fully." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You use a compromising style when it offers a practical middle ground." },
+          { "label": "High", "range": [3.51, 5], "description": "You frequently use a compromising style, seeking a quick, mutually acceptable solution where both parties give up something. This is a pragmatic approach for moderate issues." }
+        ]
+      },
+      {
+        "id": "dominant_style",
+        "title": "Your Dominant Conflict Style",
+        "calculation": "IDENTIFY_MAX_SCORE_DIMENSION('competing_score', 'accommodating_score', 'collaborating_score', 'avoiding_score', 'compromising_score')",
+        "interpretation": {
+          "competing": "Your dominant style is COMPETING (Assertive, Uncooperative). You are focused on winning and standing your ground. This is effective in emergencies but can damage relationships.",
+          "accommodating": "Your dominant style is ACCOMMODATING (Unassertive, Cooperative). You prioritize the other person's needs and seek harmony. While this fosters good relationships, over-reliance can lead to your own needs being unmet.",
+          "collaborating": "Your dominant style is COLLABORATING (Assertive, Cooperative). You seek a 'win-win' solution that fully satisfies everyone. This builds trust but can be time-consuming.",
+          "avoiding": "Your dominant style is AVOIDING (Unassertive, Uncooperative). You prefer to sidestep conflict or postpone discussions. This is useful for trivial issues but can let problems fester.",
+          "compromising": "Your dominant style is COMPROMISING (Mid-range Assertive & Cooperative). You seek a quick, middle-ground solution where both parties give something up. This is practical but may not lead to the best long-term outcome."
+        }
+      }
+    ]
+  }
+}

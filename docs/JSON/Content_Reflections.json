@@ -1,0 +1,1835 @@
+{
+  "reflection_prompts": [
+    {
+      "day": 1,
+      "theme": "Beginnings & Intentions",
+      "prompt": "What is one core intention you want to set for yourself this year? Why does this intention matter to you right now?"
+    },
+    {
+      "day": 2,
+      "theme": "Self-Awareness",
+      "prompt": "When did you feel most like your true self today? What were you doing, and who were you with?"
+    },
+    {
+      "day": 3,
+      "theme": "Growth & Learning",
+      "prompt": "What is one small thing you learned today, about the world or about yourself?"
+    },
+    {
+      "day": 4,
+      "theme": "Values & Purpose",
+      "prompt": "Describe a moment when your actions today were perfectly aligned with one of your core values."
+    },
+    {
+      "day": 5,
+      "theme": "Relationships & Connection",
+      "prompt": "Think of one interaction you had today. How could you have made it more positive or meaningful?"
+    },
+    {
+      "day": 6,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What was a sensory detail you noticed today that you might normally have missed? (A sound, a smell, a texture)."
+    },
+    {
+      "day": 7,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one simple pleasure you experienced today that you can be grateful for?"
+    },
+    {
+      "day": 8,
+      "theme": "Resilience & Strength",
+      "prompt": "What was a minor challenge or frustration today, and how did you navigate it?"
+    },
+    {
+      "day": 9,
+      "theme": "Action & Intention",
+      "prompt": "What is one small, concrete step you can take tomorrow to move closer to a goal that matters to you?"
+    },
+    {
+      "day": 10,
+      "theme": "Self-Awareness",
+      "prompt": "What emotion was most present for you today? Can you trace it back to a specific thought or event?"
+    },
+    {
+      "day": 11,
+      "theme": "Growth & Learning",
+      "prompt": "Reflect on a mistake you made recently. What is the key lesson you can take from it?"
+    },
+    {
+      "day": 12,
+      "theme": "Values & Purpose",
+      "prompt": "If you had to describe your purpose in a single sentence today, what would it be?"
+    },
+    {
+      "day": 13,
+      "theme": "Relationships & Connection",
+      "prompt": "Who is someone you could have shown more appreciation for today? What could you say or do?"
+    },
+    {
+      "day": 14,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Describe a moment of peace or stillness you found today, however brief."
+    },
+    {
+      "day": 15,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a skill or ability you possess that you are grateful for?"
+    },
+    {
+      "day": 16,
+      "theme": "Resilience & Strength",
+      "prompt": "When did you feel most capable or confident today?"
+    },
+    {
+      "day": 17,
+      "theme": "Action & Intention",
+      "prompt": "What is one distraction you can consciously decide to ignore tomorrow?"
+    },
+    {
+      "day": 18,
+      "theme": "Self-Awareness",
+      "prompt": "What story are you telling yourself about your life right now?"
+    },
+    {
+      "day": 19,
+      "theme": "Growth & Learning",
+      "prompt": "What assumption did you challenge today?"
+    },
+    {
+      "day": 20,
+      "theme": "Values & Purpose",
+      "prompt": "What is something you did today purely for the joy of it, without concern for productivity?"
+    },
+    {
+      "day": 21,
+      "theme": "Relationships & Connection",
+      "prompt": "What does 'listening' truly mean to you? How well did you listen to others today?"
+    },
+    {
+      "day": 22,
+      "theme": "Mindfulness & Presence",
+      "prompt": "How did your body feel today? Where were you holding tension?"
+    },
+    {
+      "day": 23,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What aspect of nature did you notice and appreciate today?"
+    },
+    {
+      "day": 24,
+      "theme": "Resilience & Strength",
+      "prompt": "Think about a past success. What personal strength did you use to achieve it?"
+    },
+    {
+      "day": 25,
+      "theme": "Action & Intention",
+      "prompt": "What is a task you've been procrastinating on? What's the smallest possible first step you can take?"
+    },
+    {
+      "day": 26,
+      "theme": "Self-Awareness",
+      "prompt": "In what area of your life are you currently settling for 'good enough'?"
+    },
+    {
+      "day": 27,
+      "theme": "Growth & Learning",
+      "prompt": "If you could ask for advice from your future self, what would you ask?"
+    },
+    {
+      "day": 28,
+      "theme": "Values & Purpose",
+      "prompt": "What does 'success' look like to you, beyond money or titles?"
+    },
+    {
+      "day": 29,
+      "theme": "Relationships & Connection",
+      "prompt": "How have you contributed to the well-being of someone else recently?"
+    },
+    {
+      "day": 30,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one thing you can let go of, right now, to feel lighter?"
+    },
+    {
+      "day": 31,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What piece of technology are you grateful for and why?"
+    },
+    {
+      "day": 32,
+      "theme": "Resilience & Strength",
+      "prompt": "When were you patient today when it would have been easier to be impatient?"
+    },
+    {
+      "day": 33,
+      "theme": "Action & Intention",
+      "prompt": "What boundary could you set tomorrow to protect your time and energy?"
+    },
+    {
+      "day": 34,
+      "theme": "Self-Awareness",
+      "prompt": "What is a limiting belief you hold about yourself? Where did it come from?"
+    },
+    {
+      "day": 35,
+      "theme": "Growth & Learning",
+      "prompt": "What is a topic you're curious about? What's one thing you can do to learn more about it?"
+    },
+    {
+      "day": 36,
+      "theme": "Values & Purpose",
+      "prompt": "How do you want to be remembered by the people who know you best?"
+    },
+    {
+      "day": 37,
+      "theme": "Relationships & Connection",
+      "prompt": "Is there a relationship in your life that needs more of your attention? What can you do?"
+    },
+    {
+      "day": 38,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Close your eyes for 60 seconds and just notice your breath. What did you observe?"
+    },
+    {
+      "day": 39,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "Think of a food you ate today. What journey did it take to get to your plate?"
+    },
+    {
+      "day": 40,
+      "theme": "Resilience & Strength",
+      "prompt": "Describe a time you felt fear but acted anyway. What did that feel like?"
+    },
+    {
+      "day": 41,
+      "theme": "Action & Intention",
+      "prompt": "What is one 'should' you can replace with a 'could' in your self-talk tomorrow?"
+    },
+    {
+      "day": 42,
+      "theme": "Self-Awareness",
+      "prompt": "How do you typically react to criticism? Is this reaction serving you?"
+    },
+    {
+      "day": 43,
+      "theme": "Growth & Learning",
+      "prompt": "What book, article, or podcast has influenced your thinking recently?"
+    },
+    {
+      "day": 44,
+      "theme": "Values & Purpose",
+      "prompt": "What activity makes you lose track of time?"
+    },
+    {
+      "day": 45,
+      "theme": "Relationships & Connection",
+      "prompt": "When did you last offer help to someone without being asked?"
+    },
+    {
+      "day": 46,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is the 'weather' of your mind right now? (e.g., sunny, stormy, foggy)."
+    },
+    {
+      "day": 47,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "Who is a teacher or mentor from your past that you are grateful for?"
+    },
+    {
+      "day": 48,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a 'failure' from your past that you now see as a valuable lesson?"
+    },
+    {
+      "day": 49,
+      "theme": "Action & Intention",
+      "prompt": "What is one thing you will do differently tomorrow based on your reflections today?"
+    },
+    {
+      "day": 50,
+      "theme": "Self-Awareness",
+      "prompt": "What are you avoiding? What would happen if you faced it?"
+    },
+    {
+      "day": 51,
+      "theme": "Growth & Learning",
+      "prompt": "What skill would you like to develop? What makes it appealing to you?"
+    },
+    {
+      "day": 52,
+      "theme": "Values & Purpose",
+      "prompt": "If you had an extra hour each day, how would you spend it to feel more fulfilled?"
+    },
+    {
+      "day": 53,
+      "theme": "Relationships & Connection",
+      "prompt": "Think of someone you disagree with. Can you identify one valid point in their perspective?"
+    },
+    {
+      "day": 54,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Take three deep breaths. How does your body feel different after than before?"
+    },
+    {
+      "day": 55,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What part of your daily routine are you thankful for?"
+    },
+    {
+      "day": 56,
+      "theme": "Resilience & Strength",
+      "prompt": "How have you grown more resilient over the last year?"
+    },
+    {
+      "day": 57,
+      "theme": "Action & Intention",
+      "prompt": "What commitment can you make to your well-being for the next week?"
+    },
+    {
+      "day": 58,
+      "theme": "Self-Awareness",
+      "prompt": "What comparison did you make today between yourself and someone else? Was it helpful?"
+    },
+    {
+      "day": 59,
+      "theme": "Growth & Learning",
+      "prompt": "What's a piece of conventional wisdom you've started to question?"
+    },
+    {
+      "day": 60,
+      "theme": "Values & Purpose",
+      "prompt": "When do you feel most creative and inspired?"
+    },
+    {
+      "day": 61,
+      "theme": "Relationships & Connection",
+      "prompt": "How can you be a better friend to yourself?"
+    },
+    {
+      "day": 62,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Describe the world around you right now using only your sense of hearing."
+    },
+    {
+      "day": 63,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is something beautiful you saw today?"
+    },
+    {
+      "day": 64,
+      "theme": "Resilience & Strength",
+      "prompt": "What are you capable of that you once thought was impossible?"
+    },
+    {
+      "day": 65,
+      "theme": "Action & Intention",
+      "prompt": "What is one thing in your environment you can organize or clean to bring a sense of calm?"
+    },
+    {
+      "day": 66,
+      "theme": "Self-Awareness",
+      "prompt": "What is your 'inner critic' saying to you lately? Do you have to believe it?"
+    },
+    {
+      "day": 67,
+      "theme": "Growth & Learning",
+      "prompt": "How has your definition of happiness changed over time?"
+    },
+    {
+      "day": 68,
+      "theme": "Values & Purpose",
+      "prompt": "What does a 'meaningful life' mean to you in this current chapter of your life?"
+    },
+    {
+      "day": 69,
+      "theme": "Relationships & Connection",
+      "prompt": "Who in your life brings out the best in you? What qualities do they bring out?"
+    },
+    {
+      "day": 70,
+      "theme": "Mindfulness & Presence",
+      "prompt": "When you think about the future, what physical sensations arise in your body?"
+    },
+    {
+      "day": 71,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one freedom you have that you often take for granted?"
+    },
+    {
+      "day": 72,
+      "theme": "Resilience & Strength",
+      "prompt": "Describe a time you had to adapt to an unexpected change. What did you learn?"
+    },
+    {
+      "day": 73,
+
+      "theme": "Action & Intention",
+      "prompt": "What is one healthy habit you could start tomorrow that requires less than 5 minutes?"
+    },
+    {
+      "day": 74,
+      "theme": "Self-Awareness",
+      "prompt": "When are you most likely to be hard on yourself?"
+    },
+    {
+      "day": 75,
+      "theme": "Growth & Learning",
+      "prompt": "What is one area where you've noticed significant personal growth recently?"
+    },
+    {
+      "day": 76,
+      "theme": "Values & Purpose",
+      "prompt": "What are you willing to struggle for?"
+    },
+    {
+      "day": 77,
+      "theme": "Relationships & Connection",
+      "prompt": "Is there forgiveness you need to offer, either to someone else or to yourself?"
+    },
+    {
+      "day": 78,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Notice your posture right now. What might it say about your current state of mind?"
+    },
+    {
+      "day": 79,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one piece of art (a song, a painting, a poem) that you are grateful exists?"
+    },
+    {
+      "day": 80,
+      "theme": "Resilience & Strength",
+      "prompt": "When you feel overwhelmed, what is one reliable strategy that helps you regain your footing?"
+    },
+    {
+      "day": 81,
+      "theme": "Action & Intention",
+      "prompt": "What is one email or text you can send right now to strengthen a connection?"
+    },
+    {
+      "day": 82,
+      "theme": "Self-Awareness",
+      "prompt": "What drains your energy? What replenishes it?"
+    },
+    {
+      "day": 83,
+      "theme": "Growth & Learning",
+      "prompt": "What are you currently resisting? What might be on the other side of that resistance?"
+    },
+    {
+      "day": 84,
+      "theme": "Values & Purpose",
+      "prompt": "If you weren't afraid, what would you do?"
+    },
+    {
+      "day": 85,
+      "theme": "Relationships & Connection",
+      "prompt": "What is a quality you admire in a close friend?"
+    },
+    {
+      "day": 86,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Think about a task you did on autopilot today. What might you have noticed if you were fully present?"
+    },
+    {
+      "day": 87,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What memory from the past week makes you smile?"
+    },
+    {
+      "day": 88,
+      "theme": "Resilience & Strength",
+      "prompt": "What's a simple phrase or mantra you can use to encourage yourself on a tough day?"
+    },
+    {
+      "day": 89,
+      "theme": "Action & Intention",
+      "prompt": "What is a 'no' you need to say to create space for a more important 'yes'?"
+    },
+    {
+      "day": 90,
+      "theme": "Self-Awareness",
+      "prompt": "In which situations do you feel least confident? What are the common triggers?"
+    },
+    {
+      "day": 91,
+      "theme": "Growth & Learning",
+      "prompt": "What would the 'you' from five years ago be most proud of in you today?"
+    },
+    {
+      "day": 92,
+      "theme": "Values & Purpose",
+      "prompt": "What cause or issue in the world fires you up?"
+    },
+    {
+      "day": 93,
+      "theme": "Relationships & Connection",
+      "prompt": "How do you show you care about someone, beyond just saying it?"
+    },
+    {
+      "day": 94,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one worry about the future you can consciously release for the rest of today?"
+    },
+    {
+      "day": 95,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What's something you get to do every day that others might consider a luxury?"
+    },
+    {
+      "day": 96,
+      "theme": "Resilience & Strength",
+      "prompt": "How can you reframe a current challenge as an opportunity?"
+    },
+    {
+      "day": 97,
+      "theme": "Action & Intention",
+      "prompt": "What is one thing you can do this week to bring more fun or play into your life?"
+    },
+    {
+      "day": 98,
+      "theme": "Self-Awareness",
+      "prompt": "What does your ideal morning routine look like? How does it compare to your current one?"
+    },
+    {
+      "day": 99,
+      "theme": "Growth & Learning",
+      "prompt": "What is a perspective that is the complete opposite of your own? Try to argue for it for two minutes."
+    },
+    {
+      "day": 100,
+      "theme": "Review & Consolidation",
+      "prompt": "Looking back over your recent reflections, what is a recurring theme or pattern you've noticed?"
+    },
+    {
+      "day": 101,
+      "theme": "Self-Awareness",
+      "prompt": "What is a compliment you have a hard time accepting? Why do you think that is?"
+    },
+    {
+      "day": 102,
+      "theme": "Growth & Learning",
+      "prompt": "In what area of your life do you feel you are currently 'in progress'?"
+    },
+    {
+      "day": 103,
+      "theme": "Values & Purpose",
+      "prompt": "What does 'integrity' mean to you, in practice?"
+    },
+    {
+      "day": 104,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one assumption you tend to make about people you've just met?"
+    },
+    {
+      "day": 105,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Where in your body do you feel stress? Where do you feel calm?"
+    },
+    {
+      "day": 106,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a convenience in your life that you are thankful for?"
+    },
+    {
+      "day": 107,
+      "theme": "Resilience & Strength",
+      "prompt": "What did you do today that required courage?"
+    },
+    {
+      "day": 108,
+      "theme": "Action & Intention",
+      "prompt": "What is one small act of kindness you can offer to a stranger tomorrow?"
+    },
+    {
+      "day": 109,
+      "theme": "Self-Awareness",
+      "prompt": "What is a 'truth' about yourself that may no longer be true?"
+    },
+    {
+      "day": 110,
+      "theme": "Growth & Learning",
+      "prompt": "If you had to teach someone one thing you know well, what would it be?"
+    },
+    {
+      "day": 111,
+      "theme": "Values & Purpose",
+      "prompt": "When you think about your proudest accomplishment, what values were you honoring?"
+    },
+    {
+      "day": 112,
+      "theme": "Relationships & Connection",
+      "prompt": "How does social media affect your mood and your connection with others?"
+    },
+    {
+      "day": 113,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Do one everyday task (like washing dishes) with your full, undivided attention. What did you notice?"
+    },
+    {
+      "day": 114,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a difficult experience from your past that you can now be grateful for?"
+    },
+    {
+      "day": 115,
+      "theme": "Resilience & Strength",
+      "prompt": "How do you recharge after a socially or emotionally draining day?"
+    },
+    {
+      "day": 116,
+      "theme": "Action & Intention",
+      "prompt": "What is something you can let go of to simplify your life?"
+    },
+    {
+      "day": 117,
+      "theme": "Self-Awareness",
+      "prompt": "What are your personal signs that you're starting to feel burned out?"
+    },
+    {
+      "day": 118,
+      "theme": "Growth & Learning",
+      "prompt": "What is one of your 'flaws' that you are learning to accept or even appreciate?"
+    },
+    {
+      "day": 119,
+      "theme": "Values & Purpose",
+      "prompt": "What does it mean to you to live an 'authentic' life?"
+    },
+    {
+      "day": 120,
+      "theme": "Relationships & Connection",
+      "prompt": "When was the last time you felt truly heard by someone? What made that possible?"
+    },
+    {
+      "day": 121,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one piece of 'mental clutter' you can clear out today?"
+    },
+    {
+      "day": 122,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "Think of a person who has had a positive impact on your life. What about them are you grateful for?"
+    },
+    {
+      "day": 123,
+      "theme": "Resilience & Strength",
+      "prompt": "What is one thing you can do when you feel overwhelmed to ground yourself in the present moment?"
+    },
+    {
+      "day": 124,
+      "theme": "Action & Intention",
+      "prompt": "What is a promise you can make to yourself for tomorrow and keep?"
+    },
+    {
+      "day": 125,
+      "theme": "Self-Awareness",
+      "prompt": "What environment (physical space) helps you think most clearly?"
+    },
+    {
+      "day": 126,
+      "theme": "Growth & Learning",
+      "prompt": "How do you learn best? (e.g., by reading, doing, listening, teaching)."
+    },
+    {
+      "day": 127,
+      "theme": "Values & Purpose",
+      "prompt": "If your life was a book, what would you want the theme of the current chapter to be?"
+    },
+    {
+      "day": 128,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one way you can show more compassion to someone you find difficult?"
+    },
+    {
+      "day": 129,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one thing you are looking forward to? Savor that feeling of anticipation."
+    },
+    {
+      "day": 130,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a simple act of kindness you witnessed or experienced today?"
+    },
+    {
+      "day": 131,
+      "theme": "Resilience & Strength",
+      "prompt": "Describe a time you found a creative solution to a problem."
+    },
+    {
+      "day": 132,
+      "theme": "Action & Intention",
+      "prompt": "What is one small risk you can take this week to step outside your comfort zone?"
+    },
+    {
+      "day": 133,
+      "theme": "Self-Awareness",
+      "prompt": "What activity makes you feel powerful and capable?"
+    },
+    {
+      "day": 134,
+      "theme": "Growth & Learning",
+      "prompt": "What advice would you give to your younger self about navigating challenges?"
+    },
+    {
+      "day": 135,
+      "theme": "Values & Purpose",
+      "prompt": "What does it mean to you to use your time well?"
+    },
+    {
+      "day": 136,
+      "theme": "Relationships & Connection",
+      "prompt": "Who could you reach out to this week just to say hello?"
+    },
+    {
+      "day": 137,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What's a recurring thought that has been on your mind today? Can you just observe it without judgment?"
+    },
+    {
+      "day": 138,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one thing about your body you are grateful for today?"
+    },
+    {
+      "day": 139,
+      "theme": "Resilience & Strength",
+      "prompt": "When was the last time you surprised yourself with your own strength or ability?"
+    },
+    {
+      "day": 140,
+      "theme": "Action & Intention",
+      "prompt": "What is one thing you can do to prepare for a better day tomorrow?"
+    },
+    {
+      "day": 141,
+      "theme": "Self-Awareness",
+      "prompt": "If your emotions were colors, what color was most dominant today?"
+    },
+    {
+      "day": 142,
+      "theme": "Growth & Learning",
+      "prompt": "What do you know now that you didn't know a year ago?"
+    },
+    {
+      "day": 143,
+      "theme": "Values & Purpose",
+      "prompt": "What legacy do you want to create, big or small?"
+    },
+    {
+      "day": 144,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one thing you can do to be a more supportive presence for someone in your life?"
+    },
+    {
+      "day": 145,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Listen to a favorite song without any other distractions. What new things do you notice?"
+    },
+    {
+      "day": 146,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one challenge you're grateful you don't have to face right now?"
+    },
+    {
+      "day": 147,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a story of resilience (your own or someone else's) that inspires you?"
+    },
+    {
+      "day": 148,
+      "theme": "Action & Intention",
+      "prompt": "What is one small act of self-care you can do in the next hour?"
+    },
+    {
+      "day": 149,
+      "theme": "Self-Awareness",
+      "prompt": "What are you tolerating in your life that you no longer need to?"
+    },
+    {
+      "day": 150,
+      "theme": "Review & Consolidation",
+      "prompt": "How have your reflections changed your perspective on a particular issue or on yourself?"
+    },
+    {
+      "day": 151,
+      "theme": "Growth & Learning",
+      "prompt": "What does it mean to be 'wise' versus being 'smart'?"
+    },
+    {
+      "day": 152,
+      "theme": "Values & Purpose",
+      "prompt": "What is one value you want to embody more fully in the coming week?"
+    },
+    {
+      "day": 153,
+      "theme": "Relationships & Connection",
+      "prompt": "What is the quality of your attention when you are with loved ones?"
+    },
+    {
+      "day": 154,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Look around you and name five things you can see, four things you can feel, three things you can hear, two things you can smell, and one thing you can taste."
+    },
+    {
+      "day": 155,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a small, everyday object that makes your life better?"
+    },
+    {
+      "day": 156,
+      "theme": "Resilience & Strength",
+      "prompt": "Describe a time you turned a negative situation into a positive one."
+    },
+    {
+      "day": 157,
+      "theme": "Action & Intention",
+      "prompt": "What is one positive change you can make to your physical environment right now?"
+    },
+    {
+      "day": 158,
+      "theme": "Self-Awareness",
+      "prompt": "How do you talk to yourself when you make a mistake?"
+    },
+    {
+      "day": 159,
+      "theme": "Growth & Learning",
+      "prompt": "What is something you used to believe strongly that you no longer do?"
+    },
+    {
+      "day": 160,
+      "theme": "Values & Purpose",
+      "prompt": "What activity makes you feel most aligned with your purpose?"
+    },
+    {
+      "day": 161,
+      "theme": "Relationships & Connection",
+      "prompt": "What is a boundary that has served you well?"
+    },
+    {
+      "day": 162,
+      "theme": "Mindfulness & Presence",
+      "prompt": "When you're eating, are you truly tasting your food?"
+    },
+    {
+      "day": 163,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What's a piece of good news you've heard recently?"
+    },
+    {
+      "day": 164,
+      "theme": "Resilience & Strength",
+      "prompt": "What is one of your 'superpowers' - a skill that comes naturally to you?"
+    },
+    {
+      "day": 165,
+      "theme": "Action & Intention",
+      "prompt": "What is a fear that is holding you back? What is one tiny step to face it?"
+    },
+    {
+      "day": 166,
+      "theme": "Self-Awareness",
+      "prompt": "What is your relationship with silence and solitude?"
+    },
+    {
+      "day": 167,
+      "theme": "Growth & Learning",
+      "prompt": "What is a question you are living with right now?"
+    },
+    {
+      "day": 168,
+      "theme": "Values & Purpose",
+      "prompt": "If today were your last day, what would you do?"
+    },
+    {
+      "day": 169,
+      "theme": "Relationships & Connection",
+      "prompt": "When was the last time you asked for help? How did it feel?"
+    },
+    {
+      "day": 170,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Write down three things that are true in this exact moment."
+    },
+    {
+      "day": 171,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one thing you have today that you once wished for?"
+    },
+    {
+      "day": 172,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a hard truth you've had to accept?"
+    },
+    {
+      "day": 173,
+      "theme": "Action & Intention",
+      "prompt": "What is one thing on your to-do list that isn't actually important?"
+    },
+    {
+      "day": 174,
+      "theme": "Self-Awareness",
+      "prompt": "In what moments do you feel the most 'you'?"
+    },
+    {
+      "day": 175,
+      "theme": "Growth & Learning",
+      "prompt": "What is one way you can be kinder to yourself as you learn and grow?"
+    },
+    {
+      "day": 176,
+      "theme": "Values & Purpose",
+      "prompt": "What does it mean to you to live with courage?"
+    },
+    {
+      "day": 177,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one thing you appreciate about a family member?"
+    },
+    {
+      "day": 178,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Think of a problem that's been on your mind. Can you just let it be, without solving it, for five minutes?"
+    },
+    {
+      "day": 179,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is something you own that you truly cherish?"
+    },
+    {
+      "day": 180,
+      "theme": "Resilience & Strength",
+      "prompt": "What is your body's response to stress? How can you soothe it?"
+    },
+    {
+      "day": 181,
+      "theme": "Action & Intention",
+      "prompt": "What is one distraction you can remove from your phone?"
+    },
+    {
+      "day": 182,
+      "theme": "Mid-Year Review",
+      "prompt": "It's the halfway point of the year. How do your current priorities align with the intentions you set at the beginning?"
+    },
+    {
+      "day": 183,
+      "theme": "Self-Awareness",
+      "prompt": "What is a 'mask' you sometimes wear? What purpose does it serve?"
+    },
+    {
+      "day": 184,
+      "theme": "Growth & Learning",
+      "prompt": "What is a new habit you have successfully integrated into your life?"
+    },
+    {
+      "day": 185,
+      "theme": "Values & Purpose",
+      "prompt": "What is the difference between being 'busy' and being 'productive' for you?"
+    },
+    {
+      "day": 186,
+      "theme": "Relationships & Connection",
+      "prompt": "Describe a time you felt a strong sense of belonging."
+    },
+    {
+      "day": 187,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Go outside for a few minutes. What do you notice about the sky?"
+    },
+    {
+      "day": 188,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a place (real or imagined) where you feel completely at peace?"
+    },
+    {
+      "day": 189,
+      "theme": "Resilience & Strength",
+      "prompt": "How do you define strength for yourself?"
+    },
+    {
+      "day": 190,
+      "theme": "Action & Intention",
+      "prompt": "What is a project or goal you need to let go of?"
+    },
+    {
+      "day": 191,
+      "theme": "Self-Awareness",
+      "prompt": "When you feel angry or irritated, what is usually underneath that feeling?"
+    },
+    {
+      "day": 192,
+      "theme": "Growth & Learning",
+      "prompt": "What is something you are unlearning?"
+    },
+    {
+      "day": 193,
+      "theme": "Values & Purpose",
+      "prompt": "What does 'freedom' mean to you in your daily life?"
+    },
+    {
+      "day": 194,
+      "theme": "Relationships & Connection",
+      "prompt": "What is your go-to way of showing love and appreciation?"
+    },
+    {
+      "day": 195,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one thing you can do to make your evening more restful?"
+    },
+    {
+      "day": 196,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a sound that brings you joy or comfort?"
+    },
+    {
+      "day": 197,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a lesson that took you a long time to learn?"
+    },
+    {
+      "day": 198,
+      "theme": "Action & Intention",
+      "prompt": "What is a healthy meal you can plan to have tomorrow?"
+    },
+    {
+      "day": 199,
+      "theme": "Self-Awareness",
+      "prompt": "What is your relationship with money?"
+    },
+    {
+      "day": 200,
+      "theme": "Review & Consolidation",
+      "prompt": "What is the most significant insight you've gained about yourself in the last 100 days?"
+    },
+    {
+      "day": 201,
+      "theme": "Growth & Learning",
+      "prompt": "What is a fear you have outgrown?"
+    },
+    {
+      "day": 202,
+      "theme": "Values & Purpose",
+      "prompt": "When you are at your best, what qualities do you embody?"
+    },
+    {
+      "day": 203,
+      "theme": "Relationships & Connection",
+      "prompt": "How do you handle disagreements with people you care about?"
+    },
+    {
+      "day": 204,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Imagine your thoughts are clouds passing in the sky. Just watch them for a minute."
+    },
+    {
+      "day": 205,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one thing you love about the city or town you live in?"
+    },
+    {
+      "day": 206,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a personal 'rule' you have that helps you stay on track?"
+    },
+    {
+      "day": 207,
+      "theme": "Action & Intention",
+      "prompt": "What is one thing you can do this week to connect with nature?"
+    },
+    {
+      "day": 208,
+      "theme": "Self-Awareness",
+      "prompt": "What are you currently taking for granted?"
+    },
+    {
+      "day": 209,
+      "theme": "Growth & Learning",
+      "prompt": "What is a piece of feedback you received that was difficult to hear but ultimately helpful?"
+    },
+    {
+      "day": 210,
+      "theme": "Values & Purpose",
+      "prompt": "What is more important to you right now: security or adventure?"
+    },
+    {
+      "day": 211,
+      "theme": "Relationships & Connection",
+      "prompt": "What is a tradition (big or small) that connects you to your family or friends?"
+    },
+    {
+      "day": 212,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is the story you are telling yourself about today?"
+    },
+    {
+      "day": 213,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "Who is someone who makes you laugh? What are you grateful for about them?"
+    },
+    {
+      "day": 214,
+      "theme": "Resilience & Strength",
+      "prompt": "Describe a moment you felt proud of yourself recently."
+    },
+    {
+      "day": 215,
+      "theme": "Action & Intention",
+      "prompt": "What is one way you can 'unplug' and disconnect for at least 30 minutes tomorrow?"
+    },
+    {
+      "day": 216,
+      "theme": "Self-Awareness",
+      "prompt": "What is a pattern in your life you'd like to change?"
+    },
+    {
+      "day": 217,
+      "theme": "Growth & Learning",
+      "prompt": "How can you be 1% better tomorrow than you were today?"
+    },
+    {
+      "day": 218,
+      "theme": "Values & Purpose",
+      "prompt": "What is one thing you stand for?"
+    },
+    {
+      "day": 219,
+      "theme": "Relationships & Connection",
+      "prompt": "What does a healthy boundary look like in one of your key relationships?"
+    },
+    {
+      "day": 220,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one thought you can challenge that is causing you stress?"
+    },
+    {
+      "day": 221,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a song that always lifts your spirits?"
+    },
+    {
+      "day": 222,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a lesson you've learned from a past relationship?"
+    },
+    {
+      "day": 223,
+      "theme": "Action & Intention",
+      "prompt": "What is one area of your life where you could use more help or support?"
+    },
+    {
+      "day": 224,
+      "theme": "Self-Awareness",
+      "prompt": "What are you truly hungry for in your life right now?"
+    },
+    {
+      "day": 225,
+      "theme": "Growth & Learning",
+      "prompt": "If you saw a friend going through what you're going through, what advice would you give them?"
+    },
+    {
+      "day": 226,
+      "theme": "Values & Purpose",
+      "prompt": "What is your personal definition of a 'rich' life?"
+    },
+    {
+      "day": 227,
+      "theme": "Relationships & Connection",
+      "prompt": "When you feel disconnected, what helps you reconnect with yourself or others?"
+    },
+    {
+      "day": 228,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is a recurring dream or daydream you've been having?"
+    },
+    {
+      "day": 229,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one luxury (big or small) you are grateful to have in your life?"
+    },
+    {
+      "day": 230,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a quality you possess that helps you in difficult times?"
+    },
+    {
+      "day": 231,
+      "theme": "Action & Intention",
+      "prompt": "What is one thing you can do to bring more beauty into your day tomorrow?"
+    },
+    {
+      "day": 232,
+      "theme": "Self-Awareness",
+      "prompt": "In what areas of your life are you playing it safe?"
+    },
+    {
+      "day": 233,
+      "theme": "Growth & Learning",
+      "prompt": "What is a new perspective you've gained recently?"
+    },
+    {
+      "day": 234,
+      "theme": "Values & Purpose",
+      "prompt": "What would you do if you knew you could not fail?"
+    },
+    {
+      "day": 235,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one thing you've learned from someone younger than you?"
+    },
+    {
+      "day": 236,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is the physical sensation of a strong emotion you felt today?"
+    },
+    {
+      "day": 237,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What's a positive memory associated with a particular season?"
+    },
+    {
+      "day": 238,
+      "theme": "Resilience & Strength",
+      "prompt": "What does 'self-compassion' look like in practice for you?"
+    },
+    {
+      "day": 239,
+      "theme": "Action & Intention",
+      "prompt": "What is a small, enjoyable activity you can schedule for the upcoming weekend?"
+    },
+    {
+      "day": 240,
+      "theme": "Self-Awareness",
+      "prompt": "What is your relationship with 'not knowing'?"
+    },
+    {
+      "day": 241,
+      "theme": "Growth & Learning",
+      "prompt": "What is an 'aha!' moment you've had recently?"
+    },
+    {
+      "day": 242,
+      "theme": "Values & Purpose",
+      "prompt": "What impact do you want to have on the world, even in a small way?"
+    },
+    {
+      "day": 243,
+      "theme": "Relationships & Connection",
+      "prompt": "What is something you can do to make someone feel seen and valued?"
+    },
+    {
+      "day": 244,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is a choice you made today, big or small? Acknowledge your agency."
+    },
+    {
+      "day": 245,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What about your home are you grateful for?"
+    },
+    {
+      "day": 246,
+      "theme": "Resilience & Strength",
+      "prompt": "What is one thing you have forgiven yourself for?"
+    },
+    {
+      "day": 247,
+      "theme": "Action & Intention",
+      "prompt": "What is one step you can take to better align your spending with your values?"
+    },
+    {
+      "day": 248,
+      "theme": "Self-Awareness",
+      "prompt": "What part of your identity are you most proud of?"
+    },
+    {
+      "day": 249,
+      "theme": "Growth & Learning",
+      "prompt": "What is the biggest risk you've taken? What was the outcome?"
+    },
+    {
+      "day": 250,
+      "theme": "Review & Consolidation",
+      "prompt": "What has been the most challenging reflection theme for you, and why?"
+    },
+    {
+      "day": 251,
+      "theme": "Values & Purpose",
+      "prompt": "What is something you are passionate about?"
+    },
+    {
+      "day": 252,
+      "theme": "Relationships & Connection",
+      "prompt": "What is a sign that you trust someone?"
+    },
+    {
+      "day": 253,
+      "theme": "Mindfulness & Presence",
+      "prompt": "How does it feel to do nothing for two minutes?"
+    },
+    {
+      "day": 254,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one thing you accomplished today, no matter how small?"
+    },
+    {
+      "day": 255,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a compliment you received that has stuck with you?"
+    },
+    {
+      "day": 256,
+      "theme": "Action & Intention",
+      "prompt": "What is a book you'd like to read? Can you get it from the library or a bookstore this week?"
+    },
+    {
+      "day": 257,
+      "theme": "Self-Awareness",
+      "prompt": "What is your relationship with change?"
+    },
+    {
+      "day": 258,
+      "theme": "Growth & Learning",
+      "prompt": "What is one thing you can do to challenge a fixed mindset today?"
+    },
+    {
+      "day": 259,
+      "theme": "Values & Purpose",
+      "prompt": "How do you want to feel at the end of the day tomorrow?"
+    },
+    {
+      "day": 260,
+      "theme": "Relationships & Connection",
+      "prompt": "What is something you've learned about relationships from observing others?"
+    },
+    {
+      "day": 261,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one belief that is causing you pain? What if it weren't true?"
+    },
+    {
+      "day": 262,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a scent that brings back a happy memory?"
+    },
+    {
+      "day": 263,
+      "theme": "Resilience & Strength",
+      "prompt": "When things get tough, who or what do you turn to for support?"
+    },
+    {
+      "day": 264,
+      "theme": "Action & Intention",
+      "prompt": "What is one piece of unfinished business you can take care of this week?"
+    },
+    {
+      "day": 265,
+      "theme": "Self-Awareness",
+      "prompt": "What is a 'story' from your past that you keep replaying?"
+    },
+    {
+      "day": 266,
+      "theme": "Growth & Learning",
+      "prompt": "What is a quality you admire in someone else that you'd like to cultivate in yourself?"
+    },
+    {
+      "day": 267,
+      "theme": "Values & Purpose",
+      "prompt": "What does a successful day look like for you?"
+    },
+    {
+      "day": 268,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one thing you can do to improve your listening skills?"
+    },
+    {
+      "day": 269,
+      "theme": "Mindfulness & Presence",
+      "prompt": "Pause and notice the temperature of the air on your skin."
+    },
+    {
+      "day": 270,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one thing you are grateful for about your past?"
+    },
+    {
+      "day": 271,
+      "theme": "Resilience & Strength",
+      "prompt": "What is one thing that is going right in your life, even if other things are difficult?"
+    },
+    {
+      "day": 272,
+      "theme": "Action & Intention",
+      "prompt": "What is one skill you could learn that would make your life easier or more enjoyable?"
+    },
+    {
+      "day": 273,
+      "theme": "Self-Awareness",
+      "prompt": "What is one of your quirks that makes you unique?"
+    },
+    {
+      "day": 274,
+      "theme": "Growth & Learning",
+      "prompt": "What is an area of your life where you would like to be more disciplined?"
+    },
+    {
+      "day": 275,
+      "theme": "Values & Purpose",
+      "prompt": "What is the role of 'play' in your adult life?"
+    },
+    {
+      "day": 276,
+      "theme": "Relationships & Connection",
+      "prompt": "How can you better support the goals of a friend or loved one?"
+    },
+    {
+      "day": 277,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one worry you can 'schedule' for a specific time tomorrow, freeing your mind for now?"
+    },
+    {
+      "day": 278,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one thing you're looking forward to in the coming month?"
+    },
+    {
+      "day": 279,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a time you stood up for yourself or for someone else?"
+    },
+    {
+      "day": 280,
+      "theme": "Action & Intention",
+      "prompt": "What is one thing you can do to make your workspace more inspiring?"
+    },
+    {
+      "day": 281,
+      "theme": "Self-Awareness",
+      "prompt": "What is a 'need' versus a 'want' in your life right now?"
+    },
+    {
+      "day": 282,
+      "theme": "Growth & Learning",
+      "prompt": "What is one thing you could do to step out of your routine this week?"
+    },
+    {
+      "day": 283,
+      "theme": "Values & Purpose",
+      "prompt": "If you had unlimited resources, what problem would you solve?"
+    },
+    {
+      "day": 284,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one way you can be more present during conversations?"
+    },
+    {
+      "day": 285,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one thing that is true about your life today that wasn't true five years ago?"
+    },
+    {
+      "day": 286,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a family recipe or tradition you are grateful for?"
+    },
+    {
+      "day": 287,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a difficult but necessary conversation you have had?"
+    },
+    {
+      "day": 288,
+      "theme": "Action & Intention",
+      "prompt": "What is one small, kind thing you can do for your future self?"
+    },
+    {
+      "day": 289,
+      "theme": "Self-Awareness",
+      "prompt": "What are you pretending not to know?"
+    },
+    {
+      "day": 290,
+      "theme": "Growth & Learning",
+      "prompt": "What is a skill that you've seen in someone else that you admire?"
+    },
+    {
+      "day": 291,
+      "theme": "Values & Purpose",
+      "prompt": "What does 'simplicity' mean to you?"
+    },
+    {
+      "day": 292,
+      "theme": "Relationships & Connection",
+      "prompt": "Who in your life can you be completely yourself with?"
+    },
+    {
+      "day": 293,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one assumption you can question today?"
+    },
+    {
+      "day": 294,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a part of your daily life that feels magical or miraculous?"
+    },
+    {
+      "day": 295,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a time you bounced back from a disappointment?"
+    },
+    {
+      "day": 296,
+      "theme": "Action & Intention",
+      "prompt": "What is one trip or adventure you would like to plan?"
+    },
+    {
+      "day": 297,
+      "theme": "Self-Awareness",
+      "prompt": "When do you feel most at peace?"
+    },
+    {
+      "day": 298,
+      "theme": "Growth & Learning",
+      "prompt": "What is one piece of advice that has consistently proven true in your life?"
+    },
+    {
+      "day": 299,
+      "theme": "Values & Purpose",
+      "prompt": "What is the difference for you between pleasure and happiness?"
+    },
+    {
+      "day": 300,
+      "theme": "Review & Consolidation",
+      "prompt": "What is one new habit or mindset you want to carry forward from your last 100 days of reflection?"
+    },
+    {
+      "day": 301,
+      "theme": "Self-Awareness",
+      "prompt": "What is a question you've been afraid to ask yourself?"
+    },
+    {
+      "day": 302,
+      "theme": "Growth & Learning",
+      "prompt": "What is one thing you've accomplished that you didn't think you could?"
+    },
+    {
+      "day": 303,
+      "theme": "Values & Purpose",
+      "prompt": "What does 'generosity' look like for you beyond just money?"
+    },
+    {
+      "day": 304,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one relationship you would like to invest more energy in?"
+    },
+    {
+      "day": 305,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What would it feel like to accept this moment exactly as it is?"
+    },
+    {
+      "day": 306,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a challenge you are grateful to be facing, for the growth it offers?"
+    },
+    {
+      "day": 307,
+      "theme": "Resilience & Strength",
+      "prompt": "What is one thing you can always count on about yourself?"
+    },
+    {
+      "day": 308,
+      "theme": "Action & Intention",
+      "prompt": "What is one thing you can do to get organized for the week ahead?"
+    },
+    {
+      "day": 309,
+      "theme": "Self-Awareness",
+      "prompt": "What is a story you tell about yourself? Is it empowering or limiting?"
+    },
+    {
+      "day": 310,
+      "theme": "Growth & Learning",
+      "prompt": "What is a subject you'd like to be more knowledgeable about?"
+    },
+    {
+      "day": 311,
+      "theme": "Values & Purpose",
+      "prompt": "What is your contribution to the world?"
+    },
+    {
+      "day": 312,
+      "theme": "Relationships & Connection",
+      "prompt": "When was the last time you expressed heartfelt gratitude to someone?"
+    },
+    {
+      "day": 313,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one thing you can forgive yourself for today?"
+    },
+    {
+      "day": 314,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What's a simple pleasure you are looking forward to this week?"
+    },
+    {
+      "day": 315,
+      "theme": "Resilience & Strength",
+      "prompt": "What is one way you have become stronger through adversity?"
+    },
+    {
+      "day": 316,
+      "theme": "Action & Intention",
+      "prompt": "What is a creative project you would like to start?"
+    },
+    {
+      "day": 317,
+      "theme": "Self-Awareness",
+      "prompt": "How do you know when you need to rest and recharge?"
+    },
+    {
+      "day": 318,
+      "theme": "Growth & Learning",
+      "prompt": "What is one way you can challenge yourself intellectually this week?"
+    },
+    {
+      "day": 319,
+      "theme": "Values & Purpose",
+      "prompt": "What would you stand up for, even if you had to stand alone?"
+    },
+    {
+      "day": 320,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one thing you can do to be a better ancestor?"
+    },
+    {
+      "day": 321,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one thing you can do today with a beginner's mind?"
+    },
+    {
+      "day": 322,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a piece of advice you're grateful you received?"
+    },
+    {
+      "day": 323,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a personal victory you've had recently?"
+    },
+    {
+      "day": 324,
+      "theme": "Action & Intention",
+      "prompt": "What is a conversation you need to have?"
+    },
+    {
+      "day": 325,
+      "theme": "Self-Awareness",
+      "prompt": "What is one of your core beliefs about the world?"
+    },
+    {
+      "day": 326,
+      "theme": "Growth & Learning",
+      "prompt": "What is one way you can be more open to feedback?"
+    },
+    {
+      "day": 327,
+      "theme": "Values & Purpose",
+      "prompt": "What does it mean to you to live a 'good' life?"
+    },
+    {
+      "day": 328,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one way you can strengthen your community?"
+    },
+    {
+      "day": 329,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is a 'story' you can let go of?"
+    },
+    {
+      "day": 330,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is something you are grateful for that money can't buy?"
+    },
+    {
+      "day": 331,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a challenge that once seemed insurmountable but now feels manageable?"
+    },
+    {
+      "day": 332,
+      "theme": "Action & Intention",
+      "prompt": "What is a small act of rebellion against a negative habit?"
+    },
+    {
+      "day": 333,
+      "theme": "Self-Awareness",
+      "prompt": "What are you passionate about protecting?"
+    },
+    {
+      "day": 334,
+      "theme": "Growth & Learning",
+      "prompt": "What is a lesson you keep having to learn?"
+    },
+    {
+      "day": 335,
+      "theme": "Values & Purpose",
+      "prompt": "What is one way you can bring more of your 'why' into your 'what'?"
+    },
+    {
+      "day": 336,
+      "theme": "Relationships & Connection",
+      "prompt": "What is a bridge you need to build or mend?"
+    },
+    {
+      "day": 337,
+      "theme": "Mindfulness & Presence",
+      "prompt": "How can you bring a sense of sacredness to an ordinary activity today?"
+    },
+    {
+      "day": 338,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one thing you're grateful for about your mind?"
+    },
+    {
+      "day": 339,
+      "theme": "Resilience & Strength",
+      "prompt": "What is a source of hope for you right now?"
+    },
+    {
+      "day": 340,
+      "theme": "Action & Intention",
+      "prompt": "What is a positive ripple effect you could start today?"
+    },
+    {
+      "day": 341,
+      "theme": "Self-Awareness",
+      "prompt": "What is a question that has been on your mind lately?"
+    },
+    {
+      "day": 342,
+      "theme": "Growth & Learning",
+      "prompt": "What is one thing you can do to expand your perspective?"
+    },
+    {
+      "day": 343,
+      "theme": "Values & Purpose",
+      "prompt": "How can you align your daily actions more closely with your long-term vision?"
+    },
+    {
+      "day": 344,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one conversation that changed your life?"
+    },
+    {
+      "day": 345,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one thing you can do to slow down today?"
+    },
+    {
+      "day": 346,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is a moment of unexpected joy you experienced recently?"
+    },
+    {
+      "day": 347,
+      "theme": "Resilience & Strength",
+      "prompt": "What is one thing that gives you a sense of stability in uncertain times?"
+    },
+    {
+      "day": 348,
+      "theme": "Action & Intention",
+      "prompt": "What is one thing you can do to nurture your creativity?"
+    },
+    {
+      "day": 349,
+      "theme": "Self-Awareness",
+      "prompt": "What is your personal 'weather report' for today?"
+    },
+    {
+      "day": 350,
+      "theme": "Review & Consolidation",
+      "prompt": "Looking back, what has been the most valuable insight from your daily reflections?"
+    },
+    {
+      "day": 351,
+      "theme": "Growth & Learning",
+      "prompt": "What is one belief you hold that you would like to investigate more deeply?"
+    },
+    {
+      "day": 352,
+      "theme": "Values & Purpose",
+      "prompt": "What does it mean to you to live a life of integrity?"
+    },
+    {
+      "day": 353,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one way you can be a better listener to someone in your life?"
+    },
+    {
+      "day": 354,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one thing you can do to be more present with your emotions today?"
+    },
+    {
+      "day": 355,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one thing you are grateful for about the future?"
+    },
+    {
+      "day": 356,
+      "theme": "Resilience & Strength",
+      "prompt": "What is one thing you have overcome that once felt impossible?"
+    },
+    {
+      "day": 357,
+      "theme": "Action & Intention",
+      "prompt": "What is one small step you can take towards a healthier lifestyle?"
+    },
+    {
+      "day": 358,
+      "theme": "Self-Awareness",
+      "prompt": "What is one assumption you are making about your current situation?"
+    },
+    {
+      "day": 359,
+      "theme": "Growth & Learning",
+      "prompt": "What is one thing you would like to learn in the coming year?"
+    },
+    {
+      "day": 360,
+      "theme": "Values & Purpose",
+      "prompt": "What is one value that you want to be your guide for the year ahead?"
+    },
+    {
+      "day": 361,
+      "theme": "Relationships & Connection",
+      "prompt": "What is one relationship you want to nurture more in the coming year?"
+    },
+    {
+      "day": 362,
+      "theme": "Mindfulness & Presence",
+      "prompt": "What is one way you can bring more peace into your daily life?"
+    },
+    {
+      "day": 363,
+      "theme": "Gratitude & Appreciation",
+      "prompt": "What is one thing you are deeply grateful for from the past year?"
+    },
+    {
+      "day": 364,
+      "theme": "Resilience & Strength",
+      "prompt": "What is the biggest lesson in resilience the past year has taught you?"
+    },
+    {
+      "day": 365,
+      "theme": "Action & Intention",
+      "prompt": "What is one hope or dream you have for the year to come?"
+    },
+    {
+      "day": 366,
+      "theme": "Year-End Reflection",
+      "prompt": "Looking back on this year of reflection, what is the single most important thing you've learned about yourself?"
+    }
+  ]
+}

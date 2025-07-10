@@ -1,0 +1,2202 @@
+{
+  "cognitive_biases_and_fallacies": {
+    "biases": [
+      {
+        "day": 1,
+        "bias": "Action bias",
+        "summary": "You want to do something instead of nothing, even if doing nothing might be better.",
+        "example": "A coach makes a change to the team even if it might not help them win."
+      },
+      {
+        "day": 2,
+        "bias": "Additive bias",
+        "summary": "You like to add things to make something better, even if taking things away works better.",
+        "example": "Instead of removing bad parts of a story, you add more details."
+      },
+      {
+        "day": 3,
+        "bias": "Affect heuristic",
+        "summary": "Your feelings influence your decisions.",
+        "example": "You might like a product because it makes you feel good, not because it's the best."
+      },
+      {
+        "day": 4,
+        "bias": "Ambiguity bias",
+        "summary": "You avoid choices when you don't know all the information.",
+        "example": "You might pick an investment with clear risks over one with unclear risks, even if it could pay more."
+      },
+      {
+        "day": 5,
+        "bias": "Anchoring bias",
+        "summary": "You rely too much on the first piece of information you hear.",
+        "example": "If someone first says a price is $100, you'll think a price of $80 is a good deal."
+      },
+      {
+        "day": 6,
+        "bias": "Attentional bias",
+        "summary": "You notice things that you are already thinking about a lot.",
+        "example": "If you are worried about spiders, you might notice them more often."
+      },
+      {
+        "day": 7,
+        "bias": "Automation bias",
+        "summary": "You trust automated systems too much, even when they are wrong.",
+        "example": "A pilot might rely on a computer system even when their own senses tell them something is wrong."
+      },
+      {
+        "day": 8,
+        "bias": "Availability heuristic",
+        "summary": "You guess how likely something is based on how easily you can think of examples.",
+        "example": "You might think plane crashes are common because you see them on the news."
+      },
+      {
+        "day": 9,
+        "bias": "Bike-shedding effect",
+        "summary": "You spend too much time on small, unimportant details.",
+        "example": "A group might argue a lot about the color of a logo instead of the main plan."
+      },
+      {
+        "day": 10,
+        "bias": "Cashless effect",
+        "summary": "You spend more money when using cards than when using cash.",
+        "example": "You might buy more things when paying with a credit card."
+      },
+      {
+        "day": 11,
+        "bias": "Commitment bias",
+        "summary": "You stick to your past beliefs even when new facts show they are wrong.",
+        "example": "An investor might keep a stock that is losing money because they first thought it was good."
+      },
+      {
+        "day": 12,
+        "bias": "Context neglect bias",
+        "summary": "You don't think about the bigger picture when making a decision.",
+        "example": "You look at one piece of information without thinking about where it came from."
+      },
+      {
+        "day": 13,
+        "bias": "Contrast effect",
+        "summary": "Things look different depending on what you just saw.",
+        "example": "After seeing cheap items, a normal-priced item might seem expensive."
+      },
+      {
+        "day": 14,
+        "bias": "Decoy effect",
+        "summary": "Adding a third, worse option can make you prefer one of the other two.",
+        "example": "When choosing popcorn sizes, a medium option that's almost as expensive as a large can make the large seem better."
+      },
+      {
+        "day": 15,
+        "bias": "Default effect",
+        "summary": "You tend to stick with the option that is automatically chosen for you.",
+        "example": "Many people don't change the settings on their new phone."
+      },
+      {
+        "day": 16,
+        "bias": "Delmore effect",
+        "summary": "People argue more about small, unimportant things.",
+        "example": "A group might spend a lot of time debating a minor detail in a plan."
+      },
+      {
+        "day": 17,
+        "bias": "Denomination effect",
+        "summary": "You are less likely to spend larger bills than the same amount in smaller bills.",
+        "example": "You might break a $20 bill before you are willing to spend the money."
+      },
+      {
+        "day": 18,
+        "bias": "Distinction bias",
+        "summary": "Things seem more different when you compare them side-by-side.",
+        "example": "When looking at two job offers together, you might focus on small differences."
+      },
+      {
+        "day": 19,
+        "bias": "Disposition effect",
+        "summary": "Investors sell stocks that are winning but keep stocks that are losing.",
+        "example": "Someone might quickly sell a stock that made a little money but hold onto one that is losing money."
+      },
+      {
+        "day": 20,
+        "bias": "Domain neglect bias",
+        "summary": "You focus on one detail and ignore the bigger picture.",
+        "example": "A manager might only look at how one team is doing and not the whole company."
+      },
+      {
+        "day": 21,
+        "bias": "Dread aversion",
+        "summary": "You avoid things that make you feel very scared, even if they are safe.",
+        "example": "You might avoid flying even though it's safer than driving."
+      },
+      {
+        "day": 22,
+        "bias": "Effort justification",
+        "summary": "You value things more if you put a lot of effort into them.",
+        "example": "You might think a piece of furniture you built is great even if it's not perfect."
+      },
+      {
+        "day": 23,
+        "bias": "Empathy gap",
+        "summary": "You don't realize how much your feelings can change your future choices.",
+        "example": "You might say you won't eat a lot later when you are not hungry now."
+      },
+      {
+        "day": 24,
+        "bias": "Endowment effect",
+        "summary": "You value things you own more than things you don't.",
+        "example": "You might want to sell your old toy for more money than you would pay for the same toy."
+      },
+      {
+        "day": 25,
+        "bias": "Focusing effect",
+        "summary": "You put too much importance on one part of a situation.",
+        "example": "When thinking about moving to a sunny place, you might only think about the weather."
+      },
+      {
+        "day": 26,
+        "bias": "Framing effect",
+        "summary": "The way information is presented changes how you see it.",
+        "example": "People are more likely to agree to a surgery with a '90% survival rate' than a '10% death rate.'"
+      },
+      {
+        "day": 27,
+        "bias": "Functional fixedness",
+        "summary": "You can only see objects being used in their usual way.",
+        "example": "You might not realize you can use a coin as a screwdriver in an emergency."
+      },
+      {
+        "day": 28,
+        "bias": "Fundamental pain bias",
+        "summary": "You think future pain will be worse than it really is.",
+        "example": "You might avoid a doctor's visit because you imagine the pain will be too bad."
+      },
+      {
+        "day": 29,
+        "bias": "Goal gradients",
+        "summary": "You are more motivated when you are closer to your goal.",
+        "example": "You might work harder on a task when you see the finish line."
+      },
+      {
+        "day": 30,
+        "bias": "Hot-cold empathy gap",
+        "summary": "You don't understand how your feelings will affect you in the future.",
+        "example": "You might make plans for when you are upset that you wouldn't actually do."
+      },
+      {
+        "day": 31,
+        "bias": "Hyperbolic discounting",
+        "summary": "You prefer small rewards now over bigger rewards later.",
+        "example": "You might choose to get a small amount of money today instead of a larger amount next week."
+      },
+      {
+        "day": 32,
+        "bias": "IKEA effect",
+        "summary": "You like things more if you helped make them.",
+        "example": "You might like a piece of furniture you built more than one you bought already made."
+      },
+      {
+        "day": 33,
+        "bias": "Illusion of control",
+        "summary": "You think you have more control over things than you really do.",
+        "example": "You might think you can make a traffic light change by pressing the button many times."
+      },
+      {
+        "day": 34,
+        "bias": "Impact bias",
+        "summary": "You think your feelings about future events will be stronger and last longer.",
+        "example": "You might think you will be very sad for a long time after something bad happens."
+      },
+      {
+        "day": 35,
+        "bias": "Incentivization",
+        "summary": "Rewards can make you do things.",
+        "example": "A company might give bonuses to workers who do a good job."
+      },
+      {
+        "day": 36,
+        "bias": "Interoceptive bias",
+        "summary": "Your body's feelings, like hunger, can affect your judgments.",
+        "example": "A judge might give a lighter sentence if they are not hungry."
+      },
+      {
+        "day": 37,
+        "bias": "Irrational escalation",
+        "summary": "You keep putting more into something even when it's not working.",
+        "example": "You might keep spending money on a broken car to fix it even if it would be cheaper to buy a new one."
+      },
+      {
+        "day": 38,
+        "bias": "Law of the instrument",
+        "summary": "You use the same tool for every problem.",
+        "example": "If you only have a hammer, you might try to fix everything by hammering."
+      },
+      {
+        "day": 39,
+        "bias": "Less-is-better effect",
+        "summary": "You might prefer a smaller, better thing over a larger, worse thing when they are shown separately.",
+        "example": "You might pay more for a small scoop of great ice cream than a big scoop of okay ice cream if you see them alone."
+      },
+      {
+        "day": 40,
+        "bias": "Limited attention",
+        "summary": "You can only focus on so much at once.",
+        "example": "You might miss something happening around you if you are focused on your phone."
+      },
+      {
+        "day": 41,
+        "bias": "Loss aversion",
+        "summary": "You hate losing things more than you like gaining things.",
+        "example": "You might feel worse about losing $10 than you would feel good about finding $10."
+      },
+      {
+        "day": 42,
+        "bias": "Motivating Uncertainty Effect",
+        "summary": "You are more excited by rewards when you don't know exactly what you will get.",
+        "example": "You might be more interested in a game with mystery prizes."
+      },
+      {
+        "day": 43,
+        "bias": "Naïve allocation",
+        "summary": "You spread resources evenly instead of focusing on the best options.",
+        "example": "You might invest a little bit of money in many different things instead of the few best ones."
+      },
+      {
+        "day": 44,
+        "bias": "Noble Edge Effect",
+        "summary": "You like brands that care about social issues.",
+        "example": "You might choose a coffee brand that is known for fair trade."
+      },
+      {
+        "day": 45,
+        "bias": "Non-adaptive choice switching",
+        "summary": "You switch between choices even when it makes things worse.",
+        "example": "You might keep changing your mind about something even if it leads to bad results."
+      },
+      {
+        "day": 46,
+        "bias": "Omission bias",
+        "summary": "You think doing something harmful is worse than not doing something that causes harm.",
+        "example": "You might feel worse about lying than about not telling the whole truth."
+      },
+      {
+        "day": 47,
+        "bias": "Ostrich effect",
+        "summary": "You ignore bad news.",
+        "example": "An investor might avoid looking at their stocks when the market is down."
+      },
+      {
+        "day": 48,
+        "bias": "Outcome bias",
+        "summary": "You judge a decision based on the result, not how good the decision was at the time.",
+        "example": "You might think a past decision was bad just because it had a bad outcome."
+      },
+      {
+        "day": 49,
+        "bias": "Overjustification Effect",
+        "summary": "Rewards can make you like something less.",
+        "example": "A child who loves to draw might stop liking it if they get a reward every time."
+      },
+      {
+        "day": 50,
+        "bias": "Peltzman effect",
+        "summary": "Safety rules can make people take more risks.",
+        "example": "People might drive faster if they are wearing seatbelts."
+      },
+      {
+        "day": 51,
+        "bias": "Placement bias",
+        "summary": "Where things are placed can affect what you choose.",
+        "example": "You are more likely to buy things that are at eye level in a store."
+      },
+      {
+        "day": 52,
+        "bias": "Plan continuation bias",
+        "summary": "You stick to a plan even when it's clearly not working.",
+        "example": "A project might keep going even with problems because the team doesn't want to change the plan."
+      },
+      {
+        "day": 53,
+        "bias": "Planning fallacy",
+        "summary": "You think tasks will take less time than they really will.",
+        "example": "You might always think you can finish a project faster than you actually can."
+      },
+      {
+        "day": 54,
+        "bias": "Post-purchase rationalization",
+        "summary": "After buying something expensive, you ignore its flaws.",
+        "example": "After buying a fancy car, you might not want to admit it has problems."
+      },
+      {
+        "day": 55,
+        "bias": "Present bias",
+        "summary": "You prefer rewards now over rewards in the future.",
+        "example": "You might choose to have fun now instead of saving for later."
+      },
+      {
+        "day": 56,
+        "bias": "Prevention bias",
+        "summary": "You focus more on avoiding bad things than on making good things happen.",
+        "example": "A government might spend more money on stopping crime than on improving education."
+      },
+      {
+        "day": 57,
+        "bias": "Prospect theory",
+        "summary": "You make choices based on potential gains and losses, and you dislike losses more.",
+        "example": "You might take a safe option to avoid losing money even if a riskier option could give you more."
+      },
+      {
+        "day": 58,
+        "bias": "Pseudocertainty effect",
+        "summary": "You prefer choices that seem certain.",
+        "example": "You might prefer a discount that gives you a sure amount off over one with a chance of a bigger discount."
+      },
+      {
+        "day": 59,
+        "bias": "Reactance",
+        "summary": "You do the opposite of what you are told if you feel forced.",
+        "example": "A child might do something they were told not to do just to show they can."
+      },
+      {
+        "day": 60,
+        "bias": "Regret Aversion",
+        "summary": "You avoid making choices that could lead to regret.",
+        "example": "You might stick with a safe investment to avoid the chance of losing money."
+      },
+      {
+        "day": 61,
+        "bias": "Restraint bias",
+        "summary": "You think you have more self-control than you actually do.",
+        "example": "Someone on a diet might think they can easily resist a treat."
+      },
+      {
+        "day": 62,
+        "bias": "Salience bias",
+        "summary": "You focus on things that stand out and miss other important things.",
+        "example": "You might remember a news story with a strong image more than one with important facts."
+      },
+      {
+        "day": 63,
+        "bias": "Second-Order Effect",
+        "summary": "You think about the direct results of actions but not the later results.",
+        "example": "A new invention might make things easier now but cause problems later."
+      },
+      {
+        "day": 64,
+        "bias": "Sensory Appeal",
+        "summary": "Things that appeal to more of your senses are more engaging.",
+        "example": "Food that looks, smells, and tastes good is more enjoyable."
+      },
+      {
+        "day": 65,
+        "bias": "Shaping",
+        "summary": "You learn complex things by starting with small steps.",
+        "example": "You might train a dog to do a trick by rewarding small steps towards the full trick."
+      },
+      {
+        "day": 66,
+        "bias": "Status quo bias",
+        "summary": "You prefer things to stay the same.",
+        "example": "You might not want to switch to a new phone even if it's better."
+      },
+      {
+        "day": 67,
+        "bias": "Streetlight effect",
+        "summary": "You look for things where it's easiest to see them.",
+        "example": "You might look for your keys under a streetlamp even if you didn't drop them there."
+      },
+      {
+        "day": 68,
+        "bias": "Sunk cost fallacy",
+        "summary": "You keep doing something because you've already invested time or money in it.",
+        "example": "You might keep watching a bad movie because you already paid for it."
+      },
+      {
+        "day": 69,
+        "bias": "Surrogation",
+        "summary": "You focus on an easy-to-measure number instead of the real thing you want to measure.",
+        "example": "Judging how good employees are just by how many hours they work."
+      },
+      {
+        "day": 70,
+        "bias": "Temptation Bundling",
+        "summary": "You do something you should do by pairing it with something you want to do.",
+        "example": "You might only watch your favorite show while you are exercising."
+      },
+      {
+        "day": 71,
+        "bias": "Time-saving bias",
+        "summary": "You underestimate how much time you save by going faster.",
+        "example": "You might not realize how little time you actually save by speeding."
+      },
+      {
+        "day": 72,
+        "bias": "Unit bias",
+        "summary": "You want to finish a whole thing.",
+        "example": "You might feel like you have to eat everything on your plate."
+      },
+      {
+        "day": 73,
+        "bias": "Weber–Fechner law",
+        "summary": "How much something changes needs to be big enough for you to notice.",
+        "example": "You might not notice a small change in the weight of something light."
+      },
+      {
+        "day": 74,
+        "bias": "Zero-risk bias",
+        "summary": "You prefer to get rid of a small risk completely over reducing a bigger risk.",
+        "example": "You might spend a lot of time on a very small safety issue instead of a bigger one."
+      },
+      {
+        "day": 75,
+        "bias": "Zero-sum bias",
+        "summary": "You think if one person gains something, someone else must lose.",
+        "example": "In a negotiation, you might think if the other person gets a good deal, you got a bad one."
+      },
+      {
+        "day": 76,
+        "bias": "Bandwagon effect",
+        "summary": "You do things because other people are doing them.",
+        "example": "You might like a song just because it's popular."
+      },
+      {
+        "day": 77,
+        "bias": "Actor-observer bias",
+        "summary": "You blame your actions on outside things but blame others' actions on their personality.",
+        "example": "You say you were late because of traffic, but your friend was late because they are not on time."
+      },
+      {
+        "day": 78,
+        "bias": "Anthropomorphism",
+        "summary": "You give human traits to things that are not human.",
+        "example": "You talk to your pet like it understands everything you say."
+      },
+      {
+        "day": 79,
+        "bias": "Assumed similarity bias",
+        "summary": "You think other people are like you.",
+        "example": "If you like a certain hobby, you might think most people like it too."
+      },
+      {
+        "day": 80,
+        "bias": "Authority bias",
+        "summary": "You believe someone more if they seem like an expert, even if they are not.",
+        "example": "You might believe a famous person's opinion on something they don't really know about."
+      },
+      {
+        "day": 81,
+        "bias": "Ben Franklin effect",
+        "summary": "You like someone more after doing them a favor.",
+        "example": "You might start to like a coworker more after helping them with a task."
+      },
+      {
+        "day": 82,
+        "bias": "Bias blind spot",
+        "summary": "You think you are less biased than other people.",
+        "example": "You might see other people's biases but not your own."
+      },
+      {
+        "day": 83,
+        "bias": "Cheerleader effect",
+        "summary": "People look better in a group than alone.",
+        "example": "A person in a group photo might seem more attractive."
+      },
+      {
+        "day": 84,
+        "bias": "Compassion fade",
+        "summary": "You feel less empathy for many people in need than for one person.",
+        "example": "You might be less likely to donate to a large group than to help one person."
+      },
+      {
+        "day": 85,
+        "bias": "Courtesy bias",
+        "summary": "You say what you think others want to hear.",
+        "example": "You might agree with a group even if you don't really."
+      },
+      {
+        "day": 86,
+        "bias": "Cross-race effect",
+        "summary": "You have trouble telling faces of other races apart.",
+        "example": "It might be harder for you to recognize people of a different race."
+      },
+      {
+        "day": 87,
+        "bias": "Curse of knowledge",
+        "summary": "Experts think everyone knows what they know.",
+        "example": "A teacher might forget what it's like to not understand a basic concept."
+      },
+      {
+        "day": 88,
+        "bias": "Defensive attribution hypothesis",
+        "summary": "You blame victims for bad things that happen to them so you feel safer.",
+        "example": "If someone gets robbed, you might think they were careless."
+      },
+      {
+        "day": 89,
+        "bias": "Dunning-Kruger effect",
+        "summary": "People who are bad at something think they are good, and experts doubt themselves.",
+        "example": "Someone who doesn't know much about a topic might act like they are an expert."
+      },
+      {
+        "day": 90,
+        "bias": "Egocentric bias",
+        "summary": "You think your own views are the most important.",
+        "example": "You might think everyone sees the world the same way you do."
+      },
+      {
+        "day": 91,
+        "bias": "Extrinsic incentives bias",
+        "summary": "You think others do things for rewards, but you do them because you like to.",
+        "example": "You might think a coworker is only working hard for a promotion."
+      },
+      {
+        "day": 92,
+        "bias": "False consensus effect",
+        "summary": "You think more people agree with you than they actually do.",
+        "example": "If you like a certain TV show, you might think most of your friends like it too."
+      },
+      {
+        "day": 93,
+        "bias": "False uniqueness bias",
+        "summary": "You think your skills and projects are more special than they are.",
+        "example": "You might think your ideas are very original."
+      },
+      {
+        "day": 94,
+        "bias": "Fundamental attribution error",
+        "summary": "You blame people's personality for their actions and not the situation.",
+        "example": "If someone cuts you off in traffic, you might think they are a bad person."
+      },
+      {
+        "day": 95,
+        "bias": "Gender bias",
+        "summary": "You have unfair beliefs about people based on their gender.",
+        "example": "You might assume a nurse is a woman and a doctor is a man."
+      },
+      {
+        "day": 96,
+        "bias": "Group attribution error",
+        "summary": "You think one person's traits in a group apply to the whole group.",
+        "example": "You might think everyone in a certain club is the same way as one member you met."
+      },
+      {
+        "day": 97,
+        "bias": "Groupthink",
+        "summary": "A group makes bad decisions because they want to agree with each other.",
+        "example": "A team might go along with a bad idea to avoid arguments."
+      },
+      {
+        "day": 98,
+        "bias": "Groupshift",
+        "summary": "Group discussions can make people's opinions more extreme.",
+        "example": "After talking about something, a group might have stronger opinions than they did at first."
+      },
+      {
+        "day": 99,
+        "bias": "Halo effect",
+        "summary": "If you like one thing about someone, you'll like everything about them.",
+        "example": "You might think a good-looking person is also smart and kind."
+      },
+      {
+        "day": 100,
+        "bias": "Identifiable victim effect",
+        "summary": "You are more likely to help one person you can see than a large group.",
+        "example": "People often donate more to help one sick child than to a large charity."
+      },
+      {
+        "day": 101,
+        "bias": "Illusion of asymmetric insight",
+        "summary": "You think you know others better than they know you.",
+        "example": "You might think you understand your friend's reasons better than they do."
+      },
+      {
+        "day": 102,
+        "bias": "Illusion of transparency",
+        "summary": "You think others know what you are feeling.",
+        "example": "You might think people can tell you are nervous even if you are hiding it well."
+      },
+      {
+        "day": 103,
+        "bias": "Illusory superiority",
+        "summary": "You think you are better than average.",
+        "example": "You might think you are a better driver than most people."
+      },
+      {
+        "day": 104,
+        "bias": "Implicit association",
+        "summary": "You have unconscious connections between ideas.",
+        "example": "You might unconsciously link certain groups of people with certain jobs."
+      },
+      {
+        "day": 105,
+        "bias": "Implicit stereotypes",
+        "summary": "You have unconscious beliefs about groups of people.",
+        "example": "You might unconsciously think that people from a certain place are all the same."
+      },
+      {
+        "day": 106,
+        "bias": "Impostor syndrome",
+        "summary": "You doubt your success and fear being seen as a fake.",
+        "example": "You might feel like you are not good enough even though you are successful."
+      },
+      {
+        "day": 107,
+        "bias": "In-group bias",
+        "summary": "You favor people who are in your own group.",
+        "example": "You might be nicer to people who like the same sports team as you."
+      },
+      {
+        "day": 108,
+        "bias": "Intentionality bias",
+        "summary": "You think people's actions are on purpose rather than accidents.",
+        "example": "If someone bumps into you, you might think they did it on purpose."
+      },
+      {
+        "day": 109,
+        "bias": "Messenger effect",
+        "summary": "You believe a message more if you like or trust the person telling it.",
+        "example": "You might trust health advice from a doctor you like."
+      },
+      {
+        "day": 110,
+        "bias": "Moral credential effect",
+        "summary": "After doing something good, you might feel like you can do something bad.",
+        "example": "Someone who donates to charity might then feel okay about being a little selfish."
+      },
+      {
+        "day": 111,
+        "bias": "Moral luck",
+        "summary": "You are judged for things you can't control.",
+        "example": "Someone might be praised for saving someone in a flood even if it was mostly luck."
+      },
+      {
+        "day": 112,
+        "bias": "Naïve cynicism",
+        "summary": "You think others are more selfish than they really are.",
+        "example": "You might think people only help others because they want something in return."
+      },
+      {
+        "day": 113,
+        "bias": "Naïve realism",
+        "summary": "You think you see the world as it really is and that others are wrong if they disagree.",
+        "example": "You might think your political views are just the facts."
+      },
+      {
+        "day": 114,
+        "bias": "Not invented here",
+        "summary": "You don't want to use ideas or products from outside your own group.",
+        "example": "A company might not want to use a good idea from another company."
+      },
+      {
+        "day": 115,
+        "bias": "Observer effect",
+        "summary": "People act differently when they know they are being watched.",
+        "example": "Students might do better on a test if they know someone is watching."
+      },
+      {
+        "day": 116,
+        "bias": "Out-group homogeneity bias",
+        "summary": "You think people in other groups are all the same.",
+        "example": "You might think everyone from another country is alike."
+      },
+      {
+        "day": 117,
+        "bias": "Outgroup favoritism",
+        "summary": "You favor people who are not in your own group.",
+        "example": "You might think people from a more famous school are better than people from your school."
+      },
+      {
+        "day": 118,
+        "bias": "Pluralistic Ignorance",
+        "summary": "You think your private beliefs are different from what most people publicly say.",
+        "example": "Students might not ask questions in class even if they are confused because they think everyone else understands."
+      },
+      {
+        "day": 119,
+        "bias": "Prejudice",
+        "summary": "You have a negative opinion about someone without a good reason.",
+        "example": "You might dislike someone just because they are from a certain group."
+      },
+      {
+        "day": 120,
+        "bias": "Projection bias",
+        "summary": "You think others have the same beliefs and feelings as you do.",
+        "example": "If you love a certain food, you might think everyone else loves it too."
+      },
+      {
+        "day": 121,
+        "bias": "Pygmalion effect",
+        "summary": "Higher expectations can lead to better performance.",
+        "example": "Teachers who think certain students are smart might help them do better."
+      },
+      {
+        "day": 122,
+        "bias": "Reactive devaluation",
+        "summary": "You dislike ideas just because they come from someone you don't like.",
+        "example": "You might reject a suggestion just because it came from someone you disagree with."
+      },
+      {
+        "day": 123,
+        "bias": "Response Bias",
+        "summary": "You answer questions in a way that makes you look good.",
+        "example": "You might say you eat healthier than you really do on a survey."
+      },
+      {
+        "day": 124,
+        "bias": "Reverse psychology",
+        "summary": "You say the opposite of what you want someone to do so they will do what you want.",
+        "example": "You might tell a child 'Don't eat all your vegetables!' hoping they will."
+      },
+      {
+        "day": 125,
+        "bias": "Self-cry bias",
+        "summary": "You see yourself as a victim more easily than as someone who causes problems.",
+        "example": "In an argument, you might focus on how you were hurt more than your own actions."
+      },
+      {
+        "day": 126,
+        "bias": "Self-serving bias",
+        "summary": "You blame your failures on others but take credit for your successes.",
+        "example": "You might say you did well on a test because you are smart but did badly because the test was unfair."
+      },
+      {
+        "day": 127,
+        "bias": "Sexual overperception bias",
+        "summary": "Men tend to think women are more interested in them than they really are.",
+        "example": "A man might think a woman smiling at him means she likes him romantically."
+      },
+      {
+        "day": 128,
+        "bias": "Sexual underperception bias",
+        "summary": "Women tend to think men are less interested in them than they really are.",
+        "example": "A woman might not realize a man is flirting with her."
+      },
+      {
+        "day": 129,
+        "bias": "Shared information bias",
+        "summary": "Groups talk more about what everyone knows than what only some people know.",
+        "example": "A team might spend more time on common knowledge during a meeting."
+      },
+      {
+        "day": 130,
+        "bias": "Social comparison bias",
+        "summary": "You compare people only to others in the same group.",
+        "example": "A good job applicant might not get hired if compared to an even better one in the same group of applicants."
+      },
+      {
+        "day": 131,
+        "bias": "Social desirability bias",
+        "summary": "You answer questions in a way that makes you look good to others.",
+        "example": "You might say you exercise more than you really do."
+      },
+      {
+        "day": 132,
+        "bias": "Spotlight effect",
+        "summary": "You think people notice you more than they actually do.",
+        "example": "You might worry about a small mistake because you think everyone saw it."
+      },
+      {
+        "day": 133,
+        "bias": "Stereotype bias",
+        "summary": "You have unfair beliefs about groups of people that you apply to individuals.",
+        "example": "You might think all teenagers are rebellious."
+      },
+      {
+        "day": 134,
+        "bias": "Stereotyping",
+        "summary": "You expect people in a group to be a certain way without knowing them.",
+        "example": "You might assume someone from a certain region has a certain accent."
+      },
+      {
+        "day": 135,
+        "bias": "Third-person effect",
+        "summary": "You think media affects others more than it affects you.",
+        "example": "You might think ads influence other people but not you."
+      },
+      {
+        "day": 136,
+        "bias": "Trait ascription bias",
+        "summary": "You see yourself as complex but others as simple.",
+        "example": "You might think your own actions depend on the situation but others' actions just show their personality."
+      },
+      {
+        "day": 137,
+        "bias": "Travis syndrome",
+        "summary": "People with autism can have amazing skills in some areas but struggle in others.",
+        "example": "Someone with autism might be great at math but have trouble making friends."
+      },
+      {
+        "day": 138,
+        "bias": "Ultimate attribution error",
+        "summary": "You blame bad things done by other groups on their nature and good things on luck.",
+        "example": "You might say a bad thing done by another political party shows they are bad, but a good thing was just luck."
+      },
+      {
+        "day": 139,
+        "bias": "Worse-than-average effect",
+        "summary": "You think you are worse than others at hard tasks.",
+        "example": "You might think you are not as good as others at a difficult game."
+      },
+      {
+        "day": 140,
+        "bias": "Women are wonderful effect",
+        "summary": "You tend to think women have more good qualities than men.",
+        "example": "You might automatically think women are more caring."
+      },
+      {
+        "day": 141,
+        "bias": "Absent-mindedness",
+        "summary": "Forgetting things happens when you don't pay enough attention when learning or remembering.",
+        "example": "You forget where you put your phone because you were thinking about something else."
+      },
+      {
+        "day": 142,
+        "bias": "Baader-Meinhof phenomenon",
+        "summary": "After learning something new, you suddenly see it everywhere.",
+        "example": "You learn a new word and then start hearing it all the time."
+      },
+      {
+        "day": 143,
+        "bias": "Bizarreness effect",
+        "summary": "You remember strange things more easily.",
+        "example": "You are more likely to remember a weird image than a normal one."
+      },
+      {
+        "day": 144,
+        "bias": "Boundary extension",
+        "summary": "You remember seeing more of a scene than you actually did.",
+        "example": "After seeing a picture of a cat in a doorway, you might remember seeing more of the room."
+      },
+      {
+        "day": 145,
+        "bias": "Childhood amnesia",
+        "summary": "Adults can't remember events from when they were very young.",
+        "example": "You probably don't remember your first birthday party."
+      },
+      {
+        "day": 146,
+        "bias": "Choice-supportive bias",
+        "summary": "You remember your choices as better than they were.",
+        "example": "After picking a certain phone, you might think it's better than it really is."
+      },
+      {
+        "day": 147,
+        "bias": "Chronoception",
+        "summary": "Your sense of time can change.",
+        "example": "Time might feel like it's going by very slowly when you are bored."
+      },
+      {
+        "day": 148,
+        "bias": "Chunking",
+        "summary": "You remember things better when they are grouped together.",
+        "example": "You remember a phone number by breaking it into smaller parts."
+      },
+      {
+        "day": 149,
+        "bias": "Confabulation",
+        "summary": "You make up memories without meaning to.",
+        "example": "Someone with memory loss might create stories about the past."
+      },
+      {
+        "day": 150,
+        "bias": "Consistency bias",
+        "summary": "You remember your past self as being more like your present self.",
+        "example": "You might think you always liked the same things you like now."
+      },
+      {
+        "day": 151,
+        "bias": "Cryptomnesia",
+        "summary": "You think a memory or idea is yours when it's really from somewhere else.",
+        "example": "You might think of a song and not realize you heard it before."
+      },
+      {
+        "day": 152,
+        "bias": "Cue-dependent forgetting",
+        "summary": "You can't remember something because you are in a different place or situation.",
+        "example": "You might forget something you learned in school when you are at home."
+      },
+      {
+        "day": 153,
+        "bias": "Duration neglect",
+        "summary": "You remember how an event felt at its worst and at the end, not how long it lasted.",
+        "example": "You might remember a painful shot based on the worst part and the end, not the whole time."
+      },
+      {
+        "day": 154,
+        "bias": "End-of-history illusion",
+        "summary": "You think you have changed a lot in the past but won't change much in the future.",
+        "example": "Someone in their 30s might think their personality is now set."
+      },
+      {
+        "day": 155,
+        "bias": "Euphoric recall",
+        "summary": "You remember past events as happier than they really were.",
+        "example": "You might remember a vacation as perfect, forgetting any problems."
+      },
+      {
+        "day": 156,
+        "bias": "Fading affect bias",
+        "summary": "Bad memories fade faster than good memories.",
+        "example": "Over time, you might remember a past trip as better than it actually was."
+      },
+      {
+        "day": 157,
+        "bias": "False memory",
+        "summary": "You remember things that never happened or remember them wrong.",
+        "example": "You might think you saw something that you only heard about."
+      },
+      {
+        "day": 158,
+        "bias": "Generation effect",
+        "summary": "You remember things better if you come up with them yourself.",
+        "example": "You might remember a definition better if you try to explain it in your own words."
+      },
+      {
+        "day": 159,
+        "bias": "Gender differences in eyewitness memory",
+        "summary": "Men and women might remember details of events differently.",
+        "example": "Studies suggest women might remember more details than men."
+      },
+      {
+        "day": 160,
+        "bias": "Google effect",
+        "summary": "You forget information you can easily find online.",
+        "example": "You might not remember a fact because you know you can just look it up."
+      },
+      {
+        "day": 161,
+        "bias": "Hedonic recall bias",
+        "summary": "You remember past experiences as better than they were.",
+        "example": "You might remember a past party as amazing, forgetting any bad parts."
+      },
+      {
+        "day": 162,
+        "bias": "Hindsight bias",
+        "summary": "After something happens, you think you knew it all along.",
+        "example": "After a game, you might say you knew who was going to win."
+      },
+      {
+        "day": 163,
+        "bias": "Humor effect",
+        "summary": "You remember funny things more easily.",
+        "example": "You are more likely to remember a funny ad."
+      },
+      {
+        "day": 164,
+        "bias": "Lag effect",
+        "summary": "You remember things better when you learn them over time instead of all at once.",
+        "example": "Studying a little bit each day is better than cramming all night."
+      },
+      {
+        "day": 165,
+        "bias": "Leveling and sharpening",
+        "summary": "When you tell a story, some details get lost and others become more important.",
+        "example": "A story might get shorter and more exciting each time it's told."
+      },
+      {
+        "day": 166,
+        "bias": "List-length effect",
+        "summary": "You remember shorter lists better than longer lists.",
+        "example": "You are more likely to remember a short grocery list."
+      },
+      {
+        "day": 167,
+        "bias": "Magic number 7±2",
+        "summary": "You can usually only remember about 5 to 9 things at once in your short-term memory.",
+        "example": "Most people can only remember a short string of numbers."
+      },
+      {
+        "day": 168,
+        "bias": "Mere exposure effect",
+        "summary": "You like things more just because you are familiar with them.",
+        "example": "You might start to like a song more after hearing it many times."
+      },
+      {
+        "day": 169,
+        "bias": "Method of Loci",
+        "summary": "You remember things by imagining them in familiar places.",
+        "example": "You might remember a shopping list by picturing each item in a different room of your house."
+      },
+      {
+        "day": 170,
+        "bias": "Misattribution of memory",
+        "summary": "You remember something but forget where you learned it.",
+        "example": "You might think you heard something from a friend when you actually read it online."
+      },
+      {
+        "day": 171,
+        "bias": "Misinformation effect",
+        "summary": "Wrong information can change your memory of an event.",
+        "example": "If someone asks you questions that suggest something happened, you might start to remember it that way."
+      },
+      {
+        "day": 172,
+        "bias": "Modality effect",
+        "summary": "You remember the last things you hear better than the last things you read.",
+        "example": "You might remember the end of a spoken list better than the end of a written list."
+      },
+      {
+        "day": 173,
+        "bias": "Mood-congruent memory bias",
+        "summary": "You remember things that match your current mood.",
+        "example": "If you are happy, you might remember happy memories."
+      },
+      {
+        "day": 174,
+        "bias": "Negativity bias",
+        "summary": "You remember bad things more than good things.",
+        "example": "You might remember one bad comment more than many good ones."
+      },
+      {
+        "day": 175,
+        "bias": "Next-in-line effect",
+        "summary": "You don't remember what the person before you said.",
+        "example": "If you are about to speak, you might not remember the person who just finished talking."
+      },
+      {
+        "day": 176,
+        "bias": "Nostalgia Effect",
+        "summary": "You have fond memories of the past.",
+        "example": "You might really like songs from when you were a teenager."
+      },
+      {
+        "day": 177,
+        "bias": "Part-list cueing effect",
+        "summary": "Seeing some items on a list makes it harder to remember the rest.",
+        "example": "If you see a few words from a list you studied, you might have trouble remembering the other words."
+      },
+      {
+        "day": 178,
+        "bias": "Peak–end rule",
+        "summary": "You remember an experience by its best/worst part and how it ended.",
+        "example": "You might remember a trip by the best thing that happened and how you felt at the end."
+      },
+      {
+        "day": 179,
+        "bias": "Persistence",
+        "summary": "Upsetting memories keep coming back.",
+        "example": "Someone who went through something scary might keep having flashbacks."
+      },
+      {
+        "day": 180,
+        "bias": "Picture superiority effect",
+        "summary": "You remember pictures better than words.",
+        "example": "You might remember information better if it has pictures."
+      },
+      {
+        "day": 181,
+        "bias": "Positivity effect",
+        "summary": "Older people tend to remember more good things than bad things.",
+        "example": "An older person might remember happy times from the past more easily."
+      },
+      {
+        "day": 182,
+        "bias": "Primacy effect",
+        "summary": "You remember the first things on a list better.",
+        "example": "You might remember the first few items on a shopping list."
+      },
+      {
+        "day": 183,
+        "bias": "Processing difficulty effect",
+        "summary": "You remember things better if they are harder to understand at first.",
+        "example": "You might remember a complex article better than a simple one."
+      },
+      {
+        "day": 184,
+        "bias": "Recency effect",
+        "summary": "You remember the last things on a list better.",
+        "example": "You might remember the last few items on a shopping list you just read."
+      },
+      {
+        "day": 185,
+        "bias": "Recency illusion",
+        "summary": "You think a word or phrase is new when it's actually been around for a while.",
+        "example": "You might suddenly notice a certain type of car everywhere after you just learned about it."
+      },
+      {
+        "day": 186,
+        "bias": "Recognition Over Recall",
+        "summary": "It's easier to recognize information than to remember it on your own.",
+        "example": "You might not remember a name but will recognize it from a list."
+      },
+      {
+        "day": 187,
+        "bias": "Reminiscence bump",
+        "summary": "Older adults remember events from their teens and early twenties more clearly.",
+        "example": "An elderly person might have strong memories from when they were young."
+      },
+      {
+        "day": 188,
+        "bias": "Repetition blindness",
+        "summary": "You might not see a word if it is repeated quickly.",
+        "example": "You might read a sentence with a repeated word and not notice it."
+      },
+      {
+        "day": 189,
+        "bias": "Rosy retrospection",
+        "summary": "You remember the past as better than it was.",
+        "example": "You might look back on a hard trip with only good memories."
+      },
+      {
+        "day": 190,
+        "bias": "Self-consistency bias",
+        "summary": "You think your past attitudes are the same as your current ones.",
+        "example": "You might remember always liking the same political party you like now."
+      },
+      {
+        "day": 191,
+        "bias": "Self-relevance effect",
+        "summary": "You remember things better when they relate to you.",
+        "example": "You might remember a fact if it's about something you are interested in."
+      },
+      {
+        "day": 192,
+        "bias": "Serial position effect",
+        "summary": "You remember the first and last things on a list best.",
+        "example": "You might remember the first and last names on a list of people."
+      },
+      {
+        "day": 193,
+        "bias": "Serial recall effect",
+        "summary": "You try to remember things in the order you heard them.",
+        "example": "You might repeat a phone number in the order you heard it."
+      },
+      {
+        "day": 194,
+        "bias": "Source confusion",
+        "summary": "You remember a memory but mix up where it came from.",
+        "example": "You might think you learned something from a movie when you read it in a book."
+      },
+      {
+        "day": 195,
+        "bias": "Spacing effect",
+        "summary": "You learn better when you study over time.",
+        "example": "Studying a little each day is better than studying all at once."
+      },
+      {
+        "day": 196,
+        "bias": "Storytelling Effect",
+        "summary": "You remember lessons better if they are told as a story.",
+        "example": "You might remember a lesson better if it's told as a story."
+      },
+      {
+        "day": 197,
+        "bias": "Subordination effect",
+        "summary": "You remember details better than general ideas in a structure.",
+        "example": "You might remember specific tasks in a project better than the overall goals."
+      },
+      {
+        "day": 198,
+        "bias": "Suffix effect",
+        "summary": "You have trouble remembering the end of a spoken list if something is said after it.",
+        "example": "You might forget the last few words of a list if someone says 'okay' at the end."
+      },
+      {
+        "day": 199,
+        "bias": "Tachypsychia",
+        "summary": "Time seems to slow down when you are scared.",
+        "example": "During a car accident, time might feel like it's moving very slowly."
+      },
+      {
+        "day": 200,
+        "bias": "Telescoping effect",
+        "summary": "You remember recent events as further in the past and past events as closer.",
+        "example": "You might think something that happened a few years ago happened more recently."
+      },
+      {
+        "day": 201,
+        "bias": "Testing effect",
+        "summary": "You remember things better if you test yourself on them.",
+        "example": "Taking practice quizzes can help you remember information for a test."
+      },
+      {
+        "day": 202,
+        "bias": "Tip of the tongue phenomenon",
+        "summary": "You know a word but can't quite remember it.",
+        "example": "You might struggle to recall a familiar name."
+      },
+      {
+        "day": 203,
+        "bias": "Verbatim effect",
+        "summary": "You remember the general idea better than the exact words.",
+        "example": "You might remember what a conversation was about but not the exact words used."
+      },
+      {
+        "day": 204,
+        "bias": "Von Restorff effect",
+        "summary": "You remember things that stand out from the rest.",
+        "example": "You are more likely to remember a word that is a different color on a list."
+      },
+      {
+        "day": 205,
+        "bias": "Well-traveled road effect",
+        "summary": "You think familiar trips take less time than they do.",
+        "example": "You might underestimate how long your usual drive to work takes."
+      },
+      {
+        "day": 206,
+        "bias": "Zeigarnik effect",
+        "summary": "You remember unfinished tasks better than finished ones.",
+        "example": "You might remember the details of a task you were interrupted from doing."
+      },
+      {
+        "day": 207,
+        "bias": "Agent detection bias",
+        "summary": "You tend to think something is alive or has a plan, even if it doesn't.",
+        "example": "You hear a noise in the dark and think it's an animal."
+      },
+      {
+        "day": 208,
+        "bias": "Anecdotal fallacy",
+        "summary": "You believe stories or single examples more than facts or numbers.",
+        "example": "You say a certain food is bad for you because your friend got sick after eating it, even if most people are fine."
+      },
+      {
+        "day": 209,
+        "bias": "Anthropocentric thinking",
+        "summary": "You see the world only from a human point of view.",
+        "example": "You think animals feel things exactly like people do."
+      },
+      {
+        "day": 210,
+        "bias": "Appeal to novelty",
+        "summary": "You think new ideas are better just because they are new.",
+        "example": "A company uses a new technology just because it's new, not because it's better."
+      },
+      {
+        "day": 211,
+        "bias": "Appeal to probability fallacy",
+        "summary": "You think something will happen just because it could happen.",
+        "example": "You might not study because you think you'll probably guess the answers right anyway."
+      },
+      {
+        "day": 212,
+        "bias": "Apophenia",
+        "summary": "You see connections between things that are not related.",
+        "example": "You see shapes in the clouds."
+      },
+      {
+        "day": 213,
+        "bias": "Argument from fallacy",
+        "summary": "You think something is wrong because the argument for it was bad.",
+        "example": "You might think exercise isn't good for you because someone made a silly argument for it."
+      },
+      {
+        "day": 214,
+        "bias": "Attribute substitution",
+        "summary": "You answer an easy question instead of a hard one without realizing it.",
+        "example": "When asked how happy you are, you might just think about how your day is going."
+      },
+      {
+        "day": 215,
+        "bias": "Availability cascade",
+        "summary": "A belief becomes stronger as it's repeated more in the news and by people.",
+        "example": "A small health scare might become a big worry because everyone is talking about it."
+      },
+      {
+        "day": 216,
+        "bias": "Backfire effect",
+        "summary": "When someone proves you wrong, you believe your original idea even more.",
+        "example": "If someone shows you facts that go against your beliefs, you might hold onto your beliefs even stronger."
+      },
+      {
+        "day": 217,
+        "bias": "Barnum effect",
+        "summary": "You think general personality descriptions are made just for you.",
+        "example": "You might think a horoscope is very accurate for you even though it's true for many people."
+      },
+      {
+        "day": 218,
+        "bias": "Base rate fallacy",
+        "summary": "You focus on specific details and ignore general facts.",
+        "example": "When a test result is positive for a rare disease, you might think you definitely have it, even though it's unlikely."
+      },
+      {
+        "day": 219,
+        "bias": "Belief bias",
+        "summary": "You judge how good an argument is by whether you agree with the conclusion.",
+        "example": "You might agree with a weak argument if you like the outcome."
+      },
+      {
+        "day": 220,
+        "bias": "Berkson's paradox",
+        "summary": "When looking at a limited group, things can seem related when they are not in general.",
+        "example": "In a hospital, two unrelated illnesses might seem connected because you only see sick people."
+      },
+      {
+        "day": 221,
+        "bias": "Bucket error",
+        "summary": "Grouping data too broadly can hide important differences.",
+        "example": "Saying all students are doing the same based on average scores."
+      },
+      {
+        "day": 222,
+        "bias": "Clustering illusion",
+        "summary": "You see patterns in things that happen randomly.",
+        "example": "You might think a series of coin flips has a pattern even though it's random."
+      },
+      {
+        "day": 223,
+        "bias": "Cognitive dissonance",
+        "summary": "You feel uneasy when your actions don't match your beliefs.",
+        "example": "Someone who knows smoking is bad might still smoke and feel conflicted."
+      },
+      {
+        "day": 224,
+        "bias": "Common source bias",
+        "summary": "You treat information from the same source as if it's from different sources.",
+        "example": "Thinking multiple studies by the same group give more proof than they really do."
+      },
+      {
+        "day": 225,
+        "bias": "Conjunction fallacy",
+        "summary": "You think specific events are more likely than general ones.",
+        "example": "You might think someone is more likely to be a nurse and a mother than just a nurse."
+      },
+      {
+        "day": 226,
+        "bias": "Conservatism bias",
+        "summary": "You are slow to change your beliefs when new evidence comes out.",
+        "example": "You might not update your opinion even after seeing new facts."
+      },
+      {
+        "day": 227,
+        "bias": "Continued influence effect",
+        "summary": "You still believe wrong information even after it has been corrected.",
+        "example": "You might still think a false news story is true even after reading a correction."
+      },
+      {
+        "day": 228,
+        "bias": "Declinism",
+        "summary": "You think things were better in the past and are getting worse.",
+        "example": "You might say that music today is not as good as it used to be."
+      },
+      {
+        "day": 229,
+        "bias": "Desirability effect",
+        "summary": "You think good things are more likely to happen to you.",
+        "example": "You might believe you will easily get your dream job."
+      },
+      {
+        "day": 230,
+        "bias": "Essentialism",
+        "summary": "You believe things have a true, hidden nature.",
+        "example": "You might think all people from a certain country are a certain way."
+      },
+      {
+        "day": 231,
+        "bias": "Exaggerated expectation",
+        "summary": "You expect things to be more extreme than they usually are.",
+        "example": "You might think a small investment will quickly make you rich."
+      },
+      {
+        "day": 232,
+        "bias": "Experimenter's or expectation bias",
+        "summary": "Researchers see what they expect to see in their experiments.",
+        "example": "A scientist might accidentally make their study results match what they thought would happen."
+      },
+      {
+        "day": 233,
+        "bias": "Form function attribution bias",
+        "summary": "You think things that look alike work alike.",
+        "example": "You might think two medicines with similar packaging do the same thing."
+      },
+      {
+        "day": 234,
+        "bias": "G. I. Joe fallacy",
+        "summary": "You think knowing about a problem is enough to fix it.",
+        "example": "You might think just knowing the risks of smoking will make you quit."
+      },
+      {
+        "day": 235,
+        "bias": "Gambler's fallacy",
+        "summary": "You think past random events affect future random events.",
+        "example": "If a coin has landed on heads many times, you might think it's more likely to land on tails next."
+      },
+      {
+        "day": 236,
+        "bias": "Hard-easy effect",
+        "summary": "You are too sure about easy tasks and not sure enough about hard tasks.",
+        "example": "You might think a simple puzzle is very easy but doubt your ability to solve a hard one."
+      },
+      {
+        "day": 237,
+        "bias": "Hot hand fallacy",
+        "summary": "You think someone who has been lucky will continue to be lucky.",
+        "example": "You might think a basketball player who made a few shots in a row will make the next one."
+      },
+      {
+        "day": 238,
+        "bias": "Illusion of external agency",
+        "summary": "You feel like your actions are caused by something outside of you.",
+        "example": "Someone using a Ouija board might feel like something else is moving their hands."
+      },
+      {
+        "day": 239,
+        "bias": "Illusion of explanatory depth",
+        "summary": "You think you understand things until you have to explain them.",
+        "example": "You might think you know how a toilet works until someone asks you to explain it."
+      },
+      {
+        "day": 240,
+        "bias": "Illusion of validity",
+        "summary": "You are too sure about your judgments, especially if the information seems to fit.",
+        "example": "You might feel very sure about a stock pick based on a few good signs."
+      },
+      {
+        "day": 241,
+        "bias": "Illusory correlation",
+        "summary": "You think two things are related when they are not.",
+        "example": "You might think that wearing a lucky shirt helps you win games."
+      },
+      {
+        "day": 242,
+        "bias": "Illusory truth effect",
+        "summary": "You believe things are true if you hear them many times.",
+        "example": "You might start to believe a false story if you see it shared online a lot."
+      },
+      {
+        "day": 243,
+        "bias": "Insensitivity to sample size",
+        "summary": "You don't pay enough attention to how many people were studied.",
+        "example": "You might believe a study based on a few people as much as one based on many."
+      },
+      {
+        "day": 244,
+        "bias": "Just-world hypothesis",
+        "summary": "You think good things happen to good people and bad things to bad people.",
+        "example": "If someone has bad luck, you might think they deserved it."
+      },
+      {
+        "day": 245,
+        "bias": "Masked man fallacy",
+        "summary": "You think if you don't know if two things are the same, then they must be different.",
+        "example": "You might not recognize a robber in a mask even if you saw them without the mask later."
+      },
+      {
+        "day": 246,
+        "bias": "Money illusion",
+        "summary": "You think about money in terms of numbers, not what it can really buy.",
+        "example": "You might feel richer after a raise without thinking about whether things cost more now."
+      },
+      {
+        "day": 247,
+        "bias": "Murphy's Law",
+        "summary": "If something can go wrong, it will.",
+        "example": "Expecting the worst to happen."
+      },
+      {
+        "day": 248,
+        "bias": "Narrative fallacy",
+        "summary": "You create stories to explain random events.",
+        "example": "You might make up a story about why a company succeeded."
+      },
+      {
+        "day": 249,
+        "bias": "Neglect of probability",
+        "summary": "You ignore how likely something is when you are worried about it.",
+        "example": "You might be very afraid of flying even though it's very unlikely to crash."
+      },
+      {
+        "day": 250,
+        "bias": "Normalcy bias",
+        "summary": "You underestimate the chance of bad things happening.",
+        "example": "Someone in an area that gets earthquakes might not prepare because they think it won't happen to them."
+      },
+      {
+        "day": 251,
+        "bias": "Objectivity illusion",
+        "summary": "You think your own judgments are not biased.",
+        "example": "You might think your opinions are based only on facts."
+      },
+      {
+        "day": 252,
+        "bias": "Observer-expectancy effect",
+        "summary": "Researchers can unintentionally make participants do what they expect.",
+        "example": "A scientist might accidentally influence people in a study to get the results they want."
+      },
+      {
+        "day": 253,
+        "bias": "Occam's razor",
+        "summary": "The simplest explanation is usually the best.",
+        "example": "When trying to figure out why something happened, the easiest answer is often right."
+      },
+      {
+        "day": 254,
+        "bias": "Optimism bias",
+        "summary": "You think good things are more likely to happen to you than bad things.",
+        "example": "You might think you are less likely to get sick than other people."
+      },
+      {
+        "day": 255,
+        "bias": "Overconfidence effect",
+        "summary": "You are too sure about your answers.",
+        "example": "You might be very certain you know the answer to a question even if you are wrong."
+      },
+      {
+        "day": 256,
+        "bias": "Pareidolia",
+        "summary": "You see faces or patterns in random things.",
+        "example": "Seeing a face in a cloud."
+      },
+      {
+        "day": 257,
+        "bias": "Pessimism bias",
+        "summary": "You think bad things are more likely to happen.",
+        "example": "You might always worry about bad things happening to you."
+      },
+      {
+        "day": 258,
+        "bias": "Plant blindness",
+        "summary": "You don't notice plants around you or think they are important.",
+        "example": "You might focus on animals in a forest and not really see the plants."
+      },
+      {
+        "day": 259,
+        "bias": "Placebo effect",
+        "summary": "You feel better because you think you are getting treatment, even if you are not.",
+        "example": "A fake pill can sometimes make people feel better."
+      },
+      {
+        "day": 260,
+        "bias": "Priming",
+        "summary": "Seeing or hearing something can affect how you respond to other things.",
+        "example": "Seeing the color yellow might make you think of a banana faster."
+      },
+      {
+        "day": 261,
+        "bias": "Pro-innovation bias",
+        "summary": "You are too excited about new inventions and don't see their problems.",
+        "example": "A company might be too eager to use a new technology without thinking about the downsides."
+      },
+      {
+        "day": 262,
+        "bias": "Proportionality bias",
+        "summary": "You think big events must have big causes.",
+        "example": "You might think a major disaster must have a huge, complicated reason."
+      },
+      {
+        "day": 263,
+        "bias": "Publication bias",
+        "summary": "Studies with positive results are more likely to be published.",
+        "example": "You might only see studies that show a treatment works, not the ones that show it doesn't."
+      },
+      {
+        "day": 264,
+        "bias": "Puritanical bias",
+        "summary": "You judge things more harshly than needed.",
+        "example": "You might get very upset about a small mistake someone makes."
+      },
+      {
+        "day": 265,
+        "bias": "Quantification bias",
+        "summary": "You trust numbers more than words.",
+        "example": "You might believe statistics more than personal stories."
+      },
+      {
+        "day": 266,
+        "bias": "Representativeness Heuristic",
+        "summary": "You judge things based on how similar they are to a typical example.",
+        "example": "You might think a quiet person who likes books is a librarian."
+      },
+      {
+        "day": 267,
+        "bias": "Rhyme as reason effect",
+        "summary": "You believe things that rhyme are more true.",
+        "example": "'An apple a day keeps the doctor away' might seem more believable because it rhymes."
+      },
+      {
+        "day": 268,
+        "bias": "Saying is believing effect",
+        "summary": "You start to believe what you say.",
+        "example": "After saying you like something, you might start to like it more."
+      },
+      {
+        "day": 269,
+        "bias": "Scope neglect",
+        "summary": "You don't think about the size of a problem when deciding how much to care.",
+        "example": "You might be willing to help a small number of people as much as a large number."
+      },
+      {
+        "day": 270,
+        "bias": "Selective perception",
+        "summary": "You see what you expect to see.",
+        "example": "If you are looking for a certain car, you might notice it more often."
+      },
+      {
+        "day": 271,
+        "bias": "Semmelweis reflex",
+        "summary": "You reject new ideas that go against what you already believe.",
+        "example": "Scientists might ignore new findings that disagree with their current theories."
+      },
+      {
+        "day": 272,
+        "bias": "Subadditivity effect",
+        "summary": "You think the chance of separate events is higher than the chance of them all happening.",
+        "example": "You might think you are more likely to die from heart disease or cancer than from any cause."
+      },
+      {
+        "day": 273,
+        "bias": "Subjective validation",
+        "summary": "You believe something is true if it has personal meaning to you.",
+        "example": "You might believe a vague fortune telling because you can relate it to your life."
+      },
+      {
+        "day": 274,
+        "bias": "Survivorship bias",
+        "summary": "You only see the winners and not the losers.",
+        "example": "You might think starting a business is easy because you only see the successful ones."
+      },
+      {
+        "day": 275,
+        "bias": "Swimmer's body illusion",
+        "summary": "You mix up what causes what.",
+        "example": "You might think swimming makes you thin, but thin people might just be more likely to swim."
+      },
+      {
+        "day": 276,
+        "bias": "System justification",
+        "summary": "You defend the way things are, even if they are unfair.",
+        "example": "You might say that the current rules are good even if they hurt some people."
+      },
+      {
+        "day": 277,
+        "bias": "Teleological Bias",
+        "summary": "You think things are the way they are for a reason or plan.",
+        "example": "You might think natural disasters happen to teach us something."
+      },
+      {
+        "day": 278,
+        "bias": "Truth bias",
+        "summary": "You tend to believe what people say.",
+        "example": "You might believe a statement at first without questioning it."
+      },
+      {
+        "day": 279,
+        "bias": "Turkey illusion",
+        "summary": "You think things will keep going well just before something bad happens.",
+        "example": "Someone might feel very safe right before a big change that hurts them."
+      },
+      {
+        "day": 280,
+        "bias": "Value selection bias",
+        "summary": "How you choose a group to study can affect the results.",
+        "example": "Survey results might be wrong if certain types of people don't answer."
+      },
+      {
+        "day": 281,
+        "bias": "Abilene Paradox",
+        "summary": "A group makes a decision that no individual member wants, but all agree to avoid conflict.",
+        "example": "A family goes to a restaurant no one really likes because they all thought everyone else wanted to go."
+      },
+      {
+        "day": 282,
+        "bias": "Ad Hoc Fallacy",
+        "summary": "Modifying an argument or theory to prevent it from being falsified.",
+        "example": "Claiming that a diet failed because the person didn't *truly* commit, rather than the diet itself being flawed."
+      },
+      {
+        "day": 283,
+        "bias": "Affective Forecasting Error",
+        "summary": "Incorrectly predicting how one will feel in the future.",
+        "example": "Believing winning the lottery will bring perpetual happiness, or that a breakup will lead to endless despair."
+      },
+      {
+        "day": 284,
+        "bias": "Allegory of the Cave (Plato's)",
+        "summary": "A metaphorical illustration of how people are unwilling to accept new truths.",
+        "example": "People in a society clinging to traditional beliefs despite clear evidence of a different reality."
+      },
+      {
+        "day": 285,
+        "bias": "All-or-Nothing Thinking",
+        "summary": "Viewing situations in extreme, black-and-white terms.",
+        "example": "If you don't get a perfect score, you consider yourself a complete failure."
+      },
+      {
+        "day": 286,
+        "bias": "Alternative Blindness",
+        "summary": "Failing to consider alternative possibilities or solutions.",
+        "example": "Focusing only on one career path without exploring other viable options."
+      },
+      {
+        "day": 287,
+        "bias": "Argument from Ignorance (Ad Ignorantiam)",
+        "summary": "Assuming something is true because it hasn't been proven false (or vice versa).",
+        "example": "No one has proven ghosts don't exist, so they must be real."
+      },
+      {
+        "day": 288,
+        "bias": "Asymmetry Bias",
+        "summary": "Overestimating the likelihood of positive events and underestimating negative ones.",
+        "example": "Believing you're more likely to win the lottery than to be in a car accident."
+      },
+      {
+        "day": 289,
+        "bias": "Attributional Ambiguity",
+        "summary": "Uncertainty about the cause of others' behaviors or one's own outcomes.",
+        "example": "A minority employee wondering if positive feedback is due to their work or a diversity initiative."
+      },
+      {
+        "day": 290,
+        "bias": "Autism Spectrum Disorder (ASD) Biases",
+        "summary": "Distinct patterns of information processing observed in individuals with ASD, leading to specific cognitive biases.",
+        "example": "Individuals with ASD might exhibit reduced susceptibility to certain social biases like the bandwagon effect due to different social processing."
+      },
+      {
+        "day": 291,
+        "bias": "Availability Error",
+        "summary": "Mistaking how easily something comes to mind for how common or likely it is.",
+        "example": "Fearing shark attacks more than vending machine accidents because shark attacks are more sensationalized in media."
+      },
+      {
+        "day": 292,
+        "bias": "Belief in a Just World",
+        "summary": "People generally believe that the world is fair and people get what they deserve.",
+        "example": "Blaming a homeless person for their situation, assuming they must have done something to deserve it."
+      },
+      {
+        "day": 293,
+        "bias": "Benign Violation Theory of Humor",
+        "summary": "Humor arises when something is perceived as a violation (e.g., threatening, absurd) but also benign (safe, acceptable).",
+        "example": "A playful tease between friends that is mildly offensive but not truly hurtful."
+      },
+      {
+        "day": 294,
+        "bias": "Blinkered Thinking",
+        "summary": "A narrow or limited way of thinking, preventing consideration of broader perspectives.",
+        "example": "An engineer only considering technical solutions to a problem, ignoring social or ethical implications."
+      },
+      {
+        "day": 295,
+        "bias": "Boiling Frog Syndrome",
+        "summary": "Failing to act or react to a gradually worsening situation until it's too late.",
+        "example": "A company slowly losing market share but not changing strategy until it's on the verge of bankruptcy."
+      },
+      {
+        "day": 296,
+        "bias": "Bounded Rationality",
+        "summary": "Decision-making is limited by the information available, cognitive limitations, and time constraints.",
+        "example": "Choosing the 'good enough' option for a purchase rather than exhaustive research to find the absolute best."
+      },
+      {
+        "day": 297,
+        "bias": "Bystander Effect",
+        "summary": "Individuals are less likely to offer help to a victim when other people are present.",
+        "example": "No one calls for help when a person collapses in a crowded public place, assuming someone else will."
+      },
+      {
+        "day": 298,
+        "bias": "Category-Specific Deficits",
+        "summary": "Impairments in recognizing or naming objects from specific categories (e.g., living vs. non-living).",
+        "example": "A brain injury patient who can identify tools but not animals."
+      },
+      {
+        "day": 299,
+        "bias": "Causal Fallacy",
+        "summary": "Incorrectly identifying the cause of an event.",
+        "example": "Assuming that because event B happened after event A, A must have caused B."
+      },
+      {
+        "day": 300,
+        "bias": "Cherry Picking (Fallacy of Incomplete Evidence)",
+        "summary": "Selecting only evidence that supports one's position while ignoring contradictory evidence.",
+        "example": "A politician quoting only statistics that favor their policy, disregarding data that shows negative effects."
+      },
+      {
+        "day": 301,
+        "bias": "Choice Overload (Paradox of Choice)",
+        "summary": "Having too many options makes decision-making difficult and can lead to dissatisfaction.",
+        "example": "Feeling overwhelmed and buying nothing when faced with an aisle of 50 different jams."
+      },
+      {
+        "day": 302,
+        "bias": "Chronological Snobbery",
+        "summary": "Dismissing past ideas or practices as inferior simply because they are old.",
+        "example": "Rejecting a traditional medical remedy as useless because it's not a modern pharmaceutical."
+      },
+      {
+        "day": 303,
+        "bias": "Cognitive Ease",
+        "summary": "Tendency to prefer information that is easy to process and understand.",
+        "example": "Choosing a simple, familiar product over a complex, potentially better one."
+      },
+      {
+        "day": 304,
+        "bias": "Communal Reinforcement",
+        "summary": "A belief or idea becomes more ingrained as it is repeatedly affirmed by a community.",
+        "example": "A conspiracy theory gaining widespread acceptance within a specific online forum."
+      },
+      {
+        "day": 305,
+        "bias": "Confirmation Bias",
+        "summary": "Seeking out, interpreting, and remembering information in a way that confirms one's existing beliefs.",
+        "example": "Only reading news articles that support your political views and dismissing those that don't."
+      },
+      {
+        "day": 306,
+        "bias": "Confirmatory Bias",
+        "summary": "Similar to confirmation bias, focusing on information that supports a hypothesis.",
+        "example": "A detective looking only for evidence that confirms their initial suspect, ignoring other leads."
+      },
+      {
+        "day": 307,
+        "bias": "Congruence Bias",
+        "summary": "Only testing hypotheses that are consistent with one's existing beliefs.",
+        "example": "A scientist designing an experiment in a way that is most likely to confirm their theory."
+      },
+      {
+        "day": 308,
+        "bias": "Conservatism (Bayesian)",
+        "summary": "Slowness to change one's belief in response to new evidence, even when statistically warranted.",
+        "example": "A doctor being slow to adopt a new treatment even after strong evidence of its effectiveness."
+      },
+      {
+        "day": 309,
+        "bias": "Consideration of Future Consequences (CFC)",
+        "summary": "Individual differences in the extent to which people consider potential future outcomes of their current behaviors.",
+        "example": "A person with low CFC might prioritize immediate gratification over long-term health goals."
+      },
+      {
+        "day": 310,
+        "bias": "Consistency Trap",
+        "summary": "Feeling compelled to maintain consistency with prior statements or actions, even if illogical.",
+        "example": "Continuing to argue a point in a debate even after realizing you're wrong because you've already committed to the position."
+      },
+      {
+        "day": 311,
+        "bias": "Construal Level Theory (CLT)",
+        "summary": "The greater the psychological distance to an event, the more abstractly it is construed.",
+        "example": "When planning a distant vacation, you focus on broad, desirable aspects (relaxation), but as it approaches, you focus on concrete details (packing, airport)."
+      },
+      {
+        "day": 312,
+        "bias": "Contagion Bias",
+        "summary": "Belief that objects or people can transmit properties to others through contact.",
+        "example": "Refusing to wear a sweater that belonged to a murderer, even if it's been cleaned."
+      },
+      {
+        "day": 313,
+        "bias": "Control Heuristic",
+        "summary": "Overestimating one's ability to control outcomes.",
+        "example": "Feeling that shaking the dice harder will increase the chances of rolling a six."
+      },
+      {
+        "day": 314,
+        "bias": "Cowboy Fallacy",
+        "summary": "Believing that one can succeed solely through individual effort, disregarding systemic factors or collaboration.",
+        "example": "A new startup founder insisting on doing everything themselves, refusing to delegate or seek external help."
+      },
+      {
+        "day": 315,
+        "bias": "Credibility Bias",
+        "summary": "Judging information based on the perceived credibility of the source, rather than the content itself.",
+        "example": "Dismissing a scientific study because it's published by an organization you distrust, regardless of the research quality."
+      },
+      {
+        "day": 316,
+        "bias": "Cultural Bias",
+        "summary": "Interpreting and judging phenomena by standards inherent to one's own culture.",
+        "example": "Assuming that a certain social custom in another country is 'wrong' because it differs from your own."
+      },
+      {
+        "day": 317,
+        "bias": "Curse of the Winner",
+        "summary": "In auctions, the winning bidder often pays more than the asset is worth, due to overestimating its value.",
+        "example": "A company overpaying for an acquisition in a competitive bidding process."
+      },
+      {
+        "day": 318,
+        "bias": "Data-Mining Fallacy",
+        "summary": "Finding spurious patterns in data by looking for enough combinations of variables.",
+        "example": "Discovering a correlation between ice cream sales and shark attacks, and concluding that ice cream causes shark attacks."
+      },
+      {
+        "day": 319,
+        "bias": "Deindividuation",
+        "summary": "Loss of self-awareness and self-restraint in group situations that foster anonymity and arousal.",
+        "example": "People engaging in destructive behavior during a riot, feeling less accountable for their actions."
+      },
+      {
+        "day": 320,
+        "bias": "Disability Bias",
+        "summary": "Prejudice or discrimination against people with disabilities.",
+        "example": "Assuming a person in a wheelchair is incapable of performing a certain job function."
+      },
+      {
+        "day": 321,
+        "bias": "Dunning-Kruger Effect (Reverse)",
+        "summary": "Highly competent individuals underestimate their abilities and may feel like impostors.",
+        "example": "An accomplished expert feeling they are not good enough despite widespread recognition."
+      },
+      {
+        "day": 322,
+        "bias": "Ecological Fallacy",
+        "summary": "Inferring individual characteristics from statistics about the group to which that individual belongs.",
+        "example": "Assuming a specific student is lazy because the average GPA of their university is low."
+      },
+      {
+        "day": 323,
+        "bias": "Egocentric Memory Bias",
+        "summary": "Recalling past events in a way that makes oneself appear more central or influential than they actually were.",
+        "example": "Remembering a group project as if you did most of the work, even if it was a shared effort."
+      },
+      {
+        "day": 324,
+        "bias": "Embodied Cognition",
+        "summary": "The idea that cognitive processes are deeply rooted in the body's interactions with the world.",
+        "example": "Holding a warm drink makes people perceive others as more generous."
+      },
+      {
+        "day": 325,
+        "bias": "Equivocation (Fallacy of Ambiguity)",
+        "summary": "Using a word or phrase with two different meanings in an argument, leading to a misleading conclusion.",
+        "example": "Claiming that 'all men are mortal, and no woman is a man, therefore no woman is mortal' (using 'man' in two different senses)."
+      },
+      {
+        "day": 326,
+        "bias": "Ethnocentrism",
+        "summary": "Evaluating other cultures based on preconceptions originating in the standards and customs of one's own culture.",
+        "example": "Believing your country's way of life is inherently superior to all others."
+      },
+      {
+        "day": 327,
+        "bias": "Evidence Suppression Bias",
+        "summary": "Deliberately ignoring or suppressing evidence that contradicts one's beliefs or desired outcome.",
+        "example": "A pharmaceutical company hiding unfavorable results from drug trials."
+      },
+      {
+        "day": 328,
+        "bias": "Exaggeration Fallacy",
+        "summary": "Overstating or misrepresenting the extent or significance of something.",
+        "example": "Claiming that a small inconvenience is 'the worst thing that ever happened.'"
+      },
+      {
+        "day": 329,
+        "bias": "Exceptionalism Bias",
+        "summary": "Believing that one's own group, nation, or species is unique and superior.",
+        "example": "A country believing it has a special destiny or moral authority above other nations."
+      },
+      {
+        "day": 330,
+        "bias": "Existential Guilt",
+        "summary": "Feeling guilt about one's advantages or privileges compared to others.",
+        "example": "Feeling guilty about enjoying a good meal while others are starving."
+      },
+      {
+        "day": 331,
+        "bias": "Expert Problem Solving Bias",
+        "summary": "Experts can sometimes be less effective at solving problems outside their narrow domain of expertise.",
+        "example": "A renowned heart surgeon struggling to diagnose a simple skin rash."
+      },
+      {
+        "day": 332,
+        "bias": "False Dilemma (False Dichotomy)",
+        "summary": "Presenting only two options as if they are the only possibilities, when more options exist.",
+        "example": "Saying 'Either you're with us, or you're with the terrorists' when there are many nuanced positions."
+      },
+      {
+        "day": 333,
+        "bias": "Fatalism",
+        "summary": "Belief that all events are predetermined and therefore inevitable.",
+        "example": "Refusing to take preventative health measures because 'what will be, will be.'"
+      },
+      {
+        "day": 334,
+        "bias": "Fear of Missing Out (FOMO)",
+        "summary": "Anxiety that an exciting or interesting event may currently be happening elsewhere, often fueled by social media.",
+        "example": "Attending a party you don't really want to go to because you see friends posting about it online."
+      },
+      {
+        "day": 335,
+        "bias": "Figurative Language Bias",
+        "summary": "Interpreting figurative language literally, leading to miscommunication.",
+        "example": "Taking the phrase 'it's raining cats and dogs' to mean actual animals are falling from the sky."
+      },
+      {
+        "day": 336,
+        "bias": "Fixed Mindset (vs. Growth Mindset)",
+        "summary": "Belief that one's abilities are fixed traits and cannot be developed.",
+        "example": "Avoiding challenging tasks because you believe your intelligence is limited."
+      },
+      {
+        "day": 337,
+        "bias": "Functional Fixedness (Reverse)",
+        "summary": "Being overly reliant on a specific tool or method, even when it's inefficient.",
+        "example": "Always using a hammer to fix something, even when a screwdriver is clearly more appropriate."
+      },
+      {
+        "day": 338,
+        "bias": "Gambler's Fallacy (Reverse)",
+        "summary": "Believing that a series of successes makes continued success less likely.",
+        "example": "A basketball team that's won many games in a row expecting to lose the next one because 'their luck will run out.'"
+      },
+      {
+        "day": 339,
+        "bias": "Generalization Fallacy",
+        "summary": "Drawing a broad conclusion based on a small or unrepresentative sample.",
+        "example": "Meeting one rude person from a city and concluding that all people from that city are rude."
+      },
+      {
+        "day": 340,
+        "bias": "Golden Mean Fallacy (Middle Ground)",
+        "summary": "Assuming that the truth lies in the middle of two opposing arguments.",
+        "example": "Believing that the best solution to a complex issue is always a compromise between two extremes."
+      },
+      {
+        "day": 341,
+        "bias": "Group-Serving Bias (Ethnocentric Bias)",
+        "summary": "Attributing positive outcomes to one's own group and negative outcomes to external factors.",
+        "example": "A sports team attributing their win to their skill but a loss to bad refereeing."
+      },
+      {
+        "day": 342,
+        "bias": "Hasty Generalization",
+        "summary": "Making assumptions about a whole group or range of cases based on an inadequate sample.",
+        "example": "Concluding that all fast food is unhealthy after eating one bad burger."
+      },
+      {
+        "day": 343,
+        "bias": "Hostile Attribution Bias",
+        "summary": "Tendency to interpret ambiguous social cues as hostile or aggressive.",
+        "example": "Reacting angrily to an accidental bump in a crowd, believing it was an intentional shove."
+      },
+      {
+        "day": 344,
+        "bias": "Ideological Bias",
+        "summary": "A systematic distortion of reasoning or judgment due to strong adherence to a particular ideology.",
+        "example": "Interpreting all economic data through the lens of a specific political theory, ignoring contradictory evidence."
+      },
+      {
+        "day": 345,
+        "bias": "Illusion of External Validation",
+        "summary": "Believing that external validation (e.g., praise, awards) is the primary measure of one's worth.",
+        "example": "Feeling worthless if you don't receive public recognition for your efforts, even if you achieved your goals."
+      },
+      {
+        "day": 346,
+        "bias": "Inconsistency Fallacy",
+        "summary": "Asserting two or more contradictory statements.",
+        "example": "Claiming to be a strong advocate for free speech while also demanding censorship of opposing views."
+      },
+      {
+        "day": 347,
+        "bias": "Red Herring Fallacy",
+        "summary": "Introducing an irrelevant topic to divert attention from the original issue.",
+        "example": "When discussing the safety of a new car, bringing up its beautiful color to distract from the crash test ratings."
+      },
+      {
+        "day": 348,
+        "bias": "Straw Man Fallacy",
+        "summary": "Misrepresenting someone's argument to make it easier to attack.",
+        "example": "After someone says, 'We should invest more in public transit,' their opponent retorts, 'So you want to take away everyone's cars and force them onto buses?'"
+      },
+      {
+        "day": 349,
+        "bias": "Slippery Slope Fallacy",
+        "summary": "Arguing that a small first step will inevitably lead to a chain of negative events without sufficient evidence.",
+        "example": "'If we allow children to choose their bedtime, soon they'll be choosing not to go to school at all.'"
+      },
+      {
+        "day": 350,
+        "bias": "No True Scotsman Fallacy",
+        "summary": "Making a universal claim and then excluding counterexamples by arbitrarily redefining the criteria.",
+        "example": "Person A: 'No Scotsman puts sugar on his porridge.' Person B: 'But my uncle Angus is a Scotsman and he puts sugar on his porridge.' Person A: 'Ah, but no *true* Scotsman puts sugar on his porridge.'"
+      },
+      {
+        "day": 351,
+        "bias": "Genetic Fallacy",
+        "summary": "Judging something based on its origin or source rather than its current meaning or context.",
+        "example": "Dismissing a new medical treatment because it was developed by a company with a history of past controversies."
+      },
+      {
+        "day": 352,
+        "bias": "Appeal to Emotion Fallacy",
+        "summary": "Manipulating an emotional response in place of a valid or compelling argument.",
+        "example": "A political ad showing sad puppies in a shelter to argue for a policy that has no connection to animal welfare."
+      },
+      {
+        "day": 353,
+        "bias": "Appeal to Authority Fallacy",
+        "summary": "Insisting that a claim is true simply because an authority figure said it, without other supporting evidence.",
+        "example": "A celebrity endorses a diet plan, and people follow it assuming it's effective, despite a lack of scientific evidence."
+      },
+      {
+        "day": 354,
+        "bias": "Personal Incredulity Fallacy",
+        "summary": "Arguing that because something is difficult to understand, it must be untrue.",
+        "example": "Saying you can't imagine how evolution could be true, so it must be false."
+      },
+      {
+        "day": 355,
+        "bias": "The Texas Sharpshooter Fallacy",
+        "summary": "Cherry-picking data clusters to fit a presumption, ignoring the differences and focusing on the similarities.",
+        "example": "An anti-vaccine advocate points to a cluster of autism cases in a specific town with high vaccination rates, ignoring all the towns with high vaccination rates and no such cluster."
+      },
+      {
+        "day": 356,
+        "bias": "Moving the Goalposts Fallacy",
+        "summary": "Demanding more and more evidence or changing the criteria for success after an opponent has met the initial challenge.",
+        "example": "First asking for proof that a new policy works, then when presented with proof, saying 'but it needs to work for ten years straight before I'll believe it'."
+      },
+      {
+        "day": 357,
+        "bias": "Appeal to Nature",
+        "summary": "Arguing that something is good because it's 'natural' or bad because it's 'unnatural'.",
+        "example": "Claiming that herbal remedies are always safer than synthetic drugs because they come from plants."
+      },
+      {
+        "day": 358,
+        "bias": "Begging the Question (Circular Reasoning)",
+        "summary": "A fallacy in which the premise of an argument presupposes the truth of its conclusion.",
+        "example": "'This plan is the best one because it is superior to all other plans.'"
+      },
+      {
+        "day": 359,
+        "bias": "Ad Hominem Fallacy",
+        "summary": "Attacking your opponent's character or personal traits in an attempt to undermine their argument.",
+        "example": "Instead of debating a scientist's climate change research, you say, 'Of course you'd say that, you're just trying to get more grant money.'"
+      },
+      {
+        "day": 360,
+        "bias": "Cognitive Inertia",
+        "summary": "The tendency to stick with one's current way of thinking, even when faced with new information that contradicts it.",
+        "example": "A manager continues to use an outdated software system despite employees showing that a new system is far more efficient."
+      },
+      {
+        "day": 361,
+        "bias": "Emotional Contagion",
+        "summary": "The tendency to feel and express emotions similar to and influenced by those of others.",
+        "example": "One person in an office starts panicking about a deadline, and soon the entire team feels anxious and stressed."
+      },
+      {
+        "day": 362,
+        "bias": "Inattentional Blindness",
+        "summary": "Failing to see visible objects when our attention is directed elsewhere.",
+        "example": "While counting basketball passes between players in a video, you fail to notice a person in a gorilla suit walking through the middle of the scene."
+      },
+      {
+        "day": 363,
+        "bias": "Information Bias",
+        "summary": "The tendency to seek information when it does not affect action or decisions.",
+        "example": "Spending hours researching the subtle differences between two nearly identical cameras, even though both are more than sufficient for your needs and the extra information won't change your choice."
+      },
+      {
+        "day": 364,
+        "bias": "Special Pleading Fallacy",
+        "summary": "Applying standards, principles, or rules to other people or circumstances, while making oneself or one's own circumstances exempt from the same rules without providing adequate justification.",
+        "example": "Claiming that your business's tax loopholes are 'smart incentives' while insisting that loopholes for others are 'unfair tax evasion'."
+      },
+      {
+        "day": 365,
+        "bias": "Dichotomous Thinking",
+        "summary": "Viewing the world in absolute, black-and-white categories, with no shades of gray.",
+        "example": "Believing that people are either 'good' or 'evil' with no capacity for both positive and negative traits."
+      },
+      {
+        "day": 366,
+        "bias": "Mind Projection Fallacy",
+        "summary": "The error of assuming that one's own subjective perspective and way of seeing the world is an objective property of the world itself.",
+        "example": "Assuming that because you find a particular painting beautiful, its beauty is an objective fact that everyone should be able to see."
+      }
+    ]
+  }
+}

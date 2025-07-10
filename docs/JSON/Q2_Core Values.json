@@ -1,0 +1,103 @@
+{
+  "id": "core_values_v1.0.0",
+  "version": "1.0.0",
+  "tier": "Tier 1",
+  "title": "Your Core Values",
+  "description": "This exercise helps you identify your most deeply held principles and life priorities. Understanding what truly matters to you is the key to setting meaningful goals. There are two sets of values: desired end-states (goals in life) and modes of behavior (guiding principles).",
+  "instructions": "For each set of values below (Goals and Principles), drag and drop the cards into the columns that best represent their importance to you. You can only place 5 cards in the 'Most Important' column for each set.",
+  "scientificBasis": {
+    "summary": "This assessment is based on the foundational framework of the Rokeach Value Survey, a classic and highly influential model in social psychology for understanding human values. It helps differentiate between terminal values (desirable end-states) and instrumental values (modes of behavior).",
+    "citation": "Conceptual model based on 'The Nature of Human Values' (1973) by Milton Rokeach. Value list is a standard representation used in public domain research."
+  },
+  "interactionType": "cardSort",
+  "sections": [
+    {
+      "id": "terminalValues",
+      "title": "Part 1: Your Life Goals (What you want to achieve)",
+      "categories": [
+        { "id": "terminal_most_important", "title": "Most Important", "limit": 5 },
+        { "id": "terminal_important", "title": "Important", "limit": null },
+        { "id": "terminal_less_important", "title": "Less Important", "limit": null }
+      ],
+      "items": [
+        { "id": "val_t1", "text": "A Comfortable Life", "type": "terminal", "subType": "personal" },
+        { "id": "val_t2", "text": "An Exciting Life", "type": "terminal", "subType": "personal" },
+        { "id": "val_t3", "text": "A Sense of Accomplishment", "type": "terminal", "subType": "competence" },
+        { "id": "val_t4", "text": "A World at Peace", "type": "terminal", "subType": "social" },
+        { "id": "val_t5", "text": "Equality", "type": "terminal", "subType": "social" },
+        { "id": "val_t6", "text": "Family Security", "type": "terminal", "subType": "social" },
+        { "id": "val_t7", "text": "Freedom (independence)", "type": "terminal", "subType": "personal" },
+        { "id": "val_t8", "text": "Happiness", "type": "terminal", "subType": "personal" },
+        { "id": "val_t9", "text": "Self-Respect", "type": "terminal", "subType": "personal" }
+      ]
+    },
+    {
+      "id": "instrumentalValues",
+      "title": "Part 2: Your Guiding Principles (How you want to behave)",
+      "categories": [
+        { "id": "instrumental_most_important", "title": "Most Important", "limit": 5 },
+        { "id": "instrumental_important", "title": "Important", "limit": null },
+        { "id": "instrumental_less_important", "title": "Less Important", "limit": null }
+      ],
+      "items": [
+        { "id": "val_i1", "text": "Ambitious (hard-working)", "type": "instrumental", "subType": "competence" },
+        { "id": "val_i2", "text": "Helpful (working for others' welfare)", "type": "instrumental", "subType": "moral" },
+        { "id": "val_i3", "text": "Honest (sincere, truthful)", "type": "instrumental", "subType": "moral" },
+        { "id": "val_i4", "text": "Independent (self-reliant)", "type": "instrumental", "subType": "competence" },
+        { "id": "val_i5", "text": "Intellectual (intelligent, reflective)", "type": "instrumental", "subType": "competence" },
+        { "id": "val_i6", "text": "Logical (consistent, rational)", "type": "instrumental", "subType": "competence" },
+        { "id": "val_i7", "text": "Loving (affectionate, tender)", "type": "instrumental", "subType": "moral" },
+        { "id": "val_i8", "text": "Responsible (dependable, reliable)", "type": "instrumental", "subType": "moral" },
+        { "id": "val_i9", "text": "Courageous (standing up for your beliefs)", "type": "instrumental", "subType": "competence" }
+      ]
+    }
+  ],
+  "scoringRubric": {
+    "primaryScores": [
+      {
+        "id": "top_terminal_values",
+        "title": "Your Top 5 Life Goals",
+        "calculation": "COLLECT_ITEMS_FROM_CATEGORY('terminalValues', 'terminal_most_important')",
+        "interpretation": "These are the end-states that matter most to you in life. Your long-term goals should be aligned with these values to feel truly fulfilling."
+      },
+      {
+        "id": "top_instrumental_values",
+        "title": "Your Top 5 Guiding Principles",
+        "calculation": "COLLECT_ITEMS_FROM_CATEGORY('instrumentalValues', 'instrumental_most_important')",
+        "interpretation": "This is how you believe you should behave. These principles guide your day-to-day actions and decisions."
+      }
+    ],
+    "derivativeInsights": [
+      {
+        "id": "achievement_drive",
+        "title": "Achievement Drive",
+        "replaces": ["What’s My Attitude Toward Achievement?"],
+        "calculationLogic": "IS_IN_TOP_CATEGORY('val_t3', 'terminalValues') OR IS_IN_TOP_CATEGORY('val_i1', 'instrumentalValues')",
+        "interpretation": {
+          "true": "You are strongly driven by a need for personal achievement and success. Setting and conquering challenging goals is a major source of motivation for you.",
+          "false": "While you may value success, your primary motivation likely comes from other areas, such as relationships, security, or personal enjoyment."
+        }
+      },
+      {
+        "id": "social_orientation",
+        "title": "Social vs. Personal Orientation",
+        "replaces": ["What’s My Attitude Toward Working in Groups?"],
+        "calculationLogic": "COMPARE_SUBTYPE_COUNTS('social', 'moral', 'personal', 'competence')",
+        "interpretation": {
+          "social": "You tend to prioritize social harmony, relationships, and the welfare of others. You are likely a natural team player who values collaboration.",
+          "personal": "You tend to prioritize personal freedom, self-sufficiency, and individual accomplishment. You are likely independent and value autonomy."
+        }
+      },
+      {
+        "id": "ethical_predisposition",
+        "title": "Ethical Predisposition",
+        "replaces": ["How Do My Ethics Rate?"],
+        "calculationLogic": "COUNT_SUBTYPE_IN_TOP_CATEGORY('moral', 'instrumentalValues') >= 2",
+        "interpretation": {
+          "true": "You place a strong emphasis on moral principles like honesty and responsibility as guides for your behavior.",
+          "false": "You may be more pragmatic or flexible in your approach, weighing outcomes and competence alongside moral considerations."
+        }
+      }
+    ]
+  }
+}

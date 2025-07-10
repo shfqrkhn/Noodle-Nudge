@@ -1,0 +1,69 @@
+{
+  "id": "core_agency_v1.0.0",
+  "version": "1.0.0",
+  "tier": "Tier 1",
+  "title": "Your Core Agency",
+  "description": "This assessment explores your fundamental beliefs about yourself and your ability to influence your life's outcomes. It measures your inner sense of confidence, control, and self-worth.",
+  "instructions": "Please indicate how much you agree or disagree with each of the following statements.",
+  "scientificBasis": {
+    "summary": "This assessment measures Core Self-Evaluations (CSE), a well-validated, high-order personality trait in modern psychology. CSE is a strong predictor of goal attainment, job satisfaction, and resilience. It combines the core concepts of self-esteem, self-efficacy, locus of control, and emotional stability into a single, powerful measure.",
+    "citation": "Items are adapted from the Core Self-Evaluations Scale (CSES) by Judge, Erez, Bono, & Thoresen (2003). The concepts are public domain and wording has been adapted for a general audience."
+  },
+  "responseScale": [
+    { "text": "Strongly Disagree", "value": 1 },
+    { "text": "Disagree", "value": 2 },
+    { "text": "Neither Agree nor Disagree", "value": 3 },
+    { "text": "Agree", "value": 4 },
+    { "text": "Strongly Agree", "value": 5 }
+  ],
+  "questions": [
+    { "id": "cse_01", "text": "I am confident I get the success I deserve in life.", "scoring": { "dimension": "cse", "isReversed": false } },
+    { "id": "cse_02", "text": "Sometimes I feel depressed.", "scoring": { "dimension": "cse", "isReversed": true } },
+    { "id": "cse_03", "text": "When I try, I generally succeed.", "scoring": { "dimension": "cse", "isReversed": false } },
+    { "id": "cse_04", "text": "Sometimes when I fail I feel worthless.", "scoring": { "dimension": "cse", "isReversed": true } },
+    { "id": "cse_05", "text": "I complete tasks successfully.", "scoring": { "dimension": "cse", "isReversed": false } },
+    { "id": "cse_06", "text": "Sometimes, I do not feel in control of my work.", "scoring": { "dimension": "cse", "isReversed": true } },
+    { "id": "cse_07", "text": "Overall, I am satisfied with myself.", "scoring": { "dimension": "cse", "isReversed": false } },
+    { "id": "cse_08", "text": "I am filled with self-doubt about my competence.", "scoring": { "dimension": "cse", "isReversed": true } },
+    { "id": "cse_09", "text": "I determine what will happen in my life.", "scoring": { "dimension": "cse", "isReversed": false } },
+    { "id": "cse_10", "text": "I don't feel in control of my success in my career.", "scoring": { "dimension": "cse", "isReversed": true } },
+    { "id": "cse_11", "text": "I am capable of coping with most of my problems.", "scoring": { "dimension": "cse", "isReversed": false } },
+    { "id": "cse_12", "text": "There are times when I think I am no good at all.", "scoring": { "dimension": "cse", "isReversed": true } }
+  ],
+  "scoringRubric": {
+    "primaryScores": [
+      {
+        "id": "core_self_evaluation",
+        "title": "Core Agency Score",
+        "calculation": "SUM_AND_AVERAGE([cse_01, cse_03, cse_05, cse_07, cse_09, cse_11], REVERSE_SCORE([cse_02, cse_04, cse_06, cse_08, cse_10, cse_12]))",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You may tend to doubt yourself and feel that events are outside your control. This can be a major opportunity for growth." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You have a healthy belief in yourself, though you may experience self-doubt in challenging situations." },
+          { "label": "High", "range": [3.51, 5], "description": "You have a strong, fundamental belief in your own capability, worth, and ability to influence your destiny." }
+        ]
+      }
+    ],
+    "derivativeInsights": [
+      {
+        "id": "locus_of_control",
+        "title": "Locus of Control",
+        "replaces": ["Locus of Control Scale"],
+        "calculationLogic": "IF(core_self_evaluation_score > 3.0, 'Internal', 'External')",
+        "interpretation": {
+          "Internal": "You have a strong INTERNAL locus of control. You believe you are the primary driver of your own success and failure.",
+          "External": "You may lean toward an EXTERNAL locus of control, feeling that outside forces like luck or other people have a significant impact on your life."
+        }
+      },
+      {
+        "id": "self_efficacy",
+        "title": "General Self-Efficacy",
+        "replaces": ["How Confident Am I...?"],
+        "calculationLogic": "core_self_evaluation_score",
+        "interpretation": {
+          "high": "You have high general self-efficacy. You feel confident in your ability to handle a wide range of tasks and challenges.",
+          "low": "You may have lower general self-efficacy, sometimes doubting your ability to succeed in new or difficult situations."
+        }
+      }
+    ]
+  }
+}

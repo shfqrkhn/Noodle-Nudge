@@ -1,0 +1,518 @@
+{
+  "checklistName": "Apartment & House Hunting Checklist",
+  "items": [
+    {
+      "id": "gen-consider-1",
+      "text": "Assess location suitability (proximity to work, school, etc.)",
+      "status": "pending",
+      "priority": "high",
+      "section": "Initial Research & General Considerations",
+      "tags": ["location", "commute"],
+      "isCritical": true
+    },
+    {
+      "id": "gen-consider-2",
+      "text": "Check proximity to essential services (groceries, bank, pharmacy, transit)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Initial Research & General Considerations",
+      "tags": ["location", "amenities", "services"],
+      "isCritical": false
+    },
+    {
+      "id": "gen-consider-3",
+      "text": "Research neighborhood safety and general vibe",
+      "status": "pending",
+      "priority": "high",
+      "section": "Initial Research & General Considerations",
+      "tags": ["location", "safety"],
+      "isCritical": false
+    },
+    {
+      "id": "gen-consider-4",
+      "text": "Verify internet service provider options and availability",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Initial Research & General Considerations",
+      "tags": ["utilities", "internet"],
+      "isCritical": false
+    },
+    {
+      "id": "gen-consider-5",
+      "text": "Inquire about average tenant turnover rate (for rentals)",
+      "status": "pending",
+      "priority": "low",
+      "section": "Initial Research & General Considerations",
+      "tags": ["rental", "community"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-exterior-1",
+      "text": "Assess building/house exterior condition (siding, paint, roof from ground)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Exterior & Building",
+      "tags": ["condition", "maintenance"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-exterior-2",
+      "text": "Check parking availability, cost, and condition (lighting, security)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Exterior & Building",
+      "tags": ["parking", "safety"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-exterior-3",
+      "text": "Observe landscaping, yard maintenance, and snow/grass care responsibility",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Exterior & Building",
+      "tags": ["maintenance", "yard"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-exterior-4",
+      "text": "Check condition of walkways, driveway, and general site drainage",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Exterior & Building",
+      "tags": ["condition", "safety"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-interior-1",
+      "text": "Verify overall cleanliness of the unit/house",
+      "status": "pending",
+      "priority": "high",
+      "section": "Property Viewing - Interior Unit Condition",
+      "tags": ["condition", "cleanliness"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-interior-2",
+      "text": "Assess noise levels (from street, neighbors, within building)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Interior Unit Condition",
+      "tags": ["comfort", "noise"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-interior-3",
+      "text": "Check for adequate natural light in rooms",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Interior Unit Condition",
+      "tags": ["comfort", "light"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-interior-4",
+      "text": "Test all windows: open, close, lock properly; check for damage/condensation",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Interior Unit Condition",
+      "tags": ["condition", "safety", "windows"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-interior-5",
+      "text": "Test all doors: open, close, lock properly; check for binding/damage",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Interior Unit Condition",
+      "tags": ["condition", "safety", "doors"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-interior-6",
+      "text": "Inspect floors and stairs for damage, warping, or squeaks",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Interior Unit Condition",
+      "tags": ["condition", "flooring"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-interior-7",
+      "text": "Inspect interior walls for major cracks, bulges, water stains, or mold",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Interior Unit Condition",
+      "tags": ["condition", "walls"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-interior-8",
+      "text": "Inspect ceilings for stains, mold, sagging, or gaps",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Interior Unit Condition",
+      "tags": ["condition", "ceilings"],
+      "isCritical": false
+    },
+    {
+      "id": "prop-interior-9",
+      "text": "Check for storage space (closets, basement, external) and access",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Property Viewing - Interior Unit Condition",
+      "tags": ["storage", "organization"],
+      "isCritical": false
+    },
+    {
+      "id": "systems-1",
+      "text": "Note heating system type and apparent condition (rust, leaks)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Key Systems & Utilities (Visual Check)",
+      "tags": ["systems", "heating"],
+      "isCritical": false
+    },
+    {
+      "id": "systems-2",
+      "text": "Assess ventilation (presence of fans, HRV, stale air, musty odors)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Key Systems & Utilities (Visual Check)",
+      "tags": ["systems", "ventilation", "air quality"],
+      "isCritical": false
+    },
+    {
+      "id": "systems-3",
+      "text": "Visually inspect electrical panel (fuses/breakers) and visible wiring",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Key Systems & Utilities (Visual Check)",
+      "tags": ["systems", "electrical", "safety"],
+      "isCritical": false
+    },
+    {
+      "id": "systems-4",
+      "text": "Visually inspect visible plumbing (pipes, water heater) for leaks/rust",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Key Systems & Utilities (Visual Check)",
+      "tags": ["systems", "plumbing"],
+      "isCritical": false
+    },
+    {
+      "id": "systems-5",
+      "text": "Check for laundry facilities (in-unit/building), cost, and schedule",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Key Systems & Utilities (Visual Check)",
+      "tags": ["amenities", "laundry"],
+      "isCritical": false
+    },
+    {
+      "id": "kitchen-bath-1",
+      "text": "Check included kitchen appliances (refrigerator, stove/oven, dishwasher, microwave)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Kitchen & Bathroom Specifics",
+      "tags": ["kitchen", "appliances"],
+      "isCritical": false
+    },
+    {
+      "id": "kitchen-bath-2",
+      "text": "Inspect kitchen and bathroom fixtures, faucets, and drainage",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Kitchen & Bathroom Specifics",
+      "tags": ["kitchen", "bathroom", "plumbing"],
+      "isCritical": false
+    },
+    {
+      "id": "kitchen-bath-3",
+      "text": "Look for signs of moisture damage, mold, or rot in kitchen & bathrooms",
+      "status": "pending",
+      "priority": "high",
+      "section": "Kitchen & Bathroom Specifics",
+      "tags": ["kitchen", "bathroom", "condition", "mold"],
+      "isCritical": true
+    },
+    {
+      "id": "kitchen-bath-4",
+      "text": "Check kitchen/bathroom ventilation (exhaust fans, range hoods)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Kitchen & Bathroom Specifics",
+      "tags": ["kitchen", "bathroom", "ventilation"],
+      "isCritical": false
+    },
+    {
+      "id": "kitchen-bath-5",
+      "text": "Inspect countertops, tiles, and grout for damage or poor sealing",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Kitchen & Bathroom Specifics",
+      "tags": ["kitchen", "bathroom", "condition"],
+      "isCritical": false
+    },
+    {
+      "id": "finance-lease-1",
+      "text": "Confirm rent/purchase price and payment methods",
+      "status": "pending",
+      "priority": "high",
+      "section": "Lease/Purchase Details & Finances",
+      "tags": ["finance", "rent", "purchase"],
+      "isCritical": true
+    },
+    {
+      "id": "finance-lease-2",
+      "text": "Clarify security deposit amount and any other up-front fees",
+      "status": "pending",
+      "priority": "high",
+      "section": "Lease/Purchase Details & Finances",
+      "tags": ["finance", "deposit", "fees"],
+      "isCritical": false
+    },
+    {
+      "id": "finance-lease-3",
+      "text": "Determine lease type/length (fixed-term, month-to-month)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Lease/Purchase Details & Finances",
+      "tags": ["rental", "lease"],
+      "isCritical": false
+    },
+    {
+      "id": "finance-lease-4",
+      "text": "Clarify which utilities are included (heat, water, electricity, internet, cable, garbage)",
+      "status": "pending",
+      "priority": "high",
+      "section": "Lease/Purchase Details & Finances",
+      "tags": ["finance", "utilities"],
+      "isCritical": false
+    },
+    {
+      "id": "finance-lease-5",
+      "text": "Inquire about average yearly rent increase (for rentals)",
+      "status": "pending",
+      "priority": "low",
+      "section": "Lease/Purchase Details & Finances",
+      "tags": ["rental", "finance"],
+      "isCritical": false
+    },
+    {
+      "id": "finance-lease-6",
+      "text": "Understand responsibility for repairs (major and minor)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Lease/Purchase Details & Finances",
+      "tags": ["maintenance", "repairs"],
+      "isCritical": false
+    },
+    {
+      "id": "finance-lease-7",
+      "text": "Confirm late fee policy and returned check fee (for rentals)",
+      "status": "pending",
+      "priority": "low",
+      "section": "Lease/Purchase Details & Finances",
+      "tags": ["rental", "finance"],
+      "isCritical": false
+    },
+    {
+      "id": "community-1",
+      "text": "Check if community is gated and assess nighttime lighting",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Community & Amenities (Apartments/Condos)",
+      "tags": ["security", "community"],
+      "isCritical": false
+    },
+    {
+      "id": "community-2",
+      "text": "Inquire about amenities (pool, gym, clubhouse, business center, bark park)",
+      "status": "pending",
+      "priority": "low",
+      "section": "Community & Amenities (Apartments/Condos)",
+      "tags": ["amenities", "community"],
+      "isCritical": false
+    },
+    {
+      "id": "community-3",
+      "text": "Clarify pet policy, restrictions, and any associated fees",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Community & Amenities (Apartments/Condos)",
+      "tags": ["pets", "policy"],
+      "isCritical": false
+    },
+    {
+      "id": "community-4",
+      "text": "Inquire about quiet hours policy",
+      "status": "pending",
+      "priority": "low",
+      "section": "Community & Amenities (Apartments/Condos)",
+      "tags": ["community", "policy"],
+      "isCritical": false
+    },
+    {
+      "id": "community-5",
+      "text": "Assess helpfulness and knowledge of office/management staff",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Community & Amenities (Apartments/Condos)",
+      "tags": ["service", "management"],
+      "isCritical": false
+    },
+    {
+      "id": "community-6",
+      "text": "Inquire about maintenance entry notice and response time",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Community & Amenities (Apartments/Condos)",
+      "tags": ["service", "maintenance"],
+      "isCritical": false
+    },
+    {
+      "id": "roommate-1",
+      "text": "Discuss who will sign the tenancy agreement",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Roommate Considerations (If Applicable)",
+      "tags": ["roommates", "lease"],
+      "isCritical": false
+    },
+    {
+      "id": "roommate-2",
+      "text": "Clarify policy if one person needs to move out early",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Roommate Considerations (If Applicable)",
+      "tags": ["roommates", "lease"],
+      "isCritical": false
+    },
+    {
+      "id": "roommate-3",
+      "text": "Agree on how costs will be shared and bills paid",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Roommate Considerations (If Applicable)",
+      "tags": ["roommates", "finance"],
+      "isCritical": false
+    },
+    {
+      "id": "roommate-4",
+      "text": "Establish how problems between roommates will be resolved",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Roommate Considerations (If Applicable)",
+      "tags": ["roommates", "communication"],
+      "isCritical": false
+    },
+    {
+      "id": "safety-1",
+      "text": "Check for presence and condition of smoke detectors",
+      "status": "pending",
+      "priority": "high",
+      "section": "Safety & Security",
+      "tags": ["safety", "detectors"],
+      "isCritical": true
+    },
+    {
+      "id": "safety-2",
+      "text": "Check for presence of fire extinguishers",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Safety & Security",
+      "tags": ["safety"],
+      "isCritical": false
+    },
+    {
+      "id": "safety-3",
+      "text": "Identify and assess ease of access to emergency exits",
+      "status": "pending",
+      "priority": "high",
+      "section": "Safety & Security",
+      "tags": ["safety", "exits"],
+      "isCritical": true
+    },
+    {
+      "id": "safety-4",
+      "text": "Check locks on all doors and windows",
+      "status": "pending",
+      "priority": "high",
+      "section": "Safety & Security",
+      "tags": ["safety", "security"],
+      "isCritical": true
+    },
+    {
+      "id": "safety-5",
+      "text": "Note presence of security systems or features (e.g., intercom, door viewer)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Safety & Security",
+      "tags": ["security"],
+      "isCritical": false
+    },
+    {
+      "id": "post-viewing-1",
+      "text": "Arrange for tenant insurance (if renting)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Post-Viewing / Pre-Agreement",
+      "tags": ["rental", "insurance"],
+      "isCritical": false
+    },
+    {
+      "id": "post-viewing-2",
+      "text": "Clarify when property inspection report will be done (before move-in)",
+      "status": "pending",
+      "priority": "high",
+      "section": "Post-Viewing / Pre-Agreement",
+      "tags": ["rental", "inspection"],
+      "isCritical": true
+    },
+    {
+      "id": "post-viewing-3",
+      "text": "Review lease/purchase agreement thoroughly before signing",
+      "status": "pending",
+      "priority": "high",
+      "section": "Post-Viewing / Pre-Agreement",
+      "tags": ["legal", "agreement"],
+      "isCritical": true
+    },
+    {
+      "id": "post-viewing-4",
+      "text": "Understand move-out notice procedures (for rentals)",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Post-Viewing / Pre-Agreement",
+      "tags": ["rental", "lease"],
+      "isCritical": false
+    },
+    {
+      "id": "post-viewing-5",
+      "text": "Clarify decorating policy (painting, nails, etc.)",
+      "status": "pending",
+      "priority": "low",
+      "section": "Post-Viewing / Pre-Agreement",
+      "tags": ["policy", "decorating"],
+      "isCritical": false
+    },
+    {
+      "id": "post-viewing-6",
+      "text": "Clarify guest policy (duration, restrictions)",
+      "status": "pending",
+      "priority": "low",
+      "section": "Post-Viewing / Pre-Agreement",
+      "tags": ["policy", "guests"],
+      "isCritical": false
+    },
+    {
+      "id": "post-viewing-7",
+      "text": "Clarify smoking policy",
+      "status": "pending",
+      "priority": "medium",
+      "section": "Post-Viewing / Pre-Agreement",
+      "tags": ["policy", "smoking"],
+      "isCritical": false
+    }
+  ]
+}

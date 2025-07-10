@@ -1,0 +1,45 @@
+{
+  "id": "pss_v1.0.0",
+  "version": "1.0.0",
+  "tier": "Tier 2",
+  "title": "Your Current Stress Level",
+  "description": "This assessment is a snapshot of your thoughts and feelings over the last month. It helps measure the degree to which you've perceived your life as unpredictable, uncontrollable, and overwhelming.",
+  "instructions": "In the last month, how often have you felt or thought a certain way? Please answer honestly.",
+  "scientificBasis": {
+    "summary": "This assessment uses the Perceived Stress Scale (PSS-10), one of the most widely used and validated psychological instruments for measuring subjective stress. It is a powerful indicator of how life's demands are impacting your sense of well-being.",
+    "citation": "The Perceived Stress Scale is in the public domain. Content based on the PSS-10 by Cohen, S., Kamarck, T., & Mermelstein, R. (1983)."
+  },
+  "responseScale": [
+    { "text": "Never", "value": 1 },
+    { "text": "Almost Never", "value": 2 },
+    { "text": "Sometimes", "value": 3 },
+    { "text": "Fairly Often", "value": 4 },
+    { "text": "Very Often", "value": 5 }
+  ],
+  "questions": [
+    { "id": "pss_01", "text": "In the last month, how often have you been upset because of something that happened unexpectedly?", "scoring": { "dimension": "stress", "isReversed": false } },
+    { "id": "pss_02", "text": "In the last month, how often have you felt that you were unable to control the important things in your life?", "scoring": { "dimension": "stress", "isReversed": false } },
+    { "id": "pss_03", "text": "In the last month, how often have you felt nervous and stressed?", "scoring": { "dimension": "stress", "isReversed": false } },
+    { "id": "pss_04", "text": "In the last month, how often have you felt confident about your ability to handle your personal problems?", "scoring": { "dimension": "stress", "isReversed": true } },
+    { "id": "pss_05", "text": "In the last month, how often have you felt that things were going your way?", "scoring": { "dimension": "stress", "isReversed": true } },
+    { "id": "pss_06", "text": "In the last month, how often have you found that you could not cope with all the things that you had to do?", "scoring": { "dimension": "stress", "isReversed": false } },
+    { "id": "pss_07", "text": "In the last month, how often have you been able to control irritations in your life?", "scoring": { "dimension": "stress", "isReversed": true } },
+    { "id": "pss_08", "text": "In the last month, how often have you felt that you were on top of things?", "scoring": { "dimension": "stress", "isReversed": true } },
+    { "id": "pss_09", "text": "In the last month, how often have you been angered because of things that were outside of your control?", "scoring": { "dimension": "stress", "isReversed": false } },
+    { "id": "pss_10", "text": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?", "scoring": { "dimension": "stress", "isReversed": false } }
+  ],
+  "scoringRubric": {
+    "primaryScores": [
+      {
+        "id": "perceived_stress_score",
+        "title": "Perceived Stress Score",
+        "calculation": "SUM([pss_01, pss_02, pss_03, pss_06, pss_09, pss_10], REVERSE_SCORE([pss_04, pss_05, pss_07, pss_08]))",
+        "interpretation": [
+          { "label": "Low Stress", "range": [10, 23], "description": "Your perceived stress levels appear to be low. You likely feel that you have the resources and control to handle life's demands effectively." },
+          { "label": "Moderate Stress", "range": [24, 36], "description": "Your perceived stress levels are in a moderate range. You are coping, but may sometimes feel overwhelmed by life's challenges." },
+          { "label": "High Stress", "range": [37, 50], "description": "Your perceived stress levels are high. You may feel that life is currently unpredictable and uncontrollable, which can significantly impact well-being." }
+        ]
+      }
+    ]
+  }
+}

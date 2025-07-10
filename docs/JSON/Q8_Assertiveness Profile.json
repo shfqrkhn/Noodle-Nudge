@@ -1,0 +1,110 @@
+{
+  "id": "assertiveness_profile_v1.0.0",
+  "version": "1.0.0",
+  "tier": "Tier 2",
+  "title": "Assertiveness Profile",
+  "description": "This assessment helps you understand your natural tendency to express your opinions, needs, and desires confidently and directly. Developing your assertiveness skills can enhance your communication and relationships.",
+  "instructions": "This questionnaire contains items about different aspects of assertiveness. There are no right or wrong responses, so please answer honestly. Use the following scale when responding to each statement by writing the number from the scale below that you feel most accurately characterizes your response to the statement.",
+  "scientificBasis": {
+    "summary": "This assessment measures assertiveness, a key component of effective communication, characterized by the ability to express one's thoughts and feelings openly while respecting others. The items are derived from the International Personality Item Pool (IPIP) to ensure public domain status and scientific credibility.",
+    "citation": "Assertiveness items are based on the 'Assertiveness' facet of Extraversion from the International Personality Item Pool (ipip.ori.org). This is a public domain resource. Concepts from the Rathus Assertiveness Schedule (Rathus, 1973) are also incorporated for a comprehensive profile of assertiveness."
+  },
+  "responseScale": [
+    { "text": "Very Inaccurate", "value": 1 },
+    { "text": "Moderately Inaccurate", "value": 2 },
+    { "text": "Neither Accurate nor Inaccurate", "value": 3 },
+    { "text": "Moderately Accurate", "value": 4 },
+    { "text": "Very Accurate", "value": 5 }
+  ],
+  "questions": [
+    {
+      "id": "q_01",
+      "text": "I take charge of situations.",
+      "scoring": { "dimension": "assertiveness", "isReversed": false }
+    },
+    {
+      "id": "q_02",
+      "text": "I have a strong personality.",
+      "scoring": { "dimension": "assertiveness", "isReversed": false }
+    },
+    {
+      "id": "q_03",
+      "text": "I know how to captivate people.",
+      "scoring": { "dimension": "assertiveness", "isReversed": false }
+    },
+    {
+      "id": "q_04",
+      "text": "I see myself as a good leader.",
+      "scoring": { "dimension": "assertiveness", "isReversed": false }
+    },
+    {
+      "id": "q_05",
+      "text": "I can talk others into doing things.",
+      "scoring": { "dimension": "assertiveness", "isReversed": false }
+    },
+    {
+      "id": "q_06",
+      "text": "I am the first to act.",
+      "scoring": { "dimension": "assertiveness", "isReversed": false }
+    },
+    {
+      "id": "q_07",
+      "text": "I do not have an assertive personality.",
+      "scoring": { "dimension": "assertiveness", "isReversed": true }
+    },
+    {
+      "id": "q_08",
+      "text": "I lack the talent for influencing people.",
+      "scoring": { "dimension": "assertiveness", "isReversed": true }
+    },
+    {
+      "id": "q_09",
+      "text": "I wait for others to lead the way.",
+      "scoring": { "dimension": "assertiveness", "isReversed": true }
+    },
+    {
+      "id": "q_10",
+      "text": "I hold back my opinions.",
+      "scoring": { "dimension": "assertiveness", "isReversed": true }
+    },
+    {
+      "id": "q_11",
+      "text": "I freely express my opinions.",
+      "scoring": { "dimension": "assertiveness", "isReversed": false }
+    },
+    {
+      "id": "q_12",
+      "text": "I am comfortable stating my needs clearly.",
+      "scoring": { "dimension": "assertiveness", "isReversed": false }
+    },
+    {
+      "id": "q_13",
+      "text": "I can stand up for myself when necessary.",
+      "scoring": { "dimension": "assertiveness", "isReversed": false }
+    },
+    {
+      "id": "q_14",
+      "text": "I tend to let others make decisions for me.",
+      "scoring": { "dimension": "assertiveness", "isReversed": true }
+    },
+    {
+      "id": "q_15",
+      "text": "I find it easy to say 'no' to requests.",
+      "scoring": { "dimension": "assertiveness", "isReversed": false }
+    }
+  ],
+  "scoringRubric": {
+    "primaryScores": [
+      {
+        "id": "assertiveness",
+        "title": "Assertiveness",
+        "calculation": "SUM_AND_AVERAGE([q_01, q_02, q_03, q_04, q_05, q_06, q_11, q_12, q_13, q_15], REVERSE_SCORE([q_07, q_08, q_09, q_10, q_14]))",
+        "interpretation": [
+          { "label": "Low", "range": [1, 2.49], "description": "You tend to be less assertive, preferring to avoid confrontation or defer to others. Developing your ability to express your needs can be beneficial." },
+          { "label": "Average", "range": [2.5, 3.5], "description": "You have a balanced approach to assertiveness, able to express yourself when needed but also sensitive to others' feelings." },
+          { "label": "High", "range": [3.51, 5], "description": "You are highly assertive, confidently expressing your opinions, needs, and boundaries. This strength can be very effective in influencing others and achieving goals." }
+        ]
+      }
+    ]
+  }
+}
