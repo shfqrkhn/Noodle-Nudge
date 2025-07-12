@@ -59,7 +59,6 @@ The "Settings" section gives you control over your Noodle Nudge experience:
     * **Export My Data:** Save a copy of all your answers and results to your device. This is great for backups or if you want to move your data to another device.
     * **Import My Data:** Load a previously saved data file into the app.
     * **Reset All Data:** Start fresh by deleting all your saved answers and results. Use this with caution, as it cannot be undone!
-* **About Noodle Nudge:** Learn more about the project and how you can support its continued development. Noodle Nudge is a labor of love, offered freely to everyone. If you find it valuable, any small contribution helps keep it going!
 
 ## 🔒 Your Privacy Matters
 
