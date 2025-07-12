@@ -1,0 +1,24 @@
+{
+  "name": "Noodle Nudge",
+  "short_name": "NoodleNudge",
+  "description": "Noodle Nudge is a private offline-first Progressive Web App, founded on the Socratic principle that 'the unexamined life is not worth living.' It's a tool for profound self-discovery, not self-display, empowering users with a daily cognitive toolkit. All your data is stored on-device, and an on-device AI acts as a gentle guide. Explore daily content, take deep-dive assessments, manage your privacy settings, and inspect application data. Noodle Nudge is, and always will be, free and open-source under the MIT License, prioritizing user empowerment over revenue.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F8F9FA",
+  "theme_color": "#4A90E2",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

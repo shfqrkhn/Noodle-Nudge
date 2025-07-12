@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noodle Nudge: A private space for reflection, a clear path for growth.">
+    <meta name="theme-color" content="#4A90E2">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Noodle Nudge</title>
+
+    <!-- CDN Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Inlined CSS for Customizations -->
+    <style>
+        :root {
+            --font-heading: 'Merriweather', serif;
+            --font-body: 'Source Sans Pro', sans-serif;
+            --bs-primary-rgb: 74, 144, 226; /* #4A90E2 */
+            --bs-secondary-rgb: 108, 117, 125;
+            --bs-body-color: #212529;
+            --bs-body-bg: #F8F9FA;
+            --bs-border-color-translucent: rgba(0, 0, 0, 0.1);
+        }
+        body { font-family: var(--font-body); }
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: var(--font-heading); }
+        .logo { font-family: var(--font-heading); font-weight: 700; }
+        .main-nav .nav-link { font-weight: 600; padding-left: 0; padding-right: 0; margin: 0 0.75rem; }
+        .main-nav .nav-link.active { color: var(--bs-primary) !important; border-bottom: 2px solid var(--bs-primary); }
+        .sortable-card { cursor: grab; user-select: none; transition: background-color 0.2s ease-in-out; }
+        .sortable-card:active { cursor: grabbing; }
+        .dragging { opacity: 0.5; }
+        .drag-over { border: 2px dashed var(--bs-primary) !important; background-color: #e9f2fd; }
+        #loader-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.8); display: flex; justify-content: center; align-items: center; z-index: 9999; backdrop-filter: blur(4px); }
+        .loader { border: 5px solid #F1F3F5; border-top: 5px solid #4A90E2; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        #toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 1056; }
+        .likert-scale .btn { flex-grow: 1; }
+        .card { margin-bottom: 1.5rem; }
+        .results-chart-container { height: 400px; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <header class="navbar navbar-expand-sm bg-body-tertiary shadow-sm sticky-top">
+        <nav class="container-fluid">
+            <a class="navbar-brand logo text-primary" href="#" data-nav="dashboard">Noodle Nudge</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav ms-auto main-nav">
+                    <li class="nav-item"><a href="#" data-nav="dashboard" class="nav-link active">Today</a></li>
+                    <li class="nav-item"><a href="#" data-nav="assessments" class="nav-link">Assessments</a></li>
+                    <li class="nav-item"><a href="#" data-nav="settings" class="nav-link">Settings</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4" id="app-root"></main>
+    
+    <div id="loader-overlay"><div class="loader"></div></div>
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script type="module">
+        const MasterBlueprint = { appName: "Noodle Nudge", appShortName: "NoodleNudge", version: "1.0.3", license: "MIT", author: "The Sentient Architect", featureFlags: { enableDailyContent: true, enableAssessments: true, enableDebugPanel: true, }, appDescription: "A private offline-first PWA for self-discovery.", database: { dbName: "NoodleNudgeDB", dbVersion: 1, dbStoreName: "appState", }, pwaConfig: { cacheName: 'noodle-nudge-cache-v1.0.3' }, stateSchema: { assessments: {}, dailyContent: {}, userAnswers: {}, userResults: {}, viewDate: new Date().toISOString(), appConfig: { version: "1.0.3", lastVisit: "" }, debugLog: [], }, contentUrls: { assessments: ['https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q1_Core%20Personality.json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q2_Core%20Values.json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q3_Core%20Agency.json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q4_Work%20Motivation.json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q5_Perceived%20Stress%20Scale%20(PSS).json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q6_Conflict%20%26%20Negotiation%20Style.json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q7_Authentic%20%26%20Ethical%20Leadership.json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q8_Assertiveness%20Profile.json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q9_Power%20%26%20Influence%20Profile.json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q10_Proactive%20Personality%20Scale.json'], daily: ['https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Content_CognitiveBiases.json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Content_Meditations.json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Content_Quotes.json', 'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Content_Reflections.json'], }, localization: { defaultLanguage: "en", strings: { en: { dashboardTitle: "Today's Nudge", assessmentsTitle: "Assessments", settingsTitle: "Settings", takeAssessmentsCTA: "Discover Your Core Profile", takeAssessmentsCTADescription: "Start your journey of self-discovery with our foundational assessments.", startAssessment: "Start Assessment", retakeAssessment: "Retake", submitAnswers: "Submit Answers", backToList: "Back to Assessments", resultsTitle: "Your Results for", viewResults: "View Full Results", dailyQuote: "Quote for Today", dailyReflection: "Reflection for Today", dailyMeditation: "Meditation for Today", dailyBias: "Cognitive Bias for Today", exportData: "Export My Data", importData: "Import My Data", resetData: "Reset All Data", resetConfirmation: "Are you sure you want to permanently delete all your data? This action cannot be undone.", dataExported: "Data exported successfully!", dataImported: "Data imported successfully! The app will now reload.", dataReset: "All data has been reset.", error: "An error occurred.", }, }, }, };
+        const NoodleNudge = {}; window.NoodleNudge = NoodleNudge;
+        NoodleNudge.Utils = (()=>({getDayOfYear:t=>{const e=new Date(t),n=new Date(e.getFullYear(),0,0);return Math.floor((e-n)/864e5)},sanitizeHTML:t=>{const e=document.createElement("div");return e.textContent=t,e.innerHTML}}))();
+        NoodleNudge.L10N = (() => ({ get: (key) => MasterBlueprint.localization.strings.en[key] || `[${key}]` }))();
+        NoodleNudge.State = (() => { let state = {}; const subscribers = new Set(); return { subscribe: (cb) => { subscribers.add(cb); return () => subscribers.delete(cb); }, get: () => JSON.parse(JSON.stringify(state)), set: (newState, options = {}) => { const { silent = false, persist = true } = options; state = { ...state, ...newState }; if (!silent) subscribers.forEach(cb => cb(state)); if (persist) NoodleNudge.DB.set('appState', state).catch(err => NoodleNudge.Logger.error("Failed to persist state:", err)); }, init: (schema) => { state = JSON.parse(JSON.stringify(schema)); } }; })();
+        NoodleNudge.Logger = (() => { const log = (level, ...args) => { console[level](...args); const currentState = NoodleNudge.State.get(); const newLog = { timestamp: new Date().toISOString(), level, message: args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' ') }; NoodleNudge.State.set({ debugLog: [...(currentState.debugLog || []), newLog].slice(-100) }, { silent: true, persist: true }); }; return { log: (...args) => log('log', ...args), info: (...args) => log('info', ...args), warn: (...args) => log('warn', ...args), error: (...args) => log('error', ...args) }; })();
+        NoodleNudge.DB = (() => { const { dbName, dbVersion, dbStoreName } = MasterBlueprint.database; let db; const getDB = () => new Promise((resolve, reject) => { if (db) return resolve(db); const request = indexedDB.open(dbName, dbVersion); request.onupgradeneeded = e => { const dbInstance = e.target.result; if (!dbInstance.objectStoreNames.contains(dbStoreName)) dbInstance.createObjectStore(dbStoreName); }; request.onsuccess = e => { db = e.target.result; resolve(db); }; request.onerror = e => { NoodleNudge.Logger.error("DB Error:", e.target.error); reject(e.target.error); }; }); const get = async (key) => { const dbInstance = await getDB(); return new Promise((resolve, reject) => { const req = dbInstance.transaction([dbStoreName], 'readonly').objectStore(dbStoreName).get(key); req.onsuccess = () => resolve(req.result); req.onerror = (e) => reject(e.target.error); }); }; const set = async (key, value) => { const dbInstance = await getDB(); return new Promise((resolve, reject) => { const req = dbInstance.transaction([dbStoreName], 'readwrite').objectStore(dbStoreName).put(value, key); req.onsuccess = () => resolve(req.result); req.onerror = (e) => reject(e.target.error); }); }; const clear = async () => { const dbInstance = await getDB(); return new Promise((resolve, reject) => { const req = dbInstance.transaction([dbStoreName], 'readwrite').objectStore(dbStoreName).clear(); req.onsuccess = () => resolve(); req.onerror = (e) => reject(e.target.error); }); }; return { get, set, clear }; })();
+        NoodleNudge.Content = (() => { const { contentUrls } = MasterBlueprint; const fetchJson = async url => { try { const response = await fetch(url); if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`); return await response.json(); } catch (error) { NoodleNudge.Logger.error(`Failed to fetch ${url}:`, error); return null; } }; const loadAllContent = async () => { NoodleNudge.UI.showLoader(); const allUrls = [...contentUrls.assessments, ...contentUrls.daily]; const results = await Promise.all(allUrls.map(fetchJson)); const assessments = {}; const dailyContent = { cognitiveBiases: [], meditations: [], quotes: [], reflections: [] }; results.forEach((data, index) => { if (!data) return; const url = allUrls[index]; if (contentUrls.assessments.includes(url)) { if (data.id) assessments[data.id] = data; } else if (contentUrls.daily.includes(url)) { if (data.cognitive_biases_and_fallacies) dailyContent.cognitiveBiases = data.cognitive_biases_and_fallacies.biases; if (data.meditation_prompts) dailyContent.meditations = data.meditation_prompts; if (data.quote_categories) dailyContent.quotes = Object.values(data.quote_categories).flat(); if (data.reflection_prompts) dailyContent.reflections = data.reflection_prompts; } }); NoodleNudge.State.set({ assessments, dailyContent, settings: { ...NoodleNudge.State.get().settings, lastContentUpdate: new Date().toISOString() } }); NoodleNudge.Logger.info("All content loaded and state updated."); NoodleNudge.UI.hideLoader(); }; return { loadAllContent }; })();
+        NoodleNudge.Daily = (() => ({ getContentForDay: dateString => { const date = new Date(dateString); const dayIndex = NoodleNudge.Utils.getDayOfYear(date); const { dailyContent } = NoodleNudge.State.get(); if (!dailyContent || Object.keys(dailyContent).length === 0) return { quote: null, reflection: null, meditation: null, bias: null }; const findByDay = arr => arr.find(item => item.day === dayIndex) || (arr.length > 0 ? arr[(dayIndex - 1) % arr.length] : null); return { quote: findByDay(dailyContent.quotes || []), reflection: findByDay(dailyContent.reflections || []), meditation: findByDay(dailyContent.meditations || []), bias: findByDay(dailyContent.cognitiveBiases || []) }; } }))();
+        
+        NoodleNudge.UI = (() => { const appRoot = document.getElementById('app-root'); let viewSubscriptions = []; const createEl = (tag, { className = '', textContent = '', children = [], ...attrs } = {}) => { const el = document.createElement(tag); if (className) el.className = className; if (textContent) el.textContent = textContent; children.forEach(child => el.appendChild(child)); Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, value)); return el; }; const cleanupSubscriptions = () => { viewSubscriptions.forEach(unsub => unsub()); viewSubscriptions = []; }; const updateNav = (activeNav) => { document.querySelectorAll('.main-nav a').forEach(a => a.classList.toggle('active', a.dataset.nav === activeNav)); }; const DashboardView = () => { cleanupSubscriptions(); updateNav('dashboard'); appRoot.innerHTML = ''; const L = NoodleNudge.L10N; const { viewDate } = NoodleNudge.State.get(); const { quote, reflection, meditation, bias } = NoodleNudge.Daily.getContentForDay(viewDate); const date = new Date(viewDate); const isToday = date.toDateString() === new Date().toDateString(); const dateHeader = createEl('div', { className: 'd-flex justify-content-between align-items-center mb-4' }); dateHeader.innerHTML = `<button class="btn btn-outline-secondary" data-action="prev-day"><i class="bi bi-arrow-left"></i></button><h2 class="mb-0 text-center">${date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</h2><button class="btn btn-outline-secondary" data-action="next-day" ${isToday ? 'disabled' : ''}><i class="bi bi-arrow-right"></i></button>`; const ctaCard = createEl('div', { className: 'card text-white bg-primary text-center' }); ctaCard.innerHTML = `<div class="card-body"><h3>${L.get('takeAssessmentsCTA')}</h3><p>${L.get('takeAssessmentsCTADescription')}</p><button class="btn btn-light" data-nav="assessments">${L.get('startAssessment')}</button></div>`; const grid = createEl('div', { className: 'row' }); const createCard = (title, content, iconClass) => { if (!content) return null; const col = createEl('div', { className: 'col-12 col-lg-6 mb-0' }); const card = createEl('div', { className: 'card h-100' }); card.innerHTML = `<div class="card-header h5"><i class="bi ${iconClass} me-2"></i>${title}</div><div class="card-body">${content}</div>`; col.appendChild(card); return col; }; const quoteContent = quote ? `<blockquote>${NoodleNudge.Utils.sanitizeHTML(quote.quote)}</blockquote><footer class="blockquote-footer text-end">${NoodleNudge.Utils.sanitizeHTML(quote.author)}</footer>` : '<p class="text-muted">No quote available for this day.</p>'; const reflectionContent = reflection ? `<p>${NoodleNudge.Utils.sanitizeHTML(reflection.prompt)}</p>` : '<p class="text-muted">No reflection available for this day.</p>'; const meditationContent = meditation ? `<strong>${NoodleNudge.Utils.sanitizeHTML(meditation.theme)}:</strong><p class="mt-2">${NoodleNudge.Utils.sanitizeHTML(meditation.instruction)}</p>` : '<p class="text-muted">No meditation available for this day.</p>'; const biasContent = bias ? `<strong>${NoodleNudge.Utils.sanitizeHTML(bias.bias)}:</strong><p class="mt-2">${NoodleNudge.Utils.sanitizeHTML(bias.summary)}</p>` : '<p class="text-muted">No cognitive bias available for this day.</p>'; [createCard(L.get('dailyQuote'), quoteContent, 'bi-quote'), createCard(L.get('dailyReflection'), reflectionContent, 'bi-search-heart'), createCard(L.get('dailyMeditation'), meditationContent, 'bi-wind'), createCard(L.get('dailyBias'), biasContent, 'bi-kanban')].forEach(card => card && grid.appendChild(card)); appRoot.append(dateHeader, ctaCard, grid); }; const AssessmentsView = () => { cleanupSubscriptions(); updateNav('assessments'); appRoot.innerHTML = ''; const state = NoodleNudge.State.get(); const desiredOrder = ["core_profile_v1.0.0", "core_values_v1.0.0", "core_agency_v1.0.0", "work_motivation_v1.0.0", "pss_v1.0.0", "conflict_style_v1.0.0", "authentic_ethical_leadership_v1.0.0", "assertiveness_profile_v1.0.0", "power_influence_v1.0.0", "proactive_personality_v1.0.0"]; const assessments = Object.values(state.assessments || {}).sort((a, b) => desiredOrder.indexOf(a.id) - desiredOrder.indexOf(b.id)); const header = createEl('div', { className: 'assessment-list-header' }); header.innerHTML = `<h2>${NoodleNudge.L10N.get('assessmentsTitle')}</h2><p class="lead text-muted">These assessments are designed for self-discovery. Tier 1 forms your Core Profile, while Tier 2 offers deeper dives into specific areas.</p>`; const list = createEl('div', { className: 'assessment-list' }); const createTier = (title, assessments) => { if (assessments.length === 0) return null; const section = createEl('div', { className: 'tier-section mb-5' }); section.innerHTML = `<h3>${title}</h3>`; const row = createEl('div', { className: 'row g-3' }); assessments.forEach(a => { const isCompleted = state.userResults && state.userResults[a.id]; const col = createEl('div', { className: 'col-12 col-md-6'}); const card = createEl('div', { className: `card h-100` }); const cardBody = createEl('div', { className: 'card-body d-flex flex-column' }); cardBody.innerHTML = `<h5 class="card-title">${NoodleNudge.Utils.sanitizeHTML(a.title)} ${isCompleted ? '<i class="bi bi-check-circle-fill text-success"></i>' : ''}</h5><p class="card-text text-muted flex-grow-1">${NoodleNudge.Utils.sanitizeHTML(a.description)}</p>`; const buttonGroup = createEl('div', { className: 'btn-toolbar', role: 'toolbar'}); const mainActions = createEl('div', {className: 'btn-group me-2', role: 'group'}); const secondaryActions = createEl('div', {className: 'btn-group', role: 'group'}); if (isCompleted) { card.classList.add('border-success'); mainActions.appendChild(createEl('button', { className: 'btn btn-success', textContent: NoodleNudge.L10N.get('viewResults'), 'data-nav': 'results', 'data-assessment-id': a.id })); secondaryActions.appendChild(createEl('button', { className: 'btn btn-outline-secondary', textContent: NoodleNudge.L10N.get('retakeAssessment'), 'data-nav': 'assessment', 'data-assessment-id': a.id })); } else { mainActions.appendChild(createEl('button', { className: 'btn btn-primary', textContent: NoodleNudge.L10N.get('startAssessment'), 'data-nav': 'assessment', 'data-assessment-id': a.id })); } buttonGroup.append(mainActions, secondaryActions); cardBody.appendChild(buttonGroup); card.appendChild(cardBody); col.appendChild(card); row.appendChild(col); }); section.appendChild(row); return section; }; const t1 = assessments.filter(a => a.tier === 'Tier 1'); const t2 = assessments.filter(a => a.tier === 'Tier 2'); appRoot.append(header); list.appendChild(createTier('Tier 1: Core Profile', t1)); list.appendChild(createTier('Tier 2: Contextual Deep Dives', t2)); appRoot.appendChild(list); }; const AssessmentTakerView = (id) => { cleanupSubscriptions(); updateNav('assessments'); appRoot.innerHTML = ''; const a = NoodleNudge.State.get().assessments[id]; if (!a) { appRoot.textContent = "Assessment not found."; return; } const container = createEl('div', { className: 'assessment-taker-container' }); container.innerHTML = `<h2>${NoodleNudge.Utils.sanitizeHTML(a.title)}</h2><p class="lead text-muted">${NoodleNudge.Utils.sanitizeHTML(a.instructions)}</p><hr class="my-4">`; const form = createEl('form'); form.addEventListener('submit', (e) => { e.preventDefault(); NoodleNudge.Scoring.processAndSaveResults(id, form); }); const interactionType = a.interactionType || 'likertScale'; if (interactionType === 'likertScale') { a.questions.forEach((q, i) => { const qCard = createEl('div', { className: 'card mb-3' }); qCard.innerHTML = `<div class="card-header"><p class="mb-0"><strong>${i + 1}.</strong> ${NoodleNudge.Utils.sanitizeHTML(q.text)}</p></div>`; const scaleContainer = createEl('div', { className: 'card-body btn-group w-100 likert-scale', role: 'group' }); a.responseScale.forEach(o => { const input = createEl('input', { type: 'radio', className: 'btn-check', name: q.id, id: `${q.id}-${o.value}`, value: o.value, required: true, autocomplete: 'off' }); const label = createEl('label', { className: 'btn btn-outline-primary', for: `${q.id}-${o.value}`, textContent: NoodleNudge.Utils.sanitizeHTML(o.text) }); scaleContainer.append(input, label); }); qCard.appendChild(scaleContainer); form.appendChild(qCard); }); } else if (interactionType === 'cardSort') { a.sections.forEach(s => { const sectionEl = createEl('div', { className: 'card-sort-section mb-5' }); sectionEl.innerHTML = `<h3>${NoodleNudge.Utils.sanitizeHTML(s.title)}</h3><p class="text-muted">${NoodleNudge.Utils.sanitizeHTML(s.instructions)}</p>`; const board = createEl('div', { className: 'row g-3' }); const source = createEl('div', { className: 'col-12 col-md-4 card-sort-source border p-3 rounded' }); source.innerHTML = `<h4 class="h5">Available Items</h4>`; s.items.forEach(item => source.appendChild(createEl('div', { className: 'sortable-card card p-2 mb-2', textContent: item.text, draggable: true, 'data-item-id': item.id, 'data-section-id': s.id }))); const targets = createEl('div', { className: 'col-12 col-md-8 card-sort-targets' }); const targetsRow = createEl('div', { className: 'row g-3'}); s.categories.forEach(cat => { const targetCol = createEl('div', { className: 'col-12'}); const target = createEl('div', { className: 'card-sort-target border p-3 rounded min-vh-25', 'data-category-id': cat.id, 'data-limit': cat.limit }); target.innerHTML = `<h4 class="h5">${NoodleNudge.Utils.sanitizeHTML(cat.title)} <span class="badge bg-secondary fw-normal">${cat.limit} items</span></h4>`; targetCol.appendChild(target); targetsRow.appendChild(targetCol); }); targets.appendChild(targetsRow); board.append(source, targets); sectionEl.appendChild(board); form.appendChild(sectionEl); }); setTimeout(setupDragAndDrop, 0); } form.innerHTML += `<div class="mt-4 d-flex justify-content-between"><button type="button" class="btn btn-secondary" data-nav="assessments"><i class="bi bi-arrow-left"></i> ${NoodleNudge.L10N.get('backToList')}</button><button type="submit" class="btn btn-primary">${NoodleNudge.L10N.get('submitAnswers')} <i class="bi bi-check-lg"></i></button></div>`; container.appendChild(form); appRoot.appendChild(container); }; const setupDragAndDrop = () => { let draggedItem = null; document.querySelectorAll('.sortable-card').forEach(c => { c.addEventListener('dragstart', () => { draggedItem = c; setTimeout(() => c.classList.add('dragging'), 0); }); c.addEventListener('dragend', () => { c.classList.remove('dragging'); draggedItem = null; }); }); document.querySelectorAll('.card-sort-target').forEach(t => { t.addEventListener('dragover', e => { e.preventDefault(); t.classList.add('drag-over'); }); t.addEventListener('dragleave', () => t.classList.remove('drag-over')); t.addEventListener('drop', e => { e.preventDefault(); t.classList.remove('drag-over'); const limit = parseInt(t.dataset.limit, 10) || Infinity; if (draggedItem && (t.children.length - 1 < limit)) { t.appendChild(draggedItem); } else { showToast(`'${t.querySelector('h4').textContent.split(' ')[0]}' category is full.`, 'warning'); } }); }); }; const ResultsView = (id) => { cleanupSubscriptions(); updateNav('assessments'); appRoot.innerHTML = ''; const results = NoodleNudge.State.get().userResults[id]; if (!results) { appRoot.textContent = "Results not found."; return; } const container = createEl('div'); container.innerHTML = `<div class="results-header d-flex justify-content-between align-items-center"><div><h2>${NoodleNudge.L10N.get('resultsTitle')} ${NoodleNudge.Utils.sanitizeHTML(results.assessmentTitle)}</h2><p class="text-muted mb-0">Completed on: ${new Date(results.timestamp).toLocaleDateString()}</p></div><button class="btn btn-outline-secondary" data-nav="assessments"><i class="bi bi-arrow-left me-2"></i>${NoodleNudge.L10N.get('backToList')}</button></div><hr>`; const primaryScores = results.scores.filter(s => s.type === 'primary' && typeof s.value === 'number'); if (primaryScores.length > 1) { const chartContainer = createEl('div', { className: 'results-chart-container' }); const canvas = createEl('canvas'); chartContainer.appendChild(canvas); container.appendChild(chartContainer); new Chart(canvas, { type: 'radar', data: { labels: primaryScores.map(s => s.title), datasets: [{ label: 'Your Scores', data: primaryScores.map(s => s.value), backgroundColor: 'rgba(74, 144, 226, 0.2)', borderColor: 'rgba(74, 144, 226, 1)', pointBackgroundColor: 'rgba(74, 144, 226, 1)', pointBorderColor: '#fff', pointHoverBackgroundColor: '#fff', pointHoverBorderColor: 'rgba(74, 144, 226, 1)', borderWidth: 2 }] }, options: { responsive: true, maintainAspectRatio: false, scales: { r: { angleLines: { display: false }, suggestedMin: 1, suggestedMax: 5, pointLabels: { font: { size: 14 } }, grid: { color: 'rgba(0, 0, 0, 0.1)' }, ticks: { backdropColor: 'rgba(255, 255, 255, 0.75)' } } } } }); } results.scores.forEach(score => { const card = createEl('div', { className: 'card' }); card.innerHTML = `<div class="card-body"><h5 class="card-title">${NoodleNudge.Utils.sanitizeHTML(score.title)}</h5><p class="card-subtitle mb-2 text-muted"><strong>Your Result:</strong> ${typeof score.value === 'number' ? score.value.toFixed(2) : NoodleNudge.Utils.sanitizeHTML(String(score.value))}</p><p class="card-text">${NoodleNudge.Utils.sanitizeHTML(score.interpretation)}</p></div>`; container.appendChild(card); }); appRoot.appendChild(container); }; const SettingsView = () => { cleanupSubscriptions(); updateNav('settings'); const L = NoodleNudge.L10N; appRoot.innerHTML = `<h2>${L.get('settingsTitle')}</h2>`; const dataCard = createEl('div', {className: 'card'}); dataCard.innerHTML = `<div class="card-body"><h4><i class="bi bi-database me-2"></i>Data Management</h4><p>Your data is stored only on this device. You can export it for backup or import it on another device.</p><div class="d-flex gap-2 flex-wrap mt-3"><button id="export-data-btn" class="btn btn-secondary"><i class="bi bi-download me-2"></i>${L.get('exportData')}</button><label for="import-file" class="btn btn-secondary"><i class="bi bi-upload me-2"></i>${L.get('importData')}<input type="file" id="import-file" class="d-none" accept=".json"></label><button id="reset-data-btn" class="btn btn-danger"><i class="bi bi-trash me-2"></i>${L.get('resetData')}</button></div></div>`; appRoot.append(dataCard); if (MasterBlueprint.featureFlags.enableDebugPanel) { appRoot.appendChild(DebugPanel()); } document.getElementById('export-data-btn').addEventListener('click', NoodleNudge.SettingsManager.exportData); document.getElementById('import-file').addEventListener('change', NoodleNudge.SettingsManager.importData); document.getElementById('reset-data-btn').addEventListener('click', NoodleNudge.SettingsManager.resetData); }; const DebugPanel = () => { const panel = createEl('div', {className: 'card border-warning'}); const header = createEl('div', {className: 'card-header bg-warning-subtle'}); header.innerHTML = `<a class="btn btn-sm btn-outline-dark w-100" data-bs-toggle="collapse" href="#debug-collapse" role="button" aria-expanded="false" aria-controls="debug-collapse"><i class="bi bi-bug-fill me-2"></i>Toggle Debug Panel</a>`; const collapse = createEl('div', {className: 'collapse', id: 'debug-collapse'}); const body = createEl('div', {className: 'card-body'}); body.innerHTML = `<div class="d-flex gap-2 flex-wrap mb-3"><button class="btn btn-sm btn-info" data-debug-action="force-reload">Force Content Reload</button><button class="btn btn-sm btn-warning" data-debug-action="fill-random">Fill Assessments (Random)</button><button class="btn btn-sm btn-danger" data-debug-action="clear-state">Clear State (DB)</button><button class="btn btn-sm btn-outline-success" data-debug-action="toast-success">Test Toast (Success)</button><button class="btn btn-sm btn-outline-danger" data-debug-action="toast-danger">Test Toast (Danger)</button></div><h6>Live State:</h6><pre style="max-height: 400px; overflow-y: auto; background: #212529; color: #f8f9fa; padding: 1rem; border-radius: .25rem;"><code id="debug-state-display"></code></pre><h6>Log Viewer:</h6><pre style="max-height: 200px; overflow-y: auto; background: #eee; color: #333; padding: 1rem; border-radius: .25rem;"><code id="debug-log-display"></code></pre>`; collapse.appendChild(body); panel.append(header, collapse); const unsub = NoodleNudge.State.subscribe((state) => { const stateDisplay = document.getElementById('debug-state-display'); const logDisplay = document.getElementById('debug-log-display'); if (stateDisplay) stateDisplay.textContent = JSON.stringify(state, null, 2); if (logDisplay) logDisplay.textContent = (state.debugLog || []).map(l => `${l.timestamp} [${l.level.toUpperCase()}] ${l.message}`).join('\n'); }); viewSubscriptions.push(unsub); return panel; };
+            const showToast = (message, type = 'info') => { const toastEl = createEl('div', { className: `toast align-items-center text-bg-${type} border-0`, role: 'alert', 'aria-live': 'assertive', 'aria-atomic': 'true' }); toastEl.innerHTML = `<div class="d-flex"><div class="toast-body">${message}</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div>`; document.getElementById('toast-container').appendChild(toastEl); const bsToast = new bootstrap.Toast(toastEl, { delay: 5000 }); bsToast.show(); toastEl.addEventListener('hidden.bs.toast', () => toastEl.remove()); };
+            return { DashboardView, AssessmentsView, AssessmentTakerView, ResultsView, SettingsView, showLoader: ()=>document.getElementById('loader-overlay').style.display = 'flex', hideLoader: ()=>document.getElementById('loader-overlay').style.display = 'none', showToast };
+        })();
+        
+        NoodleNudge.Scoring = (() => {
+            const processAndSaveResults = (assessmentId, form) => {
+                const assessment = NoodleNudge.State.get().assessments[assessmentId];
+                const answers = {};
+                const interactionType = assessment.interactionType || 'likertScale';
+                if (interactionType === 'cardSort') {
+                    assessment.sections.forEach(section => {
+                        answers[section.id] = {};
+                        section.categories.forEach(cat => { answers[section.id][cat.id] = [...form.querySelectorAll(`[data-category-id="${cat.id}"] .sortable-card`)].map(card => card.dataset.itemId); });
+                    });
+                } else {
+                    assessment.questions.forEach(q => {
+                        const input = form.querySelector(`input[name="${q.id}"]:checked`);
+                        if (input) answers[q.id] = parseInt(input.value, 10);
+                    });
+                }
+                const currentUserAnswers = NoodleNudge.State.get().userAnswers;
+                NoodleNudge.State.set({ userAnswers: { ...currentUserAnswers, [assessmentId]: { answers, timestamp: new Date().toISOString() } } });
+                const results = calculateResults(assessment, answers);
+                const currentUserResults = NoodleNudge.State.get().userResults;
+                NoodleNudge.State.set({ userResults: { ...currentUserResults, [assessmentId]: results } });
+                NoodleNudge.UI.showToast("Assessment completed!", 'success');
+                NoodleNudge.App.navigate('results', { id: assessmentId });
+            };
+        
+            const calculateResults = (assessment, answers) => {
+                const results = { assessmentId: assessment.id, assessmentTitle: assessment.title, timestamp: new Date().toISOString(), scores: [] };
+                const calculatedScores = new Map();
+                const getScore = (id) => answers[id] || 0;
+                
+                const primaryScoringHelpers = {
+                    SUM: (argsStr) => {
+                        const argParts = argsStr.split(/,\s*REVERSE_SCORE/);
+                        const normalIds = argParts[0].replace(/[\[\]']/g, '').split(',').map(s => s.trim()).filter(Boolean);
+                        const reverseIds = argParts[1] ? argParts[1].replace(/[\[\]()']/g, '').split(',').map(s => s.trim()).filter(Boolean) : [];
+                        let total = 0;
+                        normalIds.forEach(id => total += getScore(id));
+                        reverseIds.forEach(id => total += 6 - getScore(id)); // Assuming a 1-5 scale
+                        return total;
+                    },
+                    SUM_AND_AVERAGE: (argsStr) => {
+                        const argParts = argsStr.split(/,\s*REVERSE_SCORE/);
+                        const normalIds = argParts[0].replace(/[\[\]']/g, '').split(',').map(s => s.trim()).filter(Boolean);
+                        const reverseIds = argParts[1] ? argParts[1].replace(/[\[\]()']/g, '').split(',').map(s => s.trim()).filter(Boolean) : [];
+                        let total = 0;
+                        normalIds.forEach(id => total += getScore(id));
+                        reverseIds.forEach(id => total += 6 - getScore(id)); // Assuming a 1-5 scale
+                        const count = normalIds.length + reverseIds.length;
+                        return count > 0 ? total / count : 0;
+                    },
+                    AVERAGE_SCORE: (argsStr) => {
+                        const ids = argsStr.replace(/[\[\]']/g, '').split(',').map(s => s.trim()).filter(Boolean);
+                        const sum = ids.reduce((acc, id) => acc + getScore(id), 0);
+                        return ids.length > 0 ? sum / ids.length : 0;
+                    },
+                    COLLECT_ITEMS_FROM_CATEGORY: (argsStr) => {
+                        const [sectionId, categoryId] = argsStr.replace(/'/g, '').split(',').map(s => s.trim());
+                        const section = assessment.sections.find(s => s.id === sectionId);
+                        if (!section) return "Section not found";
+                        const itemIds = answers[sectionId]?.[categoryId] || [];
+                        return itemIds.map(id => section.items.find(i => i.id === id)?.text).filter(Boolean).join(', ');
+                    },
+                };
+
+                (assessment.scoringRubric.primaryScores || []).forEach(rule => {
+                    let value = "N/A";
+                    const calc = rule.calculation;
+                    try {
+                        const match = calc.match(/(\w+)\((.*)\)/s);
+                        if (match) {
+                            const [, funcName, argsStr] = match;
+                            if (primaryScoringHelpers[funcName]) {
+                                value = primaryScoringHelpers[funcName](argsStr);
+                            } else {
+                                // Handle simple formula like in MPS
+                                value = new Function(...calculatedScores.keys(), `return ${calc}`)(...calculatedScores.values());
+                            }
+                        } else {
+                             value = new Function(...calculatedScores.keys(), `return ${calc}`)(...calculatedScores.values());
+                        }
+                    } catch (err) { NoodleNudge.Logger.error(`Primary scoring failed for rule "${calc}"`, err); value = "Calculation Error"; }
+                    
+                    calculatedScores.set(rule.id, value);
+                    let interp = rule.interpretation || "No interpretation available.";
+                    if (Array.isArray(rule.interpretation)) {
+                        const found = rule.interpretation.find(i => typeof value === 'number' && value >= i.range[0] && value <= i.range[1]);
+                        interp = found ? found.description : "No interpretation for this score range.";
+                    } else if (typeof rule.interpretation === 'object' && !Array.isArray(rule.interpretation)) {
+                        interp = rule.interpretation[value] || interp;
+                    }
+                    results.scores.push({ id: rule.id, title: rule.title, value, interpretation: interp, type: 'primary' });
+                });
+
+                (assessment.scoringRubric.derivativeInsights || []).forEach(rule => {
+                    let value = "N/A";
+                    let interp = rule.interpretation || "No interpretation available.";
+                    const calcLogic = rule.calculationLogic || rule.calculation;
+
+                    try {
+                        value = evaluateDerivative(calcLogic, calculatedScores, assessment, answers);
+                        
+                        if (Array.isArray(rule.interpretation)) {
+                             const found = rule.interpretation.find(i => i.value === value || (typeof value === 'number' && i.range && value >= i.range[0] && value <= i.range[1]));
+                             interp = found ? found.description : interp;
+                        } else if (typeof rule.interpretation === 'object' && rule.interpretation !== null) {
+                             interp = rule.interpretation[value] || interp.note?.replace('[result]', value) || interp;
+                        }
+                    } catch (err) { NoodleNudge.Logger.error(`Derivative scoring failed for rule "${calcLogic}"`, err); value = "Calculation Error"; }
+                    results.scores.push({ id: rule.id, title: rule.title, value, interpretation: interp, type: 'derived' });
+                });
+        
+                return results;
+            };
+
+            const evaluateDerivative = (expression, scores, assessment, answers) => {
+                const helpers = {
+                    IF: (condition, thenVal, elseVal) => condition ? thenVal : elseVal,
+                    NORMALIZE: (val, min, max) => ((val - min) / (max - min)) * 100,
+                    CONCAT: (...args) => args.join(''),
+                    IDENTIFY_MAX_SCORE_DIMENSION: (...scoreIds) => {
+                        let maxScore = -Infinity;
+                        let maxDimTitle = "N/A";
+                        scoreIds.forEach(id => {
+                            const scoreValue = scores.get(id);
+                            if (typeof scoreValue === 'number' && scoreValue > maxScore) {
+                                maxScore = scoreValue;
+                                const scoreRule = [...(assessment.scoringRubric.primaryScores || []), ...(assessment.scoringRubric.derivativeInsights || [])].find(s => s.id === id);
+                                maxDimTitle = scoreRule ? scoreRule.title : id;
+                            }
+                        });
+                        return maxDimTitle;
+                    },
+                    IDENTIFY_HIGHEST_SCORE_DIMENSIONS: (scoreIds, labels) => {
+                        const values = scoreIds.map(id => scores.get(id));
+                        const maxValue = Math.max(...values);
+                        const result = [];
+                        values.forEach((v, i) => {
+                            if (v === maxValue) result.push(labels[i]);
+                        });
+                        return result.join(', ');
+                    },
+                    IS_IN_TOP_CATEGORY: (itemId, sectionId) => {
+                        const topCatKey = assessment.sections.find(s => s.id === sectionId)?.categories.find(c => c.id.includes('_most_important'))?.id;
+                        if (!topCatKey) return false;
+                        return answers[sectionId]?.[topCatKey]?.includes(itemId) || false;
+                    },
+                    COUNT_SUBTYPE_IN_TOP_CATEGORY: (subtype, sectionId) => {
+                        const section = assessment.sections.find(s => s.id === sectionId);
+                        if (!section) return 0;
+                        const topCatKey = section.categories.find(c => c.id.includes('_most_important'))?.id;
+                        if (!topCatKey) return 0;
+                        const topItemIds = answers[sectionId]?.[topCatKey] || [];
+                        return topItemIds.reduce((count, itemId) => {
+                            const item = section.items.find(i => i.id === itemId);
+                            return item && item.subType === subtype ? count + 1 : count;
+                        }, 0);
+                    },
+                    COMPARE_SUBTYPE_COUNTS: (subTypeA, subTypeB, subTypeC, subTypeD) => {
+                        let group1Count = 0;
+                        let group2Count = 0;
+                        assessment.sections.forEach(section => {
+                            group1Count += helpers.COUNT_SUBTYPE_IN_TOP_CATEGORY(subTypeA, section.id);
+                            group1Count += helpers.COUNT_SUBTYPE_IN_TOP_CATEGORY(subTypeB, section.id);
+                            group2Count += helpers.COUNT_SUBTYPE_IN_TOP_CATEGORY(subTypeC, section.id);
+                            group2Count += helpers.COUNT_SUBTYPE_IN_TOP_CATEGORY(subTypeD, section.id);
+                        });
+                        return group1Count > group2Count ? 'social' : 'personal';
+                    }
+                };
+
+                let functionBody = expression;
+                const scoreIds = [...expression.matchAll(/[a-zA-Z_][\w]*/g)].map(m => m[0]).filter(id => !Object.keys(helpers).includes(id));
+                const uniqueScoreIds = [...new Set(scoreIds)].filter(id => scores.has(id));
+
+                const func = new Function(...Object.keys(helpers), ...uniqueScoreIds, `return ${functionBody}`);
+                
+                const helperValues = Object.values(helpers);
+                const scoreValues = uniqueScoreIds.map(id => scores.get(id));
+
+                return func(...helperValues, ...scoreValues);
+            };
+
+            return { processAndSaveResults, calculateResults };
+        })();
+        
+        NoodleNudge.SettingsManager = (() => { const exportData = async () => { try { const state = await NoodleNudge.DB.get('appState'); const dataStr = JSON.stringify(state, null, 2); const blob = new Blob([dataStr], { type: 'application/json' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = `noodle-nudge-backup-${new Date().toISOString().split('T')[0]}.json`; document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url); NoodleNudge.UI.showToast(NoodleNudge.L10N.get('dataExported'), 'success'); } catch(err) { NoodleNudge.Logger.error("Export failed:", err); NoodleNudge.UI.showToast(NoodleNudge.L10N.get('error'), 'danger'); } }; const importData = (event) => { const file = event.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = async (e) => { try { await NoodleNudge.DB.set('appState', JSON.parse(e.target.result)); NoodleNudge.UI.showToast(NoodleNudge.L10N.get('dataImported'), 'success'); setTimeout(() => window.location.reload(), 1500); } catch (error) { NoodleNudge.Logger.error("Import failed:", error); NoodleNudge.UI.showToast(NoodleNudge.L10N.get('error'), 'danger'); } }; reader.readAsText(file); }; const resetData = () => { if (confirm(NoodleNudge.L10N.get('resetConfirmation'))) { NoodleNudge.UI.showLoader(); NoodleNudge.DB.clear().then(() => { NoodleNudge.UI.showToast(NoodleNudge.L10N.get('dataReset'), 'success'); setTimeout(() => window.location.reload(), 1500); }).catch(err => { NoodleNudge.Logger.error("Reset failed:", err); NoodleNudge.UI.showToast(NoodleNudge.L10N.get('error'), 'danger'); NoodleNudge.UI.hideLoader(); }); } };
+        const fillWithRandomData = () => {
+            NoodleNudge.Logger.info("Filling all assessments with random data.");
+            const state = NoodleNudge.State.get();
+            const newUserResults = { ...state.userResults };
+            const newUserAnswers = { ...state.userAnswers };
+
+            for (const assessmentId in state.assessments) {
+                const assessment = state.assessments[assessmentId];
+                const randomAnswers = {};
+                const interactionType = assessment.interactionType || 'likertScale';
+
+                if (interactionType === 'likertScale') {
+                    assessment.questions.forEach(q => {
+                        const scale = assessment.responseScale;
+                        randomAnswers[q.id] = scale[Math.floor(Math.random() * scale.length)].value;
+                    });
+                } else if (interactionType === 'cardSort') {
+                    assessment.sections.forEach(s => {
+                        randomAnswers[s.id] = {};
+                        const shuffledItems = [...s.items].sort(() => 0.5 - Math.random());
+                        s.categories.forEach(cat => {
+                            randomAnswers[s.id][cat.id] = [];
+                            const limit = cat.limit === null ? (shuffledItems.length / s.categories.length) : cat.limit; // Distribute remaining if limit is null
+                            while (randomAnswers[s.id][cat.id].length < limit && shuffledItems.length > 0) {
+                                randomAnswers[s.id][cat.id].push(shuffledItems.pop().id);
+                            }
+                        });
+                    });
+                }
+                
+                const results = NoodleNudge.Scoring.calculateResults(assessment, randomAnswers);
+                newUserResults[assessmentId] = results;
+                newUserAnswers[assessmentId] = { answers: randomAnswers, timestamp: new Date().toISOString() };
+            }
+
+            NoodleNudge.State.set({ userResults: newUserResults, userAnswers: newUserAnswers });
+            NoodleNudge.UI.showToast('All assessments filled with random data.', 'success');
+            NoodleNudge.App.navigate('assessments');
+        };
+        return { exportData, importData, resetData, fillWithRandomData }; })();
+        
+        NoodleNudge.App = (() => {
+            const routes = { dashboard: NoodleNudge.UI.DashboardView, assessments: NoodleNudge.UI.AssessmentsView, assessment: (p) => NoodleNudge.UI.AssessmentTakerView(p.id), results: (p) => NoodleNudge.UI.ResultsView(p.id), settings: NoodleNudge.UI.SettingsView };
+            const navigate = (path, params = {}) => { window.scrollTo(0, 0); const viewFn = routes[path]; if (typeof viewFn === 'function') { NoodleNudge.Logger.info(`Navigating to ${path}`); viewFn(params); } else { NoodleNudge.Logger.error(`Route not found: ${path}`); } };
+            const handleAction = (e) => {
+                const target = e.target.closest('[data-action]');
+                if (!target) return;
+                e.preventDefault();
+                let { viewDate } = NoodleNudge.State.get(); let newDate = new Date(viewDate);
+                if (target.dataset.action === 'prev-day') { newDate.setDate(newDate.getDate() - 1); } 
+                else if (target.dataset.action === 'next-day') { newDate.setDate(newDate.getDate() + 1); }
+                NoodleNudge.State.set({ viewDate: newDate.toISOString() }); 
+            };
+            const handleDebugAction = (e) => {
+                const target = e.target.closest('[data-debug-action]');
+                if (!target) return;
+                e.preventDefault();
+                const action = target.dataset.debugAction;
+                if (action === 'force-reload') NoodleNudge.Content.loadAllContent(); 
+                else if (action === 'clear-state') NoodleNudge.SettingsManager.resetData(); 
+                else if (action === 'toast-success') NoodleNudge.UI.showToast('This is a success test.', 'success'); 
+                else if (action === 'toast-danger') NoodleNudge.UI.showToast('This is a danger test.', 'danger');
+                else if (action === 'fill-random') NoodleNudge.SettingsManager.fillWithRandomData();
+            };
+            const handleNav = (e) => {
+                const target = e.target.closest('[data-nav]');
+                if (!target) return;
+                e.preventDefault();
+                navigate(target.dataset.nav, { id: target.dataset.assessmentId });
+            };
+            const setupEventListeners = () => { 
+                document.body.addEventListener('click', (e) => {
+                    handleNav(e);
+                    handleAction(e);
+                    handleDebugAction(e);
+                });
+            };
+            const init = async () => {
+                NoodleNudge.Logger.info("Initializing Noodle Nudge PWA...");
+                NoodleNudge.UI.showLoader();
+                const savedState = await NoodleNudge.DB.get('appState');
+                if (savedState) {
+                    const mergedState = { ...MasterBlueprint.stateSchema, ...savedState, appConfig: { ...MasterBlueprint.stateSchema.appConfig, ...(savedState.appConfig || {}) }, debugLog: [] };
+                    NoodleNudge.State.init(mergedState);
+                    NoodleNudge.Logger.info("State loaded from IndexedDB and merged with current schema.");
+                } else {
+                    NoodleNudge.State.init(MasterBlueprint.stateSchema);
+                    NoodleNudge.Logger.info("Initialized with fresh state schema.");
+                }
+                setupEventListeners();
+                NoodleNudge.State.subscribe((state) => { const activeNav = document.querySelector('.main-nav a.active')?.dataset.nav; if (activeNav === 'dashboard' && state.viewDate) { NoodleNudge.UI.DashboardView(); } });
+                const currentState = NoodleNudge.State.get();
+                if (!currentState.assessments || Object.keys(currentState.assessments).length === 0) { NoodleNudge.Logger.info("No content found; fetching from network..."); await NoodleNudge.Content.loadAllContent(); } else { NoodleNudge.Logger.info("Content already available in state."); }
+                navigate('dashboard');
+                if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js').then(reg => NoodleNudge.Logger.info('Service Worker registered.', reg)).catch(err => NoodleNudge.Logger.error('Service Worker registration failed:', err)); }
+                NoodleNudge.UI.hideLoader();
+                NoodleNudge.Logger.info("Noodle Nudge initialization complete.");
+            };
+            return { init, navigate };
+        })();
+        
+        document.addEventListener('DOMContentLoaded', NoodleNudge.App.init);
+    </script>
+</body>
+</html>
