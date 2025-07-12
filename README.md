@@ -12,7 +12,7 @@ Noodle Nudge is a **free and open-source** app that works completely offline onc
 
 Using Noodle Nudge is simple!
 
-1.  **Visit the App:** Open your web browser and go to: shfqrkhn.github.io/Noodle-Nudge/
+1.  **Visit the App:** Open your web browser and go to: [shfqrkhn.github.io/Noodle-Nudge/](https://shfqrkhn.github.io/Noodle-Nudge/)
 2.  **Install (Optional, but Recommended!):** For the best experience, we highly recommend installing Noodle Nudge to your device. This makes it work just like a regular app, even when you're offline!
     * **On Android:** When you visit the link, you might see a prompt to "Add Noodle Nudge to Home Screen" or "Install App." Tap on this, and follow the instructions.
     * **On iOS (iPhone/iPad):** Open the link in Safari. Tap the "Share" button (the square with an arrow pointing up), then scroll down and tap "Add to Home Screen."
