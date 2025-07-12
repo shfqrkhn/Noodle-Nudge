@@ -190,9 +190,13 @@
                         const found = rule.interpretation.find(i => typeof value === 'number' && i.range && value >= i.range[0] && value <= i.range[1]);
                         interp = found ? found.description : interp;
                     } else if (typeof rule.interpretation === 'object' && !Array.isArray(rule.interpretation)) {
-                        const resultKey = String(value).toLowerCase();
-                        const interpKey = Object.keys(rule.interpretation).find(k => k.toLowerCase() === resultKey);
-                        interp = rule.interpretation[interpKey] || (interp.note ? interp.note.replace('[result]', String(value)) : interp);
+                        if (typeof value === 'number' && rule.interpretation.high !== undefined && rule.interpretation.low !== undefined) {
+                            interp = value >= 50 ? rule.interpretation.high : rule.interpretation.low;
+                        } else {
+                            const resultKey = String(value).toLowerCase();
+                            const interpKey = Object.keys(rule.interpretation).find(k => k.toLowerCase() === resultKey);
+                            interp = rule.interpretation[interpKey] || (rule.interpretation.note ? rule.interpretation.note.replace('[result]', String(value)) : interp);
+                        }
                     }
                     results.scores.push({ id: rule.id, title: rule.title, value, interpretation: interp, type });
                 });
