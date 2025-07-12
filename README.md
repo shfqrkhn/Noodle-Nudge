@@ -51,15 +51,6 @@ Ready to dive deeper? The "Assessments" section offers structured questionnaires
 
 After completing an assessment, you'll get personalized results and interpretations to help you make sense of your insights.
 
-### ⚙️ Settings
-
-The "Settings" section gives you control over your Noodle Nudge experience:
-
-* **Data Management:** Remember, your data is private and stays on your device! Here, you can:
-    * **Export My Data:** Save a copy of all your answers and results to your device. This is great for backups or if you want to move your data to another device.
-    * **Import My Data:** Load a previously saved data file into the app.
-    * **Reset All Data:** Start fresh by deleting all your saved answers and results. Use this with caution, as it cannot be undone!
-
 ## 🔒 Your Privacy Matters
 
 We believe in user sovereignty and privacy above all else. Noodle Nudge is designed to be a completely private tool. **No data ever leaves your device.** This means you can explore, reflect, and grow with complete peace of mind.
