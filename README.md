@@ -4,6 +4,10 @@
 
 Welcome to Noodle Nudge, an app designed to help you explore your inner world and foster personal growth. Inspired by the Socratic principle, "the unexamined life is not worth living," Noodle Nudge is your personal, private sanctuary for self-discovery.
 
+[**Live Demo**](https://shfqrkhn.github.io/Noodle-Nudge/)
+
+![Done Depot App Interface](https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/%7BE5D3789B-D24D-4A85-9CE0-F23EFC579001%7D.png)
+
 ## 🌟 What is Noodle Nudge?
 
 Noodle Nudge is a **free and open-source** app that works completely offline once you've installed it. It's built with your privacy in mind – **all your data stays right on your device**, never shared or stored anywhere else. Think of it as a quiet, personal journal combined with insightful tools to help you understand yourself better.
