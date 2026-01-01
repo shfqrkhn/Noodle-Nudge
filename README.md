@@ -6,7 +6,7 @@ Welcome to Noodle Nudge, an app designed to help you explore your inner world an
 
 [**Live Demo**](https://shfqrkhn.github.io/Noodle-Nudge/)
 
-![Done Depot App Interface](https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/%7BE5D3789B-D24D-4A85-9CE0-F23EFC579001%7D.png)
+![Screenshot](https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/%7BE5D3789B-D24D-4A85-9CE0-F23EFC579001%7D.png)
 
 ## 🌟 What is Noodle Nudge?
 
