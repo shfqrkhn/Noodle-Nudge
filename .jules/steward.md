@@ -17,3 +17,7 @@
 ## 2026-01-25 - Bolt - Redundant IndexedDB Serialization
 **Insight:** The application serialized and wrote the entire state to IndexedDB on every `State.set` call. Separate calls for related data (e.g., `userAnswers` and `userResults`) doubled the I/O overhead.
 **Protocol:** Batch related state updates into a single `State.set` transaction to minimize serialization cost and database write operations.
+
+## 2026-01-25 - Sentinel - Mutable Global Configuration
+**Insight:** While scoped to a module, the `MasterBlueprint` configuration object (containing feature flags and endpoints) was mutable. Internal code could accidentally modify critical settings at runtime.
+**Protocol:** Critical configuration objects must be deeply frozen (`Object.freeze`) immediately upon definition to guarantee immutability and integrity throughout the application lifecycle.
