@@ -39,4 +39,12 @@ if (nextMatch) {
     passed = false;
 }
 
+// Check for aria-current logic
+if (html.includes("setAttribute('aria-current','page')") || html.includes('setAttribute("aria-current","page")') || html.includes("setAttribute('aria-current', 'page')")) {
+    console.log('✅ [PASS] Navigation update logic includes aria-current setting.');
+} else {
+    console.error('❌ [FAIL] Navigation update logic missing aria-current setting.');
+    passed = false;
+}
+
 if (!passed) process.exit(1);
