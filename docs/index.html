@@ -208,22 +208,8 @@
                 return results;
             };
 
+            const evalCache = new Map();
             const evaluateExpression = (expression, scores, assessment, answers) => {
-                let processedExpr = expression.replace(/\b(AND|OR)\b/gi, match => match.toUpperCase() === 'AND' ? '&&' : '||');
-                processedExpr = processedExpr.replace(/([a-zA-Z_][\w]*)_score\b/g, '$1');
-                
-                const unresolved = new Set([...processedExpr.matchAll(/[a-zA-Z_][\w]*/g)].map(m => m[0]).filter(id => !/^(NORMALIZE|CONCAT|IF|IS_IN_TOP_CATEGORY|COUNT_SUBTYPE_IN_TOP_CATEGORY|COMPARE_SUBTYPE_COUNTS|IDENTIFY_HIGHEST_SCORE_DIMENSIONS)$/.test(id) && isNaN(id)));
-
-                scores.forEach((value, key) => {
-                    if (unresolved.has(key)) {
-                        const re = new RegExp(`\\b${key}\\b`, 'g');
-                        processedExpr = processedExpr.replace(re, `(${JSON.stringify(value)})`);
-                        unresolved.delete(key);
-                    }
-                });
-
-                if (unresolved.size > 0) { throw new ReferenceError(`Unresolved dependencies: ${[...unresolved].join(', ')}`); }
-                
                 const helpers = {
                     NORMALIZE: (val, min, max) => (val === undefined || isNaN(val)) ? undefined : ((val - min) / (max - min)) * 100,
                     CONCAT: (...args) => args.join(''),
@@ -234,13 +220,16 @@
                     IF: (condition, thenVal, elseVal) => condition ? thenVal : elseVal
                 };
 
-                const cleanExpr = processedExpr.replace(/["'](?:\\.|[^"'\\])*["']/g, '');
-                if (/[{};]/.test(cleanExpr)) throw new Error("Security Violation: Objects/Blocks/Statements not allowed");
-                const allowed = new Set(['true', 'false', 'null', 'undefined', 'NaN', 'Infinity', ...Object.keys(helpers)]);
-                (cleanExpr.match(/[a-zA-Z_$][\w$]*/g) || []).forEach(t => { if (!allowed.has(t)) throw new Error(`Security Violation: Unauthorized token '${t}'`); });
+                let cached = evalCache.get(expression);
+                if (!cached) {
+                    let proc = expression.replace(/\b(AND|OR)\b/gi, m => m.toUpperCase() === 'AND' ? '&&' : '||').replace(/([a-zA-Z_][\w]*)_score\b/g, '$1');
+                    const vars = [...new Set([...proc.matchAll(/[a-zA-Z_][\w]*/g)].map(m => m[0]).filter(id => !/^(NORMALIZE|CONCAT|IF|IS_IN_TOP_CATEGORY|COUNT_SUBTYPE_IN_TOP_CATEGORY|COMPARE_SUBTYPE_COUNTS|IDENTIFY_HIGHEST_SCORE_DIMENSIONS)$/.test(id) && isNaN(id) && !/^(true|false|null|undefined|NaN|Infinity)$/.test(id)))];
+                    if (/[{};]/.test(proc)) throw new Error("Security Violation");
+                    cached = { func: new Function(...vars, ...Object.keys(helpers), `return ${proc}`), vars };
+                    evalCache.set(expression, cached);
+                }
 
-                const func = new Function(...Object.keys(helpers), `return ${processedExpr}`);
-                return func(...Object.values(helpers));
+                return cached.func(...cached.vars.map(v => { if(!scores.has(v)) throw new ReferenceError(v); return scores.get(v); }), ...Object.values(helpers));
             };
 
             return { processAndSaveResults, calculateResults };
