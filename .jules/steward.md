@@ -25,3 +25,7 @@
 ## 2026-01-25 - Bolt - Async Loader & Reactive State
 **Insight:** A simple PubSub implementation using `Set.forEach` can cause infinite loops if a subscriber removes itself and adds a new subscriber synchronously during the callback execution (e.g., a View that re-renders and re-subscribes).
 **Protocol:** Always iterate over a copy of the subscribers set (`[...subscribers].forEach`) when dispatching events.
+
+## 2026-01-25 - Bolt - Cache Busting
+**Insight:** Offline-first PWAs with Cache-First strategies require explicit version bumping in `service-worker.js` to trigger updates for cached assets (like `index.html`).
+**Protocol:** When modifying core files cached by the Service Worker, always increment `CACHE_NAME` in `service-worker.js` and synchronize the version in `index.html` and `README.md`.
