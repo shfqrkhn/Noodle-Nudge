@@ -106,10 +106,11 @@
                     });
                 }
                 const currentUserAnswers = NoodleNudge.State.get().userAnswers;
-                NoodleNudge.State.set({ userAnswers: { ...currentUserAnswers, [assessmentId]: { answers, timestamp: new Date().toISOString() } } });
+                const newUserAnswers = { ...currentUserAnswers, [assessmentId]: { answers, timestamp: new Date().toISOString() } };
                 const results = calculateResults(assessment, answers);
                 const currentUserResults = NoodleNudge.State.get().userResults;
-                NoodleNudge.State.set({ userResults: { ...currentUserResults, [assessmentId]: results } });
+                const newUserResults = { ...currentUserResults, [assessmentId]: results };
+                NoodleNudge.State.set({ userAnswers: newUserAnswers, userResults: newUserResults });
                 NoodleNudge.UI.showToast("Assessment completed!", 'success');
                 NoodleNudge.App.navigate('results', { id: assessmentId });
             };

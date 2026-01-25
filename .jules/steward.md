@@ -13,3 +13,7 @@
 ## 2026-01-25 - Sentinel - Default Debug Mode Exposure
 **Insight:** The application had the Debug Panel enabled by default in production (`enableDebugPanel: true`), exposing internal logs and state management tools to end-users.
 **Protocol:** Feature flags for debugging/admin tools must default to `false` and require explicit activation (e.g., URL parameters or auth) to adhere to the Principle of Least Privilege.
+
+## 2026-01-25 - Bolt - Redundant IndexedDB Serialization
+**Insight:** The application serialized and wrote the entire state to IndexedDB on every `State.set` call. Separate calls for related data (e.g., `userAnswers` and `userResults`) doubled the I/O overhead.
+**Protocol:** Batch related state updates into a single `State.set` transaction to minimize serialization cost and database write operations.
