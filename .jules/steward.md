@@ -21,3 +21,11 @@
 ## 2026-01-25 - Sentinel - Mutable Global Configuration
 **Insight:** While scoped to a module, the `MasterBlueprint` configuration object (containing feature flags and endpoints) was mutable. Internal code could accidentally modify critical settings at runtime.
 **Protocol:** Critical configuration objects must be deeply frozen (`Object.freeze`) immediately upon definition to guarantee immutability and integrity throughout the application lifecycle.
+
+## 2026-01-25 - Bolt - Async Loader & Reactive State
+**Insight:** A simple PubSub implementation using `Set.forEach` can cause infinite loops if a subscriber removes itself and adds a new subscriber synchronously during the callback execution (e.g., a View that re-renders and re-subscribes).
+**Protocol:** Always iterate over a copy of the subscribers set (`[...subscribers].forEach`) when dispatching events.
+
+## 2026-01-25 - Bolt - Cache Busting
+**Insight:** Offline-first PWAs with Cache-First strategies require explicit version bumping in `service-worker.js` to trigger updates for cached assets (like `index.html`).
+**Protocol:** When modifying core files cached by the Service Worker, always increment `CACHE_NAME` in `service-worker.js` and synchronize the version in `index.html` and `README.md`.
