@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Noodle Nudge: A private space for reflection, a clear path for growth.">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self';">
     <meta name="theme-color" content="#4A90E2">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -209,21 +209,6 @@
             };
 
             const evaluateExpression = (expression, scores, assessment, answers) => {
-                let processedExpr = expression.replace(/\b(AND|OR)\b/gi, match => match.toUpperCase() === 'AND' ? '&&' : '||');
-                processedExpr = processedExpr.replace(/([a-zA-Z_][\w]*)_score\b/g, '$1');
-                
-                const unresolved = new Set([...processedExpr.matchAll(/[a-zA-Z_][\w]*/g)].map(m => m[0]).filter(id => !/^(NORMALIZE|CONCAT|IF|IS_IN_TOP_CATEGORY|COUNT_SUBTYPE_IN_TOP_CATEGORY|COMPARE_SUBTYPE_COUNTS|IDENTIFY_HIGHEST_SCORE_DIMENSIONS)$/.test(id) && isNaN(id)));
-
-                scores.forEach((value, key) => {
-                    if (unresolved.has(key)) {
-                        const re = new RegExp(`\\b${key}\\b`, 'g');
-                        processedExpr = processedExpr.replace(re, `(${JSON.stringify(value)})`);
-                        unresolved.delete(key);
-                    }
-                });
-
-                if (unresolved.size > 0) { throw new ReferenceError(`Unresolved dependencies: ${[...unresolved].join(', ')}`); }
-                
                 const helpers = {
                     NORMALIZE: (val, min, max) => (val === undefined || isNaN(val)) ? undefined : ((val - min) / (max - min)) * 100,
                     CONCAT: (...args) => args.join(''),
@@ -233,14 +218,47 @@
                     IDENTIFY_HIGHEST_SCORE_DIMENSIONS: (scoreArray, labels) => { const max = Math.max(...scoreArray); return labels.filter((_, i) => scoreArray[i] === max).join(', '); },
                     IF: (condition, thenVal, elseVal) => condition ? thenVal : elseVal
                 };
+                let expr = expression.replace(/\b(AND|OR)\b/gi, m => m.toUpperCase() === 'AND' ? '&&' : '||');
+                scores.forEach((val, key) => {
+                    expr = expr.replace(new RegExp(`\\b${key}\\b`, 'g'), JSON.stringify(val));
+                    expr = expr.replace(new RegExp(`\\b${key}_score\\b`, 'g'), JSON.stringify(val));
+                });
 
-                const cleanExpr = processedExpr.replace(/["'](?:\\.|[^"'\\])*["']/g, '');
-                if (/[{};]/.test(cleanExpr)) throw new Error("Security Violation: Objects/Blocks/Statements not allowed");
-                const allowed = new Set(['true', 'false', 'null', 'undefined', 'NaN', 'Infinity', ...Object.keys(helpers)]);
-                (cleanExpr.match(/[a-zA-Z_$][\w$]*/g) || []).forEach(t => { if (!allowed.has(t)) throw new Error(`Security Violation: Unauthorized token '${t}'`); });
+                const parseVal = t => {
+                    if (t === 'true') return true; if (t === 'false') return false; if (t === 'null') return null;
+                    if (!isNaN(t)) return Number(t);
+                    if ((t.startsWith("'") && t.endsWith("'")) || (t.startsWith('"') && t.endsWith('"'))) return t.slice(1, -1);
+                    return t;
+                };
 
-                const func = new Function(...Object.keys(helpers), `return ${processedExpr}`);
-                return func(...Object.values(helpers));
+                const evalOp = (a, op, b) => {
+                    if(op==='&&') return a && b; if(op==='||') return a || b; if(op==='>=') return a >= b; if(op==='<=') return a <= b; if(op==='>') return a > b; if(op==='<') return a < b; if(op==='===') return a === b; if(op==='!==') return a !== b; return a;
+                };
+
+                // Simple recursive descent for logical/comparison ops and function calls
+                // Supported: A || B, A && B, A >= B, FUNC(args)
+                const tokens = expr.match(/([a-zA-Z_][\w]*\s*\([^)]*\)|>=|<=|===|!==|[><]|\|\||&&|\(|\)|'[^']*'|"[^"]*"|[\d.]+|true|false|null)/g) || [];
+                if (!tokens) return parseVal(expr.trim());
+
+                // Very naive infix evaluator for the specific simple expressions used
+                // 1. Handle Function Calls
+                const resolvedTokens = tokens.map(t => {
+                    const match = t.match(/^([a-zA-Z_][\w]*)\s*\((.*)\)$/);
+                    if (match && helpers[match[1]]) {
+                        const args = match[2].split(',').map(a => parseVal(a.trim()));
+                        return helpers[match[1]](...args);
+                    }
+                    return parseVal(t);
+                });
+
+                // 2. Evaluate Binary Ops (Left-to-right, ignoring precedence for simplicity as usage is simple)
+                let result = resolvedTokens[0];
+                for (let i = 1; i < resolvedTokens.length; i += 2) {
+                    const op = resolvedTokens[i];
+                    const next = resolvedTokens[i+1];
+                    result = evalOp(result, op, next);
+                }
+                return result;
             };
 
             return { processAndSaveResults, calculateResults };
