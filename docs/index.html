@@ -90,7 +90,20 @@
              return { DashboardView, AssessmentsView, AssessmentTakerView, ResultsView, SettingsView, showLoader: ()=>document.getElementById('loader-overlay').style.display = 'flex', hideLoader: ()=>document.getElementById('loader-overlay').style.display = 'none', showToast };
         })();
         
-        NoodleNudge.Scoring = (() => { const scoringRegex = /^([A-Z_]+)\((.*)\)$/s;
+        NoodleNudge.Scoring = (() => {
+            const scoringRegex = /^([A-Z_]+)\((.*)\)$/s;
+            const reSplitReverseScore = /,\s*REVERSE_SCORE/;
+            const reCleanArray = /[\[\]']/g;
+            const reCleanArrayParens = /[\[\]()']/g;
+            const reCleanQuotes = /'/g;
+            const reCleanScoreTitle = /\s*Style Score|\s*Score/gi;
+            const reAndOr = /\b(AND|OR)\b/gi;
+            const reScoreSuffix = /([a-zA-Z_][\w]*)_score\b/g;
+            const reIdentifiers = /[a-zA-Z_][\w]*/g;
+            const reKeywords = /^(NORMALIZE|CONCAT|IF|IS_IN_TOP_CATEGORY|COUNT_SUBTYPE_IN_TOP_CATEGORY|COMPARE_SUBTYPE_COUNTS|IDENTIFY_HIGHEST_SCORE_DIMENSIONS)$/;
+            const reLiterals = /^(true|false|null|undefined|NaN|Infinity)$/;
+            const reSecurity = /[{};]/;
+
             const processAndSaveResults = (assessmentId, form) => {
                 const assessment = NoodleNudge.State.get().assessments[assessmentId];
                 const answers = {};
@@ -142,11 +155,11 @@
                 const allRules = [...(assessment.scoringRubric.primaryScores || []), ...(assessment.scoringRubric.derivativeInsights || [])];
                 
                 const ScoringHelpers = {
-                    SUM: (argsStr) => { const p=argsStr.split(/,\s*REVERSE_SCORE/); const n=p[0].replace(/[\[\]']/g,'').split(',').map(s=>s.trim()).filter(Boolean); const r=p[1]?p[1].replace(/[\[\]()']/g,'').split(',').map(s=>s.trim()).filter(Boolean):[]; let t=0; n.forEach(id=>t+=getScore(id)); r.forEach(id=>t+=6-getScore(id)); return t; },
-                    SUM_AND_AVERAGE: (argsStr) => { const p=argsStr.split(/,\s*REVERSE_SCORE/); const n=p[0].replace(/[\[\]']/g,'').split(',').map(s=>s.trim()).filter(Boolean); const r=p[1]?p[1].replace(/[\[\]()']/g,'').split(',').map(s=>s.trim()).filter(Boolean):[]; let t=0; n.forEach(id=>t+=getScore(id)); r.forEach(id=>t+=6-getScore(id)); const c=n.length+r.length; return c>0?t/c:0; },
-                    AVERAGE_SCORE: (argsStr) => { const ids=argsStr.replace(/[\[\]']/g,'').split(',').map(s=>s.trim()).filter(Boolean); const sum=ids.reduce((acc,id)=>acc+getScore(id),0); return ids.length>0?sum/ids.length:0; },
-                    COLLECT_ITEMS_FROM_CATEGORY: (argsStr) => { const [sid,cid]=argsStr.replace(/'/g,'').split(',').map(s=>s.trim()); const sec=assessment.sections.find(s=>s.id===sid); if(!sec)return"E:S"; const iids=answers[sid]?.[cid]||[]; return iids.map(id=>sec.items.find(i=>i.id===id)?.text).filter(Boolean).join(', '); },
-                    IDENTIFY_MAX_SCORE_DIMENSION: (argsStr) => { const sids=argsStr.replace(/'/g,'').split(',').map(s=>s.trim()); let max=-Infinity,title="N/A"; sids.forEach(id=>{const val=calculatedScores.get(id);if(typeof val==='number'&&val>max){max=val;const rule=allRules.find(r=>r.id===id);title=rule?rule.title.replace(/\s*Style Score|\s*Score/gi,''):id;}}); return title; }
+                    SUM: (argsStr) => { const p=argsStr.split(reSplitReverseScore); const n=p[0].replace(reCleanArray,'').split(',').map(s=>s.trim()).filter(Boolean); const r=p[1]?p[1].replace(reCleanArrayParens,'').split(',').map(s=>s.trim()).filter(Boolean):[]; let t=0; n.forEach(id=>t+=getScore(id)); r.forEach(id=>t+=6-getScore(id)); return t; },
+                    SUM_AND_AVERAGE: (argsStr) => { const p=argsStr.split(reSplitReverseScore); const n=p[0].replace(reCleanArray,'').split(',').map(s=>s.trim()).filter(Boolean); const r=p[1]?p[1].replace(reCleanArrayParens,'').split(',').map(s=>s.trim()).filter(Boolean):[]; let t=0; n.forEach(id=>t+=getScore(id)); r.forEach(id=>t+=6-getScore(id)); const c=n.length+r.length; return c>0?t/c:0; },
+                    AVERAGE_SCORE: (argsStr) => { const ids=argsStr.replace(reCleanArray,'').split(',').map(s=>s.trim()).filter(Boolean); const sum=ids.reduce((acc,id)=>acc+getScore(id),0); return ids.length>0?sum/ids.length:0; },
+                    COLLECT_ITEMS_FROM_CATEGORY: (argsStr) => { const [sid,cid]=argsStr.replace(reCleanQuotes,'').split(',').map(s=>s.trim()); const sec=assessment.sections.find(s=>s.id===sid); if(!sec)return"E:S"; const iids=answers[sid]?.[cid]||[]; return iids.map(id=>sec.items.find(i=>i.id===id)?.text).filter(Boolean).join(', '); },
+                    IDENTIFY_MAX_SCORE_DIMENSION: (argsStr) => { const sids=argsStr.replace(reCleanQuotes,'').split(',').map(s=>s.trim()); let max=-Infinity,title="N/A"; sids.forEach(id=>{const val=calculatedScores.get(id);if(typeof val==='number'&&val>max){max=val;const rule=allRules.find(r=>r.id===id);title=rule?rule.title.replace(reCleanScoreTitle,''):id;}}); return title; }
                 };
 
                 const processRules = (rules) => {
@@ -222,9 +235,9 @@
 
                 let cached = evalCache.get(expression);
                 if (!cached) {
-                    let proc = expression.replace(/\b(AND|OR)\b/gi, m => m.toUpperCase() === 'AND' ? '&&' : '||').replace(/([a-zA-Z_][\w]*)_score\b/g, '$1');
-                    const vars = [...new Set([...proc.matchAll(/[a-zA-Z_][\w]*/g)].map(m => m[0]).filter(id => !/^(NORMALIZE|CONCAT|IF|IS_IN_TOP_CATEGORY|COUNT_SUBTYPE_IN_TOP_CATEGORY|COMPARE_SUBTYPE_COUNTS|IDENTIFY_HIGHEST_SCORE_DIMENSIONS)$/.test(id) && isNaN(id) && !/^(true|false|null|undefined|NaN|Infinity)$/.test(id)))];
-                    if (/[{};]/.test(proc)) throw new Error("Security Violation");
+                    let proc = expression.replace(reAndOr, m => m.toUpperCase() === 'AND' ? '&&' : '||').replace(reScoreSuffix, '$1');
+                    const vars = [...new Set([...proc.matchAll(reIdentifiers)].map(m => m[0]).filter(id => !reKeywords.test(id) && isNaN(id) && !reLiterals.test(id)))];
+                    if (reSecurity.test(proc)) throw new Error("Security Violation");
                     cached = { func: new Function(...vars, ...Object.keys(helpers), `return ${proc}`), vars };
                     evalCache.set(expression, cached);
                 }
