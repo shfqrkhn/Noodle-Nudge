@@ -90,7 +90,7 @@
              return { DashboardView, AssessmentsView, AssessmentTakerView, ResultsView, SettingsView, showLoader: ()=>document.getElementById('loader-overlay').style.display = 'flex', hideLoader: ()=>document.getElementById('loader-overlay').style.display = 'none', showToast };
         })();
         
-        NoodleNudge.Scoring = (() => {
+        NoodleNudge.Scoring = (() => { const scoringRegex = /^([A-Z_]+)\((.*)\)$/s;
             const processAndSaveResults = (assessmentId, form) => {
                 const assessment = NoodleNudge.State.get().assessments[assessmentId];
                 const answers = {};
@@ -158,7 +158,7 @@
                         for(const rule of queue) {
                             const calc = rule.calculation || rule.calculationLogic;
                             try {
-                                const match = calc.match(/^([A-Z_]+)\((.*)\)$/s);
+                                const match = calc.match(scoringRegex);
                                 if (match && ScoringHelpers[match[1]]) {
                                     calculatedScores.set(rule.id, ScoringHelpers[match[1]](match[2]));
                                 } else {
