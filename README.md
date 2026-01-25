@@ -1,6 +1,6 @@
 # Noodle Nudge: Your Pocket Philosopher 🧠✨
 
-**Current Version:** v1.0.12
+**Current Version:** v1.0.15
 
 **A private space for reflection, a clear path for growth.**
 
@@ -53,6 +53,8 @@ Ready to dive deeper? The "Assessments" section offers structured questionnaires
     * Conflict resolution styles
     * Leadership approaches
     * Assertiveness
+    * Power & Influence
+    * Proactive Personality
     * And more!
 
 After completing an assessment, you'll get personalized results and interpretations to help you make sense of your insights.

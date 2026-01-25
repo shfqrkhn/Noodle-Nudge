@@ -5,3 +5,11 @@
 ## 2026-01-25 - Sentinel - Unsafe Eval with External Content
 **Insight:** The scoring engine used `new Function` to evaluate expressions defined in external JSON files. This creates a Critical Injection Risk (XSS/RCE) if the content source is compromised.
 **Protocol:** When dynamic evaluation is strictly necessary for content logic, input MUST be sanitized against a strict Allowlist of identifiers and SAFE operators/characters before execution.
+
+## 2026-01-25 - Bolt - Service Worker Cache Key Mismatch
+**Insight:** The Service Worker cached content using `refs/heads/main` URLs, while the app requested content using `main` URLs. This caused a complete cache miss, redundant network requests, and broke offline functionality because the cache keys (URL strings) did not match.
+**Protocol:** Use relative paths (e.g., `./JSON/`) for all local content resources in both the application logic and the Service Worker configuration to ensure consistency and portability.
+
+## 2026-01-25 - Sentinel - Default Debug Mode Exposure
+**Insight:** The application had the Debug Panel enabled by default in production (`enableDebugPanel: true`), exposing internal logs and state management tools to end-users.
+**Protocol:** Feature flags for debugging/admin tools must default to `false` and require explicit activation (e.g., URL parameters or auth) to adhere to the Principle of Least Privilege.
