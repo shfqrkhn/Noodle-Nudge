@@ -66,6 +66,7 @@
     </header>
 
     <main class="container my-4" id="app-root" tabindex="-1"></main>
+    <footer class="container text-center mt-5 mb-3 text-muted"><small>Noodle Nudge v<span id="app-version"></span></small></footer>
     
     <div id="loader-overlay"><div class="loader"></div></div>
     <div id="toast-container" class="toast-container"></div>
@@ -319,7 +320,7 @@
                 navigate('dashboard');
                 if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js').then(reg => NoodleNudge.Logger.info('Service Worker registered.', reg)).catch(err => NoodleNudge.Logger.error('Service Worker registration failed:', err)); }
                 NoodleNudge.UI.hideLoader();
-                NoodleNudge.Logger.info("Noodle Nudge initialization complete.");
+                const vEl = document.getElementById("app-version"); if(vEl) vEl.textContent = MasterBlueprint.version; NoodleNudge.Logger.info("Noodle Nudge initialization complete.");
             };
             return { init, navigate };
         })();
