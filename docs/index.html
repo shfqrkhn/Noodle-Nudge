@@ -230,6 +230,11 @@
                     IF: (condition, thenVal, elseVal) => condition ? thenVal : elseVal
                 };
 
+                const cleanExpr = processedExpr.replace(/["'](?:\\.|[^"'\\])*["']/g, '');
+                if (/[{};]/.test(cleanExpr)) throw new Error("Security Violation: Objects/Blocks/Statements not allowed");
+                const allowed = new Set(['true', 'false', 'null', 'undefined', 'NaN', 'Infinity', ...Object.keys(helpers)]);
+                (cleanExpr.match(/[a-zA-Z_$][\w$]*/g) || []).forEach(t => { if (!allowed.has(t)) throw new Error(`Security Violation: Unauthorized token '${t}'`); });
+
                 const func = new Function(...Object.keys(helpers), `return ${processedExpr}`);
                 return func(...Object.values(helpers));
             };
