@@ -2,7 +2,7 @@
 
 // The cache name is versioned to ensure that updates to the PWA
 // trigger a new service worker installation and cache refresh.
-const CACHE_NAME = 'noodle-nudge-cache-v1.0.10';
+const CACHE_NAME = 'noodle-nudge-cache-v1.0.11';
 
 // App Shell: Core files needed for the app to run offline immediately.
 // This list is now corrected to match the final manifest.json.
@@ -15,7 +15,6 @@ const APP_SHELL_URLS = [
     './icons/icon-512x512.png',
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
-    'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css',
     'https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.js',
     'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap'
 ];
