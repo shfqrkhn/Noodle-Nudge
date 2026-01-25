@@ -2,7 +2,7 @@
 
 // The cache name is versioned to ensure that updates to the PWA
 // trigger a new service worker installation and cache refresh.
-const CACHE_NAME = 'noodle-nudge-cache-v1.0.12';
+const CACHE_NAME = 'noodle-nudge-cache-v1.0.13';
 
 // App Shell: Core files needed for the app to run offline immediately.
 // This list is now corrected to match the final manifest.json.
@@ -21,20 +21,20 @@ const APP_SHELL_URLS = [
 
 // Dynamic Content: JSON files to be pre-cached for offline access.
 const CONTENT_URLS = [
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q1_Core%20Personality.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q2_Core%20Values.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q3_Core%20Agency.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q4_Work%20Motivation.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q5_Perceived%20Stress%20Scale%20(PSS).json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q6_Conflict%20%26%20Negotiation%20Style.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q7_Authentic%20%26%20Ethical%20Leadership.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q8_Assertiveness%20Profile.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q9_Power%20%26%20Influence%20Profile.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Q10_Proactive%20Personality%20Scale.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Content_CognitiveBiases.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Content_Meditations.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Content_Quotes.json',
-    'https://raw.githubusercontent.com/shfqrkhn/Noodle-Nudge/refs/heads/main/docs/JSON/Content_Reflections.json'
+    './JSON/Q1_Core%20Personality.json',
+    './JSON/Q2_Core%20Values.json',
+    './JSON/Q3_Core%20Agency.json',
+    './JSON/Q4_Work%20Motivation.json',
+    './JSON/Q5_Perceived%20Stress%20Scale%20(PSS).json',
+    './JSON/Q6_Conflict%20%26%20Negotiation%20Style.json',
+    './JSON/Q7_Authentic%20%26%20Ethical%20Leadership.json',
+    './JSON/Q8_Assertiveness%20Profile.json',
+    './JSON/Q9_Power%20%26%20Influence%20Profile.json',
+    './JSON/Q10_Proactive%20Personality%20Scale.json',
+    './JSON/Content_CognitiveBiases.json',
+    './JSON/Content_Meditations.json',
+    './JSON/Content_Quotes.json',
+    './JSON/Content_Reflections.json'
 ];
 
 const ALL_URLS_TO_CACHE = [...APP_SHELL_URLS, ...CONTENT_URLS];
