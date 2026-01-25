@@ -1,5 +1,7 @@
 # Noodle Nudge: Your Pocket Philosopher 🧠✨
 
+**Current Version:** v1.0.12
+
 **A private space for reflection, a clear path for growth.**
 
 Welcome to Noodle Nudge, an app designed to help you explore your inner world and foster personal growth. Inspired by the Socratic principle, "the unexamined life is not worth living," Noodle Nudge is your personal, private sanctuary for self-discovery.
