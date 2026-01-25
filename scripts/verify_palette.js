@@ -39,4 +39,27 @@ if (nextMatch) {
     passed = false;
 }
 
+// Check for aria-current logic
+if (html.includes("setAttribute('aria-current','page')") || html.includes('setAttribute("aria-current","page")') || html.includes("setAttribute('aria-current', 'page')")) {
+    console.log('✅ [PASS] Navigation update logic includes aria-current setting.');
+} else {
+    console.error('❌ [FAIL] Navigation update logic missing aria-current setting.');
+    passed = false;
+}
+
+// Check for Card Sort A11y
+if (html.includes("tabindex: '0'") && html.includes("role: 'button'")) {
+    console.log('✅ [PASS] Sortable cards have tabindex and role.');
+} else {
+    console.error('❌ [FAIL] Sortable cards missing tabindex or role.');
+    passed = false;
+}
+
+if (html.includes("e.target.matches('.sortable-card')")) {
+    console.log('✅ [PASS] Keydown handler for sortable cards present.');
+} else {
+    console.error('❌ [FAIL] Keydown handler for sortable cards missing.');
+    passed = false;
+}
+
 if (!passed) process.exit(1);
