@@ -1,6 +1,6 @@
 # Noodle Nudge: Your Pocket Philosopher 🧠✨
 
-**Current Version:** v1.0.17
+**Current Version:** v1.0.18
 
 **A private space for reflection, a clear path for growth.**
 
