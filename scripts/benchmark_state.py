@@ -13,28 +13,39 @@ def run_benchmark():
             # Navigate to the app
             page.goto("http://localhost:8000/docs/")
 
-            # Wait for the app to initialize (look for a known element)
-            page.wait_for_selector("#app-root")
+            # Wait for the app to initialize (wait for loader to disappear)
+            page.wait_for_selector("#loader-overlay", state="hidden")
+
+            # Inject large data
+            page.evaluate("""() => {
+                const largeData = {};
+                for(let i=0; i<5000; i++) {
+                    largeData[`item_${i}`] = {
+                        id: i,
+                        text: "x".repeat(200),
+                        nested: { a: 1, b: [1,2,3] }
+                    };
+                }
+                // We assume NoodleNudge.State exists
+                if (window.NoodleNudge && window.NoodleNudge.State) {
+                    window.NoodleNudge.State.set({ benchmarkData: largeData }, { silent: true });
+                }
+            }""")
 
             # Run the benchmark in the browser context
-            # We will call NoodleNudge.State.get() 10,000 times
+            # We will call NoodleNudge.State.get() 1,000 times (reduced from 10k as deep clone might be slow)
             result_ms = page.evaluate("""() => {
                 // Ensure State is initialized
                 if (!window.NoodleNudge || !window.NoodleNudge.State) {
                     return -1;
                 }
 
-                // Warmup
-                for(let i=0; i<100; i++) {
-                    NoodleNudge.State.get();
-                }
-
                 const start = performance.now();
-                const iterations = 10000;
+                const iterations = 1000;
                 for(let i=0; i<iterations; i++) {
                     const s = NoodleNudge.State.get();
-                    // Access a property to ensure no dead code elimination (though unlikely with JIT this simple)
-                    const temp = s.assessments;
+                    // Access a property
+                    const temp = s.benchmarkData;
                 }
                 const end = performance.now();
                 return end - start;
@@ -44,7 +55,7 @@ def run_benchmark():
                 print("Error: NoodleNudge.State not found.")
                 sys.exit(1)
 
-            print(f"Benchmark Result: {result_ms:.4f} ms for 10,000 calls")
+            print(f"Benchmark Result: {result_ms:.4f} ms for 1,000 calls")
 
         except Exception as e:
             print(f"Error: {e}")
