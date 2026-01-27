@@ -5,57 +5,67 @@ import sys
 def run_benchmark():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        # Block service workers to ensure we test the fresh code and avoid caching issues
+        # Block service workers to ensure we test the fresh code
         context = browser.new_context(service_workers='block')
         page = context.new_page()
 
         try:
             # Navigate to the app
             page.goto("http://localhost:8000/docs/")
-
-            # Wait for the app to initialize (wait for loader to disappear)
             page.wait_for_selector("#loader-overlay", state="hidden")
 
             # Inject large data
+            # 50,000 items * ~200 chars ~ 10MB
             page.evaluate("""() => {
                 const largeData = {};
-                for(let i=0; i<5000; i++) {
+                for(let i=0; i<50000; i++) {
                     largeData[`item_${i}`] = {
                         id: i,
                         text: "x".repeat(200),
                         nested: { a: 1, b: [1,2,3] }
                     };
                 }
-                // We assume NoodleNudge.State exists
                 if (window.NoodleNudge && window.NoodleNudge.State) {
                     window.NoodleNudge.State.set({ benchmarkData: largeData }, { silent: true });
                 }
             }""")
 
-            # Run the benchmark in the browser context
-            # We will call NoodleNudge.State.get() 1,000 times (reduced from 10k as deep clone might be slow)
-            result_ms = page.evaluate("""() => {
-                // Ensure State is initialized
-                if (!window.NoodleNudge || !window.NoodleNudge.State) {
-                    return -1;
-                }
+            # Verify data presence
+            key_count = page.evaluate("""() => {
+                const s = NoodleNudge.State.get();
+                return s.benchmarkData ? Object.keys(s.benchmarkData).length : 0;
+            }""")
+            print(f"Injected items count: {key_count}")
 
-                const start = performance.now();
-                const iterations = 1000;
+            if key_count != 50000:
+                print("Error: Data injection failed.")
+                sys.exit(1)
+
+            # Run the benchmark
+            # 1,000,000 iterations of get()
+            print("Running 1,000,000 iterations of State.get()...")
+            result_ms = page.evaluate("""() => {
+                const start = Date.now();
+                const iterations = 1000000;
+                let check = 0;
                 for(let i=0; i<iterations; i++) {
                     const s = NoodleNudge.State.get();
-                    // Access a property
-                    const temp = s.benchmarkData;
+                    if (s.benchmarkData) check++;
                 }
-                const end = performance.now();
+                const end = Date.now();
                 return end - start;
             }""")
 
-            if result_ms < 0:
-                print("Error: NoodleNudge.State not found.")
-                sys.exit(1)
+            print(f"Benchmark Result: {result_ms} ms for 1,000,000 calls")
+            print(f"Average time per call: {result_ms / 1000000:.6f} ms")
 
-            print(f"Benchmark Result: {result_ms:.4f} ms for 1,000 calls")
+            # Threshold: Should be well under 1000ms if optimized (likely < 200ms)
+            # If it was deep clone, 1 call takes ~30ms, so 1M calls would take 30,000s (8 hours)
+            if result_ms < 5000:
+                print("✅ Performance verification PASSED (Optimized)")
+            else:
+                print("❌ Performance verification FAILED (Too slow)")
+                sys.exit(1)
 
         except Exception as e:
             print(f"Error: {e}")
