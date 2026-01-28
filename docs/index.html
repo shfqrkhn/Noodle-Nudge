@@ -163,7 +163,7 @@
                     IDENTIFY_MAX_SCORE_DIMENSION: (argsStr) => { const sids=argsStr.replace(reCleanQuotes,'').split(',').map(s=>s.trim()); let max=-Infinity,title="N/A"; sids.forEach(id=>{const val=calculatedScores.get(id);if(typeof val==='number'&&val>max){max=val;const rule=allRules.find(r=>r.id===id);title=rule?rule.title.replace(reCleanScoreTitle,''):id;}}); return title; }
                 };
 
-                const processRules = (rules) => {
+                                const processRules = (rules) => {
                     const adj = new Map();
                     const inDegree = new Map();
                     const ruleMap = new Map();
@@ -176,7 +176,10 @@
 
                     rules.forEach(rule => {
                         const calc = rule.calculation || rule.calculationLogic;
-                        const dependencies = [...new Set([...calc.matchAll(reIdentifiers)].map(m => m[0]))]
+                        if (!calc) return;
+                        // Use reIdentifiers from closure scope to find dependencies (identifiers ending in _score)
+                        const matches = [...calc.matchAll(reIdentifiers)];
+                        const dependencies = [...new Set(matches.map(m => m[0]))]
                             .filter(id => id.endsWith('_score') && ruleMap.has(id.replace('_score', '')));
 
                         dependencies.forEach(depRaw => {
