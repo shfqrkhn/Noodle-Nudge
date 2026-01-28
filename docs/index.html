@@ -177,10 +177,10 @@
                     rules.forEach(rule => {
                         const calc = rule.calculation || rule.calculationLogic;
                         if (!calc) return;
-                        // Use reIdentifiers from closure scope to find dependencies (identifiers ending in _score)
-                        const matches = [...calc.matchAll(reIdentifiers)];
+                        // Use reScoreSuffix to find dependencies directly (identifiers ending in _score)
+                        const matches = [...calc.matchAll(reScoreSuffix)];
                         const dependencies = [...new Set(matches.map(m => m[0]))]
-                            .filter(id => id.endsWith('_score') && ruleMap.has(id.replace('_score', '')));
+                            .filter(id => ruleMap.has(id.replace('_score', '')));
 
                         dependencies.forEach(depRaw => {
                             const depId = depRaw.replace('_score', '');
