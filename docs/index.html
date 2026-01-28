@@ -311,7 +311,7 @@
                 const savedState = await NoodleNudge.DB.get('appState');
                 if (savedState) {
                     let finalState = JSON.parse(JSON.stringify(MasterBlueprint.stateSchema));
-                    for (const key in finalState) { if (savedState.hasOwnProperty(key)) { finalState[key] = savedState[key]; } }
+                    for (const key in finalState) { if (savedState.hasOwnProperty(key) && key !== 'viewDate') { finalState[key] = savedState[key]; } }
                     finalState.appConfig.version = MasterBlueprint.stateSchema.appConfig.version;
                     finalState.viewDate = new Date().toISOString();
                     NoodleNudge.State.init(finalState);
