@@ -3,13 +3,30 @@ import os
 import time
 import subprocess
 import json
+import socket
 from playwright.sync_api import sync_playwright
 from datetime import datetime
+
+def wait_for_server(port, timeout=10):
+    start_time = time.time()
+    while True:
+        try:
+            with socket.create_connection(("localhost", port), timeout=1):
+                return
+        except (OSError, ConnectionRefusedError):
+            if time.time() - start_time > timeout:
+                raise TimeoutError(f"Server not ready on port {port}")
+            time.sleep(0.1)
 
 def run_verification():
     # Start the server
     server_process = subprocess.Popen([sys.executable, "-m", "http.server", "8000", "--directory", "docs"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    time.sleep(2) # Wait for server to start
+    # Replaced fixed sleep with wait_for_server
+    try:
+        wait_for_server(8000)
+    except TimeoutError:
+        print("FAIL: Server failed to start.")
+        return False
 
     try:
         with sync_playwright() as p:
@@ -76,7 +93,13 @@ def run_verification():
             # 2. Change the day
             print("2. Changing day to previous day...")
             page.click('button[data-action="prev-day"]')
-            time.sleep(1)
+
+            # Wait for viewDate to change instead of sleeping
+            try:
+                page.wait_for_function("initial => NoodleNudge.State.get().viewDate !== initial", arg=view_date_state, timeout=5000)
+            except Exception:
+                print("FAIL: Timeout waiting for viewDate change.")
+                return False
 
             new_view_date = page.evaluate("NoodleNudge.State.get().viewDate")
             print(f"Modified State viewDate: {new_view_date}")
