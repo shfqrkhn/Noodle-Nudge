@@ -38,14 +38,15 @@ async def run_simulation():
                 # But it uses `viewDate` from state to render content.
                 # To simulate "Time Passing", we should update the `viewDate`.
 
-                await page.evaluate(f"NoodleNudge.State.set({{ viewDate: '{date_str}' }})")
-
-                # Refresh Dashboard (navigate away and back or just call render)
-                # App.navigate('dashboard') is efficient
-                await page.evaluate("NoodleNudge.App.navigate('dashboard')")
+                success = await page.evaluate("""(date) => {
+                    NoodleNudge.State.set({ viewDate: date });
+                    NoodleNudge.App.navigate('dashboard');
+                    const headers = Array.from(document.querySelectorAll('.card-header'));
+                    return headers.some(h => h.textContent.includes('Quote for Today'));
+                }""", date_str)
 
                 # Check for errors (Dashboard should load)
-                if not await page.is_visible(".card-header:has-text('Quote for Today')"):
+                if not success:
                     print(f"FAILURE Day {day}: Dashboard failed to render.")
                     return False
 
