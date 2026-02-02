@@ -2,7 +2,7 @@
 
 // The cache name is versioned to ensure that updates to the PWA
 // trigger a new service worker installation and cache refresh.
-const CACHE_NAME = 'noodle-nudge-cache-v1.1.8';
+const CACHE_NAME = 'noodle-nudge-cache-v1.1.9';
 
 // App Shell: Core files needed for the app to run offline immediately.
 // This list is now corrected to match the final manifest.json.
