@@ -12,13 +12,27 @@ def run_server():
     httpd = HTTPServer(server_address, SimpleHTTPRequestHandler)
     httpd.serve_forever()
 
+async def wait_for_server(port, timeout=10):
+    """Waits for the server to be ready by attempting to connect to the port."""
+    start_time = time.time()
+    while True:
+        try:
+            reader, writer = await asyncio.open_connection('127.0.0.1', port)
+            writer.close()
+            await writer.wait_closed()
+            return
+        except (ConnectionRefusedError, OSError):
+            if time.time() - start_time > timeout:
+                raise TimeoutError(f"Server failed to start on port {port} within {timeout} seconds.")
+            await asyncio.sleep(0.05)
+
 async def main():
     # Start server in a thread
     server_thread = threading.Thread(target=run_server, daemon=True)
     server_thread.start()
 
-    # Give server a moment
-    time.sleep(1)
+    # Wait for server to be ready
+    await wait_for_server(PORT)
 
     async with async_playwright() as p:
         # Launch browser
