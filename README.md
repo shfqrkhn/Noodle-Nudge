@@ -1,6 +1,6 @@
 # Noodle Nudge: Your Pocket Philosopher 🧠✨
 
-**Current Version:** v1.1.5
+**Current Version:** v1.2.0
 
 **A private space for reflection, a clear path for growth.**
 
@@ -63,13 +63,6 @@ After completing an assessment, you'll get personalized results and interpretati
 
 We believe in user sovereignty and privacy above all else. Noodle Nudge is designed to be a completely private tool. **No data ever leaves your device.** This means you can explore, reflect, and grow with complete peace of mind.
 
-## 🛠️ Developer Mode
-
-For developers or curious users who wish to inspect the application state or debug logs:
-1.  Append `?debug` to the application URL (e.g., `.../Noodle-Nudge/?debug`).
-2.  A new "🐞" icon will appear in the navigation bar.
-3.  Clicking this icon opens the **Debug Panel**, allowing you to view the live state, logs, and trigger test actions.
-
 ## 🤝 Community
 
 While Noodle Nudge keeps your personal journey private, the spirit of shared wisdom thrives outside the app. You can connect with others, discuss philosophical concepts, or share your general insights (not your personal data!) on forums or websites dedicated to self-improvement and philosophy.
@@ -78,4 +71,4 @@ Thank you for choosing Noodle Nudge. We hope it serves as a valuable companion o
 
 ## 🏆 Stability Verified
 
-Noodle Nudge v1.1.5 has passed a comprehensive 24-month simulation stress test, ensuring long-term reliability and performance.
+Noodle Nudge v1.2.0 has passed a comprehensive 24-month simulation stress test, ensuring long-term reliability and performance.
