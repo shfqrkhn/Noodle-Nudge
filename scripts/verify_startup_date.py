@@ -54,14 +54,11 @@ def run_verification():
             with open('docs/JSON/Content_Quotes.json', 'r') as f:
                 quotes_data = json.load(f)
 
-            # Find expected quote using O(1) lookup
-            # Flatten and index quotes by day
-            quotes_by_day = {
-                item['day']: item['quote']
-                for items in quotes_data['quote_categories'].values()
-                for item in items
-            }
-            expected_quote = quotes_by_day.get(day_of_year)
+            # Find expected quote using efficient generator expression (avoids building full dict)
+            expected_quote = next(
+                (item['quote'] for items in quotes_data['quote_categories'].values() for item in items if item['day'] == day_of_year),
+                None
+            )
 
             if not expected_quote:
                 # Fallback logic in app: if not found, use modulo?
