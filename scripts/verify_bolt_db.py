@@ -24,7 +24,8 @@ async def wait_for_server(port, timeout=10):
         except (ConnectionRefusedError, OSError):
             if time.time() - start_time > timeout:
                 raise TimeoutError(f"Server failed to start on port {port} within {timeout} seconds.")
-            await asyncio.sleep(0.05)
+            # Use a small non-blocking sleep interval for responsive polling
+            await asyncio.sleep(0.01)
 
 async def main():
     # Start server in a thread
