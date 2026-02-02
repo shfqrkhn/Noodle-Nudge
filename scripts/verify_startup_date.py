@@ -4,7 +4,7 @@ import time
 import subprocess
 import json
 from playwright.sync_api import sync_playwright
-from datetime import datetime
+from datetime import datetime, timezone
 
 def run_verification():
     # Start the server
@@ -36,7 +36,7 @@ def run_verification():
 
             # Verify it matches system today
             app_date = datetime.fromisoformat(view_date_state.replace('Z', '+00:00')).date()
-            sys_date = datetime.utcnow().date()
+            sys_date = datetime.now(timezone.utc).date()
 
             if app_date != sys_date:
                 print(f"FAIL: App date ({app_date}) does not match system date ({sys_date})")
@@ -54,11 +54,15 @@ def run_verification():
             with open('docs/JSON/Content_Quotes.json', 'r') as f:
                 quotes_data = json.load(f)
 
-            # Find expected quote using efficient generator expression (avoids building full dict)
-            expected_quote = next(
-                (item['quote'] for items in quotes_data['quote_categories'].values() for item in items if item['day'] == day_of_year),
-                None
-            )
+            # Create O(1) lookup dictionary for efficient access
+            quotes_by_day = {
+                item['day']: item['quote']
+                for items in quotes_data['quote_categories'].values()
+                for item in items
+            }
+
+            # Find expected quote using O(1) lookup
+            expected_quote = quotes_by_day.get(day_of_year)
 
             if not expected_quote:
                 # Fallback logic in app: if not found, use modulo?
@@ -85,6 +89,7 @@ def run_verification():
                 print("FAIL: Date did not change.")
                 return False
 
+
             # 3. Reload the page
             print("3. Reloading page...")
             page.reload()
@@ -98,6 +103,7 @@ def run_verification():
             if reloaded_date != sys_date:
                 print(f"FAIL: App did not reset to Today. Held onto: {reloaded_view_date}")
                 return False
+
 
             print("SUCCESS: App resets to Today and shows correct content.")
             return True
