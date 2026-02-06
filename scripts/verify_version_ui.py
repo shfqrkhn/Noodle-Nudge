@@ -18,7 +18,7 @@ def run():
             # Check footer for version
             version_locator = page.locator("footer small")
             print("Checking footer version...")
-            expect(version_locator).to_contain_text("Noodle Nudge v1.2.1")
+            expect(version_locator).to_contain_text("Noodle Nudge v1.2.2")
 
             # Screenshot
             screenshot_path = "scripts/verification_version.png"
