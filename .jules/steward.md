@@ -29,3 +29,7 @@
 ## 2026-01-25 - Bolt - Cache Busting
 **Insight:** Offline-first PWAs with Cache-First strategies require explicit version bumping in `service-worker.js` to trigger updates for cached assets (like `index.html`).
 **Protocol:** When modifying core files cached by the Service Worker, always increment `CACHE_NAME` in `service-worker.js` and synchronize the version in `index.html` and `README.md`.
+
+## 2026-02-06 - Razor - Temporary Artifacts
+**Insight:** Temporary automation scripts and verification artifacts were inadvertently proposed for commit.
+**Protocol:** All temporary scripts and artifacts generated during the verification process must be deleted before submission to maintain repository hygiene.

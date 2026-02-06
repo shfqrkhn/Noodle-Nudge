@@ -88,8 +88,13 @@ async def run_simulation():
                         const state = await NoodleNudge.DB.get('appState');
                         const results = state.userResults ? Object.keys(state.userResults).length : 0;
                         const answers = state.userAnswers ? Object.keys(state.userAnswers).length : 0;
+                        let historyCount = 0;
+                        if (state.userHistory) {
+                             Object.values(state.userHistory).forEach(arr => historyCount += arr.length);
+                        }
                         logs.push(`Day ${day}/${days} completed. (Date: ${dateStr})`);
                         logs.push(`  DB Entries (Results+Answers): ${results + answers}`);
+                        logs.push(`  History Entries: ${historyCount}`);
                     }
 
                     // Increment day
