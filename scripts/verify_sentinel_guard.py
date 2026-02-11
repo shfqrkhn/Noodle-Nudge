@@ -6,11 +6,12 @@ import threading
 import os
 import sys
 
-PORT = 8007
+PORT = 8010
 
 def run_server():
     os.chdir('.')
     Handler = http.server.SimpleHTTPRequestHandler
+    socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(("", PORT), Handler) as httpd:
         print(f"serving at port {PORT}")
         httpd.serve_forever()

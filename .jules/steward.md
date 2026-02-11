@@ -33,3 +33,7 @@
 ## 2026-02-06 - Razor - Temporary Artifacts
 **Insight:** Temporary automation scripts and verification artifacts were inadvertently proposed for commit.
 **Protocol:** All temporary scripts and artifacts generated during the verification process must be deleted before submission to maintain repository hygiene.
+
+## 2026-02-11 - Sentinel - Constructor Vulnerability
+**Insight:** The expression engine allowed access to the `Function` constructor via `"".constructor.constructor` or `Reflect.construct(Function, ...)`, enabling arbitrary code execution despite regex filters.
+**Protocol:** Explicitly ban `constructor`, `prototype`, `__proto__`, `arguments`, `callee` in `reSecurity` and shadow `Reflect`, `Proxy`, `Function`, `Object` in `evaluateExpression`.
