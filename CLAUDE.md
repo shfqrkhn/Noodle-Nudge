@@ -4,7 +4,7 @@
 
 **Noodle Nudge** is a privacy-focused, offline-first Progressive Web App (PWA) for self-discovery and personal growth. It provides daily inspirational content (quotes, reflections, meditations, cognitive biases) and psychological assessments based on validated frameworks like the Big Five personality model.
 
-**Current Version:** v1.1.4
+**Current Version:** v1.2.8
 **Live Demo:** https://shfqrkhn.github.io/Noodle-Nudge/
 **License:** MIT
 
@@ -97,7 +97,7 @@ NoodleNudge.State.set(newState, opts)  // Merge new state
 
 ### Service Worker Strategy
 - **Cache-First** strategy for offline functionality
-- Cache name includes version: `noodle-nudge-cache-v1.1.4`
+- Cache name includes version: `noodle-nudge-cache-v1.2.8`
 - All assets pre-cached on install
 
 ### Assessment Scoring Engine
@@ -106,6 +106,7 @@ The `NoodleNudge.Scoring` module implements a sophisticated expression evaluator
 - Card-sort specific: `COLLECT_ITEMS_FROM_CATEGORY`, `IDENTIFY_MAX_SCORE_DIMENSION`
 - Uses topological sort for dependency resolution
 - **Security:** Input sanitization against allowlist before `new Function` evaluation
+- **Strict Regex:** Identifiers must not contain backslashes (no Unicode escapes) and globals are shadowed.
 
 ### Assessment Types
 1. **Likert Scale** (`interactionType: 'likertScale'`): Standard questionnaires with 5-point scales
@@ -140,10 +141,12 @@ Tests use Playwright for E2E verification:
 pip install playwright
 playwright install chromium
 
-# Run with local server running on port 8000
+# Run with local server running on port 8000 (if needed by script)
 python scripts/verify_scoring.py
 python scripts/verify_xss.py
 python scripts/verify_settings.py
+python scripts/verify_sentinel_guard.py # Self-contained (starts own server)
+python scripts/simulate_24_months.py    # Long-running simulation
 ```
 
 ### Version Bumping Protocol
@@ -256,6 +259,7 @@ Before any release:
 - [ ] `verify_scoring.py` - Assessment flow works
 - [ ] `verify_xss.py` - XSS protection intact
 - [ ] `verify_settings.py` - Data export/import/reset works
+- [ ] `simulate_24_months.py` - Verify long-term stability
 - [ ] Manual: Test offline mode (airplane mode)
 - [ ] Manual: Test PWA install on mobile
 - [ ] Version numbers synchronized across all files

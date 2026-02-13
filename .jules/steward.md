@@ -41,3 +41,7 @@
 ## 2026-02-12 - Sentinel - UI Component XSS Sinks
 **Insight:** The generic `showToast` utility injected the message argument via `innerHTML`, creating an XSS vulnerability when displaying errors or dynamic content.
 **Protocol:** All generic UI utilities accepting string content must default to `textContent` or explicitly sanitize input (e.g., via `sanitizeHTML`) before insertion into the DOM.
+
+## 2026-02-13 - Sync - Auxiliary Documentation Drift
+**Insight:** Development guides (like CLAUDE.md) can drift from the actual codebase version, leading to confusion about the current state of the application.
+**Protocol:** When bumping versions, grep for the old version string across the ENTIRE repository (including docs/guides) to ensure no file is left behind.
