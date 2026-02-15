@@ -4,7 +4,7 @@
 
 **Noodle Nudge** is a privacy-focused, offline-first Progressive Web App (PWA) for self-discovery and personal growth. It provides daily inspirational content (quotes, reflections, meditations, cognitive biases) and psychological assessments based on validated frameworks like the Big Five personality model.
 
-**Current Version:** v1.2.9
+**Current Version:** v1.2.10
 **Live Demo:** https://shfqrkhn.github.io/Noodle-Nudge/
 **License:** MIT
 

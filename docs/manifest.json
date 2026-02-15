@@ -7,6 +7,7 @@
   "background_color": "#F8F9FA",
   "theme_color": "#2563EB",
   "orientation": "portrait-primary",
+  "categories": ["lifestyle", "health", "productivity"],
   "icons": [
     {
       "src": "icons/icon-192x192.png",
@@ -19,6 +20,14 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/screenshot.png",
+      "sizes": "1876x1140",
+      "type": "image/jpeg",
+      "form_factor": "wide"
     }
   ]
 }
