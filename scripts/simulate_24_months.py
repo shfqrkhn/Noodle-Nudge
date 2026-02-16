@@ -20,7 +20,7 @@ async def run_simulation():
         print(f"Starting 24-month simulation from {START_DATE}...")
 
         # Initial Load
-        await page.goto("http://localhost:8000/docs/index.html")
+        await page.goto("http://localhost:8000/docs/index.html?debug")
         await page.wait_for_selector("#loader-overlay", state="hidden")
 
         # Ensure NoodleNudge is available (good practice for optimization scripts)
