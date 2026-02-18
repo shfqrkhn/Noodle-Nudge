@@ -45,3 +45,7 @@
 ## 2026-02-13 - Sync - Auxiliary Documentation Drift
 **Insight:** Development guides (like CLAUDE.md) can drift from the actual codebase version, leading to confusion about the current state of the application.
 **Protocol:** When bumping versions, grep for the old version string across the ENTIRE repository (including docs/guides) to ensure no file is left behind.
+
+## 2026-02-18 - Sentinel - Import Data Type Confusion
+**Insight:** `JSON.parse` is not enough to validate imported data structure. Loose typing allowed a string value for `userAnswers` to corrupt the application state, leading to runtime errors.
+**Protocol:** When importing complex state from external sources (JSON), explicitly validate that all root keys correspond to their expected types (e.g., `isObject(data.userAnswers)`) before persistence.
