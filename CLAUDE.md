@@ -4,7 +4,7 @@
 
 **Noodle Nudge** is a privacy-focused, offline-first Progressive Web App (PWA) for self-discovery and personal growth. It provides daily inspirational content (quotes, reflections, meditations, cognitive biases) and psychological assessments based on validated frameworks like the Big Five personality model.
 
-**Current Version:** v1.2.16
+**Current Version:** v1.2.17
 **Live Demo:** https://shfqrkhn.github.io/Noodle-Nudge/
 **License:** MIT
 
@@ -97,7 +97,7 @@ NoodleNudge.State.set(newState, opts)  // Merge new state
 
 ### Service Worker Strategy
 - **Cache-First** strategy for offline functionality
-- Cache name includes version: `noodle-nudge-cache-v1.2.16`
+- Cache name includes version: `noodle-nudge-cache-v1.2.17`
 - All assets pre-cached on install
 
 ### Assessment Scoring Engine
