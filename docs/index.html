@@ -75,7 +75,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script type="module">
-        const MasterBlueprint = { appName: "Noodle Nudge", appShortName: "NoodleNudge", version: "1.2.17", license: "MIT", author: "The Sentient Architect", featureFlags: { enableDailyContent: true, enableAssessments: true, enableDebugPanel: new URLSearchParams(window.location.search).has('debug'), }, appDescription: "A private offline-first PWA for self-discovery.", database: { dbName: "NoodleNudgeDB", dbVersion: 1, dbStoreName: "appState", }, pwaConfig: { cacheName: 'noodle-nudge-cache-v1.2.17' }, stateSchema: { assessments: {}, dailyContent: {}, userAnswers: {}, userResults: {}, userHistory: {}, viewDate: new Date().toISOString(), appConfig: { version: "1.2.17", lastVisit: "" }, debugLog: [], }, contentUrls: { assessments: ['./JSON/Q1_Core%20Personality.json', './JSON/Q2_Core%20Values.json', './JSON/Q3_Core%20Agency.json', './JSON/Q4_Work%20Motivation.json', './JSON/Q5_Perceived%20Stress%20Scale%20(PSS).json', './JSON/Q6_Conflict%20%26%20Negotiation%20Style.json', './JSON/Q7_Authentic%20%26%20Ethical%20Leadership.json', './JSON/Q8_Assertiveness%20Profile.json', './JSON/Q9_Power%20%26%20Influence%20Profile.json', './JSON/Q10_Proactive%20Personality%20Scale.json'], daily: ['./JSON/Content_CognitiveBiases.json', './JSON/Content_Meditations.json', './JSON/Content_Quotes.json', './JSON/Content_Reflections.json'], }, localization: { defaultLanguage: "en", strings: { en: { dashboardTitle: "Today's Nudge", assessmentsTitle: "Assessments", settingsTitle: "Settings", takeAssessmentsCTA: "Discover Your Core Profile", takeAssessmentsCTADescription: "Start your journey of self-discovery with our foundational assessments.", startAssessment: "Start Assessment", retakeAssessment: "Retake", submitAnswers: "Submit Answers", backToList: "Back to Assessments", resultsTitle: "Your Results for", viewResults: "View Full Results", dailyQuote: "Quote for Today", dailyReflection: "Reflection for Today", dailyMeditation: "Meditation for Today", dailyBias: "Cognitive Bias for Today", exportData: "Export My Data", importData: "Import My Data", resetData: "Reset All Data", resetConfirmation: "Are you sure you want to permanently delete all your data? This action cannot be undone.", dataExported: "Data exported successfully!", dataImported: "Data imported successfully! The app will now reload.", dataReset: "All data has been reset.", error: "An error occurred.", }, }, }, };
+        const MasterBlueprint = { appName: "Noodle Nudge", appShortName: "NoodleNudge", version: "1.2.18", license: "MIT", author: "The Sentient Architect", featureFlags: { enableDailyContent: true, enableAssessments: true, enableDebugPanel: new URLSearchParams(window.location.search).has('debug'), }, appDescription: "A private offline-first PWA for self-discovery.", database: { dbName: "NoodleNudgeDB", dbVersion: 1, dbStoreName: "appState", }, pwaConfig: { cacheName: 'noodle-nudge-cache-v1.2.18' }, stateSchema: { assessments: {}, dailyContent: {}, userAnswers: {}, userResults: {}, userHistory: {}, viewDate: new Date().toISOString(), appConfig: { version: "1.2.18", lastVisit: "" }, debugLog: [], }, contentUrls: { assessments: ['./JSON/Q1_Core%20Personality.json', './JSON/Q2_Core%20Values.json', './JSON/Q3_Core%20Agency.json', './JSON/Q4_Work%20Motivation.json', './JSON/Q5_Perceived%20Stress%20Scale%20(PSS).json', './JSON/Q6_Conflict%20%26%20Negotiation%20Style.json', './JSON/Q7_Authentic%20%26%20Ethical%20Leadership.json', './JSON/Q8_Assertiveness%20Profile.json', './JSON/Q9_Power%20%26%20Influence%20Profile.json', './JSON/Q10_Proactive%20Personality%20Scale.json'], daily: ['./JSON/Content_CognitiveBiases.json', './JSON/Content_Meditations.json', './JSON/Content_Quotes.json', './JSON/Content_Reflections.json'], }, localization: { defaultLanguage: "en", strings: { en: { dashboardTitle: "Today's Nudge", assessmentsTitle: "Assessments", settingsTitle: "Settings", takeAssessmentsCTA: "Discover Your Core Profile", takeAssessmentsCTADescription: "Start your journey of self-discovery with our foundational assessments.", startAssessment: "Start Assessment", retakeAssessment: "Retake", submitAnswers: "Submit Answers", backToList: "Back to Assessments", resultsTitle: "Your Results for", viewResults: "View Full Results", dailyQuote: "Quote for Today", dailyReflection: "Reflection for Today", dailyMeditation: "Meditation for Today", dailyBias: "Cognitive Bias for Today", exportData: "Export My Data", importData: "Import My Data", resetData: "Reset All Data", resetConfirmation: "Are you sure you want to permanently delete all your data? This action cannot be undone.", dataExported: "Data exported successfully!", dataImported: "Data imported successfully! The app will now reload.", dataReset: "All data has been reset.", error: "An error occurred.", }, }, }, };
         Object.freeze(MasterBlueprint.featureFlags); Object.freeze(MasterBlueprint.database); Object.freeze(MasterBlueprint.pwaConfig); Object.freeze(MasterBlueprint.contentUrls); Object.freeze(MasterBlueprint.localization); Object.freeze(MasterBlueprint.stateSchema); Object.freeze(MasterBlueprint);
         const NoodleNudge = {}; window.NoodleNudge = NoodleNudge;
         NoodleNudge.Utils = (()=>{const m={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'};return {getDayOfYear:t=>{const e=new Date(t);return Math.floor((Date.UTC(e.getFullYear(),e.getMonth(),e.getDate())-Date.UTC(e.getFullYear(),0,0))/864e5)},sanitizeHTML:t=>{if(t==null)return"";return String(t).replace(/[&<>"']/g,c=>m[c])}}})();
@@ -187,12 +187,13 @@
                         if (!calc) return;
                         // Use reScoreSuffix to find dependencies directly (identifiers ending in _score)
                         const matches = [...calc.matchAll(reScoreSuffix)];
-                        const dependencies = [...new Set(matches.map(m => m[0]))]
-                            .filter(id => ruleMap.has(id.replace('_score', '')));
+                        const dependencies = [...new Set(matches.map(m => m[0]))];
 
                         dependencies.forEach(depRaw => {
-                            const depId = depRaw.replace('_score', '');
-                            if (adj.has(depId)) {
+                            // Check exact match first, then stripped
+                            let depId = ruleMap.has(depRaw) ? depRaw : (ruleMap.has(depRaw.replace('_score', '')) ? depRaw.replace('_score', '') : null);
+
+                            if (depId && adj.has(depId)) {
                                 adj.get(depId).push(rule.id);
                                 inDegree.set(rule.id, (inDegree.get(rule.id) || 0) + 1);
                             }
@@ -219,6 +220,11 @@
                         } catch(err) {
                             NoodleNudge.Logger.error(`Scoring error for rule "${rule.id}":`, err);
                             calculatedScores.set(rule.id, "Calculation Error");
+                        }
+
+                        // Fix: Alias _score IDs to support references that get stripped by reScoreSuffix
+                        if (rule.id.endsWith('_score')) {
+                            calculatedScores.set(rule.id.replace('_score', ''), calculatedScores.get(rule.id));
                         }
 
                         if (adj.has(ruleId)) {
@@ -250,8 +256,26 @@
                             interp = value >= 50 ? rule.interpretation.high : rule.interpretation.low;
                         } else {
                             const resultKey = String(value).toLowerCase();
+                            // Try exact match
                             const interpKey = Object.keys(rule.interpretation).find(k => k.toLowerCase() === resultKey);
-                            interp = rule.interpretation[interpKey] || (rule.interpretation.note ? rule.interpretation.note.replace('[result]', String(value)) : interp);
+                            if (interpKey) {
+                                interp = rule.interpretation[interpKey];
+                            } else {
+                                // Try splitting by comma for multi-value results (e.g. "Variety, Freedom")
+                                const keys = resultKey.split(',').map(s => s.trim());
+                                const descriptions = keys.map(k => {
+                                    const match = Object.keys(rule.interpretation).find(mk => mk.toLowerCase() === k);
+                                    return match ? rule.interpretation[match] : null;
+                                }).filter(Boolean);
+
+                                if (descriptions.length > 0) {
+                                    interp = descriptions.join(' ');
+                                } else if (rule.interpretation.note) {
+                                    interp = rule.interpretation.note.replace('[result]', String(value));
+                                }
+                                // Fallback if still object (to avoid [object Object] in UI)
+                                if (typeof interp === 'object') interp = String(value);
+                            }
                         }
                     }
                     results.scores.push({ id: rule.id, title: rule.title, value, interpretation: interp, type });
@@ -277,8 +301,20 @@
                 let cached = evalCache.get(expression);
                 if (!cached) {
                     let proc = expression.replace(reAndOr, m => m.toUpperCase() === 'AND' ? '&&' : '||').replace(reScoreSuffix, '$1');
-                    const vars = [...new Set([...proc.matchAll(reIdentifiers)].map(m => m[0]).filter(id => !reKeywords.test(id) && isNaN(id) && !reLiterals.test(id)))];
+
+                    // Security Check 1: Prevent Computed Property Access (exploit vector)
+                    // Matches [ preceded by Identifier, ), ], ', or "
+                    const reComputedProp = /[a-zA-Z0-9_$)'"\]]\s*\[/;
+                    if (reComputedProp.test(proc)) throw new Error("Security Violation: Computed Property Access");
+
+                    // Security Check 2: Block dangerous keywords
                     if (reSecurity.test(proc)) throw new Error("Security Violation");
+
+                    // Variable Extraction: Mask strings to avoid false positives (e.g. 'Variety')
+                    const reStrings = /"[^"]*"|'[^']*'/g;
+                    const maskedProc = proc.replace(reStrings, '""');
+                    const vars = [...new Set([...maskedProc.matchAll(reIdentifiers)].map(m => m[0]).filter(id => !reKeywords.test(id) && isNaN(id) && !reLiterals.test(id)))];
+
                     // Shadow globals to prevent access
                     cached = { func: new Function(...shadowedGlobals, ...vars, ...Object.keys(helpers), `"use strict"; return ${proc}`), vars };
                     evalCache.set(expression, cached);
