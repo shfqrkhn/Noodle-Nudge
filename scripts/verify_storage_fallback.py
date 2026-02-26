@@ -1,7 +1,6 @@
 from playwright.sync_api import sync_playwright, expect
 import sys
 import time
-import os
 import subprocess
 import socket
 
@@ -29,32 +28,33 @@ def run():
 
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
-            # Block service workers to ensure we test the fresh code
-            context = browser.new_context(service_workers='block')
+            context = browser.new_context()
             page = context.new_page()
+
+            # Simulate missing IndexedDB
+            page.add_init_script("delete window.indexedDB;")
 
             try:
                 print("Navigating to http://localhost:8000/ ...")
                 page.goto("http://localhost:8000/")
-                page.wait_for_selector("#app-root")
 
-                # Wait for content to load using the robust locator
-                print("Waiting for initial content...")
-                expect(page.locator("text=Discover Your Core Profile")).to_be_visible(timeout=10000)
+                # Wait for app to load (checking for main content)
+                print("Waiting for dashboard content...")
+                # If app crashes, this will timeout
+                expect(page.locator("text=Discover Your Core Profile")).to_be_visible(timeout=5000)
 
-                # Check footer for version
-                version_locator = page.locator("footer small")
-                print("Checking footer version...")
-                expect(version_locator).to_contain_text("Noodle Nudge v1.2.21")
+                # Check for warning toast
+                print("Checking for warning toast...")
+                toast = page.locator(".toast:has-text('Storage unavailable')")
+                expect(toast).to_be_visible(timeout=5000)
 
-                # Screenshot
-                screenshot_path = "scripts/verification_version.png"
-                page.screenshot(path=screenshot_path)
-                print(f"Verification successful! Screenshot saved to {screenshot_path}")
+                # Take success screenshot
+                page.screenshot(path="scripts/verification_success_fallback.png")
+                print("SUCCESS: App loaded despite missing DB. Screenshot saved to scripts/verification_success_fallback.png")
 
             except Exception as e:
-                print(f"Error during verification: {e}")
-                page.screenshot(path="scripts/verification_error_version.png")
+                print(f"FAIL: Verification failed: {e}")
+                page.screenshot(path="scripts/verification_failure_fallback.png")
                 sys.exit(1)
             finally:
                 browser.close()
