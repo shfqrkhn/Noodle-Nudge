@@ -1,65 +1,58 @@
-from playwright.sync_api import sync_playwright, expect
+from playwright.sync_api import sync_playwright
 import sys
+import threading
 import time
-import os
-import subprocess
-import socket
+from http.server import HTTPServer, SimpleHTTPRequestHandler
 
-def wait_for_server(port, timeout=10):
-    start_time = time.time()
-    while True:
-        try:
-            with socket.create_connection(("localhost", port), timeout=1):
-                return
-        except (OSError, ConnectionRefusedError):
-            if time.time() - start_time > timeout:
-                raise TimeoutError(f"Server not ready on port {port}")
-            time.sleep(0.1)
+PORT = 8124
+
+class QuietHandler(SimpleHTTPRequestHandler):
+    def log_message(self, format, *args):
+        pass
+
+def run_server():
+    server_address = ('', PORT)
+    httpd = HTTPServer(server_address, QuietHandler)
+    httpd.serve_forever()
 
 def run():
-    # Start server
-    server_process = subprocess.Popen([sys.executable, "-m", "http.server", "8000", "--directory", "docs"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    server_thread = threading.Thread(target=run_server, daemon=True)
+    server_thread.start()
+    time.sleep(1)
 
-    try:
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context(service_workers='block')
+        page = context.new_page()
+
         try:
-            wait_for_server(8000)
-        except TimeoutError:
-            print("FAIL: Server failed to start.")
-            sys.exit(1)
+            print(f"Navigating to http://localhost:{PORT}/docs/index.html")
+            page.goto(f"http://localhost:{PORT}/docs/index.html")
 
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            # Block service workers to ensure we test the fresh code
-            context = browser.new_context(service_workers='block')
-            page = context.new_page()
+            # Wait for content to confirm app is running
+            page.wait_for_selector(".navbar-brand", timeout=10000)
 
-            try:
-                print("Navigating to http://localhost:8000/ ...")
-                page.goto("http://localhost:8000/")
-                page.wait_for_selector("#app-root")
+            # Wait explicitly for the version span to be populated
+            # The app populates #app-version in init()
+            print("Waiting for #app-version...")
+            version_span = page.wait_for_selector("#app-version", timeout=10000)
 
-                # Wait for content to load using the robust locator
-                print("Waiting for initial content...")
-                expect(page.locator("text=Discover Your Core Profile")).to_be_visible(timeout=10000)
+            # Use evaluate to get text content directly to avoid visibility issues or DOM lag
+            version_text = page.evaluate("document.getElementById('app-version').textContent")
+            print(f"Found version: {version_text}")
 
-                # Check footer for version
-                version_locator = page.locator("footer small")
-                print("Checking footer version...")
-                expect(version_locator).to_contain_text("Noodle Nudge v1.2.21")
-
-                # Screenshot
-                screenshot_path = "scripts/verification_version.png"
-                page.screenshot(path=screenshot_path)
-                print(f"Verification successful! Screenshot saved to {screenshot_path}")
-
-            except Exception as e:
-                print(f"Error during verification: {e}")
-                page.screenshot(path="scripts/verification_error_version.png")
+            if "1.2.22" in version_text:
+                print("SUCCESS: Version v1.2.22 found in UI.")
+                sys.exit(0)
+            else:
+                print(f"FAILURE: Version mismatch. Found: {version_text}")
                 sys.exit(1)
-            finally:
-                browser.close()
-    finally:
-        server_process.terminate()
+
+        except Exception as e:
+            print(f"Error during verification: {e}")
+            sys.exit(1)
+        finally:
+            browser.close()
 
 if __name__ == "__main__":
     run()
