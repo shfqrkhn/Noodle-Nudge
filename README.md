@@ -1,6 +1,6 @@
 # Noodle Nudge: Your Pocket Philosopher 🧠✨
 
-**Current Version:** v1.2.22
+**Current Version:** v1.2.23
 
 **A private space for reflection, a clear path for growth.**
 
@@ -8,7 +8,7 @@ Welcome to Noodle Nudge, an app designed to help you explore your inner world an
 
 [**Live Demo**](https://shfqrkhn.github.io/Noodle-Nudge/)
 
-![Screenshot](docs/images/screenshot.png)
+![Screenshot](docs/images/screenshot.jpeg)
 
 ## 🌟 What is Noodle Nudge?
 
@@ -71,4 +71,4 @@ Thank you for choosing Noodle Nudge. We hope it serves as a valuable companion o
 
 ## 🏆 Stability Verified
 
-Noodle Nudge v1.2.22 has passed a comprehensive 24-month simulation stress test, ensuring long-term reliability and performance.
+Noodle Nudge v1.2.23 has passed a comprehensive 24-month simulation stress test, ensuring long-term reliability and performance.
