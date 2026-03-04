@@ -41,8 +41,8 @@ def run():
             version_text = page.evaluate("document.getElementById('app-version').textContent")
             print(f"Found version: {version_text}")
 
-            if "1.2.22" in version_text:
-                print("SUCCESS: Version v1.2.22 found in UI.")
+            if "1.2.23" in version_text:
+                print("SUCCESS: Version v1.2.23 found in UI.")
                 sys.exit(0)
             else:
                 print(f"FAILURE: Version mismatch. Found: {version_text}")
