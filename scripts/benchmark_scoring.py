@@ -11,7 +11,7 @@ def run():
         try:
             # FORCE DEBUG MODE via URL parameter
             print("Navigating to Settings with ?debug...")
-            page.goto("http://localhost:8000/docs/?debug")
+            page.goto("http://localhost:8000/?debug")
 
             print("Navigating to Settings View...")
             page.click("a[data-nav='settings']")

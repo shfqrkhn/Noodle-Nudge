@@ -9,8 +9,8 @@ def run():
         page = context.new_page()
 
         try:
-            print("Navigating to http://localhost:8000/docs/ ...")
-            page.goto("http://localhost:8000/docs/")
+            print("Navigating to http://localhost:8000/ ...")
+            page.goto("http://localhost:8000/")
 
             # Wait for content to load
             expect(page.locator("text=Discover Your Core Profile")).to_be_visible(timeout=10000)

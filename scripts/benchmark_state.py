@@ -11,7 +11,7 @@ def run_benchmark():
 
         try:
             # Navigate to the app
-            page.goto("http://localhost:8000/docs/")
+            page.goto("http://localhost:8000/")
             page.wait_for_selector("#loader-overlay", state="hidden")
 
             # Inject large data
