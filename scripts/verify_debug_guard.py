@@ -11,7 +11,7 @@ def run():
         try:
             # 1. Test WITHOUT debug mode
             print("1. Testing WITHOUT debug mode...")
-            page.goto("http://localhost:8000/docs/")
+            page.goto("http://localhost:8000/")
             page.wait_for_selector("text=Discover Your Core Profile")
 
             # Execute fillWithRandomData
@@ -26,7 +26,7 @@ def run():
 
             # 2. Test WITH debug mode
             print("2. Testing WITH debug mode...")
-            page.goto("http://localhost:8000/docs/?debug")
+            page.goto("http://localhost:8000/?debug")
             page.wait_for_selector("text=Discover Your Core Profile")
 
             # Execute fillWithRandomData

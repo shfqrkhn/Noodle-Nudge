@@ -49,3 +49,6 @@
 ## 2026-02-18 - Sentinel - Import Data Type Confusion
 **Insight:** `JSON.parse` is not enough to validate imported data structure. Loose typing allowed a string value for `userAnswers` to corrupt the application state, leading to runtime errors.
 **Protocol:** When importing complex state from external sources (JSON), explicitly validate that all root keys correspond to their expected types (e.g., `isObject(data.userAnswers)`) before persistence.
+## 2026-03-08 - Sentinel - Unsanitized Error Messages in UI Sinks
+**Insight:** Error messages derived from external user input (like JSON parse errors during file import) were directly rendered in UI components like toast notifications. This creates a cross-site scripting (XSS) vulnerability if the input file contains maliciously crafted syntax errors.
+**Protocol:** When rendering dynamic error messages in UI components (such as `NoodleNudge.UI.showToast` during file imports), the error text (e.g., `error.message`) must be strictly sanitized using `NoodleNudge.Utils.sanitizeHTML` to prevent XSS vulnerabilities.

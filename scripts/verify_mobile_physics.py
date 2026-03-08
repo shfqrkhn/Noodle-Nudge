@@ -8,8 +8,8 @@ def run():
         page = context.new_page()
 
         try:
-            print("Navigating to http://localhost:8000/docs/ ...")
-            page.goto("http://localhost:8000/docs/")
+            print("Navigating to http://localhost:8000/ ...")
+            page.goto("http://localhost:8000/")
 
             # Wait for content
             expect(page.locator("h2").first).to_be_visible()

@@ -11,7 +11,7 @@ async def main():
 
         try:
             # Navigate to the app (served locally on 8000)
-            await page.goto("http://localhost:8000/docs/index.html")
+            await page.goto("http://localhost:8000/index.html")
             await page.wait_for_selector("#loader-overlay", state="hidden")
 
             # Inject Malicious State
