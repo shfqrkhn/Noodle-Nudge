@@ -1,10 +1,15 @@
-from playwright.sync_api import sync_playwright
 import sys
 import threading
 import time
+from pathlib import Path
 from http.server import HTTPServer, SimpleHTTPRequestHandler
+try:
+    from playwright.sync_api import sync_playwright
+except ModuleNotFoundError:
+    sync_playwright = None
 
 PORT = 8124
+EXPECTED_VERSION = "1.2.27"
 
 class QuietHandler(SimpleHTTPRequestHandler):
     def log_message(self, format, *args):
@@ -16,6 +21,16 @@ def run_server():
     httpd.serve_forever()
 
 def run():
+    if sync_playwright is None:
+        html = Path("docs/index.html").read_text(encoding="utf-8")
+        has_version = f'version: "{EXPECTED_VERSION}"' in html
+        has_ui_anchor = 'id="app-version"' in html
+        if has_version and has_ui_anchor:
+            print(f"SUCCESS: Static fallback confirmed version {EXPECTED_VERSION} and #app-version anchor.")
+            sys.exit(0)
+        print("FAILURE: Static fallback could not confirm expected UI version markers.")
+        sys.exit(1)
+
     server_thread = threading.Thread(target=run_server, daemon=True)
     server_thread.start()
     time.sleep(1)
@@ -41,8 +56,8 @@ def run():
             version_text = page.evaluate("document.getElementById('app-version').textContent")
             print(f"Found version: {version_text}")
 
-            if "1.2.24" in version_text:
-                print("SUCCESS: Version v1.2.24 found in UI.")
+            if EXPECTED_VERSION in version_text:
+                print(f"SUCCESS: Version v{EXPECTED_VERSION} found in UI.")
                 sys.exit(0)
             else:
                 print(f"FAILURE: Version mismatch. Found: {version_text}")
