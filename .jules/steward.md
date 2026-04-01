@@ -52,3 +52,5 @@
 ## 2026-03-08 - Sentinel - Unsanitized Error Messages in UI Sinks
 **Insight:** Error messages derived from external user input (like JSON parse errors during file import) were directly rendered in UI components like toast notifications. This creates a cross-site scripting (XSS) vulnerability if the input file contains maliciously crafted syntax errors.
 **Protocol:** When rendering dynamic error messages in UI components (such as `NoodleNudge.UI.showToast` during file imports), the error text (e.g., `error.message`) must be strictly sanitized using `NoodleNudge.Utils.sanitizeHTML` to prevent XSS vulnerabilities.
+## 2026-04-01 - Palette - Ensure navigation icon links have aria-label and aria-hidden span
+**Protocol:** When navigation links consist solely of an emoji icon (e.g., Settings link), ensure the `<a>` tag includes a descriptive `aria-label` and the emoji itself is wrapped in an `<span class="emoji-icon" aria-hidden="true">`. This ensures screen reader accessibility and prevents redundant reading of decorative elements.

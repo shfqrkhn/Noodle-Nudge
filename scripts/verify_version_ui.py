@@ -9,7 +9,7 @@ except ModuleNotFoundError:
     sync_playwright = None
 
 PORT = 8124
-EXPECTED_VERSION = "1.2.27"
+EXPECTED_VERSION = "1.2.28"
 
 class QuietHandler(SimpleHTTPRequestHandler):
     def log_message(self, format, *args):
