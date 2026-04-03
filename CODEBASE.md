@@ -12,15 +12,20 @@
 ```text
 .
 ├── CLAUDE.md
+├── CODEBASE.md
+├── LICENSE
 ├── README.md
 ├── docs/
+│   ├── favicon.ico
 │   ├── index.html
 │   ├── manifest.json
 │   ├── service-worker.js
 │   ├── JSON/
 │   │   └── (14 assessment and content JSON files)
 │   ├── icons/
+│   │   └── (static image assets)
 │   └── images/
+│       └── (static image assets)
 └── scripts/
     └── (16 verification and benchmark Python/JS scripts)
 ```
@@ -29,7 +34,7 @@
 - **Core flows:** Initialization (`NoodleNudge.App.init`) -> State hydration from IndexedDB (`NoodleNudge.DB`) -> Content fetch if missing (`NoodleNudge.Content`) -> Render UI (`NoodleNudge.UI.DashboardView`).
 - **Important interfaces:** `NoodleNudge.State.subscribe/get/set` (PubSub), `NoodleNudge.Scoring.processAndSaveResults` (Scoring Engine), `MasterBlueprint` (Configuration).
 - **Key configs:** `MasterBlueprint` (frozen) defines feature flags, state schema, database config, and remote content URLs.
-- **Major invariants:** User data never leaves the device. XSS protection via `sanitizeHTML`. Strict evaluation of scoring formulas via `sanitizeResult`, strict regex validation, and restricted `new Function`.
+- **Major invariants:** User data never leaves the device. XSS protection via `sanitizeHTML`. Strict evaluation of scoring formulas via strict regex validation, and restricted `new Function`.
 - **Principal risks:** XSS via unescaped JSON content (mitigated by sanitization), arbitrary code execution in scoring evaluation (mitigated by strict regex, shadowing globals, and blocking dangerous properties like `constructor`), IndexedDB quota limits or corruption.
 
 ## File Inventory
@@ -41,7 +46,7 @@
 | `CLAUDE.md` | Architecture / Docs | Important | Summary | Explains architecture, conventions, and security invariants. |
 | `README.md` | User Docs | Context | Summary | Project overview and feature descriptions. |
 | `scripts/*` | Tests/Scripts | Important | Summary | Playwright E2E verification tests for security and functionality. |
-| `docs/JSON/*` | Content | Context | Excluded | Static content and assessment schemas; non-behavioral. |
+| `docs/JSON/*` | Content | Context | Summary | Static content and assessment schemas; non-behavioral. |
 | `docs/images/*`, `docs/icons/*`, `docs/favicon.ico` | Assets | Context | Excluded | Static image assets. |
 
 ## Embedded Critical Files
@@ -113,7 +118,7 @@
                 <ul class="navbar-nav ms-auto main-nav">
                     <li class="nav-item"><a href="#" data-nav="dashboard" class="nav-link active">Today</a></li>
                     <li class="nav-item"><a href="#" data-nav="assessments" class="nav-link">Assessments</a></li>
-                    <li class="nav-item"><a href="#" data-nav="settings" class="nav-link">⚙️</a></li>
+                    <li class="nav-item"><a href="#" data-nav="settings" class="nav-link" aria-label="Settings"><span class="emoji-icon" aria-hidden="true">⚙️</span></a></li>
                 </ul>
             </div>
         </nav>
@@ -128,7 +133,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script type="module">
-        const MasterBlueprint = { appName: "Noodle Nudge", appShortName: "NoodleNudge", version: "1.2.25", license: "MIT", author: "The Sentient Architect", featureFlags: { enableDailyContent: true, enableAssessments: true, enableDebugPanel: new URLSearchParams(window.location.search).has('debug'), }, appDescription: "A private offline-first PWA for self-discovery.", database: { dbName: "NoodleNudgeDB", dbVersion: 1, dbStoreName: "appState", }, pwaConfig: { cacheName: 'noodle-nudge-cache-v1.2.25' }, stateSchema: { assessments: {}, dailyContent: {}, userAnswers: {}, userResults: {}, userHistory: {}, viewDate: new Date().toISOString(), appConfig: { version: "1.2.25", lastVisit: "" }, debugLog: [], }, contentUrls: { assessments: ['./JSON/Q1_Core%20Personality.json', './JSON/Q2_Core%20Values.json', './JSON/Q3_Core%20Agency.json', './JSON/Q4_Work%20Motivation.json', './JSON/Q5_Perceived%20Stress%20Scale%20(PSS).json', './JSON/Q6_Conflict%20%26%20Negotiation%20Style.json', './JSON/Q7_Authentic%20%26%20Ethical%20Leadership.json', './JSON/Q8_Assertiveness%20Profile.json', './JSON/Q9_Power%20%26%20Influence%20Profile.json', './JSON/Q10_Proactive%20Personality%20Scale.json'], daily: ['./JSON/Content_CognitiveBiases.json', './JSON/Content_Meditations.json', './JSON/Content_Quotes.json', './JSON/Content_Reflections.json'], }, localization: { defaultLanguage: "en", strings: { en: { dashboardTitle: "Today's Nudge", assessmentsTitle: "Assessments", settingsTitle: "Settings", takeAssessmentsCTA: "Discover Your Core Profile", takeAssessmentsCTADescription: "Start your journey of self-discovery with our foundational assessments.", startAssessment: "Start Assessment", retakeAssessment: "Retake", submitAnswers: "Submit Answers", backToList: "Back to Assessments", resultsTitle: "Your Results for", viewResults: "View Full Results", dailyQuote: "Quote for Today", dailyReflection: "Reflection for Today", dailyMeditation: "Meditation for Today", dailyBias: "Cognitive Bias for Today", exportData: "Export My Data", importData: "Import My Data", resetData: "Reset All Data", resetConfirmation: "Are you sure you want to permanently delete all your data? This action cannot be undone.", dataExported: "Data exported successfully!", dataImported: "Data imported successfully! The app will now reload.", dataReset: "All data has been reset.", error: "An error occurred.", }, }, }, };
+        const MasterBlueprint = { appName: "Noodle Nudge", appShortName: "NoodleNudge", version: "1.2.29", license: "MIT", author: "The Sentient Architect", featureFlags: { enableDailyContent: true, enableAssessments: true, enableDebugPanel: new URLSearchParams(window.location.search).has('debug'), }, appDescription: "A private offline-first PWA for self-discovery.", database: { dbName: "NoodleNudgeDB", dbVersion: 1, dbStoreName: "appState", }, pwaConfig: { cacheName: 'noodle-nudge-cache-v1.2.29' }, stateSchema: { assessments: {}, dailyContent: {}, userAnswers: {}, userResults: {}, userHistory: {}, viewDate: new Date().toISOString(), appConfig: { version: "1.2.29", lastVisit: "" }, debugLog: [], }, contentUrls: { assessments: ['./JSON/Q1_Core%20Personality.json', './JSON/Q2_Core%20Values.json', './JSON/Q3_Core%20Agency.json', './JSON/Q4_Work%20Motivation.json', './JSON/Q5_Perceived%20Stress%20Scale%20(PSS).json', './JSON/Q6_Conflict%20%26%20Negotiation%20Style.json', './JSON/Q7_Authentic%20%26%20Ethical%20Leadership.json', './JSON/Q8_Assertiveness%20Profile.json', './JSON/Q9_Power%20%26%20Influence%20Profile.json', './JSON/Q10_Proactive%20Personality%20Scale.json'], daily: ['./JSON/Content_CognitiveBiases.json', './JSON/Content_Meditations.json', './JSON/Content_Quotes.json', './JSON/Content_Reflections.json'], }, localization: { defaultLanguage: "en", strings: { en: { dashboardTitle: "Today's Nudge", assessmentsTitle: "Assessments", settingsTitle: "Settings", takeAssessmentsCTA: "Discover Your Core Profile", takeAssessmentsCTADescription: "Start your journey of self-discovery with our foundational assessments.", startAssessment: "Start Assessment", retakeAssessment: "Retake", submitAnswers: "Submit Answers", backToList: "Back to Assessments", resultsTitle: "Your Results for", viewResults: "View Full Results", dailyQuote: "Quote for Today", dailyReflection: "Reflection for Today", dailyMeditation: "Meditation for Today", dailyBias: "Cognitive Bias for Today", exportData: "Export My Data", importData: "Import My Data", resetData: "Reset All Data", resetConfirmation: "Are you sure you want to permanently delete all your data? This action cannot be undone.", dataExported: "Data exported successfully!", dataImported: "Data imported successfully! The app will now reload.", dataReset: "All data has been reset.", error: "An error occurred.", }, }, }, };
         Object.freeze(MasterBlueprint.featureFlags); Object.freeze(MasterBlueprint.database); Object.freeze(MasterBlueprint.pwaConfig); Object.freeze(MasterBlueprint.contentUrls); Object.freeze(MasterBlueprint.localization); Object.freeze(MasterBlueprint.stateSchema); Object.freeze(MasterBlueprint);
         const NoodleNudge = {}; window.NoodleNudge = NoodleNudge;
         NoodleNudge.Utils = (()=>{const m={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'};return {getDayOfYear:t=>{const e=new Date(t);return Math.floor((Date.UTC(e.getFullYear(),e.getMonth(),e.getDate())-Date.UTC(e.getFullYear(),0,0))/864e5)},sanitizeHTML:t=>{if(t==null)return"";return String(t).replace(/[&<>"']/g,c=>m[c])}}})();
@@ -385,7 +390,7 @@
                     evalCache.set(expression, cached);
                 }
 
-                return cached.func(...shadowedGlobals.map(() => undefined), ...cached.vars.map(v => { if(!scores.has(v)) throw new ReferenceError(v); return scores.get(v); }), ...Object.values(helpers));
+                return sanitizeResult(cached.func(...shadowedGlobals.map(() => undefined), ...cached.vars.map(v => { if(!scores.has(v)) throw new ReferenceError(v); return scores.get(v); }), ...Object.values(helpers)));
             };
 
             return { processAndSaveResults, calculateResults };
@@ -393,7 +398,7 @@
 
         NoodleNudge.SettingsManager = (() => {
             const exportData = async () => { try { const stateToExport = NoodleNudge.State.get(); const dataStr = JSON.stringify(stateToExport, null, 2); const blob = new Blob([dataStr], { type: 'application/json' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = `noodle-nudge-backup-${new Date().toISOString().split('T')[0]}.json`; document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url); NoodleNudge.UI.showToast('📥 Data exported successfully!', 'success'); } catch(err) { NoodleNudge.Logger.error("Export failed:", err); NoodleNudge.UI.showToast('An error occurred.', 'danger'); } };
-            const importData = (event) => { const file = event.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = async (e) => { try { const data = JSON.parse(e.target.result); const required = ['assessments', 'dailyContent', 'userAnswers', 'userResults', 'appConfig']; const missing = required.filter(k => !(k in data)); if (missing.length > 0) throw new Error('Invalid backup: Missing keys.'); const isObject = (o) => o && typeof o === 'object' && !Array.isArray(o); if (!isObject(data.assessments)) throw new Error('Invalid assessments structure.'); if (!isObject(data.dailyContent)) throw new Error('Invalid dailyContent structure.'); if (!isObject(data.userAnswers)) throw new Error('Invalid userAnswers structure.'); if (!isObject(data.userResults)) throw new Error('Invalid userResults structure.'); if (!isObject(data.appConfig)) throw new Error('Invalid appConfig structure.'); if (data.userHistory && !isObject(data.userHistory)) throw new Error('Invalid userHistory structure.'); if (!data.userHistory) data.userHistory = {}; const { assessments, dailyContent, debugLog, ...persistentData } = data; await NoodleNudge.DB.set('appState', persistentData); NoodleNudge.UI.showToast('📤 Data imported successfully! The app will now reload.', 'success'); setTimeout(() => window.location.reload(), 1500); } catch (error) { NoodleNudge.Logger.error('Import failed:', error); NoodleNudge.UI.showToast('Import failed: ' + error.message, 'danger'); event.target.value = ''; } }; reader.readAsText(file); };
+            const importData = (event) => { const file = event.target.files[0]; if (!file) return; if (!file.name.toLowerCase().endsWith('.json')) { NoodleNudge.UI.showToast('Import failed: Please choose a .json backup file.', 'danger'); event.target.value = ''; return; } if (file.size > 2 * 1024 * 1024) { NoodleNudge.UI.showToast('Import failed: Backup is too large (max 2MB).', 'danger'); event.target.value = ''; return; } const reader = new FileReader(); reader.onload = async (e) => { try { const data = JSON.parse(e.target.result); const required = ['assessments', 'dailyContent', 'userAnswers', 'userResults', 'appConfig']; const allowed = new Set([...required, 'userHistory', 'settings', 'viewDate', 'debugLog']); const unexpected = Object.keys(data).filter(k => !allowed.has(k)); if (unexpected.length > 0) throw new Error('Invalid backup: Unexpected keys.'); const missing = required.filter(k => !(k in data)); if (missing.length > 0) throw new Error('Invalid backup: Missing keys.'); const isObject = (o) => o && typeof o === 'object' && !Array.isArray(o); const hasUnsafeKeys = (input) => { const queue = [input]; while (queue.length > 0) { const current = queue.pop(); if (!isObject(current) && !Array.isArray(current)) continue; for (const key of Object.keys(current)) { if (key === '__proto__' || key === 'prototype' || key === 'constructor') return true; const value = current[key]; if (isObject(value) || Array.isArray(value)) queue.push(value); } } return false; }; if (!isObject(data.assessments)) throw new Error('Invalid assessments structure.'); if (!isObject(data.dailyContent)) throw new Error('Invalid dailyContent structure.'); if (!isObject(data.userAnswers)) throw new Error('Invalid userAnswers structure.'); if (!isObject(data.userResults)) throw new Error('Invalid userResults structure.'); if (!isObject(data.appConfig)) throw new Error('Invalid appConfig structure.'); if (data.userHistory && !isObject(data.userHistory)) throw new Error('Invalid userHistory structure.'); if (hasUnsafeKeys(data)) throw new Error('Invalid backup: Unsafe key detected.'); if (!data.userHistory) data.userHistory = {}; const { assessments, dailyContent, debugLog, ...persistentData } = data; await NoodleNudge.DB.set('appState', persistentData); NoodleNudge.UI.showToast('📤 Data imported successfully! The app will now reload.', 'success'); setTimeout(() => window.location.reload(), 1500); } catch (error) { NoodleNudge.Logger.error('Import failed:', error); NoodleNudge.UI.showToast('Import failed: ' + error.message, 'danger'); event.target.value = ''; } }; reader.readAsText(file); };
             const resetData = () => { if (confirm(NoodleNudge.L10N.get('resetConfirmation'))) { NoodleNudge.UI.showLoader(); NoodleNudge.DB.clear().then(() => { NoodleNudge.UI.showToast('🗑️ All data has been reset.', 'success'); setTimeout(() => window.location.reload(), 1500); }).catch(err => { NoodleNudge.Logger.error("Reset failed:", err); NoodleNudge.UI.showToast('An error occurred.', 'danger'); NoodleNudge.UI.hideLoader(); }); } };
             const fillWithRandomData = () => {
                 if (!MasterBlueprint.featureFlags.enableDebugPanel) { NoodleNudge.Logger.warn("Debug panel disabled. Action ignored."); return; }
@@ -505,7 +510,7 @@
 
 // The cache name is versioned to ensure that updates to the PWA
 // trigger a new service worker installation and cache refresh.
-const CACHE_NAME = 'noodle-nudge-cache-v1.2.25';
+const CACHE_NAME = 'noodle-nudge-cache-v1.2.29';
 
 // App Shell: Core files needed for the app to run offline immediately.
 // This list is now corrected to match the final manifest.json.
@@ -587,6 +592,7 @@ self.addEventListener('fetch', (event) => {
             })
     );
 });
+
 ```
 
 ### `docs/manifest.json`
@@ -631,10 +637,23 @@ self.addEventListener('fetch', (event) => {
 ```
 
 ## Summarized Files
-- **`CLAUDE.md`**: Outlines the single-file architecture, state management (PubSub), IndexedDB persistence, Service Worker strategy (Cache-First), and strict security requirements (XSS prevention, regex-sandboxed `new Function` evaluation).
-- **`README.md`**: Describes Noodle Nudge as an offline-first PWA for self-discovery, emphasizing local-only data privacy.
-- **`scripts/*`**: E2E test suite using Python and Playwright. Includes critical verifications for XSS (`verify_xss.py`), scoring logic (`verify_scoring.py`), sandbox escapes (`verify_sentinel_guard.py`), and storage fallbacks.
-- **`docs/JSON/*`**: Static content providing daily quotes, reflections, meditations, and JSON-defined schemas for 10 psychological assessments (Likert scale and Card Sort types).
+
+### `CLAUDE.md`
+- **Purpose:** Outlines the single-file architecture, state management (PubSub), IndexedDB persistence, Service Worker strategy (Cache-First), and strict security requirements (XSS prevention, regex-sandboxed `new Function` evaluation).
+- **Key details:** Explains `MasterBlueprint` immutability, `NoodleNudge` module namespace, and protocols for version bumping.
+
+### `README.md`
+- **Purpose:** Project overview and feature descriptions.
+- **Key details:** Describes Noodle Nudge as an offline-first PWA for self-discovery, emphasizing local-only data privacy.
+
+### `scripts/*` (Verification and Benchmark Scripts)
+- **Purpose:** Playwright E2E verification tests for security and functionality.
+- **Key tests:** Includes critical verifications for XSS (`verify_xss.py`), scoring logic (`verify_scoring.py`), sandbox escapes (`verify_sentinel_guard.py`), UI settings and fallbacks.
+- **Note:** The full test code is omitted to maximize compression as their behavioral invariants are well summarized.
+
+### `docs/JSON/*`
+- **Purpose:** Static content providing daily quotes, reflections, meditations, and JSON-defined schemas for 10 psychological assessments (Likert scale and Card Sort types).
+- **Key details:** Data files only, non-behavioral.
 
 ## Cross-File Relationships
 - **Startup wiring:** `docs/index.html` loads, calls `NoodleNudge.App.init()`, and registers `docs/service-worker.js`.
